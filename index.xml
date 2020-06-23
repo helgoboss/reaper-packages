@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index version="1" name="Helgoboss Packages">
+  <category name="MIDI">
+    <reapack name="ReaLearn" type="extension" desc="Improved MIDI learn with feedback">
+      <version name="1.10.0-pre1" author="helgoboss" time="2020-06-23T01:42:00Z">
+        <changelog><![CDATA[Initial Release]]></changelog>
+        <source platform="win64" file="FX/ReaLearn.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre1/realearn-v1.10.0-pre1-portable-windows-x86_64.zip</source>
+        <source platform="win32" file="FX/ReaLearn.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre1/realearn-v1.10.0-pre1-portable-windows-i686.zip</source>
+        <source platform="darwin64" file="FX/ReaLearn.dylib">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre1/realearn-v1.10.0-pre1-portable-macos-x86_64.zip</source>
+        <source platform="linux64" file="FX/ReaLearn.so">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre1/realearn-v1.10.0-pre1-portable-linux-x86_64.tar.gz</source>
+      </version>
+      <metadata>
+        <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
+        <link rel="donation">https://www.paypal.me/helgoboss</link>
+        <link rel="screenshot" href="https://ibb.co/fGsnDnr">Mapping list</link>
+        <link rel="screenshot" href="https://ibb.co/qD8PwCV">Mapping detail</link>
+        <description><![CDATA[{\rtf1 {\fonttbl {\f0 Helvetica;}} \f0\fs60 This is a REAPER VST plug-in which ...}]]></description>
+      </metadata>
+    </reapack>
+  </category>
+  <metadata>
+    <link rel="website">https://www.helgoboss.org</link>
+    <link rel="donation">https://www.paypal.me/helgoboss</link>
+    <description><![CDATA[{\rtf1 {\fonttbl {\f0 Helvetica;}} \f0\fs60 Description of the repository!}]]></description>
+  </metadata>
+</index>

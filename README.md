@@ -1,1 +1,1 @@
-"# reaper-packages" 
+This is a ReaPack repository for Helgoboss REAPER extensions such as [ReaLearn](https://github.com/helgoboss/realearn).
