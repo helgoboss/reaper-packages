@@ -1,26 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Helgoboss Packages">
-  <category name="MIDI">
+<index version="1" name="Helgoboss Projects">
+  <category name="Extensions">
     <reapack name="ReaLearn" type="extension" desc="Improved MIDI learn with feedback">
-      <version name="1.10.0-pre1" author="helgoboss" time="2020-06-23T01:42:00Z">
-        <changelog><![CDATA[Initial Release]]></changelog>
-        <source platform="win64" file="FX/ReaLearn.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre1/realearn-v1.10.0-pre1-portable-windows-x86_64.zip</source>
-        <source platform="win32" file="FX/ReaLearn.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre1/realearn-v1.10.0-pre1-portable-windows-i686.zip</source>
-        <source platform="darwin64" file="FX/ReaLearn.dylib">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre1/realearn-v1.10.0-pre1-portable-macos-x86_64.zip</source>
-        <source platform="linux64" file="FX/ReaLearn.so">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre1/realearn-v1.10.0-pre1-portable-linux-x86_64.tar.gz</source>
+      <version name="1.10.0-pre2" author="helgoboss" time="2020-06-24T18:59:00Z">
+        <changelog><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Made a complete rewrite in {\field{\*\fldinst{HYPERLINK "https://www.rust-lang.org/"}}{\fldrslt{\ul
+Rust
+}}}
+ programming language\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Published as open source (available on {\field{\*\fldinst{HYPERLINK "https://github.com/helgoboss/realearn"}}{\fldrslt{\ul
+GitHub
+}}}
+)\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab {\field{\*\fldinst{HYPERLINK "https://bitbucket.org/helgoboss/realearn/issues/193"}}{\fldrslt{\ul
+#193
+}}}
+ Added Linux support\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab {\field{\*\fldinst{HYPERLINK "https://bitbucket.org/helgoboss/realearn/issues/152"}}{\fldrslt{\ul
+#152
+}}}
+ Added target \u8216'Selected track\u8217' for navigating within track list\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab {\field{\*\fldinst{HYPERLINK "https://bitbucket.org/helgoboss/realearn/issues/71"}}{\fldrslt{\ul
+#71
+}}}
+ Added mapping name search\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab {\field{\*\fldinst{HYPERLINK "https://bitbucket.org/helgoboss/realearn/issues/179"}}{\fldrslt{\ul
+#179
+}}}
+ Added support for non-latin characters (in mapping names and when showing track names)\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab {\field{\*\fldinst{HYPERLINK "https://bitbucket.org/helgoboss/realearn/issues/177"}}{\fldrslt{\ul
+#177
+}}}
+ Added support for using ReaLearn as monitoring FX\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab {\field{\*\fldinst{HYPERLINK "https://bitbucket.org/helgoboss/realearn/issues/178"}}{\fldrslt{\ul
+#178
+}}}
+ Added version and build information to UI\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Added possibility to quickly check what a certain knob/fader/encoder/switch actually controls, without actually changing target parameters (implemented by simply making source filter run until pressing \u8216'Stop\u8217' and by not filtering unknown sources)\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Added feedback for target \u8216'Track FX preset\u8217'\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Added possibility for relative mode to throttle/slow-down relative increments (the \u8216'step count\u8217' sliders are now called \u8216'speed\u8217', negative values represent throttling)\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Added possibility for absolute and toggle modes to distinguish between short/long button presses (\u8216'Length\u8217' slider allows you to define press durations on millisecond granularity - obviously works with momentary switches only)\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab {\field{\*\fldinst{HYPERLINK "https://bitbucket.org/helgoboss/realearn/issues/42"}}{\fldrslt{\ul
+#42
+}}}
+ Improved UI for action target (now uses REAPER\u8217's built-in action picker)\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab {\field{\*\fldinst{HYPERLINK "https://bitbucket.org/helgoboss/realearn/issues/182"}}{\fldrslt{\ul
+#182
+}}}
+ Improved duplicate naming (\u8216'Copy of \u8230?\u8217')\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab {\field{\*\fldinst{HYPERLINK "https://bitbucket.org/helgoboss/realearn/issues/156"}}{\fldrslt{\ul
+#156
+}}}
+ Improved UI by immediately reflecting track name changes\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab {\field{\*\fldinst{HYPERLINK "https://bitbucket.org/helgoboss/realearn/issues/146"}}{\fldrslt{\ul
+#146
+}}}
+ Improved UI by replacing \u8216'=>\u8217', \u8216'<=\u8217', \u8216'Up\u8217' and \u8216'Down\u8217' with actual arrow symbols (macOS and Windows only)\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Improved UI by having better error window if clipboard import is wrong\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Improved UI by instantly updating mapping name and all other values changed via text input field while typing\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Improved feedback by keeping it more in sync with the mapping settings (e.g.\u160?also updates while changing target range)\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Improved relative mode by giving the \u8216'step size\u8217' / \u8216'step count\u8217' (now \u8216'speed\u8217') controls an overhaul\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Improved usability by not letting target fields forget their values when switching type\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab {\field{\*\fldinst{HYPERLINK "https://bitbucket.org/helgoboss/realearn/issues/189"}}{\fldrslt{\ul
+#189
+}}}
+ Fixed crashes when removing plug-ins\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab {\field{\*\fldinst{HYPERLINK "https://bitbucket.org/helgoboss/realearn/issues/197"}}{\fldrslt{\ul
+#197
+}}}
+ Fixed bug that caused feedback and learn not working with master track\sa180\par}
+}]]></changelog>
+        <source platform="win64" file="FX/ReaLearn.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-windows-x86_64.dll</source>
+        <source platform="win32" file="FX/ReaLearn.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-windows-i686.dll</source>
+        <source platform="darwin64" file="FX/ReaLearn.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-macos-x86_64.vst.dylib</source>
+        <source platform="linux64" file="FX/ReaLearn.so">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-linux-x86_64.so</source>
       </version>
       <metadata>
         <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
         <link rel="donation">https://www.paypal.me/helgoboss</link>
         <link rel="screenshot" href="https://ibb.co/fGsnDnr">Mapping list</link>
         <link rel="screenshot" href="https://ibb.co/qD8PwCV">Mapping detail</link>
-        <description><![CDATA[{\rtf1 {\fonttbl {\f0 Helvetica;}} \f0\fs60 This is a REAPER VST plug-in which ...}]]></description>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is a VST instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 REAPER itself has this capability but some useful MIDI control scenarios are quite difficult and time-consuming to achieve with REAPER alone, for example if you want to restrict the controlled target value range. You would need to tinker with things like MIDIToReaControlPath and general purpose MIDI plug-ins. ReaLearn tries to make that much easier by giving you instant and easy access to lots of advanced features out-of-the-box.\par}
+}]]></description>
       </metadata>
     </reapack>
   </category>
   <metadata>
     <link rel="website">https://www.helgoboss.org</link>
     <link rel="donation">https://www.paypal.me/helgoboss</link>
-    <description><![CDATA[{\rtf1 {\fonttbl {\f0 Helvetica;}} \f0\fs60 Description of the repository!}]]></description>
+    <description><![CDATA[{\rtf1 {\fonttbl {\f0 Helvetica;}} \f0\fs60 This repository contains REAPER extensions by Helgoboss Projects.}]]></description>
   </metadata>
 </index>
