@@ -52,6 +52,14 @@
   <metadata>
     <link rel="website">https://www.helgoboss.org</link>
     <link rel="donation">https://www.paypal.me/helgoboss</link>
-    <description><![CDATA[This repository contains REAPER extensions by Helgoboss Projects.]]></description>
+    <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Find out more about Helgoboss Projects on its {\field{\*\fldinst{HYPERLINK "https://www.helgoboss.org"}}{\fldrslt{\ul
+website
+}}}
+.\par}
+}]]></description>
   </metadata>
 </index>
