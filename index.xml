@@ -4,34 +4,36 @@
     <reapack name="ReaLearn" type="extension" desc="ReaLearn - Improved MIDI learn with feedback">
 
       <version name="1.10.0-pre2" author="helgoboss" time="2020-06-24T12:00:00Z">
-        <changelog><![CDATA[- Made a complete rewrite in [Rust](https://www.rust-lang.org/) programming language
-- Published as open source (available on [GitHub](https://github.com/helgoboss/realearn))
-- [#193](https://bitbucket.org/helgoboss/realearn/issues/193) Added Linux support
-- [#152](https://bitbucket.org/helgoboss/realearn/issues/152) Added target 'Selected track' for navigating within track list
-- [#71](https://bitbucket.org/helgoboss/realearn/issues/71) Added mapping name search
-- [#179](https://bitbucket.org/helgoboss/realearn/issues/179) Added support for non-latin characters (in mapping names and when showing track names)
-- [#177](https://bitbucket.org/helgoboss/realearn/issues/177) Added support for using ReaLearn as monitoring FX
-- [#178](https://bitbucket.org/helgoboss/realearn/issues/178) Added version and build information to UI
+        <changelog><![CDATA[- Made a complete rewrite in Rust programming language
+- Published as open source (available on GitHub)
+- Added Linux support
+- Added target 'Selected track' for navigating within track list
+- Added mapping name search
+- Added support for non-latin characters (in mapping names and when showing track names)
+- Added support for using ReaLearn as monitoring FX
+- Added version and build information to UI
 - Added possibility to quickly check what a certain knob/fader/encoder/switch actually controls, without actually changing target parameters (implemented by simply making source filter run until pressing 'Stop' and by not filtering unknown sources)
 - Added feedback for target 'Track FX preset'
 - Added possibility for relative mode to throttle/slow-down relative increments (the 'step count' sliders are now called 'speed', negative values represent throttling)
 - Added possibility for absolute and toggle modes to distinguish between short/long button presses ('Length' slider allows you to define press durations on millisecond granularity - obviously works with momentary switches only)
-- [#42](https://bitbucket.org/helgoboss/realearn/issues/42) Improved UI for action target (now uses REAPER's built-in action picker)
-- [#182](https://bitbucket.org/helgoboss/realearn/issues/182) Improved duplicate naming ('Copy of ...')
-- [#156](https://bitbucket.org/helgoboss/realearn/issues/156) Improved UI by immediately reflecting track name changes
-- [#146](https://bitbucket.org/helgoboss/realearn/issues/146) Improved UI by replacing '=>', '<=', 'Up' and 'Down' with actual arrow symbols (macOS and Windows only)
+- Improved UI for action target (now uses REAPER's built-in action picker)
+- Improved duplicate naming ('Copy of ...')
+- Improved UI by immediately reflecting track name changes
+- Improved UI by using actual arrow symbols (macOS and Windows only)
 - Improved UI by having better error window if clipboard import is wrong
 - Improved UI by instantly updating mapping name and all other values changed via text input field while typing
 - Improved feedback by keeping it more in sync with the mapping settings (e.g. also updates while changing target range)
 - Improved relative mode by giving the 'step size' / 'step count' (now 'speed') controls an overhaul
 - Improved usability by not letting target fields forget their values when switching type
-- [#189](https://bitbucket.org/helgoboss/realearn/issues/189) Fixed crashes when removing plug-ins
-- [#197](https://bitbucket.org/helgoboss/realearn/issues/197) Fixed bug that caused feedback and learn not working with master track]]></changelog>
-        <source platform="win64" file="FX/ReaLearn.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-windows-x86_64.dll</source>
-        <source platform="win32" file="FX/ReaLearn.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-windows-i686.dll</source>
-        <source platform="darwin64" file="FX/ReaLearn.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-macos-x86_64.vst.dylib</source>
-        <source platform="linux64" file="FX/ReaLearn.so">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-linux-x86_64.so</source>
+- Fixed crashes when removing plug-ins
+- Fixed bug that caused feedback and learn not working with master track
+]]>        </changelog>
+        <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-windows-x86_64.dll</source>
+        <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-windows-i686.dll</source>
+        <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-macos-x86_64.vst.dylib</source>
+        <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-linux-x86_64.so</source>
       </version>
+
       <metadata>
         <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
         <link rel="donation">https://www.paypal.me/helgoboss</link>
@@ -50,6 +52,6 @@
   <metadata>
     <link rel="website">https://www.helgoboss.org</link>
     <link rel="donation">https://www.paypal.me/helgoboss</link>
-    <description><![CDATA[{\rtf1 {\fonttbl {\f0 Helvetica;}} \f0\fs60 This repository contains REAPER extensions by Helgoboss Projects.}]]></description>
+    <description><![CDATA[This repository contains REAPER extensions by Helgoboss Projects.]]></description>
   </metadata>
 </index>
