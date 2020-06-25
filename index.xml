@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <index version="1" name="Helgoboss Projects">
   <category name="Extensions">
-    <reapack name="ReaLearn" type="extension" desc="ReaLearn - Improved MIDI learn with feedback">
+    <reapack name="ReaLearn" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+      <version name="1.10.0-pre3" author="helgoboss" time="2020-06-25T12:00:00Z">
+        <changelog><![CDATA[- Fixed some random error messages when using FX parameter target with parameters that report step sizes
+]]>        </changelog>
+        <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre3/realearn-windows-x86_64.dll</source>
+        <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre3/realearn-windows-i686.dll</source>
+        <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre3/realearn-macos-x86_64.vst.dylib</source>
+        <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre3/realearn-linux-x86_64.so</source>
+      </version>
 
       <version name="1.10.0-pre2" author="helgoboss" time="2020-06-24T12:00:00Z">
         <changelog><![CDATA[- Made a complete rewrite in Rust programming language
