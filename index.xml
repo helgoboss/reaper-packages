@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <index version="1" name="Helgoboss Projects">
 <category name="Extensions">
-    <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn (64-bit): Improved MIDI learn with feedback">
+    <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
         
         <version name="1.10.0-pre5" author="helgoboss" time="2020-06-29T12:00:00Z">
             <changelog><![CDATA[- Added developer action for resolving backtraces that just contain addresses (also stripped debug symbols from Linux release artifact)
@@ -128,7 +128,7 @@
 
         
     </reapack>
-    <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn (32-bit): Improved MIDI learn with feedback">
+    <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
         
         <version name="1.10.0-pre5" author="helgoboss" time="2020-06-29T12:00:00Z">
             <changelog><![CDATA[- Added developer action for resolving backtraces that just contain addresses (also stripped debug symbols from Linux release artifact)
