@@ -3,6 +3,35 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
+            <version name="1.10.0-pre7" author="helgoboss" time="2020-07-29T12:00:00Z">
+                <changelog><![CDATA[- Added target 'Track FX all enable' (without feedback)
+- Added feedback transformation for relative and toggle mode, too (because feedback is always absolute)
+- Added possibility to access current target value in control transformation (initial value of y)
+- Improved toggle mode by letting Source Min/Max clamp feedback value just like in other modes
+- Improved 'Log debug info' by logging to REAPER console instead of terminal
+- Fixed logic error after learning target on master track
+- Fixed crashes on logic errors while executing VST plug-in callbacks. Now it just reports an error message instead of aborting REAPER.
+]]>                </changelog>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre7/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre7/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre7/realearn-linux-x86_64.so</source>
+            </version>
+
+            <metadata>
+                <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
+                <link rel="donation">https://www.paypal.me/helgoboss</link>
+                <link rel="screenshot" href="https://ibb.co/fGsnDnr">Mapping list</link>
+                <link rel="screenshot" href="https://ibb.co/qD8PwCV">Mapping detail</link>
+                <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is a VST instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 REAPER itself has this capability but some useful MIDI control scenarios are quite difficult and time-consuming to achieve with REAPER alone, for example if you want to restrict the controlled target value range. You would need to tinker with things like MIDIToReaControlPath and general purpose MIDI plug-ins. ReaLearn tries to make that much easier by giving you instant and easy access to lots of advanced features out-of-the-box.\par}
+}]]></description>
+            </metadata>
+
+
             <version name="1.10.0-pre6" author="helgoboss" time="2020-07-13T12:00:00Z">
                 <changelog><![CDATA[- Added feedback reset logic when source not in use anymore (e.g. sends 'zero' feedback value if mapping removed)
 - Improved behavior when using 'Learn source filter': Also indicate if a source has been touched that is not used in any mapping (by showing an empty mapping list)
@@ -62,7 +91,7 @@
 - Fixed possible missing learn/feedback notification right after startup
 - Fixed possible error message when using -inf dB
 - Fixed bug that caused ReaLearn instance to stay around as a ghost even if already removed. That caused surprising issues e.g. complaints about a target parameter not being found which was not used at all.
-- Fixed continuous MIDI feedback of automated FX parameter values, track send volume and track send pan. Now fires on real value changes only. It’s still possible that ReaLearn sends more feedback than necessary when having automation. This can happen if there are value changes but they are so small that they don’t have any effect on the feedback MIDI value (because MIDI feedback values have a very low resolution).)
+- Fixed continuous MIDI feedback of automated FX parameter values, track send volume and track send pan. Now fires on real value changes only. Itâ€™s still possible that ReaLearn sends more feedback than necessary when having automation. This can happen if there are value changes but they are so small that they donâ€™t have any effect on the feedback MIDI value (because MIDI feedback values have a very low resolution).)
 ]]>                </changelog>
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre4/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre4/realearn-macos-x86_64.vst.dylib</source>
@@ -156,6 +185,33 @@
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
+            <version name="1.10.0-pre7" author="helgoboss" time="2020-07-29T12:00:00Z">
+                <changelog><![CDATA[- Added target 'Track FX all enable' (without feedback)
+- Added feedback transformation for relative and toggle mode, too (because feedback is always absolute)
+- Added possibility to access current target value in control transformation (initial value of y)
+- Improved toggle mode by letting Source Min/Max clamp feedback value just like in other modes
+- Improved 'Log debug info' by logging to REAPER console instead of terminal
+- Fixed logic error after learning target on master track
+- Fixed crashes on logic errors while executing VST plug-in callbacks. Now it just reports an error message instead of aborting REAPER.
+]]>                </changelog>
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre7/realearn-windows-i686.dll</source>
+            </version>
+
+            <metadata>
+                <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
+                <link rel="donation">https://www.paypal.me/helgoboss</link>
+                <link rel="screenshot" href="https://ibb.co/fGsnDnr">Mapping list</link>
+                <link rel="screenshot" href="https://ibb.co/qD8PwCV">Mapping detail</link>
+                <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is a VST instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 REAPER itself has this capability but some useful MIDI control scenarios are quite difficult and time-consuming to achieve with REAPER alone, for example if you want to restrict the controlled target value range. You would need to tinker with things like MIDIToReaControlPath and general purpose MIDI plug-ins. ReaLearn tries to make that much easier by giving you instant and easy access to lots of advanced features out-of-the-box.\par}
+}]]></description>
+            </metadata>
+
+
             <version name="1.10.0-pre6" author="helgoboss" time="2020-07-13T12:00:00Z">
                 <changelog><![CDATA[- Added feedback reset logic when source not in use anymore (e.g. sends 'zero' feedback value if mapping removed)
 - Improved behavior when using 'Learn source filter': Also indicate if a source has been touched that is not used in any mapping (by showing an empty mapping list)
@@ -211,7 +267,7 @@
 - Fixed possible missing learn/feedback notification right after startup
 - Fixed possible error message when using -inf dB
 - Fixed bug that caused ReaLearn instance to stay around as a ghost even if already removed. That caused surprising issues e.g. complaints about a target parameter not being found which was not used at all.
-- Fixed continuous MIDI feedback of automated FX parameter values, track send volume and track send pan. Now fires on real value changes only. It’s still possible that ReaLearn sends more feedback than necessary when having automation. This can happen if there are value changes but they are so small that they don’t have any effect on the feedback MIDI value (because MIDI feedback values have a very low resolution).)
+- Fixed continuous MIDI feedback of automated FX parameter values, track send volume and track send pan. Now fires on real value changes only. Itâ€™s still possible that ReaLearn sends more feedback than necessary when having automation. This can happen if there are value changes but they are so small that they donâ€™t have any effect on the feedback MIDI value (because MIDI feedback values have a very low resolution).)
 ]]>                </changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre4/realearn-windows-i686.dll</source>
             </version>
