@@ -1,12 +1,9 @@
-
-
-
 <?xml version="1.0" encoding="utf-8"?>
 <index version="1" name="Helgoboss Projects">
 <category name="Extensions">
     <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
         
-        <version name="1.12.0-pre1" author="helgoboss" time="2020-12-01T12:00:00Z">
+        <version name="1.12.0-pre2" author="helgoboss" time="2020-12-01T12:00:00Z">
             <changelog><![CDATA[- Added controller mapping feature (possibility to define controller-specific mappings, virtual sources and virtual targets)
 - Added controller projection feature (by using the new ReaLearn Companion app)
 - Added indication of scroll position and number of mappings
@@ -17,7 +14,8 @@
 - Fixed scrolling issues when mapping list filtered
 - Fixed error message when trying to pick action
 ]]></changelog>
-            <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre1/realearn-windows-x86_64.dll</source>
+            <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre2/realearn-windows-x86_64.dll</source>
+            <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre2/realearn-macos-x86_64.vst.dylib</source>
         </version>
         
     <metadata>
@@ -396,7 +394,7 @@
     </reapack>
     <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
         
-        <version name="1.12.0-pre1" author="helgoboss" time="2020-12-01T12:00:00Z">
+        <version name="1.12.0-pre2" author="helgoboss" time="2020-12-01T12:00:00Z">
             <changelog><![CDATA[- Added controller mapping feature (possibility to define controller-specific mappings, virtual sources and virtual targets)
 - Added controller projection feature (by using the new ReaLearn Companion app)
 - Added indication of scroll position and number of mappings
@@ -407,7 +405,7 @@
 - Fixed scrolling issues when mapping list filtered
 - Fixed error message when trying to pick action
 ]]></changelog>
-            <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre1/realearn-windows-i686.dll</source>
+            <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre2/realearn-windows-i686.dll</source>
         </version>
         
     <metadata>
