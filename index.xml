@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <index version="1" name="Helgoboss Projects">
+    <category name="ReaLearn controller presets">
+        <reapack name="midi-fighter-twister" type="data" desc="MIDI Fighter Twister">
+            <version name="1.0.0" author="helgoboss">
+                <source file="helgoboss/realearn/controllers/midi-fighter-twister.json">https://raw.githubusercontent.com/helgoboss/realearn/d6be9c98a7bc9ace696e5e63423079ed5f6f34bf/resources/controllers/midi-fighter-twister.json</source>
+            </version>
+        </reapack>
+        <reapack name="apc-key-25" type="data" desc="APC Key 25">
+            <version name="1.0.0" author="helgoboss">
+                <source file="helgoboss/realearn/controllers/apc-key-25.json">https://raw.githubusercontent.com/helgoboss/realearn/d6be9c98a7bc9ace696e5e63423079ed5f6f34bf/resources/controllers/apc-key-25.json</source>
+            </version>
+        </reapack>
+    </category>
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
