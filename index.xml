@@ -15,6 +15,41 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
+            <version name="1.12.0-pre5" author="helgoboss" time="2020-12-07T12:00:00Z">
+                <changelog><![CDATA[- Added Linux build again
+- Added two controller presets, downloadable via ReaPack (in this context, controller preset directory has been changed to Data/helgoboss/realearn/controllers)
+- Improved usability by printing possible solutions when projection server could not be started
+- Improved stability and portability by migrating from web view to opening the projection setup page in the user's browser
+- Improved QR code detection results by increasing QR code size
+- Fixed "is not a valid unit value" error (happened when reading volume values above the fader limit set in REAPER preferences)
+- Fixed "negative MIDI frame offset" error (negative offsets are interpreted as zero now)
+- Fixed "Message: assertion failed: Bpm::is_valid(value)" error (could happen when using controllers that send MIDI clock)
+- Fixed "Message: -1 is not a valid value" error (caused by unexpected FX parameter change value)
+- Fixed header panel context menu on macOS
+- Fixed crash on macOS when pressing projection button (by replacing web view with browser)
+- Fixed not showing QR code on Windows 7, probably because of old IE version
+- Fixed failure when opening presets that don't yet contain activationType
+]]></changelog>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre5/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre5/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre5/realearn-linux-x86_64.so</source>
+            </version>
+
+            <metadata>
+                <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
+                <link rel="donation">https://www.paypal.me/helgoboss</link>
+                <link rel="screenshot" href="https://ibb.co/fGsnDnr">Mapping list</link>
+                <link rel="screenshot" href="https://ibb.co/qD8PwCV">Mapping detail</link>
+                <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is a VST instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 REAPER itself has this capability but some useful MIDI control scenarios are quite difficult and time-consuming to achieve with REAPER alone, for example if you want to restrict the controlled target value range. You would need to tinker with things like MIDIToReaControlPath and general purpose MIDI plug-ins. ReaLearn tries to make that much easier by giving you instant and easy access to lots of advanced features out-of-the-box.\par}
+}]]></description>
+            </metadata>
+
+
             <version name="1.12.0-pre4" author="helgoboss" time="2020-12-03T12:00:00Z">
                 <changelog><![CDATA[- Added controller mapping feature (possibility to define controller-specific mappings, virtual sources and virtual targets)
 - Added controller projection feature (by using the new ReaLearn Companion app)
@@ -29,6 +64,7 @@
 ]]></changelog>
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre4/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre4/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre4/realearn-linux-x86_64.so</source>
             </version>
 
             <metadata>
@@ -406,6 +442,39 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+            <version name="1.12.0-pre5" author="helgoboss" time="2020-12-07T12:00:00Z">
+                <changelog><![CDATA[- Added Linux build again
+- Added two controller presets, downloadable via ReaPack (in this context, controller preset directory has been changed to Data/helgoboss/realearn/controllers)
+- Improved usability by printing possible solutions when projection server could not be started
+- Improved stability and portability by migrating from web view to opening the projection setup page in the user's browser
+- Improved QR code detection results by increasing QR code size
+- Fixed "is not a valid unit value" error (happened when reading volume values above the fader limit set in REAPER preferences)
+- Fixed "negative MIDI frame offset" error (negative offsets are interpreted as zero now)
+- Fixed "Message: assertion failed: Bpm::is_valid(value)" error (could happen when using controllers that send MIDI clock)
+- Fixed "Message: -1 is not a valid value" error (caused by unexpected FX parameter change value)
+- Fixed header panel context menu on macOS
+- Fixed crash on macOS when pressing projection button (by replacing web view with browser)
+- Fixed not showing QR code on Windows 7, probably because of old IE version
+- Fixed failure when opening presets that don't yet contain activationType
+]]></changelog>
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre5/realearn-windows-i686.dll</source>
+            </version>
+
+            <metadata>
+                <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
+                <link rel="donation">https://www.paypal.me/helgoboss</link>
+                <link rel="screenshot" href="https://ibb.co/fGsnDnr">Mapping list</link>
+                <link rel="screenshot" href="https://ibb.co/qD8PwCV">Mapping detail</link>
+                <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is a VST instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 REAPER itself has this capability but some useful MIDI control scenarios are quite difficult and time-consuming to achieve with REAPER alone, for example if you want to restrict the controlled target value range. You would need to tinker with things like MIDIToReaControlPath and general purpose MIDI plug-ins. ReaLearn tries to make that much easier by giving you instant and easy access to lots of advanced features out-of-the-box.\par}
+}]]></description>
+            </metadata>
+
 
             <version name="1.12.0-pre4" author="helgoboss" time="2020-12-03T12:00:00Z">
                 <changelog><![CDATA[- Added controller mapping feature (possibility to define controller-specific mappings, virtual sources and virtual targets)
