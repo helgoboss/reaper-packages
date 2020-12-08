@@ -3,17 +3,55 @@
     <category name="ReaLearn controller presets">
         <reapack name="midi-fighter-twister" type="data" desc="MIDI Fighter Twister">
             <version name="1.0.0" author="helgoboss">
-                <source file="helgoboss/realearn/controllers/midi-fighter-twister.json">https://raw.githubusercontent.com/helgoboss/realearn/d6be9c98a7bc9ace696e5e63423079ed5f6f34bf/resources/controllers/midi-fighter-twister.json</source>
+                <source file="helgoboss/realearn/controllers/midi-fighter-twister.json">
+                    https://raw.githubusercontent.com/helgoboss/realearn/d6be9c98a7bc9ace696e5e63423079ed5f6f34bf/resources/controllers/midi-fighter-twister.json
+                </source>
             </version>
         </reapack>
         <reapack name="apc-key-25" type="data" desc="APC Key 25">
             <version name="1.0.0" author="helgoboss">
-                <source file="helgoboss/realearn/controllers/apc-key-25.json">https://raw.githubusercontent.com/helgoboss/realearn/d6be9c98a7bc9ace696e5e63423079ed5f6f34bf/resources/controllers/apc-key-25.json</source>
+                <source file="helgoboss/realearn/controllers/apc-key-25.json">
+                    https://raw.githubusercontent.com/helgoboss/realearn/d6be9c98a7bc9ace696e5e63423079ed5f6f34bf/resources/controllers/apc-key-25.json
+                </source>
             </version>
         </reapack>
     </category>
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+            <version name="1.12.0-pre6" author="helgoboss" time="2020-12-08T12:00:00Z">
+                <changelog><![CDATA[- Added possibility to refer to a track via its name or position (as an alternative to the default of using its unique and stable ID) ← Powerful addition, if you ask me!
+- Improved consistency by preventing the session ID to become non-unique as result of actively changing it via context menu
+- Improved usability by making virtual target the default for new controller mappings
+- Improved usability by making most confirmation and alert dialogs modal with respect to the ReaLearn window itself, not REAPER
+- Fixed Windows 7 character issues in dropdown menus
+- Fixed error message if track could not be found
+]]></changelog>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre6/realearn-windows-x86_64.dll
+                </source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">
+                    https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre6/realearn-macos-x86_64.vst.dylib
+                </source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">
+                    https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre6/realearn-linux-x86_64.so
+                </source>
+            </version>
+
+            <metadata>
+                <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
+                <link rel="donation">https://www.paypal.me/helgoboss</link>
+                <link rel="screenshot" href="https://ibb.co/fGsnDnr">Mapping list</link>
+                <link rel="screenshot" href="https://ibb.co/qD8PwCV">Mapping detail</link>
+                <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is a VST instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 REAPER itself has this capability but some useful MIDI control scenarios are quite difficult and time-consuming to achieve with REAPER alone, for example if you want to restrict the controlled target value range. You would need to tinker with things like MIDIToReaControlPath and general purpose MIDI plug-ins. ReaLearn tries to make that much easier by giving you instant and easy access to lots of advanced features out-of-the-box.\par}
+}]]></description>
+            </metadata>
+
 
             <version name="1.12.0-pre5" author="helgoboss" time="2020-12-07T12:00:00Z">
                 <changelog><![CDATA[- Added Linux build again
@@ -30,9 +68,15 @@
 - Fixed not showing QR code on Windows 7, probably because of old IE version
 - Fixed failure when opening presets that don't yet contain activationType
 ]]></changelog>
-                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre5/realearn-windows-x86_64.dll</source>
-                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre5/realearn-macos-x86_64.vst.dylib</source>
-                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre5/realearn-linux-x86_64.so</source>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre5/realearn-windows-x86_64.dll
+                </source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">
+                    https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre5/realearn-macos-x86_64.vst.dylib
+                </source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">
+                    https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre5/realearn-linux-x86_64.so
+                </source>
             </version>
 
             <metadata>
@@ -62,9 +106,15 @@
 - Fixed scrolling issues when mapping list filtered
 - Fixed error message when trying to pick action
 ]]></changelog>
-                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre4/realearn-windows-x86_64.dll</source>
-                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre4/realearn-macos-x86_64.vst.dylib</source>
-                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre4/realearn-linux-x86_64.so</source>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre4/realearn-windows-x86_64.dll
+                </source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">
+                    https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre4/realearn-macos-x86_64.vst.dylib
+                </source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">
+                    https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre4/realearn-linux-x86_64.so
+                </source>
             </version>
 
             <metadata>
@@ -95,9 +145,15 @@
 - Fixed bug that caused "FX must have focus" to not work at all with floating windows and work incorrectly when in FX chain
 - Fixed action targets reporting wrong character, leading to wrong auto correction behavior
 ]]></changelog>
-                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.11.0/realearn-windows-x86_64.dll</source>
-                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.11.0/realearn-macos-x86_64.vst.dylib</source>
-                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.11.0/realearn-linux-x86_64.so</source>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.11.0/realearn-windows-x86_64.dll
+                </source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">
+                    https://github.com/helgoboss/realearn/releases/download/v1.11.0/realearn-macos-x86_64.vst.dylib
+                </source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">
+                    https://github.com/helgoboss/realearn/releases/download/v1.11.0/realearn-linux-x86_64.so
+                </source>
             </version>
 
             <metadata>
@@ -123,9 +179,15 @@
 - Improved usability by simplifying mapping window title
 - Fixed action targets reporting wrong character, leading to wrong auto correction behavior
 ]]></changelog>
-                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.11.0-pre2/realearn-windows-x86_64.dll</source>
-                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.11.0-pre2/realearn-macos-x86_64.vst.dylib</source>
-                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.11.0-pre2/realearn-linux-x86_64.so</source>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.11.0-pre2/realearn-windows-x86_64.dll
+                </source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">
+                    https://github.com/helgoboss/realearn/releases/download/v1.11.0-pre2/realearn-macos-x86_64.vst.dylib
+                </source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">
+                    https://github.com/helgoboss/realearn/releases/download/v1.11.0-pre2/realearn-linux-x86_64.so
+                </source>
             </version>
 
             <metadata>
@@ -146,9 +208,15 @@
             <version name="1.11.0-pre1" author="helgoboss" time="2020-08-28T12:00:00Z">
                 <changelog><![CDATA[- Added feature 'conditional activation' for (de)activating mappings based on parameter values
 ]]></changelog>
-                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.11.0-pre1/realearn-windows-x86_64.dll</source>
-                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.11.0-pre1/realearn-macos-x86_64.vst.dylib</source>
-                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.11.0-pre1/realearn-linux-x86_64.so</source>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.11.0-pre1/realearn-windows-x86_64.dll
+                </source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">
+                    https://github.com/helgoboss/realearn/releases/download/v1.11.0-pre1/realearn-macos-x86_64.vst.dylib
+                </source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">
+                    https://github.com/helgoboss/realearn/releases/download/v1.11.0-pre1/realearn-linux-x86_64.so
+                </source>
             </version>
 
             <metadata>
@@ -217,9 +285,15 @@
 - Fixed crashes when removing plug-ins
 - Fixed bug that caused feedback and learn not working with master track
 ]]></changelog>
-                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0/realearn-windows-x86_64.dll</source>
-                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.10.0/realearn-macos-x86_64.vst.dylib</source>
-                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.10.0/realearn-linux-x86_64.so</source>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0/realearn-windows-x86_64.dll
+                </source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0/realearn-macos-x86_64.vst.dylib
+                </source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0/realearn-linux-x86_64.so
+                </source>
             </version>
 
             <metadata>
@@ -241,9 +315,15 @@
                 <changelog><![CDATA[- Added mapping option 'Prevent echo feedback' (good for motorized faders that don't like feedback while being moved)
 - Improved error handling: Some possible smaller errors/misbehaviors where totally ignored in previous versions and therefore might have gone unnoticed. In this version, ReaLearn will print a bug report if it detects such a smaller error, exactly like it already did before with more serious errors. (ReaLearn follows a fail-fast approach in order to detect errors early instead of letting them introduce subtle and hard-to-analyze bugs.)
 ]]></changelog>
-                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre8/realearn-windows-x86_64.dll</source>
-                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre8/realearn-macos-x86_64.vst.dylib</source>
-                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre8/realearn-linux-x86_64.so</source>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre8/realearn-windows-x86_64.dll
+                </source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre8/realearn-macos-x86_64.vst.dylib
+                </source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre8/realearn-linux-x86_64.so
+                </source>
             </version>
 
             <metadata>
@@ -270,9 +350,15 @@
 - Fixed logic error after learning target on master track
 - Fixed crashes on logic errors while executing VST plug-in callbacks. Now it just reports an error message instead of aborting REAPER.
 ]]></changelog>
-                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre7/realearn-windows-x86_64.dll</source>
-                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre7/realearn-macos-x86_64.vst.dylib</source>
-                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre7/realearn-linux-x86_64.so</source>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre7/realearn-windows-x86_64.dll
+                </source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre7/realearn-macos-x86_64.vst.dylib
+                </source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre7/realearn-linux-x86_64.so
+                </source>
             </version>
 
             <metadata>
@@ -296,9 +382,15 @@
 - Fixed non-working 'Track must be selected' target condition
 - Fixed non-moving slider when slider currently focused
 ]]></changelog>
-                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre6/realearn-windows-x86_64.dll</source>
-                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre6/realearn-macos-x86_64.vst.dylib</source>
-                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre6/realearn-linux-x86_64.so</source>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre6/realearn-windows-x86_64.dll
+                </source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre6/realearn-macos-x86_64.vst.dylib
+                </source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre6/realearn-linux-x86_64.so
+                </source>
             </version>
 
             <metadata>
@@ -323,9 +415,15 @@
 - Fixed non-working FX parameter selection
 - Fixed sometimes not working FX parameter learn
 ]]></changelog>
-                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre5/realearn-windows-x86_64.dll</source>
-                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre5/realearn-macos-x86_64.vst.dylib</source>
-                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre5/realearn-linux-x86_64.so</source>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre5/realearn-windows-x86_64.dll
+                </source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre5/realearn-macos-x86_64.vst.dylib
+                </source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre5/realearn-linux-x86_64.so
+                </source>
             </version>
 
             <metadata>
@@ -351,9 +449,15 @@
 - Fixed bug that caused ReaLearn instance to stay around as a ghost even if already removed. That caused surprising issues e.g. complaints about a target parameter not being found which was not used at all.
 - Fixed continuous MIDI feedback of automated FX parameter values, track send volume and track send pan. Now fires on real value changes only. It’s still possible that ReaLearn sends more feedback than necessary when having automation. This can happen if there are value changes but they are so small that they don’t have any effect on the feedback MIDI value (because MIDI feedback values have a very low resolution).)
 ]]></changelog>
-                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre4/realearn-windows-x86_64.dll</source>
-                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre4/realearn-macos-x86_64.vst.dylib</source>
-                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre4/realearn-linux-x86_64.so</source>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre4/realearn-windows-x86_64.dll
+                </source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre4/realearn-macos-x86_64.vst.dylib
+                </source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre4/realearn-linux-x86_64.so
+                </source>
             </version>
 
             <metadata>
@@ -375,9 +479,15 @@
                 <changelog><![CDATA[- Fixed some random error messages when using FX parameter target with parameters that report step sizes
 - Include more diagnostic information in error log messages (debug info such as line numbers)
 ]]></changelog>
-                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre3/realearn-windows-x86_64.dll</source>
-                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre3/realearn-macos-x86_64.vst.dylib</source>
-                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre3/realearn-linux-x86_64.so</source>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre3/realearn-windows-x86_64.dll
+                </source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre3/realearn-macos-x86_64.vst.dylib
+                </source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre3/realearn-linux-x86_64.so
+                </source>
             </version>
 
             <metadata>
@@ -420,9 +530,15 @@
 - Fixed crashes when removing plug-ins
 - Fixed bug that caused feedback and learn not working with master track
 ]]></changelog>
-                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-windows-x86_64.dll</source>
-                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-macos-x86_64.vst.dylib</source>
-                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-linux-x86_64.so</source>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-windows-x86_64.dll
+                </source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-macos-x86_64.vst.dylib
+                </source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-linux-x86_64.so
+                </source>
             </version>
 
             <metadata>
@@ -443,6 +559,34 @@
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
+            <version name="1.12.0-pre6" author="helgoboss" time="2020-12-08T12:00:00Z">
+                <changelog><![CDATA[- Added possibility to refer to a track via its name or position (as an alternative to the default of using its unique and stable ID) ← Powerful addition, if you ask me!
+- Improved consistency by preventing the session ID to become non-unique as result of actively changing it via context menu
+- Improved usability by making virtual target the default for new controller mappings
+- Improved usability by making most confirmation and alert dialogs modal with respect to the ReaLearn window itself, not REAPER
+- Fixed Windows 7 character issues in dropdown menus
+- Fixed error message if track could not be found
+]]></changelog>
+                <source platform="win32" file="FX/ReaLearn-x86.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre6/realearn-windows-i686.dll
+                </source>
+            </version>
+
+            <metadata>
+                <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
+                <link rel="donation">https://www.paypal.me/helgoboss</link>
+                <link rel="screenshot" href="https://ibb.co/fGsnDnr">Mapping list</link>
+                <link rel="screenshot" href="https://ibb.co/qD8PwCV">Mapping detail</link>
+                <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is a VST instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 REAPER itself has this capability but some useful MIDI control scenarios are quite difficult and time-consuming to achieve with REAPER alone, for example if you want to restrict the controlled target value range. You would need to tinker with things like MIDIToReaControlPath and general purpose MIDI plug-ins. ReaLearn tries to make that much easier by giving you instant and easy access to lots of advanced features out-of-the-box.\par}
+}]]></description>
+            </metadata>
+
+
             <version name="1.12.0-pre5" author="helgoboss" time="2020-12-07T12:00:00Z">
                 <changelog><![CDATA[- Added Linux build again
 - Added two controller presets, downloadable via ReaPack (in this context, controller preset directory has been changed to Data/helgoboss/realearn/controllers)
@@ -458,7 +602,9 @@
 - Fixed not showing QR code on Windows 7, probably because of old IE version
 - Fixed failure when opening presets that don't yet contain activationType
 ]]></changelog>
-                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre5/realearn-windows-i686.dll</source>
+                <source platform="win32" file="FX/ReaLearn-x86.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre5/realearn-windows-i686.dll
+                </source>
             </version>
 
             <metadata>
@@ -488,7 +634,9 @@
 - Fixed scrolling issues when mapping list filtered
 - Fixed error message when trying to pick action
 ]]></changelog>
-                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre4/realearn-windows-i686.dll</source>
+                <source platform="win32" file="FX/ReaLearn-x86.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre4/realearn-windows-i686.dll
+                </source>
             </version>
 
             <metadata>
@@ -519,7 +667,9 @@
 - Fixed bug that caused "FX must have focus" to not work at all with floating windows and work incorrectly when in FX chain
 - Fixed action targets reporting wrong character, leading to wrong auto correction behavior
 ]]></changelog>
-                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.11.0/realearn-windows-i686.dll</source>
+                <source platform="win32" file="FX/ReaLearn-x86.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.11.0/realearn-windows-i686.dll
+                </source>
             </version>
 
             <metadata>
@@ -545,7 +695,9 @@
 - Improved usability by simplifying mapping window title
 - Fixed action targets reporting wrong character, leading to wrong auto correction behavior
 ]]></changelog>
-                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.11.0-pre2/realearn-windows-i686.dll</source>
+                <source platform="win32" file="FX/ReaLearn-x86.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.11.0-pre2/realearn-windows-i686.dll
+                </source>
             </version>
 
             <metadata>
@@ -566,7 +718,9 @@
             <version name="1.11.0-pre1" author="helgoboss" time="2020-08-28T12:00:00Z">
                 <changelog><![CDATA[- Added feature 'conditional activation' for (de)activating mappings based on parameter values
 ]]></changelog>
-                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.11.0-pre1/realearn-windows-i686.dll</source>
+                <source platform="win32" file="FX/ReaLearn-x86.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.11.0-pre1/realearn-windows-i686.dll
+                </source>
             </version>
 
             <metadata>
@@ -635,7 +789,9 @@
 - Fixed crashes when removing plug-ins
 - Fixed bug that caused feedback and learn not working with master track
 ]]></changelog>
-                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0/realearn-windows-i686.dll</source>
+                <source platform="win32" file="FX/ReaLearn-x86.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0/realearn-windows-i686.dll
+                </source>
             </version>
 
             <metadata>
@@ -657,7 +813,9 @@
                 <changelog><![CDATA[- Added mapping option 'Prevent echo feedback' (good for motorized faders that don't like feedback while being moved)
 - Improved error handling: Some possible smaller errors/misbehaviors where totally ignored in previous versions and therefore might have gone unnoticed. In this version, ReaLearn will print a bug report if it detects such a smaller error, exactly like it already did before with more serious errors. (ReaLearn follows a fail-fast approach in order to detect errors early instead of letting them introduce subtle and hard-to-analyze bugs.)
 ]]></changelog>
-                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre8/realearn-windows-i686.dll</source>
+                <source platform="win32" file="FX/ReaLearn-x86.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre8/realearn-windows-i686.dll
+                </source>
             </version>
 
             <metadata>
@@ -684,7 +842,9 @@
 - Fixed logic error after learning target on master track
 - Fixed crashes on logic errors while executing VST plug-in callbacks. Now it just reports an error message instead of aborting REAPER.
 ]]></changelog>
-                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre7/realearn-windows-i686.dll</source>
+                <source platform="win32" file="FX/ReaLearn-x86.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre7/realearn-windows-i686.dll
+                </source>
             </version>
 
             <metadata>
@@ -708,7 +868,9 @@
 - Fixed non-working 'Track must be selected' target condition
 - Fixed non-moving slider when slider currently focused
 ]]></changelog>
-                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre6/realearn-windows-i686.dll</source>
+                <source platform="win32" file="FX/ReaLearn-x86.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre6/realearn-windows-i686.dll
+                </source>
             </version>
 
             <metadata>
@@ -733,7 +895,9 @@
 - Fixed non-working FX parameter selection
 - Fixed sometimes not working FX parameter learn
 ]]></changelog>
-                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre5/realearn-windows-i686.dll</source>
+                <source platform="win32" file="FX/ReaLearn-x86.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre5/realearn-windows-i686.dll
+                </source>
             </version>
 
             <metadata>
@@ -759,7 +923,9 @@
 - Fixed bug that caused ReaLearn instance to stay around as a ghost even if already removed. That caused surprising issues e.g. complaints about a target parameter not being found which was not used at all.
 - Fixed continuous MIDI feedback of automated FX parameter values, track send volume and track send pan. Now fires on real value changes only. It’s still possible that ReaLearn sends more feedback than necessary when having automation. This can happen if there are value changes but they are so small that they don’t have any effect on the feedback MIDI value (because MIDI feedback values have a very low resolution).)
 ]]></changelog>
-                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre4/realearn-windows-i686.dll</source>
+                <source platform="win32" file="FX/ReaLearn-x86.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre4/realearn-windows-i686.dll
+                </source>
             </version>
 
             <metadata>
@@ -781,7 +947,9 @@
                 <changelog><![CDATA[- Fixed some random error messages when using FX parameter target with parameters that report step sizes
 - Include more diagnostic information in error log messages (debug info such as line numbers)
 ]]></changelog>
-                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre3/realearn-windows-i686.dll</source>
+                <source platform="win32" file="FX/ReaLearn-x86.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre3/realearn-windows-i686.dll
+                </source>
             </version>
 
             <metadata>
@@ -824,7 +992,9 @@
 - Fixed crashes when removing plug-ins
 - Fixed bug that caused feedback and learn not working with master track
 ]]></changelog>
-                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-windows-i686.dll</source>
+                <source platform="win32" file="FX/ReaLearn-x86.dll">
+                    https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-windows-i686.dll
+                </source>
             </version>
 
             <metadata>
