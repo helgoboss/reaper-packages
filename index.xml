@@ -15,6 +15,39 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
+            <version name="1.12.0-pre7" author="helgoboss" time="2020-12-14T12:00:00Z">
+                <changelog><![CDATA[- Added possibility to let unmatched FX input MIDI events through even when using hardware input (the checkbox isn't greyed out anymore)
+- Improved accessibility by fixing tab order, default buttons and initial focus (affects mapping panel only because REAPER doesn't seem to support tab control in the actual main FX window)
+- Improved consistency by letting program numbers start at 0 (just a visual change)
+- Improved versatility by increasing number of conditional-activation parameters to 100
+- Improved quality assurance by adding a few integration tests (new developer action)
+- Improved usability by making online and offline user guide accessible via context menu (plus some other links)
+- Fixed error when choosing non-MSB controller for 14-bit CC sources (now silently converted to MSB controller)
+- Fixed "Find in mapping list" not switching mapping compartment
+- Fixed "Message: -1 is not a valid value" in a better way (translating negative values to zero instead of ignoring them)
+- Fixed REAPER crash when using automation on ReaLearn conditional-activation parameters
+- Fixed UI inconsistency by hiding track anchor dropdown if not relevant
+]]></changelog>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre7/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre7/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre7/realearn-linux-x86_64.so</source>
+            </version>
+
+            <metadata>
+                <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
+                <link rel="donation">https://www.paypal.me/helgoboss</link>
+                <link rel="screenshot" href="https://ibb.co/fGsnDnr">Mapping list</link>
+                <link rel="screenshot" href="https://ibb.co/qD8PwCV">Mapping detail</link>
+                <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is a VST instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 REAPER itself has this capability but some useful MIDI control scenarios are quite difficult and time-consuming to achieve with REAPER alone, for example if you want to restrict the controlled target value range. You would need to tinker with things like MIDIToReaControlPath and general purpose MIDI plug-ins. ReaLearn tries to make that much easier by giving you instant and easy access to lots of advanced features out-of-the-box.\par}
+}]]></description>
+            </metadata>
+
+
             <version name="1.12.0-pre6" author="helgoboss" time="2020-12-08T12:00:00Z">
                 <changelog><![CDATA[- Added possibility to refer to a track via its name or position (as an alternative to the default of using its unique and stable ID) ← Powerful addition, if you ask me!
 - Improved consistency by preventing the session ID to become non-unique as result of actively changing it via context menu
@@ -470,6 +503,37 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+            <version name="1.12.0-pre7" author="helgoboss" time="2020-12-14T12:00:00Z">
+                <changelog><![CDATA[- Added possibility to let unmatched FX input MIDI events through even when using hardware input (the checkbox isn't greyed out anymore)
+- Improved accessibility by fixing tab order, default buttons and initial focus (affects mapping panel only because REAPER doesn't seem to support tab control in the actual main FX window)
+- Improved consistency by letting program numbers start at 0 (just a visual change)
+- Improved versatility by increasing number of conditional-activation parameters to 100
+- Improved quality assurance by adding a few integration tests (new developer action)
+- Improved usability by making online and offline user guide accessible via context menu (plus some other links)
+- Fixed error when choosing non-MSB controller for 14-bit CC sources (now silently converted to MSB controller)
+- Fixed "Find in mapping list" not switching mapping compartment
+- Fixed "Message: -1 is not a valid value" in a better way (translating negative values to zero instead of ignoring them)
+- Fixed REAPER crash when using automation on ReaLearn conditional-activation parameters
+- Fixed UI inconsistency by hiding track anchor dropdown if not relevant
+]]></changelog>
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre7/realearn-windows-i686.dll</source>
+            </version>
+
+            <metadata>
+                <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
+                <link rel="donation">https://www.paypal.me/helgoboss</link>
+                <link rel="screenshot" href="https://ibb.co/fGsnDnr">Mapping list</link>
+                <link rel="screenshot" href="https://ibb.co/qD8PwCV">Mapping detail</link>
+                <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is a VST instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 REAPER itself has this capability but some useful MIDI control scenarios are quite difficult and time-consuming to achieve with REAPER alone, for example if you want to restrict the controlled target value range. You would need to tinker with things like MIDIToReaControlPath and general purpose MIDI plug-ins. ReaLearn tries to make that much easier by giving you instant and easy access to lots of advanced features out-of-the-box.\par}
+}]]></description>
+            </metadata>
+
 
             <version name="1.12.0-pre6" author="helgoboss" time="2020-12-08T12:00:00Z">
                 <changelog><![CDATA[- Added possibility to refer to a track via its name or position (as an alternative to the default of using its unique and stable ID) ← Powerful addition, if you ask me!
