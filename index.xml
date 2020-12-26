@@ -29,7 +29,9 @@
 - Fixed inconsistent feedback processing order (changes behavior of existing feedback transformation formulas if used in combination with source or target interval restrictions, so they might need some adjustment!)
 ]]></changelog>
 
-                <source type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre8/realearn-user-guide.pdf</source>
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre8/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre8/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre8/realearn-user-guide.pdf</source>
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre8/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre8/realearn-macos-x86_64.vst.dylib</source>
@@ -569,7 +571,7 @@
 - Fixed inconsistent feedback processing order (changes behavior of existing feedback transformation formulas if used in combination with source or target interval restrictions, so they might need some adjustment!)
 ]]></changelog>
 
-                <source type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre8/realearn-user-guide.pdf</source>
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre8/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre8/realearn-windows-i686.dll</source>
             </version>
