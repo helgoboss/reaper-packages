@@ -10,6 +10,9 @@
             </version>
         </reapack>
         <reapack name="apc-key-25" type="data" desc="APC Key 25">
+            <version name="1.0.1" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/apc-key-25.json">https://raw.githubusercontent.com/helgoboss/realearn/e733564b368ee077a56bbb40301baae3641884d8/resources/controllers/apc-key-25.json</source>
+            </version>
             <version name="1.0.0" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/apc-key-25.json">https://raw.githubusercontent.com/helgoboss/realearn/d6be9c98a7bc9ace696e5e63423079ed5f6f34bf/resources/controllers/apc-key-25.json</source>
             </version>
