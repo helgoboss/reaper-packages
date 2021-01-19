@@ -21,7 +21,7 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
-            <version name="1.12.0-pre12" author="helgoboss" time="2021-01-19T12:00:00Z">
+            <version name="1.12.0-pre13" author="helgoboss" time="2021-01-19T12:00:00Z">
                 <changelog><![CDATA[- Added "Reload all" button for reloading all presets from preset files
 - Improved user interface by making mapping rows less grey and adding some horizontal rules
 - Fixed learning of virtual source if virtual source is fed by MIDI (N)RPN source
@@ -30,9 +30,9 @@
 - Fixed double-processing of MIDI messages when "MIDI control input" set to MIDI device
 ]]></changelog>
 
-                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre12/realearn-windows-x86_64.dll</source>
-                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre12/realearn-macos-x86_64.vst.dylib</source>
-                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre12/realearn-linux-x86_64.so</source>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre13/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre13/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre13/realearn-linux-x86_64.so</source>
             </version>
 
             <metadata>
@@ -692,7 +692,7 @@
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
-            <version name="1.12.0-pre12" author="helgoboss" time="2021-01-19T12:00:00Z">
+            <version name="1.12.0-pre13" author="helgoboss" time="2021-01-19T12:00:00Z">
                 <changelog><![CDATA[- Added "Reload all" button for reloading all presets from preset files
 - Improved user interface by making mapping rows less grey and adding some horizontal rules
 - Fixed learning of virtual source if virtual source is fed by MIDI (N)RPN source
@@ -701,7 +701,7 @@
 - Fixed double-processing of MIDI messages when "MIDI control input" set to MIDI device
 ]]></changelog>
 
-                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre12/realearn-windows-i686.dll</source>
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre13/realearn-windows-i686.dll</source>
             </version>
 
             <metadata>
