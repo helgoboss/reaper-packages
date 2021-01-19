@@ -21,7 +21,36 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
-            <version name="1.12.0-pre11" author="helgoboss" time="2021-01-13T12:00:00Z">
+            <version name="1.12.0-pre12" author="helgoboss" time="2021-01-19T12:00:00Z">
+                <changelog><![CDATA[- Added "Reload all" button for reloading all presets from preset files
+- Improved user interface by making mapping rows less grey and adding some horizontal rules
+- Fixed learning of virtual source if virtual source is fed by MIDI (N)RPN source
+- Fixed bug that could cause target value to get stuck if step size too small when it could be avoided
+- Fixed "BorrowMut" error and potential race conditions when "Allow live FX multiprocessing" enabled
+- Fixed double-processing of MIDI messages when "MIDI control input" set to MIDI device
+]]></changelog>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre12/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre12/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre12/realearn-linux-x86_64.so</source>
+            </version>
+
+            <metadata>
+                <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
+                <link rel="donation">https://www.paypal.me/helgoboss</link>
+                <link rel="screenshot" href="https://ibb.co/fGsnDnr">Mapping list</link>
+                <link rel="screenshot" href="https://ibb.co/qD8PwCV">Mapping detail</link>
+                <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is a VST instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 REAPER itself has this capability but some useful MIDI control scenarios are quite difficult and time-consuming to achieve with REAPER alone, for example if you want to restrict the controlled target value range. You would need to tinker with things like MIDIToReaControlPath and general purpose MIDI plug-ins. ReaLearn tries to make that much easier by giving you instant and easy access to lots of advanced features out-of-the-box.\par}
+}]]></description>
+            </metadata>
+
+
+            <version name="1.12.0-pre11" author="helgoboss" time="2021-01-16T12:00:00Z">
                 <changelog><![CDATA[- Improved usability by including source character in mapping row source label (makes it easier to spot character guessing issues)
 - Improved (N)RPN scanning to support popular controllers (such as Behringer BCR2000), prefer value-MSB-first now
 - Fixed broken arrow symbols on Windows 7 (display rectangles instead of arrows)
@@ -663,7 +692,34 @@
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
-            <version name="1.12.0-pre11" author="helgoboss" time="2021-01-13T12:00:00Z">
+            <version name="1.12.0-pre12" author="helgoboss" time="2021-01-19T12:00:00Z">
+                <changelog><![CDATA[- Added "Reload all" button for reloading all presets from preset files
+- Improved user interface by making mapping rows less grey and adding some horizontal rules
+- Fixed learning of virtual source if virtual source is fed by MIDI (N)RPN source
+- Fixed bug that could cause target value to get stuck if step size too small when it could be avoided
+- Fixed "BorrowMut" error and potential race conditions when "Allow live FX multiprocessing" enabled
+- Fixed double-processing of MIDI messages when "MIDI control input" set to MIDI device
+]]></changelog>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre12/realearn-windows-i686.dll</source>
+            </version>
+
+            <metadata>
+                <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
+                <link rel="donation">https://www.paypal.me/helgoboss</link>
+                <link rel="screenshot" href="https://ibb.co/fGsnDnr">Mapping list</link>
+                <link rel="screenshot" href="https://ibb.co/qD8PwCV">Mapping detail</link>
+                <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is a VST instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 REAPER itself has this capability but some useful MIDI control scenarios are quite difficult and time-consuming to achieve with REAPER alone, for example if you want to restrict the controlled target value range. You would need to tinker with things like MIDIToReaControlPath and general purpose MIDI plug-ins. ReaLearn tries to make that much easier by giving you instant and easy access to lots of advanced features out-of-the-box.\par}
+}]]></description>
+            </metadata>
+
+
+            <version name="1.12.0-pre11" author="helgoboss" time="2021-01-16T12:00:00Z">
                 <changelog><![CDATA[- Improved usability by including source character in mapping row source label (makes it easier to spot character guessing issues)
 - Improved (N)RPN scanning to support popular controllers (such as Behringer BCR2000), prefer value-MSB-first now
 - Fixed broken arrow symbols on Windows 7 (display rectangles instead of arrows)
