@@ -13,12 +13,27 @@
                 <source file="helgoboss/realearn/presets/controller/midi-fighter-twister.json">https://raw.githubusercontent.com/helgoboss/realearn/d6be9c98a7bc9ace696e5e63423079ed5f6f34bf/resources/controllers/midi-fighter-twister.json</source>
             </version>
         </reapack>
+        <reapack name="midi-fighter-twister-bank-2" type="data" desc="MIDI Fighter Twister - Bank 2">
+            <version name="1.0.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/midi-fighter-twister-bank-2.json">https://raw.githubusercontent.com/helgoboss/realearn/c853ae48c9ec4493a52ab7fdb7a4bc1044ac5412/resources/controllers/midi-fighter-twister-bank-2.json</source>
+            </version>
+        </reapack>
         <reapack name="apc-key-25" type="data" desc="APC Key 25">
             <version name="1.0.1" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/apc-key-25.json">https://raw.githubusercontent.com/helgoboss/realearn/e733564b368ee077a56bbb40301baae3641884d8/resources/controllers/apc-key-25.json</source>
             </version>
             <version name="1.0.0" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/apc-key-25.json">https://raw.githubusercontent.com/helgoboss/realearn/d6be9c98a7bc9ace696e5e63423079ed5f6f34bf/resources/controllers/apc-key-25.json</source>
+            </version>
+        </reapack>
+        <reapack name="icon-platform-m" type="data" desc="iCON Platform M+">
+            <version name="1.0.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/icon-platform-m.json">https://raw.githubusercontent.com/helgoboss/realearn/c853ae48c9ec4493a52ab7fdb7a4bc1044ac5412/resources/controllers/icon-platform-m.json</source>
+            </version>
+        </reapack>
+        <reapack name="launchpad-pro" type="data" desc="Launchpad Pro">
+            <version name="1.0.0-pre1" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/launchpad-pro.json">https://raw.githubusercontent.com/helgoboss/realearn/c853ae48c9ec4493a52ab7fdb7a4bc1044ac5412/resources/controllers/launchpad-pro.json</source>
             </version>
         </reapack>
     </category>
