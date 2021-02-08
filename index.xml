@@ -36,9 +36,53 @@
                 <source file="helgoboss/realearn/presets/controller/launchpad-pro.json">https://raw.githubusercontent.com/helgoboss/realearn/c853ae48c9ec4493a52ab7fdb7a4bc1044ac5412/resources/controllers/launchpad-pro.json</source>
             </version>
         </reapack>
+        <reapack name="x-touch-compact" type="data" desc="X-Touch Compact">
+            <version name="1.0.0-pre1" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/x-touch-compact.json">https://raw.githubusercontent.com/helgoboss/realearn/223d7e63d4773234902fe065dd42bba1a76938bf/resources/controllers/x-touch-compact.json</source>
+            </version>
+        </reapack>
+        <reapack name="x-touch-compact-layer-b" type="data" desc="X-Touch Compact - Layer B">
+            <version name="1.0.0-pre1" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/x-touch-compact-layer-b.json">https://raw.githubusercontent.com/helgoboss/realearn/223d7e63d4773234902fe065dd42bba1a76938bf/resources/controllers/x-touch-compact-layer-b.json</source>
+            </version>
+        </reapack>
+        <reapack name="mackie-control" type="data" desc="Mackie Control">
+            <version name="1.0.0-pre1" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/mackie-control.json">https://raw.githubusercontent.com/helgoboss/realearn/bd7f5e1bf4e8ee5552243d89829de1085dfb70e8/resources/controllers/mackie-control.json</source>
+            </version>
+        </reapack>
     </category>
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+            <version name="1.12.0-pre21" author="helgoboss" time="2021-02-08T12:00:00Z">
+                <changelog><![CDATA[- Added controller presets and user guide entries for X-Touch Compact, Mackie Control, iCON Platform M+ and MIDI Fighter Twister Bank 2
+- Improved projection QR code detection rate by greatly simplifying it for now (doesn't carry certificate content anymore, which was only useful when using web-based companion app from mobile device, which is an edge case, especially considering that an iOS app is on the way)
+- Improved usability by automatically switch off source/target filter learning when doing certain UI interactions
+- Fixed nonsense learning of virtual sources in controller mappings compartment (that was really bad for batch learning control elements)
+- Fixed missing mapping lanel UI update when learning other parameter of same FX
+- Fixed 'Solo' target learning (was always resulting in master track)
+]]></changelog>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre21/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre21/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre21/realearn-linux-x86_64.so</source>
+            </version>
+
+            <metadata>
+                <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
+                <link rel="donation">https://www.paypal.me/helgoboss</link>
+                <link rel="screenshot" href="https://ibb.co/fGsnDnr">Mapping list</link>
+                <link rel="screenshot" href="https://ibb.co/qD8PwCV">Mapping detail</link>
+                <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is a VST instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 REAPER itself has this capability but some useful MIDI control scenarios are quite difficult and time-consuming to achieve with REAPER alone, for example if you want to restrict the controlled target value range. You would need to tinker with things like MIDIToReaControlPath and general purpose MIDI plug-ins. ReaLearn tries to make that much easier by giving you instant and easy access to lots of advanced features out-of-the-box.\par}
+}]]></description>
+            </metadata>
+
 
             <version name="1.12.0-pre20" author="helgoboss" time="2021-01-30T12:00:00Z">
                 <changelog><![CDATA[- Added powerful REAPER actions for learning and finding mappings without opening ReaLearn
@@ -856,6 +900,33 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+            <version name="1.12.0-pre21" author="helgoboss" time="2021-02-08T12:00:00Z">
+                <changelog><![CDATA[- Added controller presets and user guide entries for X-Touch Compact, Mackie Control, iCON Platform M+ and MIDI Fighter Twister Bank 2
+- Improved projection QR code detection rate by greatly simplifying it for now (doesn't carry certificate content anymore, which was only useful when using web-based companion app from mobile device, which is an edge case, especially considering that an iOS app is on the way)
+- Improved usability by automatically switch off source/target filter learning when doing certain UI interactions
+- Fixed nonsense learning of virtual sources in controller mappings compartment (that was really bad for batch learning control elements)
+- Fixed missing mapping lanel UI update when learning other parameter of same FX
+- Fixed 'Solo' target learning (was always resulting in master track)
+]]></changelog>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre21/realearn-windows-i686.dll</source>
+            </version>
+
+            <metadata>
+                <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
+                <link rel="donation">https://www.paypal.me/helgoboss</link>
+                <link rel="screenshot" href="https://ibb.co/fGsnDnr">Mapping list</link>
+                <link rel="screenshot" href="https://ibb.co/qD8PwCV">Mapping detail</link>
+                <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is a VST instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 REAPER itself has this capability but some useful MIDI control scenarios are quite difficult and time-consuming to achieve with REAPER alone, for example if you want to restrict the controlled target value range. You would need to tinker with things like MIDIToReaControlPath and general purpose MIDI plug-ins. ReaLearn tries to make that much easier by giving you instant and easy access to lots of advanced features out-of-the-box.\par}
+}]]></description>
+            </metadata>
+
 
             <version name="1.12.0-pre20" author="helgoboss" time="2021-01-30T12:00:00Z">
                 <changelog><![CDATA[- Added powerful REAPER actions for learning and finding mappings without opening ReaLearn
