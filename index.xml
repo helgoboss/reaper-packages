@@ -55,6 +55,124 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
+            <version name="2.0.1" author="helgoboss" time="2021-02-10T12:00:00Z">
+                <changelog><![CDATA[- Added controller mapping feature (possibility to define controller-specific mappings, virtual sources and virtual targets)
+- Added a bunch of controller presets
+- Added possibility to refer to a track via its name or position (as an alternative to the default of using its unique and stable ID) ← That's called track anchors, a powerful addition, if you ask me!
+- Added controller projection feature (by using the new ReaLearn Companion app)
+- Added indication of scroll position and number of mappings
+- Added possibility to let unmatched FX input MIDI events through even when using hardware input (the checkbox isn't greyed out anymore)
+- Added support for main presets (analogously to controller presets)
+- Added batch-learning of multiple mappings (new button "Learn many")
+- Added FX anchors (analogously to track anchors)
+- Added new target FX option "&lt;Focused>" (analogously to track "&lt;Selected>")
+- Added preset auto-loading depending on focused FX (!)
+- Added possibility to assign mappings to different groups and set activation condition and control/feedback enable state for each group
+- Added limited MIDI feedback support for MIDI CC actions (requires REAPER >= 6.20)
+- Added possibility again to enter values > 100x in Speed text field (useful e.g. when using relative encoders with some NI plug-ins that report continuous parameters with step sizes that are very low)
+- Added performance measuring of ReaLearn control surface methods (including exposing metrics in Prometheus format)
+- Added possibility to use preset "Reset to factory default" to clear all settings, groups and mappings (without changing the session ID)
+- Added user guide sections "Tested controllers" and "Tutorials"
+- Added experimental new option 'Make absolute' in order to convert relative to absolute values (lets you use EEL control transformation with encoders)
+- Added powerful REAPER actions for learning and finding mappings without opening ReaLearn
+- Improved source character guessing (yields best results when turning clockwise!)
+- Improved learning of transport buttons (now prefers ReaLearn's built-in transport target over the corresponding REAPER actions)
+- Improved usability by automatically clearing filters and search expression when adding a mapping (to make sure it's shown)
+- Improved preset usability by asking user whether to automatically convert project-anchored targets to project-independent ones
+- Improved usability by scrolling to newly added/duplicated mapping if necessary
+- Improved usability by rethinking the mapping mode concept (The mapping window section is now called "Tuning" instead of "Mode" because a mapping can now cope with both relative and absolute source values, no matter the mode! It just depends on whatever value type the source emits - relative or absolute values. From now on, the "Mode" just describes how to interpret incoming absolute values. This is a "mostly" backward-compatible change since it changes only behavior of mappings that didn't have an effect anyway till now because source value type and mode didn't match.)
+- Improved usability by indicating mappings that are "off" by greying them out
+- Improved resource usage by greatly reducing project file size, undo entry size and preset size
+- Improve error logging (makes it easier to map debug symbols, on Windows at least)
+- Improved usability by making most confirmation and alert dialogs modal with respect to the ReaLearn window itself, not REAPER
+- Improved accessibility by fixing tab order, default buttons and initial focus (affects mapping panel only because REAPER doesn't seem to support tab control in the actual main FX window)
+- Improved consistency by letting program numbers start at 0 (just a visual change)
+- Improved versatility by increasing number of conditional-activation parameters to 100
+- Improved quality assurance by adding a few integration tests (new developer action)
+- Improved usability by making online and offline user guide accessible via context menu (plus some other links)
+- Improved usability by also stopping source filter learning when clearing the source filter
+- Improved usability disabling all control while learning a target (no more undesired target learning by moving an already assigned control, at least within one ReaLearn instance)
+- Improved usability by including source character in mapping row source label (makes it easier to spot character guessing issues)
+- Improved (N)RPN scanning to support popular controllers (such as Behringer BCR2000), prefer value-MSB-first now
+- Improved user interface by making mapping rows less grey and adding some horizontal rules
+- Improved usability by making "Absolute" the default invocation mode for actions, was "Trigger" before (this change could break some action mappings done with previous 1.12.0 prereleases)
+- Improved "Length" sliders to work for "Incremental buttons" mode, too
+- Improved usability by always sorting groups alphabetically
+- Improved usage of ReaLearn as monitoring FX by making parameter feedback and learning work (usually, REAPER extensions don't get notified of anything happening on the monitoring FX chain, but at least for ReaLearn parameter changes I managed to create a workaround ... which is good news especially for global conditional activation use cases)
+- Improved user guide (related to keyboard input, monitoring FX and limitations of monitoring FX)
+- Improved safety by warning whenever loading something made in a newer ReaLearn version than the current one (version number gets part of the preset data, that also paves the way for preset migration)
+- Improved usability by preferring position anchors over ID anchors when learning from a ReaLearn instance that is on the monitoring FX chain
+- Improved wording related to encoders, renamed internal named parameter for setting state to 'set-state'
+- Improved usability by making ID now really the new default FX anchor, not 'ID or position'
+- Improved awareness by changing the prime EEL control transformation example into an actually very useful one: a curve
+- Improved usability by indicating if MIDI input or output device disabled in REAPER preferences
+- Improved behavior by disabling control (not just feedback) for disabled ReaLearn FX instances (before this, it still kept controlling when a device was selected as 'MIDI control input')
+- Improved projection QR code detection rate by greatly simplifying it for now (doesn't carry certificate content anymore, which was only useful when using web-based companion app from mobile device, which is an edge case, especially considering that an iOS app is on the way)
+- Improved usability by automatically switch off source/target filter learning when doing certain UI interactions
+- Fixed nonsense learning of virtual sources in controller mappings compartment (that was really bad for batch learning control elements)
+- Fixed missing mapping lanel UI update when learning other parameter of same FX
+- Fixed 'Solo' target learning (was always resulting in master track)
+- Fixed bug that caused ReaLearn-monitoring-FX controlled targets to become sticky when switching between project tabs (not updating correctly)
+- Fixed error message when pressing space bar in an empty ReaLearn instance
+- Fixed possible "Raw pointer..." error when using track selection targets
+- Fixed possible "couldn't get FX param value..." error when using FX parameter target
+- Fixed action invocation mode "trigger", which sometimes wouldn't fire
+- Fixed misleading labels in mapping panel
+- Fixed feedback when reverse enabled and target range non-symmetric
+- Fixed bug with broken plug-ins that report parameter as discrete but with a nonsensical step size of zero
+- Fixed broken arrow symbols on Windows 7 (display rectangles instead of arrows)
+- Fixed "Couldn't get preset count" error
+- Fixed (N)RPN learning and consumption check
+- Fixed wrong info that feedback not working for (N)RPN (it works!)
+- Fixed "Track send pan" target (was confused with "Track send volume")
+- Fixed bug that caused overscrolling when clicking on "Find in mapping list" button
+- Fixed inconsistent feedback processing order (changes behavior of existing feedback transformation formulas if used in combination with source or target interval restrictions, so they might need some adjustment!)
+- Fixed error when choosing non-MSB controller for 14-bit CC sources (now silently converted to MSB controller)
+- Fixed "Find in mapping list" not switching mapping compartment
+- Fixed bug that caused initial parameter values to be sometimes ignored in conditional activation
+- Fixed scrolling issues when mapping list filtered
+- Fixed error message when trying to pick action
+- Fixed "is not a valid unit value" error (happened when reading volume values above the fader limit set in REAPER preferences)
+- Fixed "negative MIDI frame offset" error (negative offsets are interpreted as zero now)
+- Fixed "Message: assertion failed: Bpm::is_valid(value)" error (could happen when using controllers that send MIDI clock)
+- Fixed "Message: -1 is not a valid value" error (caused by unexpected FX parameter change value)
+- Fixed Windows 7 character issues in dropdown menus
+- Fixed error message if track could not be found
+- Fixed REAPER crash when using automation on ReaLearn conditional-activation parameters
+- Fixed error when encountering MIDI device name with incorrectly encoded special characters
+- Fixed error when encountering invalid MIDI messages (they are now ignored)
+- Fixed bug that caused ReaLearn to stop working when project paused and ReaLearn track not armed
+- Fixed auto correction for "Send feedback only if track armed"
+- Fixed bug that could cause target value to get stuck if step size too small when it could be avoided
+- Fixed "BorrowMut" error and potential race conditions when "Allow live FX multiprocessing" enabled
+- Fixed segmentation fault on Linux when loading ReaLearn after plug-in scan
+- Fixed wrong reverse behavior in 'Normal' mode when target value range is non-symmetric (old presets will keep their wrong behavior in order to not break existing projects)
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.0.1/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.0.1/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.0.1/realearn-user-guide.pdf</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.0.1/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.0.1/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.0.1/realearn-linux-x86_64.so</source>
+            </version>
+
+            <metadata>
+                <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
+                <link rel="donation">https://www.paypal.me/helgoboss</link>
+                <link rel="screenshot" href="https://ibb.co/fGsnDnr">Mapping list</link>
+                <link rel="screenshot" href="https://ibb.co/qD8PwCV">Mapping detail</link>
+                <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is a VST instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 REAPER itself has this capability but some useful MIDI control scenarios are quite difficult and time-consuming to achieve with REAPER alone, for example if you want to restrict the controlled target value range. You would need to tinker with things like MIDIToReaControlPath and general purpose MIDI plug-ins. ReaLearn tries to make that much easier by giving you instant and easy access to lots of advanced features out-of-the-box.\par}
+}]]></description>
+            </metadata>
+
+
             <version name="1.12.0-pre21" author="helgoboss" time="2021-02-08T12:00:00Z">
                 <changelog><![CDATA[- Added controller presets and user guide entries for X-Touch Compact, Mackie Control, iCON Platform M+ and MIDI Fighter Twister Bank 2
 - Improved projection QR code detection rate by greatly simplifying it for now (doesn't carry certificate content anymore, which was only useful when using web-based companion app from mobile device, which is an edge case, especially considering that an iOS app is on the way)
@@ -900,6 +1018,120 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+            <version name="2.0.1" author="helgoboss" time="2021-02-10T12:00:00Z">
+                <changelog><![CDATA[- Added controller mapping feature (possibility to define controller-specific mappings, virtual sources and virtual targets)
+- Added a bunch of controller presets
+- Added possibility to refer to a track via its name or position (as an alternative to the default of using its unique and stable ID) ← That's called track anchors, a powerful addition, if you ask me!
+- Added controller projection feature (by using the new ReaLearn Companion app)
+- Added indication of scroll position and number of mappings
+- Added possibility to let unmatched FX input MIDI events through even when using hardware input (the checkbox isn't greyed out anymore)
+- Added support for main presets (analogously to controller presets)
+- Added batch-learning of multiple mappings (new button "Learn many")
+- Added FX anchors (analogously to track anchors)
+- Added new target FX option "&lt;Focused>" (analogously to track "&lt;Selected>")
+- Added preset auto-loading depending on focused FX (!)
+- Added possibility to assign mappings to different groups and set activation condition and control/feedback enable state for each group
+- Added limited MIDI feedback support for MIDI CC actions (requires REAPER >= 6.20)
+- Added possibility again to enter values > 100x in Speed text field (useful e.g. when using relative encoders with some NI plug-ins that report continuous parameters with step sizes that are very low)
+- Added performance measuring of ReaLearn control surface methods (including exposing metrics in Prometheus format)
+- Added possibility to use preset "Reset to factory default" to clear all settings, groups and mappings (without changing the session ID)
+- Added user guide sections "Tested controllers" and "Tutorials"
+- Added experimental new option 'Make absolute' in order to convert relative to absolute values (lets you use EEL control transformation with encoders)
+- Added powerful REAPER actions for learning and finding mappings without opening ReaLearn
+- Improved source character guessing (yields best results when turning clockwise!)
+- Improved learning of transport buttons (now prefers ReaLearn's built-in transport target over the corresponding REAPER actions)
+- Improved usability by automatically clearing filters and search expression when adding a mapping (to make sure it's shown)
+- Improved preset usability by asking user whether to automatically convert project-anchored targets to project-independent ones
+- Improved usability by scrolling to newly added/duplicated mapping if necessary
+- Improved usability by rethinking the mapping mode concept (The mapping window section is now called "Tuning" instead of "Mode" because a mapping can now cope with both relative and absolute source values, no matter the mode! It just depends on whatever value type the source emits - relative or absolute values. From now on, the "Mode" just describes how to interpret incoming absolute values. This is a "mostly" backward-compatible change since it changes only behavior of mappings that didn't have an effect anyway till now because source value type and mode didn't match.)
+- Improved usability by indicating mappings that are "off" by greying them out
+- Improved resource usage by greatly reducing project file size, undo entry size and preset size
+- Improve error logging (makes it easier to map debug symbols, on Windows at least)
+- Improved usability by making most confirmation and alert dialogs modal with respect to the ReaLearn window itself, not REAPER
+- Improved accessibility by fixing tab order, default buttons and initial focus (affects mapping panel only because REAPER doesn't seem to support tab control in the actual main FX window)
+- Improved consistency by letting program numbers start at 0 (just a visual change)
+- Improved versatility by increasing number of conditional-activation parameters to 100
+- Improved quality assurance by adding a few integration tests (new developer action)
+- Improved usability by making online and offline user guide accessible via context menu (plus some other links)
+- Improved usability by also stopping source filter learning when clearing the source filter
+- Improved usability disabling all control while learning a target (no more undesired target learning by moving an already assigned control, at least within one ReaLearn instance)
+- Improved usability by including source character in mapping row source label (makes it easier to spot character guessing issues)
+- Improved (N)RPN scanning to support popular controllers (such as Behringer BCR2000), prefer value-MSB-first now
+- Improved user interface by making mapping rows less grey and adding some horizontal rules
+- Improved usability by making "Absolute" the default invocation mode for actions, was "Trigger" before (this change could break some action mappings done with previous 1.12.0 prereleases)
+- Improved "Length" sliders to work for "Incremental buttons" mode, too
+- Improved usability by always sorting groups alphabetically
+- Improved usage of ReaLearn as monitoring FX by making parameter feedback and learning work (usually, REAPER extensions don't get notified of anything happening on the monitoring FX chain, but at least for ReaLearn parameter changes I managed to create a workaround ... which is good news especially for global conditional activation use cases)
+- Improved user guide (related to keyboard input, monitoring FX and limitations of monitoring FX)
+- Improved safety by warning whenever loading something made in a newer ReaLearn version than the current one (version number gets part of the preset data, that also paves the way for preset migration)
+- Improved usability by preferring position anchors over ID anchors when learning from a ReaLearn instance that is on the monitoring FX chain
+- Improved wording related to encoders, renamed internal named parameter for setting state to 'set-state'
+- Improved usability by making ID now really the new default FX anchor, not 'ID or position'
+- Improved awareness by changing the prime EEL control transformation example into an actually very useful one: a curve
+- Improved usability by indicating if MIDI input or output device disabled in REAPER preferences
+- Improved behavior by disabling control (not just feedback) for disabled ReaLearn FX instances (before this, it still kept controlling when a device was selected as 'MIDI control input')
+- Improved projection QR code detection rate by greatly simplifying it for now (doesn't carry certificate content anymore, which was only useful when using web-based companion app from mobile device, which is an edge case, especially considering that an iOS app is on the way)
+- Improved usability by automatically switch off source/target filter learning when doing certain UI interactions
+- Fixed nonsense learning of virtual sources in controller mappings compartment (that was really bad for batch learning control elements)
+- Fixed missing mapping lanel UI update when learning other parameter of same FX
+- Fixed 'Solo' target learning (was always resulting in master track)
+- Fixed bug that caused ReaLearn-monitoring-FX controlled targets to become sticky when switching between project tabs (not updating correctly)
+- Fixed error message when pressing space bar in an empty ReaLearn instance
+- Fixed possible "Raw pointer..." error when using track selection targets
+- Fixed possible "couldn't get FX param value..." error when using FX parameter target
+- Fixed action invocation mode "trigger", which sometimes wouldn't fire
+- Fixed misleading labels in mapping panel
+- Fixed feedback when reverse enabled and target range non-symmetric
+- Fixed bug with broken plug-ins that report parameter as discrete but with a nonsensical step size of zero
+- Fixed broken arrow symbols on Windows 7 (display rectangles instead of arrows)
+- Fixed "Couldn't get preset count" error
+- Fixed (N)RPN learning and consumption check
+- Fixed wrong info that feedback not working for (N)RPN (it works!)
+- Fixed "Track send pan" target (was confused with "Track send volume")
+- Fixed bug that caused overscrolling when clicking on "Find in mapping list" button
+- Fixed inconsistent feedback processing order (changes behavior of existing feedback transformation formulas if used in combination with source or target interval restrictions, so they might need some adjustment!)
+- Fixed error when choosing non-MSB controller for 14-bit CC sources (now silently converted to MSB controller)
+- Fixed "Find in mapping list" not switching mapping compartment
+- Fixed bug that caused initial parameter values to be sometimes ignored in conditional activation
+- Fixed scrolling issues when mapping list filtered
+- Fixed error message when trying to pick action
+- Fixed "is not a valid unit value" error (happened when reading volume values above the fader limit set in REAPER preferences)
+- Fixed "negative MIDI frame offset" error (negative offsets are interpreted as zero now)
+- Fixed "Message: assertion failed: Bpm::is_valid(value)" error (could happen when using controllers that send MIDI clock)
+- Fixed "Message: -1 is not a valid value" error (caused by unexpected FX parameter change value)
+- Fixed Windows 7 character issues in dropdown menus
+- Fixed error message if track could not be found
+- Fixed REAPER crash when using automation on ReaLearn conditional-activation parameters
+- Fixed error when encountering MIDI device name with incorrectly encoded special characters
+- Fixed error when encountering invalid MIDI messages (they are now ignored)
+- Fixed bug that caused ReaLearn to stop working when project paused and ReaLearn track not armed
+- Fixed auto correction for "Send feedback only if track armed"
+- Fixed bug that could cause target value to get stuck if step size too small when it could be avoided
+- Fixed "BorrowMut" error and potential race conditions when "Allow live FX multiprocessing" enabled
+- Fixed segmentation fault on Linux when loading ReaLearn after plug-in scan
+- Fixed wrong reverse behavior in 'Normal' mode when target value range is non-symmetric (old presets will keep their wrong behavior in order to not break existing projects)
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.0.1/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.0.1/realearn-windows-i686.dll</source>
+            </version>
+
+            <metadata>
+                <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
+                <link rel="donation">https://www.paypal.me/helgoboss</link>
+                <link rel="screenshot" href="https://ibb.co/fGsnDnr">Mapping list</link>
+                <link rel="screenshot" href="https://ibb.co/qD8PwCV">Mapping detail</link>
+                <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is a VST instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 REAPER itself has this capability but some useful MIDI control scenarios are quite difficult and time-consuming to achieve with REAPER alone, for example if you want to restrict the controlled target value range. You would need to tinker with things like MIDIToReaControlPath and general purpose MIDI plug-ins. ReaLearn tries to make that much easier by giving you instant and easy access to lots of advanced features out-of-the-box.\par}
+}]]></description>
+            </metadata>
+
 
             <version name="1.12.0-pre21" author="helgoboss" time="2021-02-08T12:00:00Z">
                 <changelog><![CDATA[- Added controller presets and user guide entries for X-Touch Compact, Mackie Control, iCON Platform M+ and MIDI Fighter Twister Bank 2
