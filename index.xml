@@ -55,6 +55,51 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
+            <version name="2.4.0" author="helgoboss" time="2021-02-26T12:00:00Z">
+                <changelog><![CDATA[- Added "Exclusive" dropdown to all "track property on/off"-style targets (arm, selection, mute, solo, fx all enable, automation touch state) which even allows "Exclusive within folder" behavior (my personal favorite)
+- Added "Automation touch state" target in order to support "Touch" automation mode for volume, pan and width envelopes (e.g. with touch-sensitive faders or push encoders)
+- Added option "Behavior" for "Track solo" target, start using the routing-friendly "Solo in front" behavior by default
+- Added REAPER action "ReaLearn: Send feedback for all instances" (useful mainly for debugging purposes because ReaLearn usually sends feedback automatically)
+- Improved "Track solo" target by making it work with "Options → Solo in front"
+- Improved usability by clearing feedback (switch off lights or turn down motorized faders) when closing ReaLearn instance or REAPER project
+- Improved "Track mute" target by making it work reliably also on master track and by making feedback from automation work
+- Improved usability by disabling learning of "Track selection" target if REAPER preference "Mouse click on volume/pan faders and track buttons changes track selection" enabled (in order to avoid false positives, preference change respected after REAPER restart)
+- Improved usability by making "Master tempo" target uneligible as "Last touched" target and for learning in general (there were too many false positives and it could get annoying at times, just select the target manually in the dropdown to use it)
+- Improved usability by letting the user confirm before globally removing an OSC device
+- Improved usability by not firing immediately when changing the encoder turning direction while using a negative "Speed" setting (that was annoying and could result in sudden unwanted parameter changes)
+- Improved usability by not annoying user with error messages when controlling just because they use some setting that doesn't make sense (such as controlling relative targets with absolute messages)
+- Improved usability by clearing feedback of the previous source if a mapping source is changed
+- Fixed non-working automation writing for "Track width" target when controlled via relative encoder
+- Fixed often missing initial feedback for virtual controller mappings (LEDs were sometimes not updated before interacting with the project, e.g. by pressing play)
+- Fixed possible "assertion failed: 0.0 &lt;= normalized_value || normalized_value.is_nan()" error with volume targets
+- Fixed recent bug that caused "Track selection" target to be learned with wrong track (the previously selected one instead of the newly selected)
+- Fixed recent bug that caused wrong "Selected track" target feedback
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.4.0/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.4.0/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.4.0/realearn-user-guide.pdf</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.4.0/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.4.0/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.4.0/realearn-linux-x86_64.so</source>
+            </version>
+
+            <metadata>
+                <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
+                <link rel="donation">https://www.paypal.me/helgoboss</link>
+                <link rel="screenshot" href="https://ibb.co/fGsnDnr">Mapping list</link>
+                <link rel="screenshot" href="https://ibb.co/qD8PwCV">Mapping detail</link>
+                <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is a VST instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 REAPER itself has this capability but some useful MIDI control scenarios are quite difficult and time-consuming to achieve with REAPER alone, for example if you want to restrict the controlled target value range. You would need to tinker with things like MIDIToReaControlPath and general purpose MIDI plug-ins. ReaLearn tries to make that much easier by giving you instant and easy access to lots of advanced features out-of-the-box.\par}
+}]]></description>
+            </metadata>
+
+
             <version name="2.3.2" author="helgoboss" time="2021-02-23T12:00:00Z">
                 <changelog><![CDATA[- Improved usability by vastly increasing OSC feedback performance ... much smoother now (MIDI feedback has been reworked as well and should be more snappy and accurate, too)
 ]]></changelog>
@@ -1170,6 +1215,47 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+            <version name="2.4.0" author="helgoboss" time="2021-02-26T12:00:00Z">
+                <changelog><![CDATA[- Added "Exclusive" dropdown to all "track property on/off"-style targets (arm, selection, mute, solo, fx all enable, automation touch state) which even allows "Exclusive within folder" behavior (my personal favorite)
+- Added "Automation touch state" target in order to support "Touch" automation mode for volume, pan and width envelopes (e.g. with touch-sensitive faders or push encoders)
+- Added option "Behavior" for "Track solo" target, start using the routing-friendly "Solo in front" behavior by default
+- Added REAPER action "ReaLearn: Send feedback for all instances" (useful mainly for debugging purposes because ReaLearn usually sends feedback automatically)
+- Improved "Track solo" target by making it work with "Options → Solo in front"
+- Improved usability by clearing feedback (switch off lights or turn down motorized faders) when closing ReaLearn instance or REAPER project
+- Improved "Track mute" target by making it work reliably also on master track and by making feedback from automation work
+- Improved usability by disabling learning of "Track selection" target if REAPER preference "Mouse click on volume/pan faders and track buttons changes track selection" enabled (in order to avoid false positives, preference change respected after REAPER restart)
+- Improved usability by making "Master tempo" target uneligible as "Last touched" target and for learning in general (there were too many false positives and it could get annoying at times, just select the target manually in the dropdown to use it)
+- Improved usability by letting the user confirm before globally removing an OSC device
+- Improved usability by not firing immediately when changing the encoder turning direction while using a negative "Speed" setting (that was annoying and could result in sudden unwanted parameter changes)
+- Improved usability by not annoying user with error messages when controlling just because they use some setting that doesn't make sense (such as controlling relative targets with absolute messages)
+- Improved usability by clearing feedback of the previous source if a mapping source is changed
+- Fixed non-working automation writing for "Track width" target when controlled via relative encoder
+- Fixed often missing initial feedback for virtual controller mappings (LEDs were sometimes not updated before interacting with the project, e.g. by pressing play)
+- Fixed possible "assertion failed: 0.0 &lt;= normalized_value || normalized_value.is_nan()" error with volume targets
+- Fixed recent bug that caused "Track selection" target to be learned with wrong track (the previously selected one instead of the newly selected)
+- Fixed recent bug that caused wrong "Selected track" target feedback
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.4.0/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.4.0/realearn-windows-i686.dll</source>
+            </version>
+
+            <metadata>
+                <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
+                <link rel="donation">https://www.paypal.me/helgoboss</link>
+                <link rel="screenshot" href="https://ibb.co/fGsnDnr">Mapping list</link>
+                <link rel="screenshot" href="https://ibb.co/qD8PwCV">Mapping detail</link>
+                <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is a VST instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 REAPER itself has this capability but some useful MIDI control scenarios are quite difficult and time-consuming to achieve with REAPER alone, for example if you want to restrict the controlled target value range. You would need to tinker with things like MIDIToReaControlPath and general purpose MIDI plug-ins. ReaLearn tries to make that much easier by giving you instant and easy access to lots of advanced features out-of-the-box.\par}
+}]]></description>
+            </metadata>
+
 
             <version name="2.3.2" author="helgoboss" time="2021-02-23T12:00:00Z">
                 <changelog><![CDATA[- Improved usability by vastly increasing OSC feedback performance ... much smoother now (MIDI feedback has been reworked as well and should be more snappy and accurate, too)
