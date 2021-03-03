@@ -51,38 +51,41 @@
                 <source file="helgoboss/realearn/presets/controller/mackie-control.json">https://raw.githubusercontent.com/helgoboss/realearn/bd7f5e1bf4e8ee5552243d89829de1085dfb70e8/resources/controllers/mackie-control.json</source>
             </version>
         </reapack>
+        <reapack name="faderport-8" type="data" desc="FaderPort 8">
+            <version name="1.0.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/faderport-8.json">https://raw.githubusercontent.com/helgoboss/realearn/225add1a7cb324327bb8350c4d7b5a30fe7c75dd/resources/controllers/faderport-8.json</source>
+            </version>
+        </reapack>
+        <reapack name="faderport-classic" type="data" desc="FaderPort Classic">
+            <version name="1.0.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/faderport-classic.json">https://raw.githubusercontent.com/helgoboss/realearn/225add1a7cb324327bb8350c4d7b5a30fe7c75dd/resources/controllers/faderport-classic.json</source>
+            </version>
+        </reapack>
     </category>
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
-            <version name="2.4.0" author="helgoboss" time="2021-02-26T12:00:00Z">
-                <changelog><![CDATA[- Added "Exclusive" dropdown to all "track property on/off"-style targets (arm, selection, mute, solo, fx all enable, automation touch state) which even allows "Exclusive within folder" behavior (my personal favorite)
-- Added "Automation touch state" target in order to support "Touch" automation mode for volume, pan and width envelopes (e.g. with touch-sensitive faders or push encoders)
-- Added option "Behavior" for "Track solo" target, start using the routing-friendly "Solo in front" behavior by default
-- Added REAPER action "ReaLearn: Send feedback for all instances" (useful mainly for debugging purposes because ReaLearn usually sends feedback automatically)
-- Improved "Track solo" target by making it work with "Options → Solo in front"
-- Improved usability by clearing feedback (switch off lights or turn down motorized faders) when closing ReaLearn instance or REAPER project
-- Improved "Track mute" target by making it work reliably also on master track and by making feedback from automation work
-- Improved usability by disabling learning of "Track selection" target if REAPER preference "Mouse click on volume/pan faders and track buttons changes track selection" enabled (in order to avoid false positives, preference change respected after REAPER restart)
-- Improved usability by making "Master tempo" target uneligible as "Last touched" target and for learning in general (there were too many false positives and it could get annoying at times, just select the target manually in the dropdown to use it)
-- Improved usability by letting the user confirm before globally removing an OSC device
-- Improved usability by not firing immediately when changing the encoder turning direction while using a negative "Speed" setting (that was annoying and could result in sudden unwanted parameter changes)
-- Improved usability by not annoying user with error messages when controlling just because they use some setting that doesn't make sense (such as controlling relative targets with absolute messages)
-- Improved usability by clearing feedback of the previous source if a mapping source is changed
-- Fixed non-working automation writing for "Track width" target when controlled via relative encoder
-- Fixed often missing initial feedback for virtual controller mappings (LEDs were sometimes not updated before interacting with the project, e.g. by pressing play)
-- Fixed possible "assertion failed: 0.0 &lt;= normalized_value || normalized_value.is_nan()" error with volume targets
-- Fixed recent bug that caused "Track selection" target to be learned with wrong track (the previously selected one instead of the newly selected)
-- Fixed recent bug that caused wrong "Selected track" target feedback
+            <version name="2.5.0" author="helgoboss" time="2021-03-03T12:00:00Z">
+                <changelog><![CDATA[- Added foundation for setting advanced aspects of mappings via textual configuration (accessible via new mapping panel button "Advanced settings")
+- Added foundation for using very device-specific features by allowing to send a bunch of raw MIDI data (including SysEx!) on mapping activation/deactivation (see user guide section "Advanced settings" for details)
+- Added option "Can deal with OSC bundles" to OSC device popup menu which can be unticked in order to achieve compatibility with devices not supporting them (e.g. Behringer mixers)
+- Added user guide entries and controller presets for PreSonus FaderPort 8 and FaderPort Classic
+- Improved reliability by avoiding memory exhaustion in the presence of potential programming errors (internally use bounded channels instead of unbounded one)
+- Improved user guide and projection instructions by explaining how to open a context menu
+- Fixed possible folder overflow with the "Exclusive: Within folder" setting introduced in the previous release
+- Fixed non-occurring mapping row target label updates when track list changes
+- Fixed sometimes non-arriving MIDI feedback on project load
+-
+-
 ]]></changelog>
 
-                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.4.0/realearn-user-guide.pdf</source>
-                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.4.0/realearn-user-guide.pdf</source>
-                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.4.0/realearn-user-guide.pdf</source>
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.5.0/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.5.0/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.5.0/realearn-user-guide.pdf</source>
 
-                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.4.0/realearn-windows-x86_64.dll</source>
-                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.4.0/realearn-macos-x86_64.vst.dylib</source>
-                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.4.0/realearn-linux-x86_64.so</source>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.5.0/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.5.0/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.5.0/realearn-linux-x86_64.so</source>
             </version>
 
             <metadata>
@@ -1216,30 +1219,23 @@
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
-            <version name="2.4.0" author="helgoboss" time="2021-02-26T12:00:00Z">
-                <changelog><![CDATA[- Added "Exclusive" dropdown to all "track property on/off"-style targets (arm, selection, mute, solo, fx all enable, automation touch state) which even allows "Exclusive within folder" behavior (my personal favorite)
-- Added "Automation touch state" target in order to support "Touch" automation mode for volume, pan and width envelopes (e.g. with touch-sensitive faders or push encoders)
-- Added option "Behavior" for "Track solo" target, start using the routing-friendly "Solo in front" behavior by default
-- Added REAPER action "ReaLearn: Send feedback for all instances" (useful mainly for debugging purposes because ReaLearn usually sends feedback automatically)
-- Improved "Track solo" target by making it work with "Options → Solo in front"
-- Improved usability by clearing feedback (switch off lights or turn down motorized faders) when closing ReaLearn instance or REAPER project
-- Improved "Track mute" target by making it work reliably also on master track and by making feedback from automation work
-- Improved usability by disabling learning of "Track selection" target if REAPER preference "Mouse click on volume/pan faders and track buttons changes track selection" enabled (in order to avoid false positives, preference change respected after REAPER restart)
-- Improved usability by making "Master tempo" target uneligible as "Last touched" target and for learning in general (there were too many false positives and it could get annoying at times, just select the target manually in the dropdown to use it)
-- Improved usability by letting the user confirm before globally removing an OSC device
-- Improved usability by not firing immediately when changing the encoder turning direction while using a negative "Speed" setting (that was annoying and could result in sudden unwanted parameter changes)
-- Improved usability by not annoying user with error messages when controlling just because they use some setting that doesn't make sense (such as controlling relative targets with absolute messages)
-- Improved usability by clearing feedback of the previous source if a mapping source is changed
-- Fixed non-working automation writing for "Track width" target when controlled via relative encoder
-- Fixed often missing initial feedback for virtual controller mappings (LEDs were sometimes not updated before interacting with the project, e.g. by pressing play)
-- Fixed possible "assertion failed: 0.0 &lt;= normalized_value || normalized_value.is_nan()" error with volume targets
-- Fixed recent bug that caused "Track selection" target to be learned with wrong track (the previously selected one instead of the newly selected)
-- Fixed recent bug that caused wrong "Selected track" target feedback
+            <version name="2.5.0" author="helgoboss" time="2021-03-03T12:00:00Z">
+                <changelog><![CDATA[- Added foundation for setting advanced aspects of mappings via textual configuration (accessible via new mapping panel button "Advanced settings")
+- Added foundation for using very device-specific features by allowing to send a bunch of raw MIDI data (including SysEx!) on mapping activation/deactivation (see user guide section "Advanced settings" for details)
+- Added option "Can deal with OSC bundles" to OSC device popup menu which can be unticked in order to achieve compatibility with devices not supporting them (e.g. Behringer mixers)
+- Added user guide entries and controller presets for PreSonus FaderPort 8 and FaderPort Classic
+- Improved reliability by avoiding memory exhaustion in the presence of potential programming errors (internally use bounded channels instead of unbounded one)
+- Improved user guide and projection instructions by explaining how to open a context menu
+- Fixed possible folder overflow with the "Exclusive: Within folder" setting introduced in the previous release
+- Fixed non-occurring mapping row target label updates when track list changes
+- Fixed sometimes non-arriving MIDI feedback on project load
+-
+-
 ]]></changelog>
 
-                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.4.0/realearn-user-guide.pdf</source>
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.5.0/realearn-user-guide.pdf</source>
 
-                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.4.0/realearn-windows-i686.dll</source>
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.5.0/realearn-windows-i686.dll</source>
             </version>
 
             <metadata>
