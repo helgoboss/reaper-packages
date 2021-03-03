@@ -75,8 +75,6 @@
 - Fixed possible folder overflow with the "Exclusive: Within folder" setting introduced in the previous release
 - Fixed non-occurring mapping row target label updates when track list changes
 - Fixed sometimes non-arriving MIDI feedback on project load
--
--
 ]]></changelog>
 
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.5.0/realearn-user-guide.pdf</source>
@@ -1229,8 +1227,6 @@
 - Fixed possible folder overflow with the "Exclusive: Within folder" setting introduced in the previous release
 - Fixed non-occurring mapping row target label updates when track list changes
 - Fixed sometimes non-arriving MIDI feedback on project load
--
--
 ]]></changelog>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.5.0/realearn-user-guide.pdf</source>
