@@ -70,6 +70,26 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
+            <version name="2.7.1" author="helgoboss" time="2021-03-09T12:00:00Z">
+                <changelog><![CDATA[- Added new track type "&lt;Dynamic>" (allows to calculate a track number depending on ReaLearn's internal parameter values)
+- Improved target track picker GUI by making it easier to create ReaLearn presets that are going to be used across different projects (e.g. "By name" now lets you enter a string as one would expect)
+- Improved performance by trying to not send too much unnecessary feedback when mapping or mapping target activation states change
+- Improved handling of REAPER's "Audio device closed" state (in ReaLearn &lt; 2.5.0 being in that state for a long time could have led to slow memory exhaustion, in ReaLearn &lt; 2.7.0 it would eventually lead to an error message "Full" instead - which is already better, and in 2.7.0 it's handled as it probably should)
+- Fixed error message complaining about negative positions when using count-in and sometimes when playing from the very project start (introduced in 2.6.0)
+- Improved usability by not intentionally generating a backtrace when pressing "Log debug info" (that caused confusion)
+- Improved usability by reducing likelihood for audio dropouts by avoiding allocation in real-time thread when using very many mappings (probably premature optimization)
+- Fixed another possible error message when closing a project while ReaLearn is open
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.7.1/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.7.1/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.7.1/realearn-user-guide.pdf</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.7.1/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.7.1/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.7.1/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.6.0" author="helgoboss" time="2021-03-07T12:00:00Z">
                 <changelog><![CDATA[- Added experimental and feedback-enabled (!) "Go to marker/region" target with smooth seek for regions
 - Added very flexible feedback-only "Raw MIDI" source in order to support feedback on controllers whose LEDs etc. can only be controlled via system-exclusive MIDI messages (e.g. Arturia MiniLab mkII)
@@ -791,6 +811,22 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+            <version name="2.7.1" author="helgoboss" time="2021-03-09T12:00:00Z">
+                <changelog><![CDATA[- Added new track type "&lt;Dynamic>" (allows to calculate a track number depending on ReaLearn's internal parameter values)
+- Improved target track picker GUI by making it easier to create ReaLearn presets that are going to be used across different projects (e.g. "By name" now lets you enter a string as one would expect)
+- Improved performance by trying to not send too much unnecessary feedback when mapping or mapping target activation states change
+- Improved handling of REAPER's "Audio device closed" state (in ReaLearn &lt; 2.5.0 being in that state for a long time could have led to slow memory exhaustion, in ReaLearn &lt; 2.7.0 it would eventually lead to an error message "Full" instead - which is already better, and in 2.7.0 it's handled as it probably should)
+- Fixed error message complaining about negative positions when using count-in and sometimes when playing from the very project start (introduced in 2.6.0)
+- Improved usability by not intentionally generating a backtrace when pressing "Log debug info" (that caused confusion)
+- Improved usability by reducing likelihood for audio dropouts by avoiding allocation in real-time thread when using very many mappings (probably premature optimization)
+- Fixed another possible error message when closing a project while ReaLearn is open
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.7.1/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.7.1/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.6.0" author="helgoboss" time="2021-03-07T12:00:00Z">
                 <changelog><![CDATA[- Added experimental and feedback-enabled (!) "Go to marker/region" target with smooth seek for regions
