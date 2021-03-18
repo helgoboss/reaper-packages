@@ -70,6 +70,23 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
+            <version name="2.8.0-pre3" author="helgoboss" time="2021-03-18T12:00:00Z">
+                <changelog><![CDATA[- Added support for showing current target values in projection view (= "Projection feedback", needs a prerelease version of the ReaLearn Companion app to work)
+- Added takeover modes "Parallel" and "Catch up" (renamed existing takeover modes to "Pick up" and "Long time no see")
+- Fixed idle CPU usage when having OSC feedback enabled for at least one OSC device (was quite high)
+- Fixed channel "Full" error when invoking lots of actions in a small amount of time
+- Fixed bug that was causing ReaLearn to forget the FX in FX targets (introduced in 2.8.0-pre1)
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre3/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre3/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre3/realearn-user-guide.pdf</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre3/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre3/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre3/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.8.0-pre2" author="helgoboss" time="2021-03-13T12:00:00Z">
                 <changelog><![CDATA[- Added "Fire after timeout" mode for button presses
 - Added "Fire after timeout, keep firing" mode for button presses (turbo mode!)
@@ -846,6 +863,19 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+            <version name="2.8.0-pre3" author="helgoboss" time="2021-03-18T12:00:00Z">
+                <changelog><![CDATA[- Added support for showing current target values in projection view (= "Projection feedback", needs a prerelease version of the ReaLearn Companion app to work)
+- Added takeover modes "Parallel" and "Catch up" (renamed existing takeover modes to "Pick up" and "Long time no see")
+- Fixed idle CPU usage when having OSC feedback enabled for at least one OSC device (was quite high)
+- Fixed channel "Full" error when invoking lots of actions in a small amount of time
+- Fixed bug that was causing ReaLearn to forget the FX in FX targets (introduced in 2.8.0-pre1)
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre3/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre3/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.8.0-pre2" author="helgoboss" time="2021-03-13T12:00:00Z">
                 <changelog><![CDATA[- Added "Fire after timeout" mode for button presses
