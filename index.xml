@@ -70,6 +70,26 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
+            <version name="2.8.0-pre4" author="helgoboss" time="2021-03-22T12:00:00Z">
+                <changelog><![CDATA[- Added FX selector &lt;This> for targeting the own ReaLearn instance (good for using conditional activation and &lt;Dynamic> in reusable presets)
+- Added copy/paste of mappings or even just sources/modes/targets (also across compartments and instances)
+- Added copy/paste of the complete filtered mapping list (e.g. to copy/paste whole compartments, groups or search results)
+- Added possibility to use names for virtual control elements instead of numbers
+- Added quick start section at the top of the user guide
+- Added FAQ section to the user guide
+- Fixed possible "unwrap" error with certain mapping tuning settings, e.g. jump and step size
+- Fixed possible "borrow" error when using FX parameter target with own ReaLearn instance
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre4/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre4/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre4/realearn-user-guide.pdf</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre4/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre4/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre4/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.8.0-pre3" author="helgoboss" time="2021-03-18T12:00:00Z">
                 <changelog><![CDATA[- Added support for showing current target values in projection view (= "Projection feedback", needs a prerelease version of the ReaLearn Companion app to work)
 - Added takeover modes "Parallel" and "Catch up" (renamed existing takeover modes to "Pick up" and "Long time no see")
@@ -863,6 +883,22 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+            <version name="2.8.0-pre4" author="helgoboss" time="2021-03-22T12:00:00Z">
+                <changelog><![CDATA[- Added FX selector &lt;This> for targeting the own ReaLearn instance (good for using conditional activation and &lt;Dynamic> in reusable presets)
+- Added copy/paste of mappings or even just sources/modes/targets (also across compartments and instances)
+- Added copy/paste of the complete filtered mapping list (e.g. to copy/paste whole compartments, groups or search results)
+- Added possibility to use names for virtual control elements instead of numbers
+- Added quick start section at the top of the user guide
+- Added FAQ section to the user guide
+- Fixed possible "unwrap" error with certain mapping tuning settings, e.g. jump and step size
+- Fixed possible "borrow" error when using FX parameter target with own ReaLearn instance
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre4/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre4/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.8.0-pre3" author="helgoboss" time="2021-03-18T12:00:00Z">
                 <changelog><![CDATA[- Added support for showing current target values in projection view (= "Projection feedback", needs a prerelease version of the ReaLearn Companion app to work)
