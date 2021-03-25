@@ -70,6 +70,24 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
+            <version name="2.8.0-pre6" author="helgoboss" time="2021-03-25T12:00:00Z">
+                <changelog><![CDATA[- Added ability for "Auto-load preset: Depending on focused FX" instances to cancel other instances that share the same device (with this, you can easily let your controller control the currently focused FX but fall back to your usual controls when it's closed)
+- Added ability that multiple instances work hand in hand when it comes to feedback (As long as 2 instances don't actively feedback to more than one control element at once, everything will be fine and should work just as with conditional activation within 1 instance.)
+- Improved UI in minor ways
+- Improved usability by respecting activation state of controller mappings with virtual targets when learning a main mapping source
+- Improved usability by showing only short parameter name in conditional activation parameter dropdowns
+- Fixed annoying bug that made group changes have an effect only ever in one of the compartments
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre6/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre6/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre6/realearn-user-guide.pdf</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre6/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre6/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre6/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.8.0-pre5" author="helgoboss" time="2021-03-23T12:00:00Z">
                 <changelog><![CDATA[- Added mapping group feature to controller compartment (was previously available in main compartment only)
 - Added conditional activation to controller compartment (was previously available in main compartment only)
@@ -903,6 +921,20 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+            <version name="2.8.0-pre6" author="helgoboss" time="2021-03-25T12:00:00Z">
+                <changelog><![CDATA[- Added ability for "Auto-load preset: Depending on focused FX" instances to cancel other instances that share the same device (with this, you can easily let your controller control the currently focused FX but fall back to your usual controls when it's closed)
+- Added ability that multiple instances work hand in hand when it comes to feedback (As long as 2 instances don't actively feedback to more than one control element at once, everything will be fine and should work just as with conditional activation within 1 instance.)
+- Improved UI in minor ways
+- Improved usability by respecting activation state of controller mappings with virtual targets when learning a main mapping source
+- Improved usability by showing only short parameter name in conditional activation parameter dropdowns
+- Fixed annoying bug that made group changes have an effect only ever in one of the compartments
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre6/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre6/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.8.0-pre5" author="helgoboss" time="2021-03-23T12:00:00Z">
                 <changelog><![CDATA[- Added mapping group feature to controller compartment (was previously available in main compartment only)
