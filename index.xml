@@ -70,6 +70,24 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
+            <version name="2.8.0-pre9" author="helgoboss" time="2021-04-01T12:00:00Z">
+                <changelog><![CDATA[- Added possibility to easily react to button press-down only and ignore button release (without affecting feedback)
+- Added possibility to easily react to encoder increments or decrements only
+- Added possibility to let the target track depend on the current position of this ReaLearn track by making variable this_track_index available in the &lt;Dynamic> track expression
+- Improved "Global: Set automation override" target by adding "None" option
+- Improved "Project: Invoke transport action" target by making "Play/stop" and "Play/pause" retriggerable
+- Fixed &lt;Dynamic> expression evaluation by doing rounding (was sometimes leading to unexpected results because decimal digits were just being cut off)
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre9/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre9/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre9/realearn-user-guide.pdf</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre9/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre9/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre9/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.8.0-pre8" author="helgoboss" time="2021-03-31T12:00:00Z">
                 <changelog><![CDATA[- Added new fire modes "Single press" and "Double press" (can now distinguish between single press, double press and long press)
 - Added possibility to use preset name in addition to plug-in name when creating preset links for the "Auto-load preset" feature (allows you to load a different ReaLearn main preset when the preset of the focused FX changes)
@@ -964,6 +982,20 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+            <version name="2.8.0-pre9" author="helgoboss" time="2021-04-01T12:00:00Z">
+                <changelog><![CDATA[- Added possibility to easily react to button press-down only and ignore button release (without affecting feedback)
+- Added possibility to easily react to encoder increments or decrements only
+- Added possibility to let the target track depend on the current position of this ReaLearn track by making variable this_track_index available in the &lt;Dynamic> track expression
+- Improved "Global: Set automation override" target by adding "None" option
+- Improved "Project: Invoke transport action" target by making "Play/stop" and "Play/pause" retriggerable
+- Fixed &lt;Dynamic> expression evaluation by doing rounding (was sometimes leading to unexpected results because decimal digits were just being cut off)
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre9/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre9/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.8.0-pre8" author="helgoboss" time="2021-03-31T12:00:00Z">
                 <changelog><![CDATA[- Added new fire modes "Single press" and "Double press" (can now distinguish between single press, double press and long press)
