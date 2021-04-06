@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <index version="1" name="Helgoboss Projects">
     <category name="ReaLearn controller presets">
-        <reapack name="midi-fighter-twister" type="data" desc="MIDI Fighter Twister">
+        <reapack name="midi-fighter-twister" type="data" desc="DJ TechTools Midi Fighter Twister">
+            <version name="1.1.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/midi-fighter-twister.json">https://raw.githubusercontent.com/helgoboss/realearn/74ae3e116c184f9edc01bf8c3fe78d5add1fb69d/resources/controllers/midi-fighter-twister.json</source>
+                <changelog><![CDATA[- Fixed mappings for "Left 3" and "Right 3" buttons]]></changelog>
+            </version>
             <version name="1.0.2" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/midi-fighter-twister.json">https://raw.githubusercontent.com/helgoboss/realearn/05cee8ba80cd76988e4ada61f3dfb5ef1b479381/resources/controllers/midi-fighter-twister.json</source>
                 <changelog><![CDATA[- Fixed mappings for "Left 3" and "Right 3" buttons]]></changelog>
@@ -13,12 +17,18 @@
                 <source file="helgoboss/realearn/presets/controller/midi-fighter-twister.json">https://raw.githubusercontent.com/helgoboss/realearn/d6be9c98a7bc9ace696e5e63423079ed5f6f34bf/resources/controllers/midi-fighter-twister.json</source>
             </version>
         </reapack>
-        <reapack name="midi-fighter-twister-bank-2" type="data" desc="MIDI Fighter Twister - Bank 2">
+        <reapack name="midi-fighter-twister-bank-2" type="data" desc="DJ TechTools Midi Fighter Twister - Bank 2">
+            <version name="1.1.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/midi-fighter-twister-bank-2.json">https://raw.githubusercontent.com/helgoboss/realearn/74ae3e116c184f9edc01bf8c3fe78d5add1fb69d/resources/controllers/midi-fighter-twister-bank-2.json</source>
+            </version>
             <version name="1.0.0" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/midi-fighter-twister-bank-2.json">https://raw.githubusercontent.com/helgoboss/realearn/c853ae48c9ec4493a52ab7fdb7a4bc1044ac5412/resources/controllers/midi-fighter-twister-bank-2.json</source>
             </version>
         </reapack>
-        <reapack name="apc-key-25" type="data" desc="APC Key 25">
+        <reapack name="apc-key-25" type="data" desc="Akai APC Key 25">
+            <version name="1.1.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/apc-key-25.json">https://raw.githubusercontent.com/helgoboss/realearn/74ae3e116c184f9edc01bf8c3fe78d5add1fb69d/resources/controllers/apc-key-25.json</source>
+            </version>
             <version name="1.0.1" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/apc-key-25.json">https://raw.githubusercontent.com/helgoboss/realearn/e733564b368ee077a56bbb40301baae3641884d8/resources/controllers/apc-key-25.json</source>
             </version>
@@ -31,17 +41,26 @@
                 <source file="helgoboss/realearn/presets/controller/icon-platform-m.json">https://raw.githubusercontent.com/helgoboss/realearn/c853ae48c9ec4493a52ab7fdb7a4bc1044ac5412/resources/controllers/icon-platform-m.json</source>
             </version>
         </reapack>
-        <reapack name="launchpad-pro" type="data" desc="Launchpad Pro">
+        <reapack name="launchpad-pro" type="data" desc="Novation Launchpad Pro">
+            <version name="1.0.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/launchpad-pro.json">https://raw.githubusercontent.com/helgoboss/realearn/74ae3e116c184f9edc01bf8c3fe78d5add1fb69d/resources/controllers/launchpad-pro.json</source>
+            </version>
             <version name="1.0.0-pre1" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/launchpad-pro.json">https://raw.githubusercontent.com/helgoboss/realearn/c853ae48c9ec4493a52ab7fdb7a4bc1044ac5412/resources/controllers/launchpad-pro.json</source>
             </version>
         </reapack>
-        <reapack name="x-touch-compact" type="data" desc="X-Touch Compact">
+        <reapack name="x-touch-compact" type="data" desc="Behringer X-Touch Compact">
+            <version name="1.0.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/x-touch-compact.json">https://raw.githubusercontent.com/helgoboss/realearn/74ae3e116c184f9edc01bf8c3fe78d5add1fb69d/resources/controllers/x-touch-compact.json</source>
+            </version>
             <version name="1.0.0-pre1" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/x-touch-compact.json">https://raw.githubusercontent.com/helgoboss/realearn/223d7e63d4773234902fe065dd42bba1a76938bf/resources/controllers/x-touch-compact.json</source>
             </version>
         </reapack>
-        <reapack name="x-touch-compact-layer-b" type="data" desc="X-Touch Compact - Layer B">
+        <reapack name="x-touch-compact-layer-b" type="data" desc="Behringer X-Touch Compact - Layer B">
+            <version name="1.0.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/x-touch-compact-layer-b.json">https://raw.githubusercontent.com/helgoboss/realearn/74ae3e116c184f9edc01bf8c3fe78d5add1fb69d/resources/controllers/x-touch-compact-layer-b.json</source>
+            </version>
             <version name="1.0.0-pre1" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/x-touch-compact-layer-b.json">https://raw.githubusercontent.com/helgoboss/realearn/223d7e63d4773234902fe065dd42bba1a76938bf/resources/controllers/x-touch-compact-layer-b.json</source>
             </version>
@@ -51,19 +70,43 @@
                 <source file="helgoboss/realearn/presets/controller/mackie-control.json">https://raw.githubusercontent.com/helgoboss/realearn/bd7f5e1bf4e8ee5552243d89829de1085dfb70e8/resources/controllers/mackie-control.json</source>
             </version>
         </reapack>
-        <reapack name="faderport-8" type="data" desc="FaderPort 8">
+        <reapack name="faderport-8" type="data" desc="PreSonus FaderPort 8">
+            <version name="1.1.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/faderport-8.json">https://raw.githubusercontent.com/helgoboss/realearn/74ae3e116c184f9edc01bf8c3fe78d5add1fb69d/resources/controllers/faderport-8.json</source>
+            </version>
             <version name="1.0.0" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/faderport-8.json">https://raw.githubusercontent.com/helgoboss/realearn/225add1a7cb324327bb8350c4d7b5a30fe7c75dd/resources/controllers/faderport-8.json</source>
             </version>
         </reapack>
-        <reapack name="faderport-classic" type="data" desc="FaderPort Classic">
+        <reapack name="faderport-classic" type="data" desc="PreSonus FaderPort Classic">
+            <version name="1.1.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/faderport-classic.json">https://raw.githubusercontent.com/helgoboss/realearn/74ae3e116c184f9edc01bf8c3fe78d5add1fb69d/resources/controllers/faderport-classic.json</source>
+            </version>
             <version name="1.0.0" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/faderport-classic.json">https://raw.githubusercontent.com/helgoboss/realearn/225add1a7cb324327bb8350c4d7b5a30fe7c75dd/resources/controllers/faderport-classic.json</source>
             </version>
         </reapack>
-        <reapack name="minilab-mkii" type="data" desc="MiniLab mkII">
+        <reapack name="minilab-mkii" type="data" desc="Arturia MiniLab mkII">
+            <version name="1.1.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/minilab-mkii.json">https://raw.githubusercontent.com/helgoboss/realearn/74ae3e116c184f9edc01bf8c3fe78d5add1fb69d/resources/controllers/minilab-mkii.json</source>
+            </version>
             <version name="1.0.0" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/minilab-mkii.json">https://raw.githubusercontent.com/helgoboss/realearn/09fe2dc9f075cf84186123d7d27c2f0860b89022/resources/controllers/minilab-mkii.json</source>
+            </version>
+        </reapack>
+        <reapack name="nord-stage-3" type="data" desc="Nord Stage 3">
+            <version name="1.0.0" author="Roger Green">
+                <source file="helgoboss/realearn/presets/controller/nord-stage-3.json">https://raw.githubusercontent.com/helgoboss/realearn/74ae3e116c184f9edc01bf8c3fe78d5add1fb69d/resources/controllers/nord-stage-3.json</source>
+            </version>
+        </reapack>
+        <reapack name="pad-kontrol" type="data" desc="Korg padKONTROL">
+            <version name="1.0.0" author="Roger Green">
+                <source file="helgoboss/realearn/presets/controller/pad-kontrol.json">https://raw.githubusercontent.com/helgoboss/realearn/74ae3e116c184f9edc01bf8c3fe78d5add1fb69d/resources/controllers/pad-kontrol.json</source>
+            </version>
+        </reapack>
+        <reapack name="uc-33" type="data" desc="Evolution UC-33">
+            <version name="1.0.0" author="Roger Green">
+                <source file="helgoboss/realearn/presets/controller/uc-33.json">https://raw.githubusercontent.com/helgoboss/realearn/74ae3e116c184f9edc01bf8c3fe78d5add1fb69d/resources/controllers/uc-33.json</source>
             </version>
         </reapack>
     </category>
