@@ -70,6 +70,26 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
+            <version name="2.8.0-rc.1" author="helgoboss" time="2021-04-06T12:00:00Z">
+                <changelog><![CDATA[- Added support for keeping control/feedback working even when switching to other project tab (with exception of automation writing, "Project: Set playrate" target and the smooth region seeking part of "Marker/region: Go to" target)
+- Added possibility to enforce "Rotate" already in a virtual controller mapping
+- Improved user interface by displaying helpful text and button if compartment, group or filtered list empty
+- Improved user interface by moving "Reload all" to the header right-click context menu as "Reload all presets from disk"
+- Improved user interface by displaying mapping compartments as radio buttons
+- Improved user interface by hiding "Let through" options when input is not &lt;FX input> (change in behavior: now it will always let through FX input events in that case)
+- Improved user interface by marking "Toggle buttons" mode as invalid for virtual controller mappings
+- Improved versatility by making "Character" dropdown available even for 14-bit sources (both (N)RPN and CC)
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.1/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.1/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.1/realearn-user-guide.pdf</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.1/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.1/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.1/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.8.0-pre9" author="helgoboss" time="2021-04-01T12:00:00Z">
                 <changelog><![CDATA[- Added possibility to easily react to button press-down only and ignore button release (without affecting feedback)
 - Added possibility to easily react to encoder increments or decrements only
@@ -982,6 +1002,22 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+            <version name="2.8.0-rc.1" author="helgoboss" time="2021-04-06T12:00:00Z">
+                <changelog><![CDATA[- Added support for keeping control/feedback working even when switching to other project tab (with exception of automation writing, "Project: Set playrate" target and the smooth region seeking part of "Marker/region: Go to" target)
+- Added possibility to enforce "Rotate" already in a virtual controller mapping
+- Improved user interface by displaying helpful text and button if compartment, group or filtered list empty
+- Improved user interface by moving "Reload all" to the header right-click context menu as "Reload all presets from disk"
+- Improved user interface by displaying mapping compartments as radio buttons
+- Improved user interface by hiding "Let through" options when input is not &lt;FX input> (change in behavior: now it will always let through FX input events in that case)
+- Improved user interface by marking "Toggle buttons" mode as invalid for virtual controller mappings
+- Improved versatility by making "Character" dropdown available even for 14-bit sources (both (N)RPN and CC)
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.1/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.1/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.8.0-pre9" author="helgoboss" time="2021-04-01T12:00:00Z">
                 <changelog><![CDATA[- Added possibility to easily react to button press-down only and ignore button release (without affecting feedback)
