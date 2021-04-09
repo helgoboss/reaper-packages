@@ -4,7 +4,6 @@
         <reapack name="midi-fighter-twister" type="data" desc="DJ TechTools Midi Fighter Twister">
             <version name="1.1.0" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/midi-fighter-twister.json">https://raw.githubusercontent.com/helgoboss/realearn/74ae3e116c184f9edc01bf8c3fe78d5add1fb69d/resources/controllers/midi-fighter-twister.json</source>
-                <changelog><![CDATA[- Fixed mappings for "Left 3" and "Right 3" buttons]]></changelog>
             </version>
             <version name="1.0.2" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/midi-fighter-twister.json">https://raw.githubusercontent.com/helgoboss/realearn/05cee8ba80cd76988e4ada61f3dfb5ef1b479381/resources/controllers/midi-fighter-twister.json</source>
@@ -112,6 +111,31 @@
     </category>
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+            <version name="2.8.0-rc.2" author="helgoboss" time="2021-04-09T12:00:00Z">
+                <changelog><![CDATA[- Added feedback-only "Script" MIDI source for making LCD support possible (lets you write EEL scripts that encode the target value as raw MIDI message in any imaginable way)
+- Added library of Mackie-inspired virtual control element names and a convenient picker
+- Added capability for automatic naming of mappings based on its target - kicks in when clearing the custom name
+- Added right-click menu action to auto-name listed mappings (clearing all names)
+- Added main preset "DAW Control" to ReaPack repository and documented it in the user guide in the new "Preset" section
+- Added user guide entry for controller "Behringer X-Touch One"
+- Added support for wildcards in search expressions
+- Improved controller presets "Mackie Control" and "iCON Platform M+" by using virtual control element names of the new "DAW" domain (major version bump, breaking change ... but no worries, your existing projects, FX chains and track templates will not be changed unless you explicitly reload the preset within ReaLearn)
+- Improved "What could I do to see some mappings?" suggestions if mapping list is empty and filter/group set
+- Improved usability by displaying mapping group name on right when showing mappings in all groups
+- Improved "Duplicate" by getting rid of the annoying "Copy of ..." prefix
+- Fixed cropped "Min" labels on macOS
+- Fixed little GUI lag when selecting control element index for virtual targets
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.2/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.2/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.2/realearn-user-guide.pdf</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.2/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.2/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.2/realearn-linux-x86_64.so</source>
+            </version>
 
             <version name="2.8.0-rc.1" author="helgoboss" time="2021-04-06T12:00:00Z">
                 <changelog><![CDATA[- Added support for keeping control/feedback working even when switching to other project tab (with exception of automation writing, "Project: Set playrate" target and the smooth region seeking part of "Marker/region: Go to" target)
@@ -1045,6 +1069,27 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+            <version name="2.8.0-rc.2" author="helgoboss" time="2021-04-09T12:00:00Z">
+                <changelog><![CDATA[- Added feedback-only "Script" MIDI source for making LCD support possible (lets you write EEL scripts that encode the target value as raw MIDI message in any imaginable way)
+- Added library of Mackie-inspired virtual control element names and a convenient picker
+- Added capability for automatic naming of mappings based on its target - kicks in when clearing the custom name
+- Added right-click menu action to auto-name listed mappings (clearing all names)
+- Added main preset "DAW Control" to ReaPack repository and documented it in the user guide in the new "Preset" section
+- Added user guide entry for controller "Behringer X-Touch One"
+- Added support for wildcards in search expressions
+- Improved controller presets "Mackie Control" and "iCON Platform M+" by using virtual control element names of the new "DAW" domain (major version bump, breaking change ... but no worries, your existing projects, FX chains and track templates will not be changed unless you explicitly reload the preset within ReaLearn)
+- Improved "What could I do to see some mappings?" suggestions if mapping list is empty and filter/group set
+- Improved usability by displaying mapping group name on right when showing mappings in all groups
+- Improved "Duplicate" by getting rid of the annoying "Copy of ..." prefix
+- Fixed cropped "Min" labels on macOS
+- Fixed little GUI lag when selecting control element index for virtual targets
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.2/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.2/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.8.0-rc.1" author="helgoboss" time="2021-04-06T12:00:00Z">
                 <changelog><![CDATA[- Added support for keeping control/feedback working even when switching to other project tab (with exception of automation writing, "Project: Set playrate" target and the smooth region seeking part of "Marker/region: Go to" target)
