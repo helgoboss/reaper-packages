@@ -35,7 +35,11 @@
                 <source file="helgoboss/realearn/presets/controller/apc-key-25.json">https://raw.githubusercontent.com/helgoboss/realearn/d6be9c98a7bc9ace696e5e63423079ed5f6f34bf/resources/controllers/apc-key-25.json</source>
             </version>
         </reapack>
-        <reapack name="icon-platform-m" type="data" desc="iCON Platform M+">
+        <reapack name="icon-platform-m" type="data" desc="iCON Platform M+ [DAW]">
+            <version name="2.0.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/icon-platform-m.json">https://raw.githubusercontent.com/helgoboss/realearn/930e6b4af97976486fe0ae6245e810b99782a3b8/resources/controllers/icon-platform-m.json</source>
+                <changelog><![CDATA[- Improved usability by using named virtual control elements of the DAW domain]]></changelog>
+            </version>
             <version name="1.0.0" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/icon-platform-m.json">https://raw.githubusercontent.com/helgoboss/realearn/c853ae48c9ec4493a52ab7fdb7a4bc1044ac5412/resources/controllers/icon-platform-m.json</source>
             </version>
@@ -64,7 +68,11 @@
                 <source file="helgoboss/realearn/presets/controller/x-touch-compact-layer-b.json">https://raw.githubusercontent.com/helgoboss/realearn/223d7e63d4773234902fe065dd42bba1a76938bf/resources/controllers/x-touch-compact-layer-b.json</source>
             </version>
         </reapack>
-        <reapack name="mackie-control" type="data" desc="Mackie Control">
+        <reapack name="mackie-control" type="data" desc="Mackie Control [DAW]">
+            <version name="1.0.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/mackie-control.json">https://raw.githubusercontent.com/helgoboss/realearn/930e6b4af97976486fe0ae6245e810b99782a3b8/resources/controllers/mackie-control.json</source>
+                <changelog><![CDATA[- Improved usability by using named virtual control elements of the DAW domain]]></changelog>
+            </version>
             <version name="1.0.0-pre1" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/mackie-control.json">https://raw.githubusercontent.com/helgoboss/realearn/bd7f5e1bf4e8ee5552243d89829de1085dfb70e8/resources/controllers/mackie-control.json</source>
             </version>
@@ -106,6 +114,13 @@
         <reapack name="uc-33" type="data" desc="Evolution UC-33">
             <version name="1.0.0" author="Roger Green">
                 <source file="helgoboss/realearn/presets/controller/uc-33.json">https://raw.githubusercontent.com/helgoboss/realearn/74ae3e116c184f9edc01bf8c3fe78d5add1fb69d/resources/controllers/uc-33.json</source>
+            </version>
+        </reapack>
+    </category>
+    <category name="ReaLearn main presets">
+        <reapack name="daw-control" type="data" desc="DAW control [DAW]">
+            <version name="1.0.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/main-presets/daw-control.json">https://raw.githubusercontent.com/helgoboss/realearn/930e6b4af97976486fe0ae6245e810b99782a3b8/resources/main-presets/daw-control.json</source>
             </version>
         </reapack>
     </category>
