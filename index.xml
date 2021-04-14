@@ -127,6 +127,28 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
+            <version name="2.8.0-rc.4" author="helgoboss" time="2021-04-14T12:00:00Z">
+                <changelog><![CDATA[- Added context-sensitive help section to mapping panel which explains most of the tuning options (for each kind of source separately)
+- Improved usability by hiding mapping tuning options which are not relevant at all in the current context
+- Improved user friendliness by raising step size max to 5% and speed max to 5x (in order to make it more obvious to new users that ReaLearn supports encoder acceleration and velocity-sensitive buttons)
+- Improved usability by removing the UI difference between numbered and named virtual control elements (internally numbers are still treated a bit differently, but on the surface it's the same now)
+- Improved usability by making source pattern/script a single-line text field again (automatically greyed out as soon as value has multiple lines)
+- Improved usability by explicitly indicating when target is currently inactive
+- Improved naming by renaming "Rotate" to "Wrap" and "Move instance to upper floor" to "Make instance superior"
+- Fixed bug on macOS which caused text fields not to update correctly if still focused
+- Fixed default mapping group showing up as "Group not present" when viewing mappings in all groups
+- Fixed incomplete mapping panel on Linux (was incomplete up since rc.1)
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.4/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.4/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.4/realearn-user-guide.pdf</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.4/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.4/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.4/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.8.0-rc.2" author="helgoboss" time="2021-04-09T12:00:00Z">
                 <changelog><![CDATA[- Added feedback-only "Script" MIDI source for making LCD support possible (lets you write EEL scripts that encode the target value as raw MIDI message in any imaginable way)
 - Added library of Mackie-inspired virtual control element names and a convenient picker
@@ -1084,6 +1106,24 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+            <version name="2.8.0-rc.4" author="helgoboss" time="2021-04-14T12:00:00Z">
+                <changelog><![CDATA[- Added context-sensitive help section to mapping panel which explains most of the tuning options (for each kind of source separately)
+- Improved usability by hiding mapping tuning options which are not relevant at all in the current context
+- Improved user friendliness by raising step size max to 5% and speed max to 5x (in order to make it more obvious to new users that ReaLearn supports encoder acceleration and velocity-sensitive buttons)
+- Improved usability by removing the UI difference between numbered and named virtual control elements (internally numbers are still treated a bit differently, but on the surface it's the same now)
+- Improved usability by making source pattern/script a single-line text field again (automatically greyed out as soon as value has multiple lines)
+- Improved usability by explicitly indicating when target is currently inactive
+- Improved naming by renaming "Rotate" to "Wrap" and "Move instance to upper floor" to "Make instance superior"
+- Fixed bug on macOS which caused text fields not to update correctly if still focused
+- Fixed default mapping group showing up as "Group not present" when viewing mappings in all groups
+- Fixed incomplete mapping panel on Linux (was incomplete up since rc.1)
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.4/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.4/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.8.0-rc.2" author="helgoboss" time="2021-04-09T12:00:00Z">
                 <changelog><![CDATA[- Added feedback-only "Script" MIDI source for making LCD support possible (lets you write EEL scripts that encode the target value as raw MIDI message in any imaginable way)
