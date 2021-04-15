@@ -2,6 +2,10 @@
 <index version="1" name="Helgoboss Projects">
     <category name="ReaLearn controller presets">
         <reapack name="midi-fighter-twister" type="data" desc="DJ TechTools Midi Fighter Twister">
+            <version name="2.0.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/midi-fighter-twister.json">https://raw.githubusercontent.com/helgoboss/realearn/303c3861f2e65b498612a5fd332a86141f6e9306/resources/controllers/midi-fighter-twister.json</source>
+                <changelog><![CDATA[- Improved usability by making preset accept accelerated encoder moves and making side buttons named virtual control elements]]></changelog>
+            </version>
             <version name="1.1.0" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/midi-fighter-twister.json">https://raw.githubusercontent.com/helgoboss/realearn/74ae3e116c184f9edc01bf8c3fe78d5add1fb69d/resources/controllers/midi-fighter-twister.json</source>
             </version>
@@ -17,6 +21,10 @@
             </version>
         </reapack>
         <reapack name="midi-fighter-twister-bank-2" type="data" desc="DJ TechTools Midi Fighter Twister - Bank 2">
+            <version name="2.0.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/midi-fighter-twister-bank-2.json">https://raw.githubusercontent.com/helgoboss/realearn/303c3861f2e65b498612a5fd332a86141f6e9306/resources/controllers/midi-fighter-twister-bank-2.json</source>
+                <changelog><![CDATA[- Improved usability by making preset accept accelerated encoder moves and making side buttons named virtual control elements]]></changelog>
+            </version>
             <version name="1.1.0" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/midi-fighter-twister-bank-2.json">https://raw.githubusercontent.com/helgoboss/realearn/74ae3e116c184f9edc01bf8c3fe78d5add1fb69d/resources/controllers/midi-fighter-twister-bank-2.json</source>
             </version>
@@ -126,6 +134,25 @@
     </category>
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+            <version name="2.8.0-rc.5" author="helgoboss" time="2021-04-14T12:00:00Z">
+                <changelog><![CDATA[- Added target "MIDI: Send message"
+- Added target "OSC: Send message"
+- Added new track selector "All selected" to make track targets (NOT FX and send targets) work on all selected tracks
+- Added right-click menu action "Move listed mappings to group"
+- Improved Midi Fighter Twister user guide entry by explaining how to use encoder acceleration and by linking to ReaLearn-compatible MFT Color Designer web app
+- Improved Midi Fighter Twister controller presets by making it react to encoder acceleration if configured in MF utility (also use named virtual control IDs for side buttons)
+- Improved naming by renaming "Navigate within ..." to "Navigate between"
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.5/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.5/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.5/realearn-user-guide.pdf</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.5/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.5/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.5/realearn-linux-x86_64.so</source>
+            </version>
 
             <version name="2.8.0-rc.4" author="helgoboss" time="2021-04-14T12:00:00Z">
                 <changelog><![CDATA[- Added context-sensitive help section to mapping panel which explains most of the tuning options (for each kind of source separately)
@@ -1106,6 +1133,21 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+            <version name="2.8.0-rc.5" author="helgoboss" time="2021-04-14T12:00:00Z">
+                <changelog><![CDATA[- Added target "MIDI: Send message"
+- Added target "OSC: Send message"
+- Added new track selector "All selected" to make track targets (NOT FX and send targets) work on all selected tracks
+- Added right-click menu action "Move listed mappings to group"
+- Improved Midi Fighter Twister user guide entry by explaining how to use encoder acceleration and by linking to ReaLearn-compatible MFT Color Designer web app
+- Improved Midi Fighter Twister controller presets by making it react to encoder acceleration if configured in MF utility (also use named virtual control IDs for side buttons)
+- Improved naming by renaming "Navigate within ..." to "Navigate between"
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.5/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.5/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.8.0-rc.4" author="helgoboss" time="2021-04-14T12:00:00Z">
                 <changelog><![CDATA[- Added context-sensitive help section to mapping panel which explains most of the tuning options (for each kind of source separately)
