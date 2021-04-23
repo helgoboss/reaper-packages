@@ -135,6 +135,26 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
+            <version name="2.8.0-rc.6" author="helgoboss" time="2021-04-23T12:00:00Z">
+                <changelog><![CDATA[- Added experimental targets "Clip: Invoke transport action", "Clip: Seek" and "Clip: Volume"
+- Improved preset behavior by automatically resetting all compartment parameters to zero when loading a compartment preset
+- Improved global "Find first mapping by source" REAPER action by taking mapping activation status into account
+- Fixed rc.5 bug that caused control transformation to have no effect on non-velocity-sensitive buttons anymore
+- Fixed &lt;All selected> label confusion in mapping rows
+- Fixed "BorrowMut" error on macOS when doing things while text field still focused
+- Fixed bug that caused "Last touched" target to not respond right after preset/project loading
+- Fixed disappeared targets in target dropdown on Windows (and other small UI fixes)
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.6/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.6/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.6/realearn-user-guide.pdf</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.6/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.6/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.6/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.8.0-rc.5" author="helgoboss" time="2021-04-14T12:00:00Z">
                 <changelog><![CDATA[- Added target "MIDI: Send message"
 - Added target "OSC: Send message"
@@ -1133,6 +1153,22 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+            <version name="2.8.0-rc.6" author="helgoboss" time="2021-04-23T12:00:00Z">
+                <changelog><![CDATA[- Added experimental targets "Clip: Invoke transport action", "Clip: Seek" and "Clip: Volume"
+- Improved preset behavior by automatically resetting all compartment parameters to zero when loading a compartment preset
+- Improved global "Find first mapping by source" REAPER action by taking mapping activation status into account
+- Fixed rc.5 bug that caused control transformation to have no effect on non-velocity-sensitive buttons anymore
+- Fixed &lt;All selected> label confusion in mapping rows
+- Fixed "BorrowMut" error on macOS when doing things while text field still focused
+- Fixed bug that caused "Last touched" target to not respond right after preset/project loading
+- Fixed disappeared targets in target dropdown on Windows (and other small UI fixes)
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.6/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.6/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.8.0-rc.5" author="helgoboss" time="2021-04-14T12:00:00Z">
                 <changelog><![CDATA[- Added target "MIDI: Send message"
