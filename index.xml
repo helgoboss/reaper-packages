@@ -135,6 +135,110 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
+            <version name="2.8.1" author="helgoboss" time="2021-04-27T12:00:00Z">
+                <changelog><![CDATA[- Added experimental targets "Clip: Invoke transport action", "Clip: Seek" and "Clip: Volume"
+- Added new FX instance selector "Dynamic"
+- Added new FX parameter selectors "Dynamic" and "By name"
+- Added new send/receive/output selectors "Dynamic", "By ID" (source/destination track ID) and "By name"
+- Added option to use track receives (change of perspective) and hardware output sends instead of track sends only
+- Added possibility to use wildcards (\* and ?) in all name selectors to match only parts of names
+- Added "Fire after timeout" mode for button presses
+- Added "Fire after timeout, keep firing" mode for button presses (turbo mode!)
+- Added "Seek" target (including feedback on beat changes or in high resolution!)
+- Added support for showing current target values in projection view (= "Projection feedback", needs latest version of the ReaLearn Companion app to work)
+- Added takeover modes "Parallel" and "Catch up" (renamed existing takeover modes to "Pick up" and "Long time no see")
+- Added FX selector &lt;This> for targeting the own ReaLearn instance (good for using conditional activation and &lt;Dynamic> in reusable presets)
+- Added copy/paste of mappings or even just sources/modes/targets (also across compartments and instances)
+- Added copy/paste of the complete filtered mapping list (e.g. to copy/paste whole compartments, groups or search results)
+- Added possibility to use names for virtual control elements instead of numbers
+- Added quick start section at the top of the user guide
+- Added FAQ section to the user guide
+- Added mapping group feature to controller compartment (was previously available in main compartment only)
+- Added conditional activation to controller compartment (was previously available in main compartment only)
+- Added 100 more freely assignable VST parameters to ReaLearn (now we have 200 parameters in total divided into the already existing 100 main compartment parameters and 100 new controller compartment parameters)
+- Added possibility to customize parameter names via header panel context menu
+- Added ability for "Auto-load preset: Depending on focused FX" instances to suspend other instances that share the same device (with this, you can easily let your controller control the currently focused FX but fall back to your usual controls when it's closed)
+- Added ability that multiple instances work hand in hand when it comes to feedback (As long as 2 instances don't actively feedback to more than one control element at once, everything will be fine and should work just as with conditional activation within 1 instance.)
+- Added new targets "FX open" (for opening/closing a specific FX via button) and "FX navigate" (for navigating with prev/next buttons or encoders within FX chain)
+- Added new targets "Track automation mode" and "Automation mode override"
+- Added new target "Track show/hide"
+- Added new transport actions "Pause" and "Stop" to "Transport target" (for more fine-grained feedback)
+- Added checkboxes "Scroll TCP" and "Scroll mixer" to targets "Selected track" and "Track selection"
+- Added checkboxes "Set loop points" and "Set time selection" to target "Go to region"
+- Added "Paste mappings (replace all in group)" to header context menu
+- Added "FX-to-preset links" to header context menu for better management and for making it possible to map multiple plug-ins to the same preset
+- Added possibility to use plug-in file name wildcards (\* and ?) when linking an FX to a preset (another way to map multiple plug-ins to the same preset)
+- Added new source character "Toggle button" as a workaround for hardware buttons that can't be configured to act as momentary buttons (should usually be avoided; behavior is that it always sends 1 even when 0 is received)
+- Added new fire modes "Single press" and "Double press" (can now distinguish between single press, double press and long press)
+- Added possibility to use preset name in addition to plug-in name when creating preset links for the "Auto-load preset" feature (allows you to load a different ReaLearn main preset when the preset of the focused FX changes)
+- Added ability to correctly switch feedback when enabling/disabling ReaLearn instances that talk to the same control elements (uses source-takeover mechanism)
+- Added possibility to easily react to button press-down only and ignore button release (without affecting feedback)
+- Added possibility to easily react to encoder increments or decrements only
+- Added possibility to let the target track depend on the current position of this ReaLearn track by making variable this_track_index available in the &lt;Dynamic> track expression
+- Added support for keeping control/feedback working even when switching to other project tab (with exception of automation writing, "Project: Set playrate" target and the smooth region seeking part of "Marker/region: Go to" target)
+- Added possibility to enforce "Rotate" already in a virtual controller mapping
+- Added feedback-only "Script" MIDI source for making LCD support possible (lets you write EEL scripts that encode the target value as raw MIDI message in any imaginable way)
+- Added library of Mackie-inspired virtual control element names and a convenient picker
+- Added capability for automatic naming of mappings based on its target - kicks in when clearing the custom name
+- Added right-click menu action to auto-name listed mappings (clearing all names)
+- Added main preset "DAW Control" to ReaPack repository and documented it in the user guide in the new "Preset" section
+- Added user guide entry for controller "Behringer X-Touch One"
+- Added support for wildcards in search expressions
+- Added context-sensitive help section to mapping panel which explains most of the tuning options (for each kind of source separately)
+- Added target "MIDI: Send message"
+- Added target "OSC: Send message"
+- Added new track selector "All selected" to make track targets (NOT FX and send targets) work on all selected tracks
+- Added right-click menu action "Move listed mappings to group"
+- Improved compartment presets by making them save/restore the customized compartment parameter names as well
+- Improved feedback for controller mappings with virtual targets (enabling it again will restore feedback, that was previously not the case)
+- Improved understandability by renaming "Program" to "Bank" in conditional activation
+- Improved usability by renaming and reordering targets, also introduced additional target hint label
+- Improved "Project: Invoke transport action" target by making "Play/stop" and "Play/pause" retriggerable
+- Improved user interface by displaying helpful text and button if compartment, group or filtered list empty
+- Improved user interface by moving "Reload all" to the header right-click context menu as "Reload all presets from disk"
+- Improved user interface by displaying mapping compartments as radio buttons
+- Improved user interface by hiding "Let through" options when input is not &lt;FX input> (change in behavior: now it will always let through FX input events in that case)
+- Improved user interface by marking "Toggle buttons" mode as invalid for virtual controller mappings
+- Improved versatility by making "Character" dropdown available even for 14-bit sources (both (N)RPN and CC)
+- Improved controller presets "Mackie Control" and "iCON Platform M+" by using virtual control element names of the new "DAW" domain (major version bump, breaking change ... but no worries, your existing projects, FX chains and track templates will not be changed unless you explicitly reload the preset within ReaLearn)
+- Improved usability by displaying mapping group name on right when showing mappings in all groups
+- Improved "Duplicate" by getting rid of the annoying "Copy of ..." prefix
+- Improved usability by hiding mapping tuning options which are not relevant at all in the current context
+- Improved user friendliness by raising step size max to 5% and speed max to 5x (in order to make it more obvious to new users that ReaLearn supports encoder acceleration and velocity-sensitive buttons)
+- Improved usability by removing the UI difference between numbered and named virtual control elements (internally numbers are still treated a bit differently, but on the surface it's the same now)
+- Improved usability by explicitly indicating when target is currently inactive
+- Improved naming by renaming "Rotate" to "Wrap" and "Move instance to upper floor" to "Make instance superior"
+- Improved Midi Fighter Twister user guide entry by explaining how to use encoder acceleration and by linking to ReaLearn-compatible MFT Color Designer web app
+- Improved Midi Fighter Twister controller presets by making it react to encoder acceleration if configured in MF utility (also use named virtual control IDs for side buttons)
+- Improved preset behavior by automatically resetting all compartment parameters to zero when loading a compartment preset
+- Improved global "Find first mapping by source" REAPER action by taking mapping activation status into account
+- Fixed error when controlling "Last touched" target after the last touched target is gone (e.g. after track deleted)
+- Fixed too early rotation when using "Incremental buttons" in combination with "Rotate"
+- Fixed bug in "Go to marger/region" target that caused markers/regions to be triggered even on button release
+- Fixed idle CPU usage when having OSC feedback enabled for at least one OSC device (was quite high)
+- Fixed channel "Full" error when invoking lots of actions in a small amount of time
+- Fixed possible "unwrap" error with certain mapping tuning settings, e.g. jump and step size
+- Fixed possible "borrow" error when using FX parameter target with own ReaLearn instance
+- Fixed feedback issues due to numerical inaccuracies (especially useful for radio-button-like feedback from discrete target values)
+- Fixed "FX chain chunk not found" error when on monitoring FX and "Auto-load preset" on
+- Fixed sometimes missing feedback on target activation changes (e.g. when "Track must be selected" is used)
+- Fixed &lt;Dynamic> expression evaluation by doing rounding (was sometimes leading to unexpected results because decimal digits were just being cut off)
+- Fixed cropped "Min" labels on macOS
+- Fixed little GUI lag when selecting control element index for virtual targets
+- Fixed bug on macOS which caused text fields not to update correctly if still focused
+- Fixed "BorrowMut" error on macOS when doing things while text field still focused
+- Fixed bug that caused "Last touched" target to not respond right after preset/project loading
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.1/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.1/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.1/realearn-user-guide.pdf</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.1/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.8.1/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.8.1/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.8.0-rc.6" author="helgoboss" time="2021-04-23T12:00:00Z">
                 <changelog><![CDATA[- Added experimental targets "Clip: Invoke transport action", "Clip: Seek" and "Clip: Volume"
 - Improved preset behavior by automatically resetting all compartment parameters to zero when loading a compartment preset
@@ -1153,6 +1257,106 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+            <version name="2.8.1" author="helgoboss" time="2021-04-27T12:00:00Z">
+                <changelog><![CDATA[- Added experimental targets "Clip: Invoke transport action", "Clip: Seek" and "Clip: Volume"
+- Added new FX instance selector "Dynamic"
+- Added new FX parameter selectors "Dynamic" and "By name"
+- Added new send/receive/output selectors "Dynamic", "By ID" (source/destination track ID) and "By name"
+- Added option to use track receives (change of perspective) and hardware output sends instead of track sends only
+- Added possibility to use wildcards (\* and ?) in all name selectors to match only parts of names
+- Added "Fire after timeout" mode for button presses
+- Added "Fire after timeout, keep firing" mode for button presses (turbo mode!)
+- Added "Seek" target (including feedback on beat changes or in high resolution!)
+- Added support for showing current target values in projection view (= "Projection feedback", needs latest version of the ReaLearn Companion app to work)
+- Added takeover modes "Parallel" and "Catch up" (renamed existing takeover modes to "Pick up" and "Long time no see")
+- Added FX selector &lt;This> for targeting the own ReaLearn instance (good for using conditional activation and &lt;Dynamic> in reusable presets)
+- Added copy/paste of mappings or even just sources/modes/targets (also across compartments and instances)
+- Added copy/paste of the complete filtered mapping list (e.g. to copy/paste whole compartments, groups or search results)
+- Added possibility to use names for virtual control elements instead of numbers
+- Added quick start section at the top of the user guide
+- Added FAQ section to the user guide
+- Added mapping group feature to controller compartment (was previously available in main compartment only)
+- Added conditional activation to controller compartment (was previously available in main compartment only)
+- Added 100 more freely assignable VST parameters to ReaLearn (now we have 200 parameters in total divided into the already existing 100 main compartment parameters and 100 new controller compartment parameters)
+- Added possibility to customize parameter names via header panel context menu
+- Added ability for "Auto-load preset: Depending on focused FX" instances to suspend other instances that share the same device (with this, you can easily let your controller control the currently focused FX but fall back to your usual controls when it's closed)
+- Added ability that multiple instances work hand in hand when it comes to feedback (As long as 2 instances don't actively feedback to more than one control element at once, everything will be fine and should work just as with conditional activation within 1 instance.)
+- Added new targets "FX open" (for opening/closing a specific FX via button) and "FX navigate" (for navigating with prev/next buttons or encoders within FX chain)
+- Added new targets "Track automation mode" and "Automation mode override"
+- Added new target "Track show/hide"
+- Added new transport actions "Pause" and "Stop" to "Transport target" (for more fine-grained feedback)
+- Added checkboxes "Scroll TCP" and "Scroll mixer" to targets "Selected track" and "Track selection"
+- Added checkboxes "Set loop points" and "Set time selection" to target "Go to region"
+- Added "Paste mappings (replace all in group)" to header context menu
+- Added "FX-to-preset links" to header context menu for better management and for making it possible to map multiple plug-ins to the same preset
+- Added possibility to use plug-in file name wildcards (\* and ?) when linking an FX to a preset (another way to map multiple plug-ins to the same preset)
+- Added new source character "Toggle button" as a workaround for hardware buttons that can't be configured to act as momentary buttons (should usually be avoided; behavior is that it always sends 1 even when 0 is received)
+- Added new fire modes "Single press" and "Double press" (can now distinguish between single press, double press and long press)
+- Added possibility to use preset name in addition to plug-in name when creating preset links for the "Auto-load preset" feature (allows you to load a different ReaLearn main preset when the preset of the focused FX changes)
+- Added ability to correctly switch feedback when enabling/disabling ReaLearn instances that talk to the same control elements (uses source-takeover mechanism)
+- Added possibility to easily react to button press-down only and ignore button release (without affecting feedback)
+- Added possibility to easily react to encoder increments or decrements only
+- Added possibility to let the target track depend on the current position of this ReaLearn track by making variable this_track_index available in the &lt;Dynamic> track expression
+- Added support for keeping control/feedback working even when switching to other project tab (with exception of automation writing, "Project: Set playrate" target and the smooth region seeking part of "Marker/region: Go to" target)
+- Added possibility to enforce "Rotate" already in a virtual controller mapping
+- Added feedback-only "Script" MIDI source for making LCD support possible (lets you write EEL scripts that encode the target value as raw MIDI message in any imaginable way)
+- Added library of Mackie-inspired virtual control element names and a convenient picker
+- Added capability for automatic naming of mappings based on its target - kicks in when clearing the custom name
+- Added right-click menu action to auto-name listed mappings (clearing all names)
+- Added main preset "DAW Control" to ReaPack repository and documented it in the user guide in the new "Preset" section
+- Added user guide entry for controller "Behringer X-Touch One"
+- Added support for wildcards in search expressions
+- Added context-sensitive help section to mapping panel which explains most of the tuning options (for each kind of source separately)
+- Added target "MIDI: Send message"
+- Added target "OSC: Send message"
+- Added new track selector "All selected" to make track targets (NOT FX and send targets) work on all selected tracks
+- Added right-click menu action "Move listed mappings to group"
+- Improved compartment presets by making them save/restore the customized compartment parameter names as well
+- Improved feedback for controller mappings with virtual targets (enabling it again will restore feedback, that was previously not the case)
+- Improved understandability by renaming "Program" to "Bank" in conditional activation
+- Improved usability by renaming and reordering targets, also introduced additional target hint label
+- Improved "Project: Invoke transport action" target by making "Play/stop" and "Play/pause" retriggerable
+- Improved user interface by displaying helpful text and button if compartment, group or filtered list empty
+- Improved user interface by moving "Reload all" to the header right-click context menu as "Reload all presets from disk"
+- Improved user interface by displaying mapping compartments as radio buttons
+- Improved user interface by hiding "Let through" options when input is not &lt;FX input> (change in behavior: now it will always let through FX input events in that case)
+- Improved user interface by marking "Toggle buttons" mode as invalid for virtual controller mappings
+- Improved versatility by making "Character" dropdown available even for 14-bit sources (both (N)RPN and CC)
+- Improved controller presets "Mackie Control" and "iCON Platform M+" by using virtual control element names of the new "DAW" domain (major version bump, breaking change ... but no worries, your existing projects, FX chains and track templates will not be changed unless you explicitly reload the preset within ReaLearn)
+- Improved usability by displaying mapping group name on right when showing mappings in all groups
+- Improved "Duplicate" by getting rid of the annoying "Copy of ..." prefix
+- Improved usability by hiding mapping tuning options which are not relevant at all in the current context
+- Improved user friendliness by raising step size max to 5% and speed max to 5x (in order to make it more obvious to new users that ReaLearn supports encoder acceleration and velocity-sensitive buttons)
+- Improved usability by removing the UI difference between numbered and named virtual control elements (internally numbers are still treated a bit differently, but on the surface it's the same now)
+- Improved usability by explicitly indicating when target is currently inactive
+- Improved naming by renaming "Rotate" to "Wrap" and "Move instance to upper floor" to "Make instance superior"
+- Improved Midi Fighter Twister user guide entry by explaining how to use encoder acceleration and by linking to ReaLearn-compatible MFT Color Designer web app
+- Improved Midi Fighter Twister controller presets by making it react to encoder acceleration if configured in MF utility (also use named virtual control IDs for side buttons)
+- Improved preset behavior by automatically resetting all compartment parameters to zero when loading a compartment preset
+- Improved global "Find first mapping by source" REAPER action by taking mapping activation status into account
+- Fixed error when controlling "Last touched" target after the last touched target is gone (e.g. after track deleted)
+- Fixed too early rotation when using "Incremental buttons" in combination with "Rotate"
+- Fixed bug in "Go to marger/region" target that caused markers/regions to be triggered even on button release
+- Fixed idle CPU usage when having OSC feedback enabled for at least one OSC device (was quite high)
+- Fixed channel "Full" error when invoking lots of actions in a small amount of time
+- Fixed possible "unwrap" error with certain mapping tuning settings, e.g. jump and step size
+- Fixed possible "borrow" error when using FX parameter target with own ReaLearn instance
+- Fixed feedback issues due to numerical inaccuracies (especially useful for radio-button-like feedback from discrete target values)
+- Fixed "FX chain chunk not found" error when on monitoring FX and "Auto-load preset" on
+- Fixed sometimes missing feedback on target activation changes (e.g. when "Track must be selected" is used)
+- Fixed &lt;Dynamic> expression evaluation by doing rounding (was sometimes leading to unexpected results because decimal digits were just being cut off)
+- Fixed cropped "Min" labels on macOS
+- Fixed little GUI lag when selecting control element index for virtual targets
+- Fixed bug on macOS which caused text fields not to update correctly if still focused
+- Fixed "BorrowMut" error on macOS when doing things while text field still focused
+- Fixed bug that caused "Last touched" target to not respond right after preset/project loading
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.1/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.1/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.8.0-rc.6" author="helgoboss" time="2021-04-23T12:00:00Z">
                 <changelog><![CDATA[- Added experimental targets "Clip: Invoke transport action", "Clip: Seek" and "Clip: Volume"
