@@ -135,6 +135,21 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
+            <version name="2.8.2" author="helgoboss" time="2021-04-29T12:00:00Z">
+                <changelog><![CDATA[- Changed license from LGPL-3.0 to GPL-3.0
+- Fixed BorrowError when changing preset if control surface configured in preferences
+- Fixed bug that caused some tuning settings to stay hidden when enabling "Make absolute"
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.2/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.2/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.2/realearn-user-guide.pdf</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.2/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.8.2/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.8.2/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.8.1" author="helgoboss" time="2021-04-27T12:00:00Z">
                 <changelog><![CDATA[- Added experimental targets "Clip: Invoke transport action", "Clip: Seek" and "Clip: Volume"
 - Added new FX instance selector "Dynamic"
@@ -1257,6 +1272,17 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
+
+            <version name="2.8.2" author="helgoboss" time="2021-04-29T12:00:00Z">
+                <changelog><![CDATA[- Changed license from LGPL-3.0 to GPL-3.0
+- Fixed BorrowError when changing preset if control surface configured in preferences
+- Fixed bug that caused some tuning settings to stay hidden when enabling "Make absolute"
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.2/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.2/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.8.1" author="helgoboss" time="2021-04-27T12:00:00Z">
                 <changelog><![CDATA[- Added experimental targets "Clip: Invoke transport action", "Clip: Seek" and "Clip: Volume"
