@@ -136,7 +136,7 @@
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
             <version name="2.9.0-pre.5" author="helgoboss" time="2021-04-30T12:00:00Z">
-                <changelog><![CDATA[- Added macOS aarch64 build (ARM64)
+                <changelog><![CDATA[- Added macOS aarch64 build (ARM64), also updated WDL and other used libraries
 ]]></changelog>
 
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.5/realearn-user-guide.pdf</source>
@@ -1357,7 +1357,7 @@
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Improved MIDI learn with feedback">
 
             <version name="2.9.0-pre.5" author="helgoboss" time="2021-04-30T12:00:00Z">
-                <changelog><![CDATA[- Added macOS aarch64 build (ARM64)
+                <changelog><![CDATA[- Added macOS aarch64 build (ARM64), also updated WDL and other used libraries
 ]]></changelog>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.5/realearn-user-guide.pdf</source>
