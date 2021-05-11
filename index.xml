@@ -135,10 +135,54 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
 
+            <version name="2.9.0" author="helgoboss" time="2021-05-11T12:00:00Z">
+                <changelog><![CDATA[- Added possibility to seek within currently visible viewport (by not checking any "Use ..." checkbox in the project seek target)
+- Added feedback-only "Track peak" target to turn your controller into a simple VU meter
+- Added macOS aarch64 build (ARM64), also updated WDL and other used libraries
+- Improved reliability by reducing probability of audio dropouts in certain situations (by deferring all deallocations from real-time threads to main thread; allocations were done in main thread before already)
+- Improved usability by sorting compartment presets by name (independent from file name)
+- Improved maintainability by doing an internal target refactoring (shouldn't cause any changes, just for protocol)
+- Fixed some disappeared tuning options for "Note number" source and all press-only button characters
+- Fixed action invocation mode "Absolute" (broken in some cases since 2.8.0 because upgrade to 14-bit resolution went a bit wrong ...)
+- Fixed bug that caused target option "Scroll mixer" to not be restored correctly
+- Fixed bug that caused "Prevent echo feedback" to not work correctly anymore since v2.8.x
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.0/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.0/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.0/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.0/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.9.0/realearn-macos-aarch64.vst.dylib</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.9.0/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.9.0/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.9.0/realearn-linux-x86_64.so</source>
+            </version>
+
+            <version name="2.9.0-pre.9" author="helgoboss" time="2021-05-11T12:00:00Z">
+                <changelog><![CDATA[- Fixed bug that caused target option "Scroll mixer" to not be restored correctly
+- Fixed bug that caused "Prevent echo feedback" to not work correctly anymore since v2.8.x
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.9/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.9/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.9/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.9/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.9/realearn-macos-aarch64.vst.dylib</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.9/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.9/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.9/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.9.0-pre.8" author="helgoboss" time="2021-05-07T12:00:00Z">
                 <changelog><![CDATA[- Added feedback-only "Track peak" target to turn your controller into a simple VU meter
-- Fixed action invocation mode "Absolute" (broken in some cases since 2.8.0 because upgrade to 14-bit resolution went a bit wrong ...)
 - Improved maintainability by doing an internal target refactoring (shouldn't cause any changes, just for protocol)
+- Fixed action invocation mode "Absolute" (broken in some cases since 2.8.0 because upgrade to 14-bit resolution went a bit wrong ...)
 ]]></changelog>
 
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.8/realearn-user-guide.pdf</source>
@@ -1412,10 +1456,38 @@
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
 
+            <version name="2.9.0" author="helgoboss" time="2021-05-11T12:00:00Z">
+                <changelog><![CDATA[- Added possibility to seek within currently visible viewport (by not checking any "Use ..." checkbox in the project seek target)
+- Added feedback-only "Track peak" target to turn your controller into a simple VU meter
+- Added macOS aarch64 build (ARM64), also updated WDL and other used libraries
+- Improved reliability by reducing probability of audio dropouts in certain situations (by deferring all deallocations from real-time threads to main thread; allocations were done in main thread before already)
+- Improved usability by sorting compartment presets by name (independent from file name)
+- Improved maintainability by doing an internal target refactoring (shouldn't cause any changes, just for protocol)
+- Fixed some disappeared tuning options for "Note number" source and all press-only button characters
+- Fixed action invocation mode "Absolute" (broken in some cases since 2.8.0 because upgrade to 14-bit resolution went a bit wrong ...)
+- Fixed bug that caused target option "Scroll mixer" to not be restored correctly
+- Fixed bug that caused "Prevent echo feedback" to not work correctly anymore since v2.8.x
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.0/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.9.0/realearn-windows-i686.dll</source>
+            </version>
+
+            <version name="2.9.0-pre.9" author="helgoboss" time="2021-05-11T12:00:00Z">
+                <changelog><![CDATA[- Fixed bug that caused target option "Scroll mixer" to not be restored correctly
+- Fixed bug that caused "Prevent echo feedback" to not work correctly anymore since v2.8.x
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.9/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.9/realearn-windows-i686.dll</source>
+            </version>
+
             <version name="2.9.0-pre.8" author="helgoboss" time="2021-05-07T12:00:00Z">
                 <changelog><![CDATA[- Added feedback-only "Track peak" target to turn your controller into a simple VU meter
-- Fixed action invocation mode "Absolute" (broken in some cases since 2.8.0 because upgrade to 14-bit resolution went a bit wrong ...)
 - Improved maintainability by doing an internal target refactoring (shouldn't cause any changes, just for protocol)
+- Fixed action invocation mode "Absolute" (broken in some cases since 2.8.0 because upgrade to 14-bit resolution went a bit wrong ...)
 ]]></changelog>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.8/realearn-user-guide.pdf</source>
