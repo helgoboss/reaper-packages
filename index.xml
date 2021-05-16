@@ -135,6 +135,44 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
 
+            <version name="2.10.0-pre.1" author="helgoboss" time="2021-05-16T12:00:00Z">
+                <changelog><![CDATA[- Added option "Poll for feedback" (enabled by default) to the few targets for which the REAPER API doesn't provide any value change notification or not in all cases (essentially makes automatic feedback work for all targets, also fixes the issue that switching presets from within a FX UI doesn't resend FX parameter feedback)
+- Added header context menu options to log incoming/outgoing MIDI/OSC messages (great for debugging)
+- Added track selector "All by name" which resolves to many tracks instead of only the first one if the name contains wildcards and multiple tracks match
+- Added mapping row context menu option to log debug info for a single mapping
+- Improved performance for targets that poll for feedback (e.g. "Track: Peak") by processing and sending feedback only if value actually changed
+- Improved reliability by migrating to stable Rust (just an internal change)
+- Fixed "nervous motor faders" issue by not sending batch feedback anymore when starting to play or seeking
+- Fixed predefined "MIDI: Send" target patterns (7-bit patterns reported to be 14-bit-capable)
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.1/realearn-user-guide.pdf</source>
+
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.1/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.1/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.1/realearn-linux-x86_64.so</source>
+            </version>
+
+            <version name="2.9.1" author="helgoboss" time="2021-05-16T12:00:00Z">
+                <changelog><![CDATA[- Fixed regression that caused real targets in controller mappings to not work anymore
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.1/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.1/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.1/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.1/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.9.1/realearn-macos-aarch64.vst.dylib</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.9.1/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.9.1/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.9.1/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.9.0" author="helgoboss" time="2021-05-11T12:00:00Z">
                 <changelog><![CDATA[- Added possibility to seek within currently visible viewport (by not checking any "Use ..." checkbox in the project seek target)
 - Added feedback-only "Track peak" target to turn your controller into a simple VU meter
@@ -1455,6 +1493,31 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
+
+            <version name="2.10.0-pre.1" author="helgoboss" time="2021-05-16T12:00:00Z">
+                <changelog><![CDATA[- Added option "Poll for feedback" (enabled by default) to the few targets for which the REAPER API doesn't provide any value change notification or not in all cases (essentially makes automatic feedback work for all targets, also fixes the issue that switching presets from within a FX UI doesn't resend FX parameter feedback)
+- Added header context menu options to log incoming/outgoing MIDI/OSC messages (great for debugging)
+- Added track selector "All by name" which resolves to many tracks instead of only the first one if the name contains wildcards and multiple tracks match
+- Added mapping row context menu option to log debug info for a single mapping
+- Improved performance for targets that poll for feedback (e.g. "Track: Peak") by processing and sending feedback only if value actually changed
+- Improved reliability by migrating to stable Rust (just an internal change)
+- Fixed "nervous motor faders" issue by not sending batch feedback anymore when starting to play or seeking
+- Fixed predefined "MIDI: Send" target patterns (7-bit patterns reported to be 14-bit-capable)
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.1/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.1/realearn-windows-i686.dll</source>
+            </version>
+
+            <version name="2.9.1" author="helgoboss" time="2021-05-16T12:00:00Z">
+                <changelog><![CDATA[- Fixed regression that caused real targets in controller mappings to not work anymore
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.1/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.9.1/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.9.0" author="helgoboss" time="2021-05-11T12:00:00Z">
                 <changelog><![CDATA[- Added possibility to seek within currently visible viewport (by not checking any "Use ..." checkbox in the project seek target)
