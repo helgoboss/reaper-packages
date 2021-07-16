@@ -102,6 +102,10 @@
             </version>
         </reapack>
         <reapack name="minilab-mkii" type="data" desc="Arturia MiniLab mkII">
+            <version name="1.1.1" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/minilab-mkii.json">https://raw.githubusercontent.com/helgoboss/realearn/9d138e496a191f222e2dd2f43700ee14bfad2231/resources/controllers/minilab-mkii.json</source>
+                <changelog><![CDATA[- Fixed missing projection feedback (for pads)]]></changelog>
+            </version>
             <version name="1.1.0" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/minilab-mkii.json">https://raw.githubusercontent.com/helgoboss/realearn/74ae3e116c184f9edc01bf8c3fe78d5add1fb69d/resources/controllers/minilab-mkii.json</source>
             </version>
@@ -134,6 +138,26 @@
     </category>
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
+
+            <version name="2.10.0-pre.3" author="helgoboss" time="2021-07-17T12:00:00Z">
+                <changelog><![CDATA[- Internal change: Added and changed code for upcoming "Discrete processing" feature (#184)
+- Added mapping option "Show in projection" (enabled by default)
+- Improved usability by putting "Send feedback after control" and "Prevent echo feedback" into dropdown (because it doesn't make sense to combine them)
+- Fixed MiniLab mkII controller preset: Projection feedback for pads works now
+- Fixed confusing logic that caused the preset save button to not be greyed out after making mappings project-independent
+- Fixed lag when sending MIDI messages to FX output (both when letting incoming messages through and when sending them via "MIDI: Send message" target)
+- Fixed bug that caused ReaLearn send targets to forget the kind of send
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.3/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.3/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.3/realearn-user-guide.pdf</source>
+
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.3/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.3/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.3/realearn-linux-x86_64.so</source>
+            </version>
 
             <version name="2.10.0-pre.2" author="helgoboss" time="2021-05-18T12:00:00Z">
                 <changelog><![CDATA[- Added new tuning setting "Group interaction" for controlling multiple mappings within the same group at once, in multiple interesting ways
@@ -1508,6 +1532,21 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
+
+            <version name="2.10.0-pre.3" author="helgoboss" time="2021-07-17T12:00:00Z">
+                <changelog><![CDATA[- Internal change: Added and changed code for upcoming "Discrete processing" feature (#184)
+- Added mapping option "Show in projection" (enabled by default)
+- Improved usability by putting "Send feedback after control" and "Prevent echo feedback" into dropdown (because it doesn't make sense to combine them)
+- Fixed MiniLab mkII controller preset: Projection feedback for pads works now
+- Fixed confusing logic that caused the preset save button to not be greyed out after making mappings project-independent
+- Fixed lag when sending MIDI messages to FX output (both when letting incoming messages through and when sending them via "MIDI: Send message" target)
+- Fixed bug that caused ReaLearn send targets to forget the kind of send
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.3/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.3/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.10.0-pre.2" author="helgoboss" time="2021-05-18T12:00:00Z">
                 <changelog><![CDATA[- Added new tuning setting "Group interaction" for controlling multiple mappings within the same group at once, in multiple interesting ways
