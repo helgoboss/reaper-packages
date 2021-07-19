@@ -139,6 +139,27 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
 
+            <version name="2.10.0-pre.4" author="helgoboss" time="2021-07-19T12:00:00Z">
+                <changelog><![CDATA[- Added source "MIDI device changes" in new source category "REAPER" (for reacting to MIDI device plug/unplug events)
+- Added variable selected_track_index for use in dynamic track expression
+- Improved versatility by guaranteeing mappings within one compartment to be processed in the order of definition (exception: ReaLearn parameters)
+- Improved "MIDI/OSC: Send message" targets by making it work with "Toggle buttons" mode and relative encoders
+- Fixed reverse behavior for discrete targets (2.10.0-pre.3 regression)
+- Fixed bug that caused "The pipe is being closed" error on some systems when choosing "MIDI: Send message" target
+- Fixed non-reliable dynamic selectors for send, FX and FX parameters (was only working reliably for tracks before)
+- Fixed large binary size on macOS (regression introduced with 2.10.0-pre.1)
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.4/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.4/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.4/realearn-user-guide.pdf</source>
+
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.4/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.4/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.4/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.10.0-pre.3" author="helgoboss" time="2021-07-17T12:00:00Z">
                 <changelog><![CDATA[- Internal change: Added and changed code for upcoming "Discrete processing" feature (#184)
 - Added mapping option "Show in projection" (enabled by default)
@@ -1532,6 +1553,22 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
+
+            <version name="2.10.0-pre.4" author="helgoboss" time="2021-07-19T12:00:00Z">
+                <changelog><![CDATA[- Added source "MIDI device changes" in new source category "REAPER" (for reacting to MIDI device plug/unplug events)
+- Added variable selected_track_index for use in dynamic track expression
+- Improved versatility by guaranteeing mappings within one compartment to be processed in the order of definition (exception: ReaLearn parameters)
+- Improved "MIDI/OSC: Send message" targets by making it work with "Toggle buttons" mode and relative encoders
+- Fixed reverse behavior for discrete targets (2.10.0-pre.3 regression)
+- Fixed bug that caused "The pipe is being closed" error on some systems when choosing "MIDI: Send message" target
+- Fixed non-reliable dynamic selectors for send, FX and FX parameters (was only working reliably for tracks before)
+- Fixed large binary size on macOS (regression introduced with 2.10.0-pre.1)
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.4/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.4/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.10.0-pre.3" author="helgoboss" time="2021-07-17T12:00:00Z">
                 <changelog><![CDATA[- Internal change: Added and changed code for upcoming "Discrete processing" feature (#184)
