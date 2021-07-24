@@ -139,6 +139,23 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
 
+            <version name="2.10.0-pre.5" author="helgoboss" time="2021-07-24T12:00:00Z">
+                <changelog><![CDATA[- Added support for target value sequences (including ranges, customizable step sizes etc., even supports true relative control!)
+- Added target unit button for switching between 1. native target unit and 2. percentages (chosen unit will be used whenever entering/displaying target values or step sizes, saved per mapping)
+- Improved versatility of "Make absolute" checkbox by also making it available in "Incremental buttons" mode
+- Improved jump settings by displaying and letting one enter step sizes instead of absolute values (makes much more sense)
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.5/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.5/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.5/realearn-user-guide.pdf</source>
+
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.5/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.5/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.5/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.10.0-pre.4" author="helgoboss" time="2021-07-19T12:00:00Z">
                 <changelog><![CDATA[- Added source "MIDI device changes" in new source category "REAPER" (for reacting to MIDI device plug/unplug events)
 - Added variable selected_track_index for use in dynamic track expression
@@ -1553,6 +1570,18 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
+
+            <version name="2.10.0-pre.5" author="helgoboss" time="2021-07-24T12:00:00Z">
+                <changelog><![CDATA[- Added support for target value sequences (including ranges, customizable step sizes etc., even supports true relative control!)
+- Added target unit button for switching between 1. native target unit and 2. percentages (chosen unit will be used whenever entering/displaying target values or step sizes, saved per mapping)
+- Improved versatility of "Make absolute" checkbox by also making it available in "Incremental buttons" mode
+- Improved jump settings by displaying and letting one enter step sizes instead of absolute values (makes much more sense)
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.5/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.5/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.10.0-pre.4" author="helgoboss" time="2021-07-19T12:00:00Z">
                 <changelog><![CDATA[- Added source "MIDI device changes" in new source category "REAPER" (for reacting to MIDI device plug/unplug events)
