@@ -139,6 +139,23 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
 
+            <version name="2.10.0-pre.6" author="helgoboss" time="2021-08-01T12:00:00Z">
+                <changelog><![CDATA[- Improved fire mode "After timeout" by making it work in combination with "Press only" button filter (you can now press a button and no matter how long you press it, it will fire after the specified timeout)
+- Improved wording by renaming "Target values" to "(Target) value sequence"
+- Fixed rounding issues when using ranges in target value sequences
+- Fixed non-working fire mode (pre5 regression)
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.6/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.6/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.6/realearn-user-guide.pdf</source>
+
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.6/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.6/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.6/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.10.0-pre.5" author="helgoboss" time="2021-07-24T12:00:00Z">
                 <changelog><![CDATA[- Added support for target value sequences (including ranges, customizable step sizes etc., even supports true relative control!)
 - Added target unit button for switching between 1. native target unit and 2. percentages (chosen unit will be used whenever entering/displaying target values or step sizes, saved per mapping)
@@ -1570,6 +1587,18 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
+
+            <version name="2.10.0-pre.6" author="helgoboss" time="2021-08-01T12:00:00Z">
+                <changelog><![CDATA[- Improved fire mode "After timeout" by making it work in combination with "Press only" button filter (you can now press a button and no matter how long you press it, it will fire after the specified timeout)
+- Improved wording by renaming "Target values" to "(Target) value sequence"
+- Fixed rounding issues when using ranges in target value sequences
+- Fixed non-working fire mode (pre5 regression)
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.6/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.6/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.10.0-pre.5" author="helgoboss" time="2021-07-24T12:00:00Z">
                 <changelog><![CDATA[- Added support for target value sequences (including ranges, customizable step sizes etc., even supports true relative control!)
