@@ -139,6 +139,30 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
 
+            <version name="2.10.0-pre.9" author="helgoboss" time="2021-08-20T12:00:00Z">
+                <changelog><![CDATA[- Added visual mapping (source) match indicator, both in mapping row and mapping panel
+- Added "All by name" FX selector (lets you use wildcards now to resolve to multiple FX, quite useful with the "FX: Enable/disable" target for simulating controller pages)
+- Improved usability by disallowing addressing FX "By ID" if the track is not sticky (that is, not &lt;This> or addressed "By ID") ... allowing was nonsensical and confusing
+- Improved FX parameter "By position" selector so you can enter the position in a text field (parameter dropdown is now available as selector "By ID")
+- Improved consistency of target label in mapping row (e.g. don't show resolved track/FX/parameter name if selector is not "By ID")
+- Improved usability of target dropdowns by making it possible to change the track/FX selectors while keeping entered values (e.g. having the name always prefilled when switching from "By ID" to "By name")
+- Improved user guide (better table of contents, better quick start, migrated to AsciiDoc)
+- Improved projection by sending projection feedback even if feedback disabled for controller mapping
+- Fixed takeover modes misbehavior in presence of restricted source/target value range
+- Fixed bug that let "Send feedback after control" not send feedback after control in some corner cases
+- Fixed "Last touched" target: Make it work correctly if other FX parameter is currently automated (also improves FX parameter learning in presence of parameter automation)
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.9/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.9/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.9/realearn-user-guide.pdf</source>
+
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.9/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.9/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.9/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.10.0-pre.6" author="helgoboss" time="2021-08-01T12:00:00Z">
                 <changelog><![CDATA[- Improved fire mode "After timeout" by making it work in combination with "Press only" button filter (you can now press a button and no matter how long you press it, it will fire after the specified timeout)
 - Improved wording by renaming "Target values" to "(Target) value sequence"
@@ -1587,6 +1611,25 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
+
+            <version name="2.10.0-pre.9" author="helgoboss" time="2021-08-20T12:00:00Z">
+                <changelog><![CDATA[- Added visual mapping (source) match indicator, both in mapping row and mapping panel
+- Added "All by name" FX selector (lets you use wildcards now to resolve to multiple FX, quite useful with the "FX: Enable/disable" target for simulating controller pages)
+- Improved usability by disallowing addressing FX "By ID" if the track is not sticky (that is, not &lt;This> or addressed "By ID") ... allowing was nonsensical and confusing
+- Improved FX parameter "By position" selector so you can enter the position in a text field (parameter dropdown is now available as selector "By ID")
+- Improved consistency of target label in mapping row (e.g. don't show resolved track/FX/parameter name if selector is not "By ID")
+- Improved usability of target dropdowns by making it possible to change the track/FX selectors while keeping entered values (e.g. having the name always prefilled when switching from "By ID" to "By name")
+- Improved user guide (better table of contents, better quick start, migrated to AsciiDoc)
+- Improved projection by sending projection feedback even if feedback disabled for controller mapping
+- Fixed takeover modes misbehavior in presence of restricted source/target value range
+- Fixed bug that let "Send feedback after control" not send feedback after control in some corner cases
+- Fixed "Last touched" target: Make it work correctly if other FX parameter is currently automated (also improves FX parameter learning in presence of parameter automation)
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.9/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.9/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.10.0-pre.6" author="helgoboss" time="2021-08-01T12:00:00Z">
                 <changelog><![CDATA[- Improved fire mode "After timeout" by making it work in combination with "Press only" button filter (you can now press a button and no matter how long you press it, it will fire after the specified timeout)
