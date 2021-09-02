@@ -140,7 +140,7 @@
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
 
             <version name="2.10.0-pre.10" author="helgoboss" time="2021-09-02T12:00:00Z">
-                <changelog><![CDATA[- Added possibility to use ReaLearn as global MIDI filter (by making "Let through" checkboxes available even when choosing real hardware MIDI input devices, needs REAPER >= v3.6rc1!)
+                <changelog><![CDATA[- Added possibility to use ReaLearn as global MIDI filter (by making "Let through" checkboxes available even when choosing real hardware MIDI input device, needs REAPER >= v6.36rc1!)
 - Added a very work-in-progress version of the new "ReaLearn: Load mapping snapshot" target (only restores the initial target values of all instance mappings at the moment but will become much more powerful in future)
 - Fixed non-working group interaction feature for OSC and REAPER sources
 ]]></changelog>
@@ -1629,7 +1629,7 @@
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
 
             <version name="2.10.0-pre.10" author="helgoboss" time="2021-09-02T12:00:00Z">
-                <changelog><![CDATA[- Added possibility to use ReaLearn as global MIDI filter (by making "Let through" checkboxes available even when choosing real hardware MIDI input devices, needs REAPER >= v3.6rc1!)
+                <changelog><![CDATA[- Added possibility to use ReaLearn as global MIDI filter (by making "Let through" checkboxes available even when choosing real hardware MIDI input device, needs REAPER >= v6.36rc1!)
 - Added a very work-in-progress version of the new "ReaLearn: Load mapping snapshot" target (only restores the initial target values of all instance mappings at the moment but will become much more powerful in future)
 - Fixed non-working group interaction feature for OSC and REAPER sources
 ]]></changelog>
