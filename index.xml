@@ -139,6 +139,22 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
 
+            <version name="2.10.0-pre.10" author="helgoboss" time="2021-09-02T12:00:00Z">
+                <changelog><![CDATA[- Added possibility to use ReaLearn as global MIDI filter (by making "Let through" checkboxes available even when choosing real hardware MIDI input devices, needs REAPER >= v3.6rc1!)
+- Added a very work-in-progress version of the new "ReaLearn: Load mapping snapshot" target (only restores the initial target values of all instance mappings at the moment but will become much more powerful in future)
+- Fixed non-working group interaction feature for OSC and REAPER sources
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.10/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.10/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.10/realearn-user-guide.pdf</source>
+
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.10/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.10/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.10/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.10.0-pre.9" author="helgoboss" time="2021-08-20T12:00:00Z">
                 <changelog><![CDATA[- Added visual mapping (source) match indicator, both in mapping row and mapping panel
 - Added "All by name" FX selector (lets you use wildcards now to resolve to multiple FX, quite useful with the "FX: Enable/disable" target for simulating controller pages)
@@ -1611,6 +1627,17 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
+
+            <version name="2.10.0-pre.10" author="helgoboss" time="2021-09-02T12:00:00Z">
+                <changelog><![CDATA[- Added possibility to use ReaLearn as global MIDI filter (by making "Let through" checkboxes available even when choosing real hardware MIDI input devices, needs REAPER >= v3.6rc1!)
+- Added a very work-in-progress version of the new "ReaLearn: Load mapping snapshot" target (only restores the initial target values of all instance mappings at the moment but will become much more powerful in future)
+- Fixed non-working group interaction feature for OSC and REAPER sources
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.10/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.10/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.10.0-pre.9" author="helgoboss" time="2021-08-20T12:00:00Z">
                 <changelog><![CDATA[- Added visual mapping (source) match indicator, both in mapping row and mapping panel
