@@ -101,7 +101,12 @@
                 <source file="helgoboss/realearn/presets/controller/faderport-classic.json">https://raw.githubusercontent.com/helgoboss/realearn/225add1a7cb324327bb8350c4d7b5a30fe7c75dd/resources/controllers/faderport-classic.json</source>
             </version>
         </reapack>
-        <reapack name="minilab-mkii" type="data" desc="Arturia MiniLab mkII">
+        <reapack name="keylab-mkii" type="data" desc="Arturia KeyLab MkII">
+            <version name="1.0.0" author="dissofiddle">
+                <source file="helgoboss/realearn/presets/controller/keylab-mkii.json">https://raw.githubusercontent.com/helgoboss/realearn/fbbf4005569fff7e53e1a916ff2baacff9799529/resources/controllers/keylab-mkii.json</source>
+            </version>
+        </reapack>
+        <reapack name="minilab-mkii" type="data" desc="Arturia MiniLab MkII">
             <version name="1.1.1" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/minilab-mkii.json">https://raw.githubusercontent.com/helgoboss/realearn/9d138e496a191f222e2dd2f43700ee14bfad2231/resources/controllers/minilab-mkii.json</source>
                 <changelog><![CDATA[- Fixed missing projection feedback (for pads)]]></changelog>
@@ -138,6 +143,66 @@
     </category>
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
+
+            <version name="2.10.0" author="helgoboss" time="2021-09-06T12:00:00Z">
+                <changelog><![CDATA[- Added option "Poll for feedback" (enabled by default) to the few targets for which the REAPER API doesn't provide any value change notification or not in all cases (essentially makes automatic feedback work for all targets, also fixes the issue that switching presets from within a FX UI doesn't resend FX parameter feedback)
+- Added header context menu options to log incoming/outgoing MIDI/OSC messages (great for debugging)
+- Added track selector "All by name" which resolves to many tracks instead of only the first one if the name contains wildcards and multiple tracks match
+- Added mapping row context menu option to log debug info for a single mapping
+- Added new tuning setting "Group interaction" for controlling multiple mappings within the same group at once, in multiple interesting ways
+- Added source category "None", to be used with mappings that are not supposed to be controlled directly but just via "Group interaction"
+- Added support for target value sequences (including ranges, customizable step sizes etc., even supports true relative control!)
+- Added target unit button for switching between 1. native target unit and 2. percentages (chosen unit will be used whenever entering/displaying target values or step sizes, saved per mapping)
+- Added visual mapping (source) match indicator, both in mapping row and mapping panel
+- Added "All by name" FX selector (lets you use wildcards now to resolve to multiple FX, quite useful with the "FX: Enable/disable" target for simulating controller pages)
+- Added possibility to use ReaLearn as global MIDI filter (by making "Let through" checkboxes available even when choosing real hardware MIDI input device, needs REAPER >= v6.36!)
+- Added source "MIDI device changes" in new source category "REAPER" (for reacting to MIDI device plug/unplug events)
+- Added variable selected_track_index for use in dynamic track expression
+- Added a very work-in-progress version of the new "ReaLearn: Load mapping snapshot" target (only restores the initial target values of all instance mappings at the moment but will become much more powerful in future)
+- Internal change: Added and changed code for upcoming "Discrete processing" feature (#184)
+- Added mapping option "Show in projection" (enabled by default)
+- Added controller preset and instructions for "Arturia KeyLab MkII" (thanks to dissofiddle)
+- Improved usability by putting "Send feedback after control" and "Prevent echo feedback" into dropdown (because it doesn't make sense to combine them)
+- Improved versatility of "Make absolute" checkbox by also making it available in "Incremental buttons" mode
+- Improved jump settings by displaying and letting one enter step sizes instead of absolute values (makes much more sense)
+- Improved error handling by logging details when not being able to load a preset
+- Improved error handling by displaying instructions on what to do when encountering a preset saved with a newer version
+- Improved error handling by logging only the first warning message in a sequence of equal warning messages
+- Improved UI semantics by renaming target category "REAPER" to "Real"
+- Improved usability by disallowing addressing FX "By ID" if the track is not sticky (that is, not &lt;This> or addressed "By ID") ... allowing was nonsensical and confusing
+- Improved FX parameter "By position" selector so you can enter the position in a text field (parameter dropdown is now available as selector "By ID")
+- Improved consistency of target label in mapping row (e.g. don't show resolved track/FX/parameter name if selector is not "By ID")
+- Improved usability of target dropdowns by making it possible to change the track/FX selectors while keeping entered values (e.g. having the name always prefilled when switching from "By ID" to "By name")
+- Improved user guide (better table of contents, better quick start, migrated to AsciiDoc)
+- Improved projection by sending projection feedback even if feedback disabled for controller mapping
+- Improved fire mode "After timeout" by making it work in combination with "Press only" button filter (you can now press a button and no matter how long you press it, it will fire after the specified timeout)
+- Improved versatility by guaranteeing mappings within one compartment to be processed in the order of definition (exception: ReaLearn parameters)
+- Improved "MIDI/OSC: Send message" targets by making it work with "Toggle buttons" mode and relative encoders
+- Improved performance for targets that poll for feedback (e.g. "Track: Peak") by processing and sending feedback only if value actually changed
+- Improved reliability by migrating to stable Rust (just an internal change)
+- Fixed "nervous motor faders" issue by not sending batch feedback anymore when starting to play or seeking
+- Fixed predefined "MIDI: Send" target patterns (7-bit patterns reported to be 14-bit-capable)
+- Fixed takeover modes misbehavior in presence of restricted source/target value range
+- Fixed bug that let "Send feedback after control" not send feedback after control in some corner cases
+- Fixed "Last touched" target: Make it work correctly if other FX parameter is currently automated (also improves FX parameter learning in presence of parameter automation)
+- Fixed error "REAPER string should be UTF-8 encoded" with certain FX parameter names
+- Fixed bug that caused "The pipe is being closed" error on some systems when choosing "MIDI: Send message" target
+- Fixed non-reliable dynamic selectors for send, FX and FX parameters (was only working reliably for tracks before)
+- Fixed MiniLab mkII controller preset: Projection feedback for pads works now
+- Fixed confusing logic that caused the preset save button to not be greyed out after making mappings project-independent
+- Fixed lag when sending MIDI messages to FX output (both when letting incoming messages through and when sending them via "MIDI: Send message" target)
+- Fixed bug that caused ReaLearn send targets to forget the kind of send
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0/realearn-user-guide.pdf</source>
+
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.10.0/realearn-linux-x86_64.so</source>
+            </version>
 
             <version name="2.10.0-pre.10" author="helgoboss" time="2021-09-02T12:00:00Z">
                 <changelog><![CDATA[- Added possibility to use ReaLearn as global MIDI filter (by making "Let through" checkboxes available even when choosing real hardware MIDI input device, needs REAPER >= v6.36rc1!)
@@ -1627,6 +1692,61 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
+
+            <version name="2.10.0" author="helgoboss" time="2021-09-06T12:00:00Z">
+                <changelog><![CDATA[- Added option "Poll for feedback" (enabled by default) to the few targets for which the REAPER API doesn't provide any value change notification or not in all cases (essentially makes automatic feedback work for all targets, also fixes the issue that switching presets from within a FX UI doesn't resend FX parameter feedback)
+- Added header context menu options to log incoming/outgoing MIDI/OSC messages (great for debugging)
+- Added track selector "All by name" which resolves to many tracks instead of only the first one if the name contains wildcards and multiple tracks match
+- Added mapping row context menu option to log debug info for a single mapping
+- Added new tuning setting "Group interaction" for controlling multiple mappings within the same group at once, in multiple interesting ways
+- Added source category "None", to be used with mappings that are not supposed to be controlled directly but just via "Group interaction"
+- Added support for target value sequences (including ranges, customizable step sizes etc., even supports true relative control!)
+- Added target unit button for switching between 1. native target unit and 2. percentages (chosen unit will be used whenever entering/displaying target values or step sizes, saved per mapping)
+- Added visual mapping (source) match indicator, both in mapping row and mapping panel
+- Added "All by name" FX selector (lets you use wildcards now to resolve to multiple FX, quite useful with the "FX: Enable/disable" target for simulating controller pages)
+- Added possibility to use ReaLearn as global MIDI filter (by making "Let through" checkboxes available even when choosing real hardware MIDI input device, needs REAPER >= v6.36!)
+- Added source "MIDI device changes" in new source category "REAPER" (for reacting to MIDI device plug/unplug events)
+- Added variable selected_track_index for use in dynamic track expression
+- Added a very work-in-progress version of the new "ReaLearn: Load mapping snapshot" target (only restores the initial target values of all instance mappings at the moment but will become much more powerful in future)
+- Internal change: Added and changed code for upcoming "Discrete processing" feature (#184)
+- Added mapping option "Show in projection" (enabled by default)
+- Added controller preset and instructions for "Arturia KeyLab MkII" (thanks to dissofiddle)
+- Improved usability by putting "Send feedback after control" and "Prevent echo feedback" into dropdown (because it doesn't make sense to combine them)
+- Improved versatility of "Make absolute" checkbox by also making it available in "Incremental buttons" mode
+- Improved jump settings by displaying and letting one enter step sizes instead of absolute values (makes much more sense)
+- Improved error handling by logging details when not being able to load a preset
+- Improved error handling by displaying instructions on what to do when encountering a preset saved with a newer version
+- Improved error handling by logging only the first warning message in a sequence of equal warning messages
+- Improved UI semantics by renaming target category "REAPER" to "Real"
+- Improved usability by disallowing addressing FX "By ID" if the track is not sticky (that is, not &lt;This> or addressed "By ID") ... allowing was nonsensical and confusing
+- Improved FX parameter "By position" selector so you can enter the position in a text field (parameter dropdown is now available as selector "By ID")
+- Improved consistency of target label in mapping row (e.g. don't show resolved track/FX/parameter name if selector is not "By ID")
+- Improved usability of target dropdowns by making it possible to change the track/FX selectors while keeping entered values (e.g. having the name always prefilled when switching from "By ID" to "By name")
+- Improved user guide (better table of contents, better quick start, migrated to AsciiDoc)
+- Improved projection by sending projection feedback even if feedback disabled for controller mapping
+- Improved fire mode "After timeout" by making it work in combination with "Press only" button filter (you can now press a button and no matter how long you press it, it will fire after the specified timeout)
+- Improved versatility by guaranteeing mappings within one compartment to be processed in the order of definition (exception: ReaLearn parameters)
+- Improved "MIDI/OSC: Send message" targets by making it work with "Toggle buttons" mode and relative encoders
+- Improved performance for targets that poll for feedback (e.g. "Track: Peak") by processing and sending feedback only if value actually changed
+- Improved reliability by migrating to stable Rust (just an internal change)
+- Fixed "nervous motor faders" issue by not sending batch feedback anymore when starting to play or seeking
+- Fixed predefined "MIDI: Send" target patterns (7-bit patterns reported to be 14-bit-capable)
+- Fixed takeover modes misbehavior in presence of restricted source/target value range
+- Fixed bug that let "Send feedback after control" not send feedback after control in some corner cases
+- Fixed "Last touched" target: Make it work correctly if other FX parameter is currently automated (also improves FX parameter learning in presence of parameter automation)
+- Fixed error "REAPER string should be UTF-8 encoded" with certain FX parameter names
+- Fixed bug that caused "The pipe is being closed" error on some systems when choosing "MIDI: Send message" target
+- Fixed non-reliable dynamic selectors for send, FX and FX parameters (was only working reliably for tracks before)
+- Fixed MiniLab mkII controller preset: Projection feedback for pads works now
+- Fixed confusing logic that caused the preset save button to not be greyed out after making mappings project-independent
+- Fixed lag when sending MIDI messages to FX output (both when letting incoming messages through and when sending them via "MIDI: Send message" target)
+- Fixed bug that caused ReaLearn send targets to forget the kind of send
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.10.0-pre.10" author="helgoboss" time="2021-09-02T12:00:00Z">
                 <changelog><![CDATA[- Added possibility to use ReaLearn as global MIDI filter (by making "Let through" checkboxes available even when choosing real hardware MIDI input device, needs REAPER >= v6.36rc1!)
