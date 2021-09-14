@@ -144,6 +144,20 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
 
+            <version name="2.10.1" author="helgoboss" time="2021-09-14T12:00:00Z">
+                <changelog><![CDATA[- Fixed bug in 2.10.0 that caused disabling and reenabling ReaLearn FX to stop control
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.1/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.1/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.1/realearn-user-guide.pdf</source>
+
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.1/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.1/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.10.1/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.10.0" author="helgoboss" time="2021-09-06T12:00:00Z">
                 <changelog><![CDATA[- Added option "Poll for feedback" (enabled by default) to the few targets for which the REAPER API doesn't provide any value change notification or not in all cases (essentially makes automatic feedback work for all targets, also fixes the issue that switching presets from within a FX UI doesn't resend FX parameter feedback)
 - Added header context menu options to log incoming/outgoing MIDI/OSC messages (great for debugging)
@@ -1692,6 +1706,15 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
+
+            <version name="2.10.1" author="helgoboss" time="2021-09-14T12:00:00Z">
+                <changelog><![CDATA[- Fixed bug in 2.10.0 that caused disabling and reenabling ReaLearn FX to stop control
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.1/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.1/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.10.0" author="helgoboss" time="2021-09-06T12:00:00Z">
                 <changelog><![CDATA[- Added option "Poll for feedback" (enabled by default) to the few targets for which the REAPER API doesn't provide any value change notification or not in all cases (essentially makes automatic feedback work for all targets, also fixes the issue that switching presets from within a FX UI doesn't resend FX parameter feedback)
