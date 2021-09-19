@@ -144,8 +144,22 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
 
+            <version name="2.10.3" author="helgoboss" time="2021-09-19T12:00:00Z">
+                <changelog><![CDATA[- Fixed bug in 2.10 that made source min/max not work for MIDI sources
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.3/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.3/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.3/realearn-user-guide.pdf</source>
+
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.3/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.3/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.10.3/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.10.2" author="helgoboss" time="2021-09-16T12:00:00Z">
-                <changelog><![CDATA[- Fixed bug in 2.10.0 and 2.10.1 that made it impossible to target monitoring FX instances
+                <changelog><![CDATA[- Fixed bug in 2.10 that made it impossible to target monitoring FX instances
 ]]></changelog>
 
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.2/realearn-user-guide.pdf</source>
@@ -159,7 +173,7 @@
             </version>
 
             <version name="2.10.1" author="helgoboss" time="2021-09-14T12:00:00Z">
-                <changelog><![CDATA[- Fixed bug in 2.10.0 that caused disabling and reenabling ReaLearn FX to stop control
+                <changelog><![CDATA[- Fixed bug in 2.10 that caused disabling and reenabling ReaLearn FX to stop control
 ]]></changelog>
 
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.1/realearn-user-guide.pdf</source>
@@ -1721,8 +1735,17 @@
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
 
+            <version name="2.10.3" author="helgoboss" time="2021-09-19T12:00:00Z">
+                <changelog><![CDATA[- Fixed bug in 2.10 that made source min/max not work for MIDI sources
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.3/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.3/realearn-windows-i686.dll</source>
+            </version>
+
             <version name="2.10.2" author="helgoboss" time="2021-09-16T12:00:00Z">
-                <changelog><![CDATA[- Fixed bug in 2.10.0 and 2.10.1 that made it impossible to target monitoring FX instances
+                <changelog><![CDATA[- Fixed bug in 2.10 that made it impossible to target monitoring FX instances
 ]]></changelog>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.2/realearn-user-guide.pdf</source>
@@ -1731,7 +1754,7 @@
             </version>
 
             <version name="2.10.1" author="helgoboss" time="2021-09-14T12:00:00Z">
-                <changelog><![CDATA[- Fixed bug in 2.10.0 that caused disabling and reenabling ReaLearn FX to stop control
+                <changelog><![CDATA[- Fixed bug in 2.10 that caused disabling and reenabling ReaLearn FX to stop control
 ]]></changelog>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.1/realearn-user-guide.pdf</source>
