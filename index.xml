@@ -144,6 +144,30 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
 
+            <version name="2.11.0-pre.1" author="helgoboss" time="2021-09-22T12:00:00Z">
+                <changelog><![CDATA[- Added possibility to control using system-exclusive MIDI messages (by using the existing very flexible "Raw MIDI" source, which only worked for feedback direction so far - now supports learning, value extraction using patterns and logging of incoming messages)
+- Added new target "ReaLearn: Navigate within group" for cycling through mappings in a mapping group (for intuitively defining sequences e.g. for implementing pages, zones etc.; support sequences spanning completely different targets!)
+- Added new target "ReaLearn: Enable/disable mappings" for flexibly enabling/disabling mappings during a performance (can be used as a more straightforward alternative to conditional activation, especially when it comes to bank/zone switching scenarios)
+- Added new target "ReaLearn: Enable/disable instances" for flexibly enabling/disabling complete ReaLearn instances during a performance (great for paging)
+- Added completely new possibility to organize mappings - by tagging them (most new ReaLearn targets support tags to flexibly restrict the mapping scope, you can also search for them by prefixing a search term with a hash character #)
+- Added new source "ReaLearn instance started" in source category REAPER that fires when ReaLearn is started (can be used to execute an actions, restore parameter states or whatever on REAPER startup or project load)
+- Improved target "ReaLearn: Load mapping snapshot" by allowing to restrict snapshot loading to mappings with certain tags and activity state
+- Improved target value entry by providing buttons for trigger- or switch-like targets
+- Improved projection feedback by sending feedback initially, not just on value changes or on manual request via REAPER action
+- Improved performance of "MIDI: Send message" target when sending to feedback output by avoiding deallocation in audio thread
+- Improved documentation of what's special about "MIDI: Send message" target and what limitations it has
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.1/realearn-user-guide.pdf</source>
+
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.1/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.1/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.1/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.10.3" author="helgoboss" time="2021-09-19T12:00:00Z">
                 <changelog><![CDATA[- Fixed bug in 2.10 that made source min/max not work for MIDI sources
 ]]></changelog>
@@ -1734,6 +1758,25 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI learn with feedback">
+
+            <version name="2.11.0-pre.1" author="helgoboss" time="2021-09-22T12:00:00Z">
+                <changelog><![CDATA[- Added possibility to control using system-exclusive MIDI messages (by using the existing very flexible "Raw MIDI" source, which only worked for feedback direction so far - now supports learning, value extraction using patterns and logging of incoming messages)
+- Added new target "ReaLearn: Navigate within group" for cycling through mappings in a mapping group (for intuitively defining sequences e.g. for implementing pages, zones etc.; support sequences spanning completely different targets!)
+- Added new target "ReaLearn: Enable/disable mappings" for flexibly enabling/disabling mappings during a performance (can be used as a more straightforward alternative to conditional activation, especially when it comes to bank/zone switching scenarios)
+- Added new target "ReaLearn: Enable/disable instances" for flexibly enabling/disabling complete ReaLearn instances during a performance (great for paging)
+- Added completely new possibility to organize mappings - by tagging them (most new ReaLearn targets support tags to flexibly restrict the mapping scope, you can also search for them by prefixing a search term with a hash character #)
+- Added new source "ReaLearn instance started" in source category REAPER that fires when ReaLearn is started (can be used to execute an actions, restore parameter states or whatever on REAPER startup or project load)
+- Improved target "ReaLearn: Load mapping snapshot" by allowing to restrict snapshot loading to mappings with certain tags and activity state
+- Improved target value entry by providing buttons for trigger- or switch-like targets
+- Improved projection feedback by sending feedback initially, not just on value changes or on manual request via REAPER action
+- Improved performance of "MIDI: Send message" target when sending to feedback output by avoiding deallocation in audio thread
+- Improved documentation of what's special about "MIDI: Send message" target and what limitations it has
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.1/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.1/realearn-windows-i686.dll</source>
+            </version>
 
             <version name="2.10.3" author="helgoboss" time="2021-09-19T12:00:00Z">
                 <changelog><![CDATA[- Fixed bug in 2.10 that made source min/max not work for MIDI sources
