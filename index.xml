@@ -144,6 +144,29 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.11.0-pre.12" author="helgoboss" time="2021-11-01T12:00:00Z">
+                <changelog><![CDATA[- Fixed severe bug that could cause ReaLearn instances to receive MIDI from wrong input device (existed in 2.10 already)
+- Fixed bug that caused automation to shortly jump back when writing automation via fader touch
+- Fixed error message about feedback address introduced in pre.9 duplicate feedback prevention
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.12/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.12/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.12/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.12/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.12/realearn-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.12/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.12/realearn-linux-aarch64.so</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.12/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.12/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.12/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.11.0-pre.11" author="helgoboss" time="2021-10-30T12:00:00Z">
                 <changelog><![CDATA[- Added comprehensive built-in support for import and export of the all-new ReaLearn Script = Build ReaLearn presets/mappings in Lua! (Attention: Small adjustments to the ReaLearn Script API data structure are to be expected during the 2.11 and 2.12 release cycle!)
 - Added JSON schema of the API data structure (in order to potentially support writing ReaLearn presets/mappings in other languages as well, especially typed ones, e.g. TypeScript)
@@ -304,6 +327,25 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.1/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.1/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.1/realearn-linux-x86_64.so</source>
+            </version>
+
+            <version name="2.10.4" author="helgoboss" time="2021-11-01T12:00:00Z">
+                <changelog><![CDATA[- Fixed severe bug that could cause ReaLearn instances to receive MIDI from wrong input device
+- Fixed bug that caused automation to shortly jump back when writing automation via fader touch
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.4/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.4/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.4/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.4/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.4/realearn-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.4/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.4/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.10.4/realearn-linux-x86_64.so</source>
             </version>
 
             <version name="2.10.3" author="helgoboss" time="2021-09-19T12:00:00Z">
@@ -2005,6 +2047,21 @@
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.11.0-pre.12" author="helgoboss" time="2021-11-01T12:00:00Z">
+                <changelog><![CDATA[- Fixed severe bug that could cause ReaLearn instances to receive MIDI from wrong input device (existed in 2.10 already)
+- Fixed bug that caused automation to shortly jump back when writing automation via fader touch
+- Fixed error message about feedback address introduced in pre.9 duplicate feedback prevention
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.12/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.12/realearn-windows-i686.dll</source>
+
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.12/realearn-user-guide.pdf</source>
+                <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.12/realearn-linux-armv7.so</source>
+
+            </version>
+
             <version name="2.11.0-pre.11" author="helgoboss" time="2021-10-30T12:00:00Z">
                 <changelog><![CDATA[- Added comprehensive built-in support for import and export of the all-new ReaLearn Script = Build ReaLearn presets/mappings in Lua! (Attention: Small adjustments to the ReaLearn Script API data structure are to be expected during the 2.11 and 2.12 release cycle!)
 - Added JSON schema of the API data structure (in order to potentially support writing ReaLearn presets/mappings in other languages as well, especially typed ones, e.g. TypeScript)
@@ -2108,6 +2165,17 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.1/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.1/realearn-windows-i686.dll</source>
+
+            </version>
+
+            <version name="2.10.4" author="helgoboss" time="2021-11-01T12:00:00Z">
+                <changelog><![CDATA[- Fixed severe bug that could cause ReaLearn instances to receive MIDI from wrong input device
+- Fixed bug that caused automation to shortly jump back when writing automation via fader touch
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.4/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.4/realearn-windows-i686.dll</source>
 
             </version>
 
