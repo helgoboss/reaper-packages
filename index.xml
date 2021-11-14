@@ -44,6 +44,10 @@
             </version>
         </reapack>
         <reapack name="icon-platform-m" type="data" desc="iCON Platform M+ [DAW]">
+            <version name="3.0.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/icon-platform-m.json">https://raw.githubusercontent.com/helgoboss/realearn/24b9ad6a563276c450f30b9901b3e17d2d55fe96/resources/controllers/icon-platform-m.json</source>
+                <changelog><![CDATA[- Added support for LCD and timecode display, track peak meter and any-solo button, fixed encoder acceleration behavior, many small improvements, easier to maintain because generated from ReaLearn Script]]></changelog>
+            </version>
             <version name="2.0.0" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/icon-platform-m.json">https://raw.githubusercontent.com/helgoboss/realearn/930e6b4af97976486fe0ae6245e810b99782a3b8/resources/controllers/icon-platform-m.json</source>
                 <changelog><![CDATA[- Improved usability by using named virtual control elements of the DAW domain]]></changelog>
@@ -77,6 +81,10 @@
             </version>
         </reapack>
         <reapack name="mackie-control" type="data" desc="Mackie Control [DAW]">
+            <version name="2.0.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/mackie-control.json">https://raw.githubusercontent.com/helgoboss/realearn/24b9ad6a563276c450f30b9901b3e17d2d55fe96/resources/controllers/mackie-control.json</source>
+                <changelog><![CDATA[- Added support for LCD and timecode display, track peak meter and any-solo button, fixed encoder acceleration behavior, many small improvements, easier to maintain because generated from ReaLearn Script]]></changelog>
+            </version>
             <version name="1.0.0" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/mackie-control.json">https://raw.githubusercontent.com/helgoboss/realearn/930e6b4af97976486fe0ae6245e810b99782a3b8/resources/controllers/mackie-control.json</source>
                 <changelog><![CDATA[- Improved usability by using named virtual control elements of the DAW domain]]></changelog>
@@ -136,6 +144,10 @@
     </category>
     <category name="ReaLearn main presets">
         <reapack name="daw-control" type="data" desc="DAW control [DAW]">
+            <version name="2.0.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/main/daw-control.json">https://raw.githubusercontent.com/helgoboss/realearn/24b9ad6a563276c450f30b9901b3e17d2d55fe96/resources/main-presets/daw-control.json</source>
+                <changelog><![CDATA[- Added support for timecode display, time mode cycling, track name and pan display, any-solo, track peak meter, many small improvements, easier to maintain because generated from ReaLearn Script]]></changelog>
+            </version>
             <version name="1.0.0" author="helgoboss">
                 <source file="helgoboss/realearn/presets/main/daw-control.json">https://raw.githubusercontent.com/helgoboss/realearn/930e6b4af97976486fe0ae6245e810b99782a3b8/resources/main-presets/daw-control.json</source>
             </version>
@@ -143,6 +155,41 @@
     </category>
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.11.0-pre.13" author="helgoboss" time="2021-11-14T12:00:00Z">
+                <changelog><![CDATA[- Added new "Project: Any on (solo/mute/...)" target
+- Added new "target.position.\*.mcu" text feedback placeholders to seek target (uses timecode formatting tailored to MCU timecode display)
+- Added new "target.pan.mcu" text feedback placeholder to track pan target (uses pan formatting tailored to MCU LCD line)
+- Added place in Git repository for making unofficial 3rd-party presets available (added 2 unofficial controller presets for BCF2000 and Panorama P6)
+- Improved &lt;Dynamic> track selector by allowing it to address the master track (if the expression returns value -1)
+- Improved wording by renaming "Tuning" to "Glue"
+- Improved "Mackie Control" and "iCON Platform M+" controller presets (added support for LCD and timecode display, track peak meter and any-solo button, fixed encoder acceleration behavior, many small improvements, easier to maintain because generated from ReaLearn Script)
+- Improved "DAW control" main preset (added support for timecode display, time mode cycling, track name and pan display, any-solo, track peak meter, many small improvements, easier to maintain because generated from ReaLearn Script)
+- Improved ReaLearn Script and native ReaLearn JSON format by allowing arbitrary mapping and group IDs (not just UUIDs) and complaining if the import contains duplicate IDs
+- Improved performance, code complexity and serialization independence of preset dirty checking by using a much simpler method than before (before: comparison of JSON; now: setting dirty flag whenever e.g. a mapping changed)
+- Improved ReaLearn Script by renaming 'key' to 'id'
+- Improved virtual control element naming by increasing maximum length from 16 to 32
+- Improved Raw MIDI source to control and learn incoming short (non-sys-ex) messages as well
+- Fixed pre-release regression that made on/off track targets not work anymore on master track
+- Fixed bug that caused source takeover between ReaLearn instances with different feedback output devices
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.13/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.13/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.13/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.13/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.13/realearn-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.13/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.13/realearn-linux-aarch64.so</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.13/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.13/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.13/realearn-linux-x86_64.so</source>
+            </version>
 
             <version name="2.11.0-pre.12" author="helgoboss" time="2021-11-01T12:00:00Z">
                 <changelog><![CDATA[- Fixed severe bug that could cause ReaLearn instances to receive MIDI from wrong input device (existed in 2.10 already)
@@ -2046,6 +2093,33 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.11.0-pre.13" author="helgoboss" time="2021-11-14T12:00:00Z">
+                <changelog><![CDATA[- Added new "Project: Any on (solo/mute/...)" target
+- Added new "target.position.\*.mcu" text feedback placeholders to seek target (uses timecode formatting tailored to MCU timecode display)
+- Added new "target.pan.mcu" text feedback placeholder to track pan target (uses pan formatting tailored to MCU LCD line)
+- Added place in Git repository for making unofficial 3rd-party presets available (added 2 unofficial controller presets for BCF2000 and Panorama P6)
+- Improved &lt;Dynamic> track selector by allowing it to address the master track (if the expression returns value -1)
+- Improved wording by renaming "Tuning" to "Glue"
+- Improved "Mackie Control" and "iCON Platform M+" controller presets (added support for LCD and timecode display, track peak meter and any-solo button, fixed encoder acceleration behavior, many small improvements, easier to maintain because generated from ReaLearn Script)
+- Improved "DAW control" main preset (added support for timecode display, time mode cycling, track name and pan display, any-solo, track peak meter, many small improvements, easier to maintain because generated from ReaLearn Script)
+- Improved ReaLearn Script and native ReaLearn JSON format by allowing arbitrary mapping and group IDs (not just UUIDs) and complaining if the import contains duplicate IDs
+- Improved performance, code complexity and serialization independence of preset dirty checking by using a much simpler method than before (before: comparison of JSON; now: setting dirty flag whenever e.g. a mapping changed)
+- Improved ReaLearn Script by renaming 'key' to 'id'
+- Improved virtual control element naming by increasing maximum length from 16 to 32
+- Improved Raw MIDI source to control and learn incoming short (non-sys-ex) messages as well
+- Fixed pre-release regression that made on/off track targets not work anymore on master track
+- Fixed bug that caused source takeover between ReaLearn instances with different feedback output devices
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.13/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.13/realearn-windows-i686.dll</source>
+
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.13/realearn-user-guide.pdf</source>
+                <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.13/realearn-linux-armv7.so</source>
+
+            </version>
 
             <version name="2.11.0-pre.12" author="helgoboss" time="2021-11-01T12:00:00Z">
                 <changelog><![CDATA[- Fixed severe bug that could cause ReaLearn instances to receive MIDI from wrong input device (existed in 2.10 already)
