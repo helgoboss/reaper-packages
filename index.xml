@@ -144,6 +144,10 @@
     </category>
     <category name="ReaLearn main presets">
         <reapack name="daw-control" type="data" desc="DAW control [DAW]">
+            <version name="2.0.1" author="helgoboss">
+                <source file="helgoboss/realearn/presets/main/daw-control.json">https://raw.githubusercontent.com/helgoboss/realearn/ff9fc4f6ef03a82d30cd8af86e15558ea96e5956/resources/main-presets/daw-control.json</source>
+                <changelog><![CDATA[- Improved internals by using Track target instead of Track Volume target for displaying track name on LCD]]></changelog>
+            </version>
             <version name="2.0.0" author="helgoboss">
                 <source file="helgoboss/realearn/presets/main/daw-control.json">https://raw.githubusercontent.com/helgoboss/realearn/24b9ad6a563276c450f30b9901b3e17d2d55fe96/resources/main-presets/daw-control.json</source>
                 <changelog><![CDATA[- Added support for timecode display, time mode cycling, track name and pan display, any-solo, track peak meter, many small improvements, easier to maintain because generated from ReaLearn Script]]></changelog>
@@ -155,6 +159,30 @@
     </category>
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.11.0-pre.14" author="helgoboss" time="2021-11-18T12:00:00Z">
+                <changelog><![CDATA[- Added new "Track" target which is well-suited as neutral target for getting textual feedback for track properties (but will get more interesting functionality at a later stage, see #228)
+- Improved performance and correctness regarding textual feedback update for secondary target properties (internally, each property now defines its own set of need-update events and if it needs polling or not)
+- Fixed feedback update for secondary target properties (e.g. track name)
+- Fixed feedback update for property-based feedback style (e.g. color based on property 'target.track.color')
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.14/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.14/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.14/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.14/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.14/realearn-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.14/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.14/realearn-linux-aarch64.so</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.14/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.14/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.14/realearn-linux-x86_64.so</source>
+            </version>
 
             <version name="2.11.0-pre.13" author="helgoboss" time="2021-11-14T12:00:00Z">
                 <changelog><![CDATA[- Added new "Project: Any on (solo/mute/...)" target
@@ -2093,6 +2121,22 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.11.0-pre.14" author="helgoboss" time="2021-11-18T12:00:00Z">
+                <changelog><![CDATA[- Added new "Track" target which is well-suited as neutral target for getting textual feedback for track properties (but will get more interesting functionality at a later stage, see #228)
+- Improved performance and correctness regarding textual feedback update for secondary target properties (internally, each property now defines its own set of need-update events and if it needs polling or not)
+- Fixed feedback update for secondary target properties (e.g. track name)
+- Fixed feedback update for property-based feedback style (e.g. color based on property 'target.track.color')
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.14/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.14/realearn-windows-i686.dll</source>
+
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.14/realearn-user-guide.pdf</source>
+                <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.14/realearn-linux-armv7.so</source>
+
+            </version>
 
             <version name="2.11.0-pre.13" author="helgoboss" time="2021-11-14T12:00:00Z">
                 <changelog><![CDATA[- Added new "Project: Any on (solo/mute/...)" target
