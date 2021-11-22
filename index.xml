@@ -160,6 +160,38 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.11.0-pre.15" author="helgoboss" time="2021-11-22T12:00:00Z">
+                <changelog><![CDATA[- Added new variable 'y_last' in EEL control transformation, which can be used to implement a performance control mode typical for a synth modulation matrix (y = y_last + x \* (1 - y_last))
+- Added variable 'selected_track_indexes' array variable to dynamic expressions (making it possible to e.g. control 1st selected track with fader one, 2nd selected track with fader two, etc.)
+- Added header panel context menu action 'Make sources of all main mappings virtual'
+- Added header panel context menu action 'Make targets of listed mappings sticky'
+- Improved dynamic expressions by making target inactive if the expression fails (e.g. if an undefined variable is used)
+- Improved dynamic expressions by making 'selected_track_index' and 'this_track_index' support master track (value -1)
+- Improved dynamic expressions by letting 'track_selected_index' evaluate to the special variable 'none' if no track is selected, allowing users to choose a suitable fallback in that case
+- Improved dynamic expressions by making compartment parameters available as array variable 'p' (now you can write p\[0] instead of p1])
+- Improved API by renaming 'feedback_foreground_color' to 'feedback_color'
+- Fixed API for new "Track" target
+- Fixed bug that caused project to be marked dirty on load already
+- Fixed bug that caused changes to sometimes not be memorized if ReaLearn is on monitoring FX chain
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.15/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.15/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.15/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.15/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.15/realearn-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.15/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.15/realearn-linux-aarch64.so</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.15/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.15/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.15/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.11.0-pre.14" author="helgoboss" time="2021-11-18T12:00:00Z">
                 <changelog><![CDATA[- Added new "Track" target which is well-suited as neutral target for getting textual feedback for track properties (but will get more interesting functionality at a later stage, see #228)
 - Improved performance and correctness regarding textual feedback update for secondary target properties (internally, each property now defines its own set of need-update events and if it needs polling or not)
@@ -2121,6 +2153,30 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.11.0-pre.15" author="helgoboss" time="2021-11-22T12:00:00Z">
+                <changelog><![CDATA[- Added new variable 'y_last' in EEL control transformation, which can be used to implement a performance control mode typical for a synth modulation matrix (y = y_last + x \* (1 - y_last))
+- Added variable 'selected_track_indexes' array variable to dynamic expressions (making it possible to e.g. control 1st selected track with fader one, 2nd selected track with fader two, etc.)
+- Added header panel context menu action 'Make sources of all main mappings virtual'
+- Added header panel context menu action 'Make targets of listed mappings sticky'
+- Improved dynamic expressions by making target inactive if the expression fails (e.g. if an undefined variable is used)
+- Improved dynamic expressions by making 'selected_track_index' and 'this_track_index' support master track (value -1)
+- Improved dynamic expressions by letting 'track_selected_index' evaluate to the special variable 'none' if no track is selected, allowing users to choose a suitable fallback in that case
+- Improved dynamic expressions by making compartment parameters available as array variable 'p' (now you can write p\[0] instead of p1])
+- Improved API by renaming 'feedback_foreground_color' to 'feedback_color'
+- Fixed API for new "Track" target
+- Fixed bug that caused project to be marked dirty on load already
+- Fixed bug that caused changes to sometimes not be memorized if ReaLearn is on monitoring FX chain
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.15/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.15/realearn-windows-i686.dll</source>
+
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.15/realearn-user-guide.pdf</source>
+                <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.15/realearn-linux-armv7.so</source>
+
+            </version>
 
             <version name="2.11.0-pre.14" author="helgoboss" time="2021-11-18T12:00:00Z">
                 <changelog><![CDATA[- Added new "Track" target which is well-suited as neutral target for getting textual feedback for track properties (but will get more interesting functionality at a later stage, see #228)
