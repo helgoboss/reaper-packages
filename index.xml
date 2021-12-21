@@ -160,6 +160,77 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.11.0" author="helgoboss" time="2021-12-21T12:00:00Z">
+                <changelog><![CDATA[- Added comprehensive built-in support for import and export of the all-new ReaLearn Script = Build ReaLearn presets/mappings in Lua! (Attention: Small adjustments to the ReaLearn Script API data structure are to be expected during the 2.11 and 2.12 release cycles!)
+- Added new "Track" target which is well-suited as neutral target for getting textual feedback for track properties (but will get more interesting functionality at a later stage, see #228)
+- Added JSON schema of the API data structure (in order to potentially support writing ReaLearn presets/mappings in other languages as well, especially typed ones, e.g. TypeScript)
+- Added new target "ReaLearn: Enable/disable instances" for flexibly enabling/disabling complete ReaLearn instances during a performance (great for paging)
+- Added target "ReaLearn: Enable/disable mappings" for flexibly enabling/disabling mappings during a performance (can be used as a more straightforward alternative to conditional activation, especially when it comes to bank/zone switching scenarios)
+- Added target "ReaLearn: Navigate within group" for cycling through mappings in a mapping group (for intuitively defining sequences e.g. for implementing pages, zones etc.; support sequences spanning completely different targets!)
+- Added completely new possibility to organize mappings - by tagging them (most new ReaLearn targets support tags to flexibly restrict the mapping scope, you can also search for them by prefixing a search term with a hash character #)
+- Added possibility to control using system-exclusive MIDI messages (by using the existing very flexible "Raw MIDI" source, which only worked for feedback direction so far - now supports learning, value extraction using patterns and logging of incoming messages)
+- Added header panel context menu action 'Make sources of all main mappings virtual'
+- Added optional track dropdown to "Project: Invoke REAPER action" target (The target makes sure that this track is selected before executing the action. This makes it possible to combine ReaLearn's flexible track selection capabilities with the plethora of REAPER actions that work on the currently selected track.)
+- Added target "Send: Automation mode"
+- Added target "Send: Mono/stereo"
+- Added target "Send: Phase invert/normal"
+- Added target "Track: Phase invert/normal"
+- Added target "Project: Any on (solo/mute/...)"
+- Added "exclusive (on only)" options wherever appropriate in order to easily support exclusive toggle buttons (group interaction "inverse target value", track exclusivity, mapping/instance enable/disable exclusivity)
+- Added support for (N)RPN data increment/decrement messages
+- Added source "ReaLearn instance started" in source category REAPER that fires when ReaLearn is started (can be used to execute an actions, restore parameter states or whatever on REAPER startup or project load)
+- Added text and background color support for some MIDI controller displays that have color capabilities (at the moment SiniCon E24 and Launchpad Pro)
+- Added basic support for displaying scrollable text on the Launchpad Pro (also supports text color)
+- Added &lt;New group> option to "Move to group" context menu actions
+- Added support for Raspberry Pi (Linux armv7 and Linux aarch64)
+- Added new variable 'y_last' in EEL control transformation, which can be used to implement a performance control mode typical for a synth modulation matrix (y = y_last + x \* (1 - y_last))
+- Added variable 'selected_track_indexes' array variable to dynamic expressions (making it possible to e.g. control 1st selected track with fader one, 2nd selected track with fader two, etc.)
+- Added place in Git repository for making unofficial 3rd-party presets available (added 2 unofficial controller presets for BCF2000 and Panorama P6)
+- Added header panel context menu action 'Make targets of listed mappings sticky'
+- Improved "DAW control" main preset (added support for timecode display, time mode cycling, track name and pan display, any-solo, track peak meter, many small improvements, easier to maintain because generated from ReaLearn Script)
+- Improved "Mackie Control" and "iCON Platform M+" controller presets (added support for LCD and timecode display, track peak meter and any-solo button, fixed encoder acceleration behavior, many small improvements, easier to maintain because generated from ReaLearn Script)
+- Improved performance, code complexity and serialization independence of preset dirty checking by using a much simpler method than before (before: comparison of JSON; now: setting dirty flag whenever e.g. a mapping changed)
+- Improved virtual control element naming by increasing maximum length from 16 to 32
+- Improved wording by renaming "Tuning" to "Glue"
+- Improved target "ReaLearn: Load mapping snapshot" by allowing to restrict snapshot loading to mappings with certain tags and activity state
+- Improved auto-load preset functionality to work better with shell plug-ins, e.g. Waves (now by default uses plug-in name instead of file name to distinguish between the single plug-in types; in order for this to take effect, you need to remove each problematic link and reestablish it or edit the link and fill out the FX ID name yourself)
+- Improved projection feedback by sending feedback initially, not just on value changes or on manual request via REAPER action
+- Improved target value entry by providing buttons for trigger- or switch-like targets
+- Improved "Toggle buttons" mode to support exclusive toggle button use cases (if target min is equal to target max, it now toggles between that specific value and zero)
+- Improved &lt;Dynamic> track selector by allowing it to address the master track (if the expression returns value -1)
+- Improved dynamic expressions by letting 'track_selected_index' evaluate to the special variable 'none' if no track is selected, allowing users to choose a suitable fallback in that case
+- Improved dynamic expressions by making 'selected_track_index' and 'this_track_index' support master track (value -1)
+- Improved dynamic expressions by making compartment parameters available as array variable 'p' (now you can write p\[0] instead of p1])
+- Improved dynamic expressions by making target inactive if the expression fails (e.g. if an undefined variable is used)
+- Improved Raw MIDI source to control and learn incoming short (non-sys-ex) messages as well
+- Improved documentation of what's special about "MIDI: Send message" target and what limitations it has
+- Improved performance of "MIDI: Send message" target when sending to feedback output by avoiding deallocation in audio thread
+- Improved usability by disabling certain UI elements depending on the selected OSC argument type
+- Improved user guide (structure, headings, table of contents, TouchOSC instructions)
+- Fixed bug that caused project to be marked dirty on load already
+- Fixed bug that caused changes to sometimes not be memorized if ReaLearn is on monitoring FX chain
+- Fixed bug that caused automation to shortly jump back when writing automation via fader touch
+- Fixed severe bug that could cause ReaLearn instances to receive MIDI from wrong input device
+- Fixed bug that caused source takeover between ReaLearn instances with different feedback output devices
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0/realearn-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0/realearn-linux-aarch64.so</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.11.0-pre.15" author="helgoboss" time="2021-11-22T12:00:00Z">
                 <changelog><![CDATA[- Added new variable 'y_last' in EEL control transformation, which can be used to implement a performance control mode typical for a synth modulation matrix (y = y_last + x \* (1 - y_last))
 - Added variable 'selected_track_indexes' array variable to dynamic expressions (making it possible to e.g. control 1st selected track with fader one, 2nd selected track with fader two, etc.)
@@ -2153,6 +2224,69 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.11.0" author="helgoboss" time="2021-12-21T12:00:00Z">
+                <changelog><![CDATA[- Added comprehensive built-in support for import and export of the all-new ReaLearn Script = Build ReaLearn presets/mappings in Lua! (Attention: Small adjustments to the ReaLearn Script API data structure are to be expected during the 2.11 and 2.12 release cycles!)
+- Added new "Track" target which is well-suited as neutral target for getting textual feedback for track properties (but will get more interesting functionality at a later stage, see #228)
+- Added JSON schema of the API data structure (in order to potentially support writing ReaLearn presets/mappings in other languages as well, especially typed ones, e.g. TypeScript)
+- Added new target "ReaLearn: Enable/disable instances" for flexibly enabling/disabling complete ReaLearn instances during a performance (great for paging)
+- Added target "ReaLearn: Enable/disable mappings" for flexibly enabling/disabling mappings during a performance (can be used as a more straightforward alternative to conditional activation, especially when it comes to bank/zone switching scenarios)
+- Added target "ReaLearn: Navigate within group" for cycling through mappings in a mapping group (for intuitively defining sequences e.g. for implementing pages, zones etc.; support sequences spanning completely different targets!)
+- Added completely new possibility to organize mappings - by tagging them (most new ReaLearn targets support tags to flexibly restrict the mapping scope, you can also search for them by prefixing a search term with a hash character #)
+- Added possibility to control using system-exclusive MIDI messages (by using the existing very flexible "Raw MIDI" source, which only worked for feedback direction so far - now supports learning, value extraction using patterns and logging of incoming messages)
+- Added header panel context menu action 'Make sources of all main mappings virtual'
+- Added optional track dropdown to "Project: Invoke REAPER action" target (The target makes sure that this track is selected before executing the action. This makes it possible to combine ReaLearn's flexible track selection capabilities with the plethora of REAPER actions that work on the currently selected track.)
+- Added target "Send: Automation mode"
+- Added target "Send: Mono/stereo"
+- Added target "Send: Phase invert/normal"
+- Added target "Track: Phase invert/normal"
+- Added target "Project: Any on (solo/mute/...)"
+- Added "exclusive (on only)" options wherever appropriate in order to easily support exclusive toggle buttons (group interaction "inverse target value", track exclusivity, mapping/instance enable/disable exclusivity)
+- Added support for (N)RPN data increment/decrement messages
+- Added source "ReaLearn instance started" in source category REAPER that fires when ReaLearn is started (can be used to execute an actions, restore parameter states or whatever on REAPER startup or project load)
+- Added text and background color support for some MIDI controller displays that have color capabilities (at the moment SiniCon E24 and Launchpad Pro)
+- Added basic support for displaying scrollable text on the Launchpad Pro (also supports text color)
+- Added &lt;New group> option to "Move to group" context menu actions
+- Added support for Raspberry Pi (Linux armv7 and Linux aarch64)
+- Added new variable 'y_last' in EEL control transformation, which can be used to implement a performance control mode typical for a synth modulation matrix (y = y_last + x \* (1 - y_last))
+- Added variable 'selected_track_indexes' array variable to dynamic expressions (making it possible to e.g. control 1st selected track with fader one, 2nd selected track with fader two, etc.)
+- Added place in Git repository for making unofficial 3rd-party presets available (added 2 unofficial controller presets for BCF2000 and Panorama P6)
+- Added header panel context menu action 'Make targets of listed mappings sticky'
+- Improved "DAW control" main preset (added support for timecode display, time mode cycling, track name and pan display, any-solo, track peak meter, many small improvements, easier to maintain because generated from ReaLearn Script)
+- Improved "Mackie Control" and "iCON Platform M+" controller presets (added support for LCD and timecode display, track peak meter and any-solo button, fixed encoder acceleration behavior, many small improvements, easier to maintain because generated from ReaLearn Script)
+- Improved performance, code complexity and serialization independence of preset dirty checking by using a much simpler method than before (before: comparison of JSON; now: setting dirty flag whenever e.g. a mapping changed)
+- Improved virtual control element naming by increasing maximum length from 16 to 32
+- Improved wording by renaming "Tuning" to "Glue"
+- Improved target "ReaLearn: Load mapping snapshot" by allowing to restrict snapshot loading to mappings with certain tags and activity state
+- Improved auto-load preset functionality to work better with shell plug-ins, e.g. Waves (now by default uses plug-in name instead of file name to distinguish between the single plug-in types; in order for this to take effect, you need to remove each problematic link and reestablish it or edit the link and fill out the FX ID name yourself)
+- Improved projection feedback by sending feedback initially, not just on value changes or on manual request via REAPER action
+- Improved target value entry by providing buttons for trigger- or switch-like targets
+- Improved "Toggle buttons" mode to support exclusive toggle button use cases (if target min is equal to target max, it now toggles between that specific value and zero)
+- Improved &lt;Dynamic> track selector by allowing it to address the master track (if the expression returns value -1)
+- Improved dynamic expressions by letting 'track_selected_index' evaluate to the special variable 'none' if no track is selected, allowing users to choose a suitable fallback in that case
+- Improved dynamic expressions by making 'selected_track_index' and 'this_track_index' support master track (value -1)
+- Improved dynamic expressions by making compartment parameters available as array variable 'p' (now you can write p\[0] instead of p1])
+- Improved dynamic expressions by making target inactive if the expression fails (e.g. if an undefined variable is used)
+- Improved Raw MIDI source to control and learn incoming short (non-sys-ex) messages as well
+- Improved documentation of what's special about "MIDI: Send message" target and what limitations it has
+- Improved performance of "MIDI: Send message" target when sending to feedback output by avoiding deallocation in audio thread
+- Improved usability by disabling certain UI elements depending on the selected OSC argument type
+- Improved user guide (structure, headings, table of contents, TouchOSC instructions)
+- Fixed bug that caused project to be marked dirty on load already
+- Fixed bug that caused changes to sometimes not be memorized if ReaLearn is on monitoring FX chain
+- Fixed bug that caused automation to shortly jump back when writing automation via fader touch
+- Fixed severe bug that could cause ReaLearn instances to receive MIDI from wrong input device
+- Fixed bug that caused source takeover between ReaLearn instances with different feedback output devices
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0/realearn-windows-i686.dll</source>
+
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0/realearn-user-guide.pdf</source>
+                <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0/realearn-linux-armv7.so</source>
+
+            </version>
 
             <version name="2.11.0-pre.15" author="helgoboss" time="2021-11-22T12:00:00Z">
                 <changelog><![CDATA[- Added new variable 'y_last' in EEL control transformation, which can be used to implement a performance control mode typical for a synth modulation matrix (y = y_last + x \* (1 - y_last))
