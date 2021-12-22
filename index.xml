@@ -144,6 +144,10 @@
     </category>
     <category name="ReaLearn main presets">
         <reapack name="daw-control" type="data" desc="DAW control [DAW]">
+            <version name="2.0.2" author="helgoboss">
+                <source file="helgoboss/realearn/presets/main/daw-control.json">https://raw.githubusercontent.com/helgoboss/realearn/57866b1384adcc64f12a904a97b8be6b8463eacc/resources/main-presets/daw-control.json</source>
+                <changelog><![CDATA[- Improved composability by using virtual control element "lcd/timecode" as time code source]]></changelog>
+            </version>
             <version name="2.0.1" author="helgoboss">
                 <source file="helgoboss/realearn/presets/main/daw-control.json">https://raw.githubusercontent.com/helgoboss/realearn/ff9fc4f6ef03a82d30cd8af86e15558ea96e5956/resources/main-presets/daw-control.json</source>
                 <changelog><![CDATA[- Improved internals by using Track target instead of Track Volume target for displaying track name on LCD]]></changelog>
