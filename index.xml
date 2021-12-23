@@ -164,6 +164,30 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.12.0-pre.1" author="helgoboss" time="2021-12-23T12:00:00Z">
+                <changelog><![CDATA[- Improved memory consumption a lot (nobody seems to have noticed it but ReaLearn used enormous amounts of memory per mapping before)
+- Fixed borrow error when virtualizing mappings if that fails for some mappings
+- Fixed Lua import of Lua export of mapping with negative step factor
+- Fixed Lua import of FX chain (ReaLearn didn't respect the FX chain property before in many cases)
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.1/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.1/realearn-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.1/realearn-linux-aarch64.so</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.1/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.1/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.1/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.11.1" author="helgoboss" time="2021-12-22T12:00:00Z">
                 <changelog><![CDATA[- Added support for textual feedback (usable with OSC String sources and MIDI hardware displays: Mackie, SiniCon)
 - Added comprehensive built-in support for import and export of the all-new ReaLearn Script = Build ReaLearn presets/mappings in Lua! (Attention: Small adjustments to the ReaLearn Script API data structure are to be expected during the 2.11 and 2.12 release cycles!)
@@ -2229,6 +2253,22 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.12.0-pre.1" author="helgoboss" time="2021-12-23T12:00:00Z">
+                <changelog><![CDATA[- Improved memory consumption a lot (nobody seems to have noticed it but ReaLearn used enormous amounts of memory per mapping before)
+- Fixed borrow error when virtualizing mappings if that fails for some mappings
+- Fixed Lua import of Lua export of mapping with negative step factor
+- Fixed Lua import of FX chain (ReaLearn didn't respect the FX chain property before in many cases)
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.1/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.1/realearn-windows-i686.dll</source>
+
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.1/realearn-linux-armv7.so</source>
+
+            </version>
 
             <version name="2.11.1" author="helgoboss" time="2021-12-22T12:00:00Z">
                 <changelog><![CDATA[- Added support for textual feedback (usable with OSC String sources and MIDI hardware displays: Mackie, SiniCon)
