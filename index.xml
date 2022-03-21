@@ -164,6 +164,50 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.12.0" author="helgoboss" time="2022-03-21T12:00:00Z">
+                <changelog><![CDATA[- Internal change: Build with Rust 1.59
+- Internal change: Refactored and modernized HTTP server code, prepared addition of gRPC server (for communication with Playtime 2)
+- Added fine-grained OSC feedback argument mapping
+- Added support for sending colors to TouchOSC (in RRGGBB string format)
+- Added more text properties to target "Marker/region: Go to" (e.g. for displaying name of current region on device)
+- Added new target "FX: Set online/offline"
+- Improved ReaLearn development by adding a fancy architecture documentation
+- Improved ReaLearn Script by making more Lua built-in variables/functions available (only safe ones to prevent execution of malicious code)
+- Improved usability by automatically resending all feedback when MIDI device plugged in (probably works on macOS only at the moment)
+- Improved feedback latency of "FX: Navigate within presets" for plug-ins that report parameter changes when changing presets
+- Improved memory footprint a lot (nobody seems to have noticed it but ReaLearn used enormous amounts of memory per mapping before)
+- Fixed borrow error when virtualizing mappings if that fails for some mappings
+- Fixed Lua import of Lua export of mapping with negative step factor
+- Fixed Lua import of FX chain (ReaLearn didn't respect the FX chain property before in many cases)
+- Fixed unnecessary user prompt when changing preset if no mappings and groups present
+- Fixed display issue when using Mackie LCD source in combination with Mountain Utilities BCManager
+- Fixed feedback when writing send volume automation
+- Fixed "Invalid command ID" error if JSON contains invalid command ID but target type is not "Project: Invoke REAPER action"
+- Fixed blacked out GUI on macOS since in REAPER 6.48 - 6.51
+- Fixed rare PoisonError when loading plug-in
+- Fixed text feedback error when trying to format paramter of FX that's offline
+- Fixed missing Lua import of poll_for_feedback property in target FxParameterValue target
+- Fixed error when pressing save button on non-existing preset (grey out button instead)
+- Fixed "FX: Navigate within presets" target getting stuck at "No preset" for VST 3 plug-ins
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.12.0/realearn-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.12.0/realearn-linux-aarch64.so</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.12.0/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.12.0/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.12.0/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.12.0-pre.4" author="helgoboss" time="2021-12-30T12:00:00Z">
                 <changelog><![CDATA[- Added fine-grained OSC feedback argument mapping
 - Added support for sending colors to TouchOSC (in RRGGBB string format)
@@ -2303,6 +2347,42 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.12.0" author="helgoboss" time="2022-03-21T12:00:00Z">
+                <changelog><![CDATA[- Internal change: Build with Rust 1.59
+- Internal change: Refactored and modernized HTTP server code, prepared addition of gRPC server (for communication with Playtime 2)
+- Added fine-grained OSC feedback argument mapping
+- Added support for sending colors to TouchOSC (in RRGGBB string format)
+- Added more text properties to target "Marker/region: Go to" (e.g. for displaying name of current region on device)
+- Added new target "FX: Set online/offline"
+- Improved ReaLearn development by adding a fancy architecture documentation
+- Improved ReaLearn Script by making more Lua built-in variables/functions available (only safe ones to prevent execution of malicious code)
+- Improved usability by automatically resending all feedback when MIDI device plugged in (probably works on macOS only at the moment)
+- Improved feedback latency of "FX: Navigate within presets" for plug-ins that report parameter changes when changing presets
+- Improved memory footprint a lot (nobody seems to have noticed it but ReaLearn used enormous amounts of memory per mapping before)
+- Fixed borrow error when virtualizing mappings if that fails for some mappings
+- Fixed Lua import of Lua export of mapping with negative step factor
+- Fixed Lua import of FX chain (ReaLearn didn't respect the FX chain property before in many cases)
+- Fixed unnecessary user prompt when changing preset if no mappings and groups present
+- Fixed display issue when using Mackie LCD source in combination with Mountain Utilities BCManager
+- Fixed feedback when writing send volume automation
+- Fixed "Invalid command ID" error if JSON contains invalid command ID but target type is not "Project: Invoke REAPER action"
+- Fixed blacked out GUI on macOS since in REAPER 6.48 - 6.51
+- Fixed rare PoisonError when loading plug-in
+- Fixed text feedback error when trying to format paramter of FX that's offline
+- Fixed missing Lua import of poll_for_feedback property in target FxParameterValue target
+- Fixed error when pressing save button on non-existing preset (grey out button instead)
+- Fixed "FX: Navigate within presets" target getting stuck at "No preset" for VST 3 plug-ins
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.12.0/realearn-windows-i686.dll</source>
+
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0/realearn-user-guide.pdf</source>
+                <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.12.0/realearn-linux-armv7.so</source>
+
+            </version>
 
             <version name="2.12.0-pre.4" author="helgoboss" time="2021-12-30T12:00:00Z">
                 <changelog><![CDATA[- Added fine-grained OSC feedback argument mapping
