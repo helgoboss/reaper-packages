@@ -164,6 +164,45 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.13.0-pre.1" author="helgoboss" time="2022-03-25T12:00:00Z">
+                <changelog><![CDATA[- Added limited support for offline rendering (works now with REAPER >= v6.52+dev0323, limited to controlling FX parameters on the same track)
+- Added source "Timer" for repeated triggering of arbitrary targets (you can find it in source category "REAPER", can for example be used to repeatedly send a particular OSC message, which is a precondition to support Behringer X32 OSC)
+- Added work-in-progress "Keyboard" source (NO SAVE of source settings yet!)
+- Added option in context menu to log not just real but also incoming/outgoing virtual control elements and values (very useful for debugging mappings)
+- Added invocation mode "Absolute (7-bit)" to target "Project: Invoke REAPER action" (for controlling actions that don't correctly interpret 14-bit values, e.g. "SWS/SM: Live Config #1 - Apply config (MIDI/OSC only)")
+- Added plug'n'play for MIDI devices, also on Windows (automatically resends all feedback shortly after MIDI device plugged in without further user interaction)
+- Added John's presets for Behringer MOTÖR and FCB1010
+- Added clip engine to be used by upcoming Playtime 2 (this is by far the biggest addition but you can't use it yet :P ... more about this in the next pre-release)
+- Improved target "MIDI: Send message" by lifting all previous restrictions when using destination "FX output" (Yes, you can now play your VSTs via OSC!)
+- Improved precision for entering and displaying percentages and dB to 4 fractional digits (e.g. useful for values in value sequences)
+- Improved error reporting by including the name of the channel in case a channel ran full
+- Improved ReaLearn plug-in topology by removing output pins (since ReaLearn doesn't output any audio streams)
+- Fixed bug that caused enabling/disabling ReaLearn to have no effect when on monitoring FX chain
+- Fixed white background color when using dark SWELL settings on Linux (by not enforcing any background color at all)
+- Fixed bug in target "MIDI: Send message" that made repeated sending of the same value have no effect with some configurations
+- Fixed sometimes missing text feedback updates for clip seek target and some other targets
+- Fixed some potential errors when using "Copy as Lua"
+- Fixed bug when combining conditional activation with single press fire mode (modifier firing unexpectedly)
+- Removed most of the support for the experimental legacy clip targets (replaced with the new clip engine, which is not completely compatible with the experimental legacy clip targets)
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.1/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.1/realearn-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.1/realearn-linux-aarch64.so</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.1/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.1/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.1/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.12.0" author="helgoboss" time="2022-03-21T12:00:00Z">
                 <changelog><![CDATA[- Internal change: Build with Rust 1.59
 - Internal change: Refactored and modernized HTTP server code, prepared addition of gRPC server (for communication with Playtime 2)
@@ -2347,6 +2386,37 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.13.0-pre.1" author="helgoboss" time="2022-03-25T12:00:00Z">
+                <changelog><![CDATA[- Added limited support for offline rendering (works now with REAPER >= v6.52+dev0323, limited to controlling FX parameters on the same track)
+- Added source "Timer" for repeated triggering of arbitrary targets (you can find it in source category "REAPER", can for example be used to repeatedly send a particular OSC message, which is a precondition to support Behringer X32 OSC)
+- Added work-in-progress "Keyboard" source (NO SAVE of source settings yet!)
+- Added option in context menu to log not just real but also incoming/outgoing virtual control elements and values (very useful for debugging mappings)
+- Added invocation mode "Absolute (7-bit)" to target "Project: Invoke REAPER action" (for controlling actions that don't correctly interpret 14-bit values, e.g. "SWS/SM: Live Config #1 - Apply config (MIDI/OSC only)")
+- Added plug'n'play for MIDI devices, also on Windows (automatically resends all feedback shortly after MIDI device plugged in without further user interaction)
+- Added John's presets for Behringer MOTÖR and FCB1010
+- Added clip engine to be used by upcoming Playtime 2 (this is by far the biggest addition but you can't use it yet :P ... more about this in the next pre-release)
+- Improved target "MIDI: Send message" by lifting all previous restrictions when using destination "FX output" (Yes, you can now play your VSTs via OSC!)
+- Improved precision for entering and displaying percentages and dB to 4 fractional digits (e.g. useful for values in value sequences)
+- Improved error reporting by including the name of the channel in case a channel ran full
+- Improved ReaLearn plug-in topology by removing output pins (since ReaLearn doesn't output any audio streams)
+- Fixed bug that caused enabling/disabling ReaLearn to have no effect when on monitoring FX chain
+- Fixed white background color when using dark SWELL settings on Linux (by not enforcing any background color at all)
+- Fixed bug in target "MIDI: Send message" that made repeated sending of the same value have no effect with some configurations
+- Fixed sometimes missing text feedback updates for clip seek target and some other targets
+- Fixed some potential errors when using "Copy as Lua"
+- Fixed bug when combining conditional activation with single press fire mode (modifier firing unexpectedly)
+- Removed most of the support for the experimental legacy clip targets (replaced with the new clip engine, which is not completely compatible with the experimental legacy clip targets)
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.1/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.1/realearn-windows-i686.dll</source>
+
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.1/realearn-linux-armv7.so</source>
+
+            </version>
 
             <version name="2.12.0" author="helgoboss" time="2022-03-21T12:00:00Z">
                 <changelog><![CDATA[- Internal change: Build with Rust 1.59
