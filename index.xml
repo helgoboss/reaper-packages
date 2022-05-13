@@ -164,6 +164,41 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.13.0-pre.4" author="helgoboss" time="2022-05-13T12:00:00Z">
+                <changelog><![CDATA[- Improved integrated Playtime 2 Clip Engine to be ready for a first presentation (see video on YouTube)
+- Added possibility to target FX parameters shown in track control panel by using the new variables tcp_fx_indexes and tcp_fx_parameter_indexes in dynamic FX and FX parameter expressions
+- Added context menu action "Dry-run Lua script from clipboard"
+- Added support for importing JSON presets via "Import from clipboard"
+- Added possibility to write MIDI scripts in Lua
+- Added possibility to map text feedback to numeric source values (API-only, feedback_value_table)
+- Added new activation condition type "Expression" (which lets one use the same expression language in activation conditions that's also used for dynamic selectors)
+- Improved virtual feedback message logging by logging them even if no match found
+- Improved bank-based conditional activation by showing value labels of discrete parameters as bank names
+- Improved projection by making it possible to use without saving a controller preset (projection widget settings are now saved together with the ReaLearn instance)
+- Fixed feedback for virtual controller mappings by sending "Off" when not in use
+- Fixed feedback for virtual controller mappings if they are inactive
+- Fixed missing feedback on activation changes when replacing all parameters
+- Fixed "Make relative" by preventing jump when controlling previously deactivated mapping again
+- Fixed pre-release regression that made "FX: Set parameter value" target have no effect under certain conditions
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.4/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.4/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.4/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.4/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.4/realearn-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.4/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.4/realearn-linux-aarch64.so</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.4/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.4/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.4/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.13.0-pre.3" author="helgoboss" time="2022-04-08T12:00:00Z">
                 <changelog><![CDATA[- Added absolute mode "Make relative" for turning absolute fader/knob movements into relative target adjustments
 - Added absolute mode "Performance control" for emulating the behavior of a typical soft synth modulation matrix mapping
@@ -2446,6 +2481,33 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.13.0-pre.4" author="helgoboss" time="2022-05-13T12:00:00Z">
+                <changelog><![CDATA[- Improved integrated Playtime 2 Clip Engine to be ready for a first presentation (see video on YouTube)
+- Added possibility to target FX parameters shown in track control panel by using the new variables tcp_fx_indexes and tcp_fx_parameter_indexes in dynamic FX and FX parameter expressions
+- Added context menu action "Dry-run Lua script from clipboard"
+- Added support for importing JSON presets via "Import from clipboard"
+- Added possibility to write MIDI scripts in Lua
+- Added possibility to map text feedback to numeric source values (API-only, feedback_value_table)
+- Added new activation condition type "Expression" (which lets one use the same expression language in activation conditions that's also used for dynamic selectors)
+- Improved virtual feedback message logging by logging them even if no match found
+- Improved bank-based conditional activation by showing value labels of discrete parameters as bank names
+- Improved projection by making it possible to use without saving a controller preset (projection widget settings are now saved together with the ReaLearn instance)
+- Fixed feedback for virtual controller mappings by sending "Off" when not in use
+- Fixed feedback for virtual controller mappings if they are inactive
+- Fixed missing feedback on activation changes when replacing all parameters
+- Fixed "Make relative" by preventing jump when controlling previously deactivated mapping again
+- Fixed pre-release regression that made "FX: Set parameter value" target have no effect under certain conditions
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.4/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.4/realearn-windows-i686.dll</source>
+
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.4/realearn-user-guide.pdf</source>
+                <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.4/realearn-linux-armv7.so</source>
+
+            </version>
 
             <version name="2.13.0-pre.3" author="helgoboss" time="2022-04-08T12:00:00Z">
                 <changelog><![CDATA[- Added absolute mode "Make relative" for turning absolute fader/knob movements into relative target adjustments
