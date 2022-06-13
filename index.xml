@@ -164,6 +164,44 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.13.0-pre.6" author="helgoboss" time="2022-06-12T12:00:00Z">
+                <changelog><![CDATA[- Internal change: Migrate to Rust 1.61
+- Clip Engine: Improved communication with upcoming Playtime App
+- Added initial accessibility (Thanks a lot to AZSlow3 for his contribution!)
+- Added possibility to modulate ReaLearn target values and smooth transitions by making the rel_time variable available in control transformation formulas (read more on the issue tracker or in the user guide)
+- Added "ReaLearn: Dummy" target
+- Added support for Mackie Extender (XT) displays
+- Added option to log target control values (available in header panel context menu)
+- Improved usability by reducing height of mapping panel on Windows and macOS (also vastly improved GUI dialog development tooling to gain more flexibility for GUI modifications)
+- Improved wording of log actions and log messages
+- Improved usability by using text field to enter marker/region position
+- Improved accuracy when using relative mode with continuous target by not exceeding target min/max
+- Fixed missing reset of make-relative reference value when disabling mapping via checkbox or dedicated target
+- Fixed target incorrect track peaks when using "Track: Peak" target with multi-channel tracks (Thanks a lot to AlbertoV5's contribution!)
+- Fixed missing update when changing FX in FX-related targets
+- Fixed missing text feedback updates when using placeholder target.fx.name and target.fx.index
+- Fixed "channel full" messages on high load (e.g. selecting many tracks at once) and improved initial memory consumption
+- Fixed broken controller layout saving (was affecting Companion App)
+- Fixed error when using plug-ins with non-UTF8 names
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.6/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.6/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.6/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.6/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.6/realearn-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.6/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.6/realearn-linux-aarch64.so</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.6/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.6/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.6/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.13.0-pre.4" author="helgoboss" time="2022-05-13T12:00:00Z">
                 <changelog><![CDATA[- Improved integrated Playtime 2 Clip Engine to be ready for a first presentation (see video on YouTube)
 - Added possibility to target FX parameters shown in track control panel by using the new variables tcp_fx_indexes and tcp_fx_parameter_indexes in dynamic FX and FX parameter expressions
@@ -2468,6 +2506,7 @@
             <metadata>
                 <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
                 <link rel="donation">https://www.paypal.me/helgoboss</link>
+                <link rel="donation">https://liberapay.com/helgoboss/donate</link>
                 <link rel="screenshot" href="https://ibb.co/fGsnDnr">Mapping list</link>
                 <link rel="screenshot" href="https://ibb.co/qD8PwCV">Mapping detail</link>
                 <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
@@ -2481,6 +2520,36 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.13.0-pre.6" author="helgoboss" time="2022-06-12T12:00:00Z">
+                <changelog><![CDATA[- Internal change: Migrate to Rust 1.61
+- Clip Engine: Improved communication with upcoming Playtime App
+- Added initial accessibility (Thanks a lot to AZSlow3 for his contribution!)
+- Added possibility to modulate ReaLearn target values and smooth transitions by making the rel_time variable available in control transformation formulas (read more on the issue tracker or in the user guide)
+- Added "ReaLearn: Dummy" target
+- Added support for Mackie Extender (XT) displays
+- Added option to log target control values (available in header panel context menu)
+- Improved usability by reducing height of mapping panel on Windows and macOS (also vastly improved GUI dialog development tooling to gain more flexibility for GUI modifications)
+- Improved wording of log actions and log messages
+- Improved usability by using text field to enter marker/region position
+- Improved accuracy when using relative mode with continuous target by not exceeding target min/max
+- Fixed missing reset of make-relative reference value when disabling mapping via checkbox or dedicated target
+- Fixed target incorrect track peaks when using "Track: Peak" target with multi-channel tracks (Thanks a lot to AlbertoV5's contribution!)
+- Fixed missing update when changing FX in FX-related targets
+- Fixed missing text feedback updates when using placeholder target.fx.name and target.fx.index
+- Fixed "channel full" messages on high load (e.g. selecting many tracks at once) and improved initial memory consumption
+- Fixed broken controller layout saving (was affecting Companion App)
+- Fixed error when using plug-ins with non-UTF8 names
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.6/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.6/realearn-windows-i686.dll</source>
+
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.6/realearn-user-guide.pdf</source>
+                <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.6/realearn-linux-armv7.so</source>
+
+            </version>
 
             <version name="2.13.0-pre.4" author="helgoboss" time="2022-05-13T12:00:00Z">
                 <changelog><![CDATA[- Improved integrated Playtime 2 Clip Engine to be ready for a first presentation (see video on YouTube)
@@ -4249,6 +4318,7 @@
             <metadata>
                 <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
                 <link rel="donation">https://www.paypal.me/helgoboss</link>
+                <link rel="donation">https://liberapay.com/helgoboss/donate</link>
                 <link rel="screenshot" href="https://ibb.co/fGsnDnr">Mapping list</link>
                 <link rel="screenshot" href="https://ibb.co/qD8PwCV">Mapping detail</link>
                 <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
