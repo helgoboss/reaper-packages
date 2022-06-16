@@ -164,6 +164,33 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.13.0-pre.7" author="helgoboss" time="2022-06-17T12:00:00Z">
+                <changelog><![CDATA[- Added target-based conditional activation (THIS IS BIG!)
+- Added new source "ReaLearn parameter" in source category "REAPER" (for controlling targets with ReaLearn's automatable parameters itself)
+- Added possibility to address a FX instance relative to the current ReaLearn instance by using dynamic FX expression variable this_fx_index
+- Improved usability by making None the default source and dummy target the default target
+- Improved GUI dimensions on Linux, Windows and macOS
+- Fixed missing reset of reference value in "Make relative" mode in certain cases (leading to parameter jumps which should not occur in this mode)
+- Fixed a few GUI bugs introduced in last pre
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.7/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.7/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.7/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.7/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.7/realearn-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.7/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.7/realearn-linux-aarch64.so</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.7/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.7/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.7/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.13.0-pre.6" author="helgoboss" time="2022-06-12T12:00:00Z">
                 <changelog><![CDATA[- Internal change: Migrate to Rust 1.61
 - Clip Engine: Improved communication with upcoming Playtime App
@@ -2520,6 +2547,25 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.13.0-pre.7" author="helgoboss" time="2022-06-17T12:00:00Z">
+                <changelog><![CDATA[- Added target-based conditional activation (THIS IS BIG!)
+- Added new source "ReaLearn parameter" in source category "REAPER" (for controlling targets with ReaLearn's automatable parameters itself)
+- Added possibility to address a FX instance relative to the current ReaLearn instance by using dynamic FX expression variable this_fx_index
+- Improved usability by making None the default source and dummy target the default target
+- Improved GUI dimensions on Linux, Windows and macOS
+- Fixed missing reset of reference value in "Make relative" mode in certain cases (leading to parameter jumps which should not occur in this mode)
+- Fixed a few GUI bugs introduced in last pre
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.7/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.7/realearn-windows-i686.dll</source>
+
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.7/realearn-user-guide.pdf</source>
+                <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.7/realearn-linux-armv7.so</source>
+
+            </version>
 
             <version name="2.13.0-pre.6" author="helgoboss" time="2022-06-12T12:00:00Z">
                 <changelog><![CDATA[- Internal change: Migrate to Rust 1.61
