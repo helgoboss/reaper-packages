@@ -164,6 +164,32 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.13.0-pre.9" author="helgoboss" time="2022-06-21T12:00:00Z">
+                <changelog><![CDATA[- Added "FX" target (analogously to "Track" target, well-suited for text feedback concerning a particular FX)
+- Added new "Instance track" concept, a corresponding track selector &lt;Instance> and a way to set the instance track (this enables many new scenarios such as track pinning)
+- Added new "Instance FX" concept, a corresponding FX selector &lt;Instance> and a way to set the instance FX (this enables many new scenarios such as FX pinning)
+- Improved "Auto-load preset" feature to be more generic. It now works on the current instance FX instead of just on the currently focused FX (allows much more flexible auto-loading)
+- Fixed havoc when copying and pasting mappings
+- Fixed "Paste mappings (replace all in group)" for default group
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.9/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.9/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.9/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.9/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.9/realearn-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.9/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.9/realearn-linux-aarch64.so</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.9/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.9/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.9/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.13.0-pre.8" author="helgoboss" time="2022-06-18T12:00:00Z">
                 <changelog><![CDATA[- Fixed Lua import bug for new source "ReaLearn parameter"
 - Fixed borrow error when building activation conditions (caused by the addition of target-based conditional activation)
@@ -2570,6 +2596,24 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.13.0-pre.9" author="helgoboss" time="2022-06-21T12:00:00Z">
+                <changelog><![CDATA[- Added "FX" target (analogously to "Track" target, well-suited for text feedback concerning a particular FX)
+- Added new "Instance track" concept, a corresponding track selector &lt;Instance> and a way to set the instance track (this enables many new scenarios such as track pinning)
+- Added new "Instance FX" concept, a corresponding FX selector &lt;Instance> and a way to set the instance FX (this enables many new scenarios such as FX pinning)
+- Improved "Auto-load preset" feature to be more generic. It now works on the current instance FX instead of just on the currently focused FX (allows much more flexible auto-loading)
+- Fixed havoc when copying and pasting mappings
+- Fixed "Paste mappings (replace all in group)" for default group
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.9/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.9/realearn-windows-i686.dll</source>
+
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.9/realearn-user-guide.pdf</source>
+                <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.9/realearn-linux-armv7.so</source>
+
+            </version>
 
             <version name="2.13.0-pre.8" author="helgoboss" time="2022-06-18T12:00:00Z">
                 <changelog><![CDATA[- Fixed Lua import bug for new source "ReaLearn parameter"
