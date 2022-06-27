@@ -81,6 +81,10 @@
             </version>
         </reapack>
         <reapack name="mackie-control" type="data" desc="Mackie Control [DAW]">
+            <version name="3.0.0" author="helgoboss">
+                <source file="helgoboss/realearn/presets/controller/mackie-control.json">https://raw.githubusercontent.com/helgoboss/realearn/ed4b9b3f4a6424a93bd7b65a286379d376ef7c27/resources/controller-presets/mackie-control.json</source>
+                <changelog><![CDATA[- Improved usability by making v-pot encoder have feedback by default]]></changelog>
+            </version>
             <version name="2.0.0" author="helgoboss">
                 <source file="helgoboss/realearn/presets/controller/mackie-control.json">https://raw.githubusercontent.com/helgoboss/realearn/24b9ad6a563276c450f30b9901b3e17d2d55fe96/resources/controllers/mackie-control.json</source>
                 <changelog><![CDATA[- Added support for LCD and timecode display, track peak meter and any-solo button, fixed encoder acceleration behavior, many small improvements, easier to maintain because generated from ReaLearn Script]]></changelog>
