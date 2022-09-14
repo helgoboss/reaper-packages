@@ -168,7 +168,7 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
-            <version name="2.14.1-pre.1" author="helgoboss" time="2022-08-14T12:00:00Z">
+            <version name="2.14.0-pre.1" author="helgoboss" time="2022-08-14T12:00:00Z">
                 <changelog><![CDATA[- Migrated to Rust 1.63.0
 - Added display type "Studiologic SL Keyboard display" for showing arbitrary text on the keyboard (tested with SL88)
 - Added display types "X-Touch Mackie LCD" and "X-Touch Mackie LCD XT" for enabling LCD color support when certain X-Touch devices are in MCU mode
@@ -199,17 +199,17 @@
 - Fixed change detection for FX on the monitoring FX chain (most importantly enable/disable, in general ReaLearn should now work much better when targeting monitoring FX and also work better if it's placed on the monitoring FX chain itself)
 ]]></changelog>
 
-                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-user-guide.pdf</source>
-                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-user-guide.pdf</source>
-                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-user-guide.pdf</source>
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.1/realearn-user-guide.pdf</source>
 
 
-                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-user-guide.pdf</source>
-                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-macos-aarch64.vst.dylib</source>
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.1/realearn-macos-aarch64.vst.dylib</source>
 
 
-                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-user-guide.pdf</source>
-                <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-linux-aarch64.so</source>
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.1/realearn-linux-aarch64.so</source>
 
 
                 <source platform="win64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
@@ -218,9 +218,9 @@
                 <source platform="linux64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
 
-                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-windows-x86_64.dll</source>
-                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-macos-x86_64.vst.dylib</source>
-                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-linux-x86_64.so</source>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.1/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.1/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.1/realearn-linux-x86_64.so</source>
             </version>
 
             <version name="2.13.1" author="helgoboss" time="2022-07-10T12:00:00Z">
@@ -2987,7 +2987,7 @@
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
-            <version name="2.14.1-pre.1" author="helgoboss" time="2022-08-14T12:00:00Z">
+            <version name="2.14.0-pre.1" author="helgoboss" time="2022-08-14T12:00:00Z">
                 <changelog><![CDATA[- Migrated to Rust 1.63.0
 - Added display type "Studiologic SL Keyboard display" for showing arbitrary text on the keyboard (tested with SL88)
 - Added display types "X-Touch Mackie LCD" and "X-Touch Mackie LCD XT" for enabling LCD color support when certain X-Touch devices are in MCU mode
@@ -3018,12 +3018,12 @@
 - Fixed change detection for FX on the monitoring FX chain (most importantly enable/disable, in general ReaLearn should now work much better when targeting monitoring FX and also work better if it's placed on the monitoring FX chain itself)
 ]]></changelog>
 
-                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-user-guide.pdf</source>
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.1/realearn-user-guide.pdf</source>
 
-                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-windows-i686.dll</source>
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.1/realearn-windows-i686.dll</source>
 
-                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-user-guide.pdf</source>
-                <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-linux-armv7.so</source>
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.1/realearn-linux-armv7.so</source>
 
 
                 <source platform="win32" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
