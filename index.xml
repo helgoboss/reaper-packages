@@ -168,6 +168,61 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.14.1-pre.1" author="helgoboss" time="2022-08-14T12:00:00Z">
+                <changelog><![CDATA[- Migrated to Rust 1.63.0
+- Added display type "Studiologic SL Keyboard display" for showing arbitrary text on the keyboard (tested with SL88)
+- Added display types "X-Touch Mackie LCD" and "X-Touch Mackie LCD XT" for enabling LCD color support when certain X-Touch devices are in MCU mode
+- Added various options to decide whether to keep ReaLearn active if its project tab is in the background (accessible via right-click menu)
+- Added option to play sound when target has been invoked successfully ("Beep on success" checkbox at the bottom left of the mapping panel, great for trigger-like targets such as saving a snapshot)
+- Added target "Track: Enable/disable parent send" (great for MIDI routing in the context of song switching)
+- Added option to prevent resetting feedback when releasing sources (accessible via right-click menu, good for using REAPER/ReaLearn as a remote control for hardware devices)
+- Added stop function to be used in control transformation formulas to emit a target value and stop the currently running transition at once
+- Added context menu entry "Open preset folder"
+- Added "Retrigger" option to target "FX parameter: Set value" (sets parameter even if it already has desired value)
+- Improved preset loading by supporting placing preset files in sub directories (1 level, ATTENTION: The parent directory will become part of the preset ID, so don't move existing presets!)
+- Improved preset loading by supporting symlinked preset files
+- Improved target "ReaLearn: Load mapping snapshot" by respecting the "Reverse" checkbox when loading the default value (great for changing the perspective when it comes to on/off targets)
+- Improved usability of the snapshot targets by displaying the snapshot ID in the row label
+- Improved usability of source "ReaLearn parameter" by displaying the parameter index in the row label
+- Improved usability of source "ReaLearn parameter" by making the parameter learnable
+- Improved usability by making text feedback available with dummy target (great for sending just some constant text or using placeholders that don't need target context)
+- Improved usability by displaying session ID in the status bar (should help detecting duplicate IDs, which can be useful e.g. when using projection)
+- Improved target "ReaLearn: Load mapping snapshot" by enabling feedback (showing if the desired snapshot is currently loaded or not)
+- Improved versatility of target "Project: Invoke REAPER action" by making trigger-like actions controllable by relative endless encoders (via invocation mode "Trigger")
+- Improved target "ReaLearn: Take mapping snapshot" by adding the "Last loaded" selector (great for assigning a particular button to update the currently loaded snapshot)
+- Fixed saving of snapshot IDs in target "ReaLearn: Take mapping snapshot"
+- Fixed feedback of target "Marker/region: Go to" (it was changing even when playback was stopped)
+- Fixed ReaLearn still being active when disabling it via its automatable "Bypass" parameter (as opposed to disabling it via checkbox or ReaScript)
+- Fixed deletion of mapping snapshots when copying and pasting a compartment
+- Fixed "mapping not found" error when removing a mapping while still learning it
+- Fixed infinite error loop and certain "track is not available"-like errors
+- Fixed change detection for FX on the monitoring FX chain (most importantly enable/disable, in general ReaLearn should now work much better when targeting monitoring FX and also work better if it's placed on the monitoring FX chain itself)
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-linux-aarch64.so</source>
+
+
+                <source platform="win64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.13.1" author="helgoboss" time="2022-07-10T12:00:00Z">
                 <changelog><![CDATA[- Fixed Lua import/export by defaulting to This FX again when using FX targets (instead of Focused)
 ]]></changelog>
@@ -183,6 +238,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.1/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.1/realearn-linux-aarch64.so</source>
+
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.1/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.1/realearn-macos-x86_64.vst.dylib</source>
@@ -294,6 +350,7 @@
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0/realearn-linux-aarch64.so</source>
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0/realearn-linux-x86_64.so</source>
@@ -316,6 +373,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre-13/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre-13/realearn-linux-aarch64.so</source>
+
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre-13/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre-13/realearn-macos-x86_64.vst.dylib</source>
@@ -343,6 +401,7 @@
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.12/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.12/realearn-linux-aarch64.so</source>
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.12/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.12/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.12/realearn-linux-x86_64.so</source>
@@ -365,6 +424,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.11/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.11/realearn-linux-aarch64.so</source>
+
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.11/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.11/realearn-macos-x86_64.vst.dylib</source>
@@ -390,6 +450,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.10/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.10/realearn-linux-aarch64.so</source>
+
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.10/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.10/realearn-macos-x86_64.vst.dylib</source>
@@ -417,6 +478,7 @@
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.9/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.9/realearn-linux-aarch64.so</source>
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.9/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.9/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.9/realearn-linux-x86_64.so</source>
@@ -439,6 +501,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.8/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.8/realearn-linux-aarch64.so</source>
+
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.8/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.8/realearn-macos-x86_64.vst.dylib</source>
@@ -466,6 +529,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.7/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.7/realearn-linux-aarch64.so</source>
+
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.7/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.7/realearn-macos-x86_64.vst.dylib</source>
@@ -505,6 +569,7 @@
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.6/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.6/realearn-linux-aarch64.so</source>
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.6/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.6/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.6/realearn-linux-x86_64.so</source>
@@ -540,6 +605,7 @@
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.4/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.4/realearn-linux-aarch64.so</source>
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.4/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.4/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.4/realearn-linux-x86_64.so</source>
@@ -563,6 +629,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.3/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.3/realearn-linux-aarch64.so</source>
+
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.3/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.3/realearn-macos-x86_64.vst.dylib</source>
@@ -599,6 +666,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.2/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.2/realearn-linux-aarch64.so</source>
+
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.2/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.2/realearn-macos-x86_64.vst.dylib</source>
@@ -638,6 +706,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.1/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.1/realearn-linux-aarch64.so</source>
+
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.1/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.1/realearn-macos-x86_64.vst.dylib</source>
@@ -683,6 +752,7 @@
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.12.0/realearn-linux-aarch64.so</source>
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.12.0/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.12.0/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.12.0/realearn-linux-x86_64.so</source>
@@ -712,6 +782,7 @@
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.4/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.4/realearn-linux-aarch64.so</source>
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.4/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.4/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.4/realearn-linux-x86_64.so</source>
@@ -732,6 +803,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.3/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.3/realearn-linux-aarch64.so</source>
+
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.3/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.3/realearn-macos-x86_64.vst.dylib</source>
@@ -756,6 +828,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.1/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.1/realearn-linux-aarch64.so</source>
+
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.1/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.1/realearn-macos-x86_64.vst.dylib</source>
@@ -829,6 +902,7 @@
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.1/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.1/realearn-linux-aarch64.so</source>
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.1/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.1/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.1/realearn-linux-x86_64.so</source>
@@ -861,6 +935,7 @@
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.15/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.15/realearn-linux-aarch64.so</source>
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.15/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.15/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.15/realearn-linux-x86_64.so</source>
@@ -884,6 +959,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.14/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.14/realearn-linux-aarch64.so</source>
+
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.14/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.14/realearn-macos-x86_64.vst.dylib</source>
@@ -920,6 +996,7 @@
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.13/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.13/realearn-linux-aarch64.so</source>
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.13/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.13/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.13/realearn-linux-x86_64.so</source>
@@ -943,6 +1020,7 @@
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.12/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.12/realearn-linux-aarch64.so</source>
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.12/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.12/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.12/realearn-linux-x86_64.so</source>
@@ -964,6 +1042,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.11/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.11/realearn-linux-aarch64.so</source>
+
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.11/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.11/realearn-macos-x86_64.vst.dylib</source>
@@ -989,6 +1068,7 @@
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.9/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.9/realearn-linux-aarch64.so</source>
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.9/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.9/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.9/realearn-linux-x86_64.so</source>
@@ -1009,6 +1089,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.8/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.8/realearn-linux-aarch64.so</source>
+
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.8/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.8/realearn-macos-x86_64.vst.dylib</source>
@@ -1033,6 +1114,7 @@
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.6/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.6/realearn-linux-aarch64.so</source>
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.6/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.6/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.6/realearn-linux-x86_64.so</source>
@@ -1049,6 +1131,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.3/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.3/realearn-macos-aarch64.vst.dylib</source>
+
 
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.3/realearn-windows-x86_64.dll</source>
@@ -1075,6 +1158,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.2/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.2/realearn-macos-aarch64.vst.dylib</source>
+
 
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.2/realearn-windows-x86_64.dll</source>
@@ -1105,6 +1189,7 @@
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.1/realearn-macos-aarch64.vst.dylib</source>
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.1/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.1/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.1/realearn-linux-x86_64.so</source>
@@ -1122,6 +1207,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.4/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.4/realearn-macos-aarch64.vst.dylib</source>
+
 
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.4/realearn-windows-x86_64.dll</source>
@@ -1142,6 +1228,7 @@
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.3/realearn-macos-aarch64.vst.dylib</source>
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.3/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.3/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.10.3/realearn-linux-x86_64.so</source>
@@ -1160,6 +1247,7 @@
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.2/realearn-macos-aarch64.vst.dylib</source>
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.2/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.2/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.10.2/realearn-linux-x86_64.so</source>
@@ -1176,6 +1264,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.1/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.1/realearn-macos-aarch64.vst.dylib</source>
+
 
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.1/realearn-windows-x86_64.dll</source>
@@ -1242,6 +1331,7 @@
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0/realearn-macos-aarch64.vst.dylib</source>
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.10.0/realearn-linux-x86_64.so</source>
@@ -1260,6 +1350,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.10/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.10/realearn-macos-aarch64.vst.dylib</source>
+
 
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.10/realearn-windows-x86_64.dll</source>
@@ -1290,6 +1381,7 @@
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.9/realearn-macos-aarch64.vst.dylib</source>
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.9/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.9/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.9/realearn-linux-x86_64.so</source>
@@ -1311,6 +1403,7 @@
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.6/realearn-macos-aarch64.vst.dylib</source>
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.6/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.6/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.6/realearn-linux-x86_64.so</source>
@@ -1330,6 +1423,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.5/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.5/realearn-macos-aarch64.vst.dylib</source>
+
 
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.5/realearn-windows-x86_64.dll</source>
@@ -1357,6 +1451,7 @@
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.4/realearn-macos-aarch64.vst.dylib</source>
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.4/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.4/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.4/realearn-linux-x86_64.so</source>
@@ -1381,6 +1476,7 @@
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.3/realearn-macos-aarch64.vst.dylib</source>
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.3/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.3/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.3/realearn-linux-x86_64.so</source>
@@ -1398,6 +1494,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.2/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.2/realearn-macos-aarch64.vst.dylib</source>
+
 
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.2/realearn-windows-x86_64.dll</source>
@@ -1425,6 +1522,7 @@
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.1/realearn-macos-aarch64.vst.dylib</source>
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.1/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.1/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.1/realearn-linux-x86_64.so</source>
@@ -1441,6 +1539,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.1/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.9.1/realearn-macos-aarch64.vst.dylib</source>
+
 
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.9.1/realearn-windows-x86_64.dll</source>
@@ -1470,6 +1569,7 @@
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.9.0/realearn-macos-aarch64.vst.dylib</source>
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.9.0/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.9.0/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.9.0/realearn-linux-x86_64.so</source>
@@ -1487,6 +1587,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.9/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.9/realearn-macos-aarch64.vst.dylib</source>
+
 
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.9/realearn-windows-x86_64.dll</source>
@@ -1509,6 +1610,7 @@
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.8/realearn-macos-aarch64.vst.dylib</source>
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.8/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.8/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.8/realearn-linux-x86_64.so</source>
@@ -1527,6 +1629,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.7/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.7/realearn-macos-aarch64.vst.dylib</source>
+
 
 
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.7/realearn-windows-x86_64.dll</source>
@@ -1548,6 +1651,7 @@
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.6/realearn-macos-aarch64.vst.dylib</source>
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.6/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.6/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.6/realearn-linux-x86_64.so</source>
@@ -1566,6 +1670,7 @@
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.5/realearn-macos-aarch64.vst.dylib</source>
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.5/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.5/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.5/realearn-linux-x86_64.so</source>
@@ -1578,6 +1683,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.1/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.1/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.1/realearn-user-guide.pdf</source>
+
 
 
 
@@ -1595,6 +1701,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.2/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.2/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.2/realearn-user-guide.pdf</source>
+
 
 
 
@@ -1704,6 +1811,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.1/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.8.1/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.8.1/realearn-linux-x86_64.so</source>
@@ -1723,6 +1831,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.6/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.6/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.6/realearn-user-guide.pdf</source>
+
 
 
 
@@ -1747,6 +1856,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.5/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.5/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.5/realearn-linux-x86_64.so</source>
@@ -1768,6 +1878,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.4/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.4/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.4/realearn-user-guide.pdf</source>
+
 
 
 
@@ -1798,6 +1909,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.2/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.2/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.2/realearn-linux-x86_64.so</source>
@@ -1817,6 +1929,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.1/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.1/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.1/realearn-user-guide.pdf</source>
+
 
 
 
@@ -1840,6 +1953,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre9/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre9/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre9/realearn-linux-x86_64.so</source>
@@ -1856,6 +1970,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre8/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre8/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre8/realearn-user-guide.pdf</source>
+
 
 
 
@@ -1887,6 +2002,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre7/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre7/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre7/realearn-linux-x86_64.so</source>
@@ -1904,6 +2020,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre6/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre6/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre6/realearn-user-guide.pdf</source>
+
 
 
 
@@ -1929,6 +2046,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre5/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre5/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre5/realearn-linux-x86_64.so</source>
@@ -1951,6 +2069,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre4/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre4/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre4/realearn-linux-x86_64.so</source>
@@ -1967,6 +2086,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre3/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre3/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre3/realearn-user-guide.pdf</source>
+
 
 
 
@@ -1988,6 +2108,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre2/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre2/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre2/realearn-linux-x86_64.so</source>
@@ -2006,6 +2127,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre1/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre1/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre1/realearn-user-guide.pdf</source>
+
 
 
 
@@ -2031,6 +2153,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.7.1/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.7.1/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.7.1/realearn-linux-x86_64.so</source>
@@ -2050,6 +2173,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.6.0/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.6.0/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.6.0/realearn-user-guide.pdf</source>
+
 
 
 
@@ -2073,6 +2197,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.5.0/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.5.0/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.5.0/realearn-user-guide.pdf</source>
+
 
 
 
@@ -2108,6 +2233,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.4.0/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.4.0/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.4.0/realearn-linux-x86_64.so</source>
@@ -2120,6 +2246,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.3.2/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.3.2/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.3.2/realearn-user-guide.pdf</source>
+
 
 
 
@@ -2138,6 +2265,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.3.1/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.3.1/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.3.1/realearn-linux-x86_64.so</source>
@@ -2150,6 +2278,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.3.0/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.3.0/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.3.0/realearn-user-guide.pdf</source>
+
 
 
 
@@ -2169,6 +2298,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.2.0/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.2.0/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.2.0/realearn-user-guide.pdf</source>
+
 
 
 
@@ -2192,6 +2322,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.1.0/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.1.0/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.1.0/realearn-user-guide.pdf</source>
+
 
 
 
@@ -2300,6 +2431,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.0.1/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.0.1/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.0.1/realearn-linux-x86_64.so</source>
@@ -2316,6 +2448,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre21/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre21/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre21/realearn-linux-x86_64.so</source>
@@ -2327,6 +2460,7 @@
 - Improved behavior by disabling control (not just feedback) for disabled ReaLearn FX instances (before this, it still kept controlling when a device was selected as 'MIDI control input')
 - Fixed bug that caused ReaLearn-monitoring-FX controlled targets to become sticky when switching between project tabs (not updating correctly)
 ]]></changelog>
+
 
 
 
@@ -2346,6 +2480,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre19/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre19/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre19/realearn-linux-x86_64.so</source>
@@ -2360,6 +2495,7 @@
 - Fixed wrong reverse behavior in 'Normal' mode when target value range is non-symmetric (old presets will keep their wrong behavior in order to not break existing projects)
 - Fixed bug when moving mapping to another group that caused the activation conditions to not immediately be reflected
 ]]></changelog>
+
 
 
 
@@ -2384,6 +2520,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre16/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre16/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre16/realearn-linux-x86_64.so</source>
@@ -2394,6 +2531,7 @@
 - Fixed mapping row painting on Linux
 - Fixed segmentation fault on Linux when loading ReaLearn after plug-in scan
 ]]></changelog>
+
 
 
 
@@ -2410,6 +2548,7 @@
 - Fixed "BorrowMut" error and potential race conditions when "Allow live FX multiprocessing" enabled
 - Fixed double-processing of MIDI messages when "MIDI control input" set to MIDI device
 ]]></changelog>
+
 
 
 
@@ -2430,6 +2569,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre11/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre11/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre11/realearn-linux-x86_64.so</source>
@@ -2443,6 +2583,7 @@
 - Fixed auto correction for "Send feedback only if track armed"
 - Fixed wording in mapping row panel context menu
 ]]></changelog>
+
 
 
 
@@ -2474,6 +2615,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre9/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre9/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre9/realearn-linux-x86_64.so</source>
@@ -2499,6 +2641,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre8/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre8/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre8/realearn-linux-x86_64.so</source>
@@ -2520,6 +2663,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre7/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre7/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre7/realearn-linux-x86_64.so</source>
@@ -2533,6 +2677,7 @@
 - Fixed Windows 7 character issues in dropdown menus
 - Fixed error message if track could not be found
 ]]></changelog>
+
 
 
 
@@ -2559,6 +2704,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre5/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre5/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre5/realearn-linux-x86_64.so</source>
@@ -2576,6 +2722,7 @@
 - Fixed scrolling issues when mapping list filtered
 - Fixed error message when trying to pick action
 ]]></changelog>
+
 
 
 
@@ -2600,6 +2747,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.11.0/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.11.0/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.11.0/realearn-linux-x86_64.so</source>
@@ -2616,6 +2764,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.11.0-pre2/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.11.0-pre2/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.11.0-pre2/realearn-linux-x86_64.so</source>
@@ -2624,6 +2773,7 @@
             <version name="1.11.0-pre1" author="helgoboss" time="2020-08-28T12:00:00Z">
                 <changelog><![CDATA[- Added feature 'conditional activation' for (de)activating mappings based on parameter values
 ]]></changelog>
+
 
 
 
@@ -2686,6 +2836,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.10.0/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.10.0/realearn-linux-x86_64.so</source>
@@ -2695,6 +2846,7 @@
                 <changelog><![CDATA[- Added mapping option 'Prevent echo feedback' (good for motorized faders that don't like feedback while being moved)
 - Improved error handling: Some possible smaller errors/misbehaviors where totally ignored in previous versions and therefore might have gone unnoticed. In this version, ReaLearn will print a bug report if it detects such a smaller error, exactly like it already did before with more serious errors. (ReaLearn follows a fail-fast approach in order to detect errors early instead of letting them introduce subtle and hard-to-analyze bugs.)
 ]]></changelog>
+
 
 
 
@@ -2715,6 +2867,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre7/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre7/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre7/realearn-linux-x86_64.so</source>
@@ -2726,6 +2879,7 @@
 - Fixed non-working 'Track must be selected' target condition
 - Fixed non-moving slider when slider currently focused
 ]]></changelog>
+
 
 
 
@@ -2741,6 +2895,7 @@
 - Fixed non-working FX parameter selection
 - Fixed sometimes not working FX parameter learn
 ]]></changelog>
+
 
 
 
@@ -2760,6 +2915,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre4/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre4/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre4/realearn-linux-x86_64.so</source>
@@ -2769,6 +2925,7 @@
                 <changelog><![CDATA[- Fixed some random error messages when using FX parameter target with parameters that report step sizes
 - Include more diagnostic information in error log messages (debug info such as line numbers)
 ]]></changelog>
+
 
 
 
@@ -2805,6 +2962,7 @@
 
 
 
+
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-linux-x86_64.so</source>
@@ -2829,6 +2987,50 @@
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.14.1-pre.1" author="helgoboss" time="2022-08-14T12:00:00Z">
+                <changelog><![CDATA[- Migrated to Rust 1.63.0
+- Added display type "Studiologic SL Keyboard display" for showing arbitrary text on the keyboard (tested with SL88)
+- Added display types "X-Touch Mackie LCD" and "X-Touch Mackie LCD XT" for enabling LCD color support when certain X-Touch devices are in MCU mode
+- Added various options to decide whether to keep ReaLearn active if its project tab is in the background (accessible via right-click menu)
+- Added option to play sound when target has been invoked successfully ("Beep on success" checkbox at the bottom left of the mapping panel, great for trigger-like targets such as saving a snapshot)
+- Added target "Track: Enable/disable parent send" (great for MIDI routing in the context of song switching)
+- Added option to prevent resetting feedback when releasing sources (accessible via right-click menu, good for using REAPER/ReaLearn as a remote control for hardware devices)
+- Added stop function to be used in control transformation formulas to emit a target value and stop the currently running transition at once
+- Added context menu entry "Open preset folder"
+- Added "Retrigger" option to target "FX parameter: Set value" (sets parameter even if it already has desired value)
+- Improved preset loading by supporting placing preset files in sub directories (1 level, ATTENTION: The parent directory will become part of the preset ID, so don't move existing presets!)
+- Improved preset loading by supporting symlinked preset files
+- Improved target "ReaLearn: Load mapping snapshot" by respecting the "Reverse" checkbox when loading the default value (great for changing the perspective when it comes to on/off targets)
+- Improved usability of the snapshot targets by displaying the snapshot ID in the row label
+- Improved usability of source "ReaLearn parameter" by displaying the parameter index in the row label
+- Improved usability of source "ReaLearn parameter" by making the parameter learnable
+- Improved usability by making text feedback available with dummy target (great for sending just some constant text or using placeholders that don't need target context)
+- Improved usability by displaying session ID in the status bar (should help detecting duplicate IDs, which can be useful e.g. when using projection)
+- Improved target "ReaLearn: Load mapping snapshot" by enabling feedback (showing if the desired snapshot is currently loaded or not)
+- Improved versatility of target "Project: Invoke REAPER action" by making trigger-like actions controllable by relative endless encoders (via invocation mode "Trigger")
+- Improved target "ReaLearn: Take mapping snapshot" by adding the "Last loaded" selector (great for assigning a particular button to update the currently loaded snapshot)
+- Fixed saving of snapshot IDs in target "ReaLearn: Take mapping snapshot"
+- Fixed feedback of target "Marker/region: Go to" (it was changing even when playback was stopped)
+- Fixed ReaLearn still being active when disabling it via its automatable "Bypass" parameter (as opposed to disabling it via checkbox or ReaScript)
+- Fixed deletion of mapping snapshots when copying and pasting a compartment
+- Fixed "mapping not found" error when removing a mapping while still learning it
+- Fixed infinite error loop and certain "track is not available"-like errors
+- Fixed change detection for FX on the monitoring FX chain (most importantly enable/disable, in general ReaLearn should now work much better when targeting monitoring FX and also work better if it's placed on the monitoring FX chain itself)
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-windows-i686.dll</source>
+
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-user-guide.pdf</source>
+                <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.14.1-pre.1/realearn-linux-armv7.so</source>
+
+
+                <source platform="win32" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
+            </version>
+
             <version name="2.13.1" author="helgoboss" time="2022-07-10T12:00:00Z">
                 <changelog><![CDATA[- Fixed Lua import/export by defaulting to This FX again when using FX targets (instead of Focused)
 ]]></changelog>
@@ -2839,6 +3041,7 @@
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.1/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.13.1/realearn-linux-armv7.so</source>
+
 
             </version>
 
@@ -2942,6 +3145,7 @@
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0/realearn-linux-armv7.so</source>
 
+
             </version>
 
             <version name="2.13.0-pre-13" author="helgoboss" time="2022-07-06T12:00:00Z">
@@ -2956,6 +3160,7 @@
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre-13/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre-13/realearn-linux-armv7.so</source>
+
 
             </version>
 
@@ -2975,6 +3180,7 @@
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.12/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.12/realearn-linux-armv7.so</source>
 
+
             </version>
 
             <version name="2.13.0-pre.11" author="helgoboss" time="2022-06-24T12:00:00Z">
@@ -2989,6 +3195,7 @@
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.11/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.11/realearn-linux-armv7.so</source>
+
 
             </version>
 
@@ -3006,6 +3213,7 @@
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.10/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.10/realearn-linux-armv7.so</source>
+
 
             </version>
 
@@ -3025,6 +3233,7 @@
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.9/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.9/realearn-linux-armv7.so</source>
 
+
             </version>
 
             <version name="2.13.0-pre.8" author="helgoboss" time="2022-06-18T12:00:00Z">
@@ -3039,6 +3248,7 @@
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.8/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.8/realearn-linux-armv7.so</source>
+
 
             </version>
 
@@ -3058,6 +3268,7 @@
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.7/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.7/realearn-linux-armv7.so</source>
+
 
             </version>
 
@@ -3089,6 +3300,7 @@
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.6/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.6/realearn-linux-armv7.so</source>
 
+
             </version>
 
             <version name="2.13.0-pre.4" author="helgoboss" time="2022-05-13T12:00:00Z">
@@ -3116,6 +3328,7 @@
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.4/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.4/realearn-linux-armv7.so</source>
 
+
             </version>
 
             <version name="2.13.0-pre.3" author="helgoboss" time="2022-04-08T12:00:00Z">
@@ -3131,6 +3344,7 @@
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.3/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.3/realearn-linux-armv7.so</source>
+
 
             </version>
 
@@ -3159,6 +3373,7 @@
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.2/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.2/realearn-linux-armv7.so</source>
+
 
             </version>
 
@@ -3190,6 +3405,7 @@
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.1/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.13.0-pre.1/realearn-linux-armv7.so</source>
+
 
             </version>
 
@@ -3227,6 +3443,7 @@
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.12.0/realearn-linux-armv7.so</source>
 
+
             </version>
 
             <version name="2.12.0-pre.4" author="helgoboss" time="2021-12-30T12:00:00Z">
@@ -3248,6 +3465,7 @@
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.4/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.4/realearn-linux-armv7.so</source>
 
+
             </version>
 
             <version name="2.12.0-pre.3" author="helgoboss" time="2021-12-24T12:00:00Z">
@@ -3260,6 +3478,7 @@
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.3/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.3/realearn-linux-armv7.so</source>
+
 
             </version>
 
@@ -3276,6 +3495,7 @@
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.1/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.12.0-pre.1/realearn-linux-armv7.so</source>
+
 
             </version>
 
@@ -3341,6 +3561,7 @@
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.1/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.11.1/realearn-linux-armv7.so</source>
 
+
             </version>
 
             <version name="2.11.0-pre.15" author="helgoboss" time="2021-11-22T12:00:00Z">
@@ -3365,6 +3586,7 @@
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.15/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.15/realearn-linux-armv7.so</source>
 
+
             </version>
 
             <version name="2.11.0-pre.14" author="helgoboss" time="2021-11-18T12:00:00Z">
@@ -3380,6 +3602,7 @@
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.14/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.14/realearn-linux-armv7.so</source>
+
 
             </version>
 
@@ -3408,6 +3631,7 @@
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.13/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.13/realearn-linux-armv7.so</source>
 
+
             </version>
 
             <version name="2.11.0-pre.12" author="helgoboss" time="2021-11-01T12:00:00Z">
@@ -3423,6 +3647,7 @@
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.12/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.12/realearn-linux-armv7.so</source>
 
+
             </version>
 
             <version name="2.11.0-pre.11" author="helgoboss" time="2021-10-30T12:00:00Z">
@@ -3436,6 +3661,7 @@
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.11/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.11/realearn-linux-armv7.so</source>
+
 
             </version>
 
@@ -3453,6 +3679,7 @@
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.9/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.9/realearn-linux-armv7.so</source>
 
+
             </version>
 
             <version name="2.11.0-pre.8" author="helgoboss" time="2021-10-14T12:00:00Z">
@@ -3465,6 +3692,7 @@
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.8/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.8/realearn-linux-armv7.so</source>
+
 
             </version>
 
@@ -3481,6 +3709,7 @@
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.6/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.6/realearn-linux-armv7.so</source>
 
+
             </version>
 
             <version name="2.11.0-pre.3" author="helgoboss" time="2021-10-09T12:00:00Z">
@@ -3490,6 +3719,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.3/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.3/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -3508,6 +3738,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.2/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.2/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -3529,6 +3760,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.11.0-pre.1/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.10.4" author="helgoboss" time="2021-11-01T12:00:00Z">
@@ -3540,6 +3772,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.4/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.10.3" author="helgoboss" time="2021-09-19T12:00:00Z">
@@ -3549,6 +3782,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.3/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.3/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -3560,6 +3794,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.2/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.10.1" author="helgoboss" time="2021-09-14T12:00:00Z">
@@ -3569,6 +3804,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.1/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.1/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -3626,6 +3862,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.10.0-pre.10" author="helgoboss" time="2021-09-02T12:00:00Z">
@@ -3637,6 +3874,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.10/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.10/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -3658,6 +3896,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.9/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.10.0-pre.6" author="helgoboss" time="2021-08-01T12:00:00Z">
@@ -3671,6 +3910,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.6/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.10.0-pre.5" author="helgoboss" time="2021-07-24T12:00:00Z">
@@ -3683,6 +3923,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.5/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.5/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -3701,6 +3942,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.4/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.10.0-pre.3" author="helgoboss" time="2021-07-17T12:00:00Z">
@@ -3717,6 +3959,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.3/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.10.0-pre.2" author="helgoboss" time="2021-05-18T12:00:00Z">
@@ -3727,6 +3970,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.2/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.2/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -3745,6 +3989,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.10.0-pre.1/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.9.1" author="helgoboss" time="2021-05-16T12:00:00Z">
@@ -3754,6 +3999,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.1/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.9.1/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -3774,6 +4020,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.9.0/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.9.0-pre.9" author="helgoboss" time="2021-05-11T12:00:00Z">
@@ -3784,6 +4031,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.9/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.9/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -3797,6 +4045,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.8/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.9.0-pre.7" author="helgoboss" time="2021-05-03T12:00:00Z">
@@ -3809,6 +4058,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.7/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.9.0-pre.6" author="helgoboss" time="2021-04-30T12:00:00Z">
@@ -3820,6 +4070,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.6/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.9.0-pre.5" author="helgoboss" time="2021-04-30T12:00:00Z">
@@ -3830,6 +4081,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.5/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.9.0-pre.1" author="helgoboss" time="2021-04-29T12:00:00Z">
@@ -3839,6 +4091,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.1/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.9.0-pre.1/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -3851,6 +4104,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.2/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.2/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -3953,6 +4207,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.1/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.8.0-rc.6" author="helgoboss" time="2021-04-23T12:00:00Z">
@@ -3970,6 +4225,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.6/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.8.0-rc.5" author="helgoboss" time="2021-04-14T12:00:00Z">
@@ -3985,6 +4241,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.5/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.5/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4004,6 +4261,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.4/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.4/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4027,6 +4285,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.2/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.8.0-rc.1" author="helgoboss" time="2021-04-06T12:00:00Z">
@@ -4044,6 +4303,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-rc.1/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.8.0-pre9" author="helgoboss" time="2021-04-01T12:00:00Z">
@@ -4059,6 +4319,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre9/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.8.0-pre8" author="helgoboss" time="2021-03-31T12:00:00Z">
@@ -4072,6 +4333,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre8/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre8/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4096,6 +4358,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre7/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.8.0-pre6" author="helgoboss" time="2021-03-25T12:00:00Z">
@@ -4110,6 +4373,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre6/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre6/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4128,6 +4392,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre5/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.8.0-pre4" author="helgoboss" time="2021-03-22T12:00:00Z">
@@ -4145,6 +4410,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre4/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.8.0-pre3" author="helgoboss" time="2021-03-18T12:00:00Z">
@@ -4159,6 +4425,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre3/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.8.0-pre2" author="helgoboss" time="2021-03-13T12:00:00Z">
@@ -4171,6 +4438,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre2/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre2/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4187,6 +4455,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre1/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.8.0-pre1/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4205,6 +4474,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.7.1/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.6.0" author="helgoboss" time="2021-03-07T12:00:00Z">
@@ -4221,6 +4491,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.6.0/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.6.0/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4239,6 +4510,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.5.0/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.5.0/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4267,6 +4539,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.4.0/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.3.2" author="helgoboss" time="2021-02-23T12:00:00Z">
@@ -4276,6 +4549,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.3.2/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.3.2/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4287,6 +4561,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.3.1/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="2.3.0" author="helgoboss" time="2021-02-21T12:00:00Z">
@@ -4296,6 +4571,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.3.0/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.3.0/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4310,6 +4586,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.2.0/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.2.0/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4328,6 +4605,7 @@
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.1.0/realearn-user-guide.pdf</source>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.1.0/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4429,6 +4707,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.0.1/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="1.12.0-pre21" author="helgoboss" time="2021-02-08T12:00:00Z">
@@ -4442,6 +4721,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre21/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="1.12.0-pre20" author="helgoboss" time="2021-01-30T12:00:00Z">
@@ -4452,6 +4732,7 @@
 ]]></changelog>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre20/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4466,6 +4747,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre19/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="1.12.0-pre18" author="helgoboss" time="2021-01-26T12:00:00Z">
@@ -4479,6 +4761,7 @@
 ]]></changelog>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre18/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4498,6 +4781,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre16/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="1.12.0-pre15" author="helgoboss" time="2021-01-20T12:00:00Z">
@@ -4507,6 +4791,7 @@
 ]]></changelog>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre15/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4520,6 +4805,7 @@
 ]]></changelog>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre14/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4535,6 +4821,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre11/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="1.12.0-pre10" author="helgoboss" time="2021-01-13T12:00:00Z">
@@ -4547,6 +4834,7 @@
 ]]></changelog>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre10/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4571,6 +4859,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre9/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="1.12.0-pre8" author="helgoboss" time="2020-12-25T12:00:00Z">
@@ -4591,6 +4880,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre8/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="1.12.0-pre7" author="helgoboss" time="2020-12-14T12:00:00Z">
@@ -4609,6 +4899,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre7/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="1.12.0-pre6" author="helgoboss" time="2020-12-08T12:00:00Z">
@@ -4621,6 +4912,7 @@
 ]]></changelog>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre6/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4642,6 +4934,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre5/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="1.12.0-pre4" author="helgoboss" time="2020-12-03T12:00:00Z">
@@ -4658,6 +4951,7 @@
 ]]></changelog>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.12.0-pre4/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4677,6 +4971,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.11.0/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="1.11.0-pre2" author="helgoboss" time="2020-09-01T12:00:00Z">
@@ -4690,6 +4985,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.11.0-pre2/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="1.11.0-pre1" author="helgoboss" time="2020-08-28T12:00:00Z">
@@ -4697,6 +4993,7 @@
 ]]></changelog>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.11.0-pre1/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4754,6 +5051,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="1.10.0-pre8" author="helgoboss" time="2020-08-19T12:00:00Z">
@@ -4762,6 +5060,7 @@
 ]]></changelog>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre8/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4777,6 +5076,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre7/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="1.10.0-pre6" author="helgoboss" time="2020-07-13T12:00:00Z">
@@ -4787,6 +5087,7 @@
 ]]></changelog>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre6/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4799,6 +5100,7 @@
 ]]></changelog>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre5/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4813,6 +5115,7 @@
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre4/realearn-windows-i686.dll</source>
 
+
             </version>
 
             <version name="1.10.0-pre3" author="helgoboss" time="2020-06-25T12:00:00Z">
@@ -4821,6 +5124,7 @@
 ]]></changelog>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre3/realearn-windows-i686.dll</source>
+
 
             </version>
 
@@ -4851,6 +5155,7 @@
 ]]></changelog>
 
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v1.10.0-pre2/realearn-windows-i686.dll</source>
+
 
             </version>
 
