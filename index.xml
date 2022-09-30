@@ -168,6 +168,39 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.14.0-pre.5" author="helgoboss" time="2022-09-30T12:00:00Z">
+                <changelog><![CDATA[- Added option to respect/ignore track grouping to supported track targets
+- Added option to enable/disable selection ganging to supported track targets
+- Added target control information to mapping panel (Very useful to understand what's going on! For real-time-MIDI-controlled mappings, this only works if target control logging is enabled.)
+- Improved target-based conditional activation by listening to target activation/deactivation as well
+- Improved usability by marking targets that support MIDI real-time control (because MIDI real-time control has a few restrictions)
+- Fixed bug that caused retriggerable targets to not be retriggered with relative control if they already had the desired value
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.5/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.5/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.5/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.5/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.5/realearn-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.5/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.5/realearn-linux-aarch64.so</source>
+
+
+                <source platform="win64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.5/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.5/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.5/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.14.0-pre.4" author="helgoboss" time="2022-09-24T12:00:00Z">
                 <changelog><![CDATA[- Added new target "Global: Mouse" to control the mouse (one use case is to control the FX parameter which is currently under the mouse cursor)
 - Improved source "MIDI script" when used with Lua language by making color information available (allows users to provide support for arbitrary MIDI color LEDs/displays, in addition to the built-in ones)
@@ -3052,6 +3085,28 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.14.0-pre.5" author="helgoboss" time="2022-09-30T12:00:00Z">
+                <changelog><![CDATA[- Added option to respect/ignore track grouping to supported track targets
+- Added option to enable/disable selection ganging to supported track targets
+- Added target control information to mapping panel (Very useful to understand what's going on! For real-time-MIDI-controlled mappings, this only works if target control logging is enabled.)
+- Improved target-based conditional activation by listening to target activation/deactivation as well
+- Improved usability by marking targets that support MIDI real-time control (because MIDI real-time control has a few restrictions)
+- Fixed bug that caused retriggerable targets to not be retriggered with relative control if they already had the desired value
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.5/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.5/realearn-windows-i686.dll</source>
+
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.5/realearn-user-guide.pdf</source>
+                <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.5/realearn-linux-armv7.so</source>
+
+
+                <source platform="win32" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
+            </version>
 
             <version name="2.14.0-pre.4" author="helgoboss" time="2022-09-24T12:00:00Z">
                 <changelog><![CDATA[- Added new target "Global: Mouse" to control the mouse (one use case is to control the FX parameter which is currently under the mouse cursor)
