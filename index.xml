@@ -168,6 +168,38 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.14.0-pre.6" author="helgoboss" time="2022-10-09T12:00:00Z">
+                <changelog><![CDATA[- Added fancy control transformation editor with visual preview of curve/transition (Windows/macOS only for now)
+- Added control transformation template facility (including some first templates, hard-coded, Windows/macOS only for now)
+- Improved usability by insisting on keyboard focus, even if 'Send all keyboard focus to plug-in' is disabled
+- Improved target info logging by including invocation count and target number
+- Fixed target "Project: Invoke REAPER action" invocation mode "Trigger" (could potentially suffer from not being retriggered in some situations)
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.6/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.6/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.6/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.6/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.6/realearn-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.6/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.6/realearn-linux-aarch64.so</source>
+
+
+                <source platform="win64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.6/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.6/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.6/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.14.0-pre.5" author="helgoboss" time="2022-09-30T12:00:00Z">
                 <changelog><![CDATA[- Added option to respect/ignore track grouping to supported track targets
 - Added option to enable/disable selection ganging to supported track targets
@@ -3085,6 +3117,27 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.14.0-pre.6" author="helgoboss" time="2022-10-09T12:00:00Z">
+                <changelog><![CDATA[- Added fancy control transformation editor with visual preview of curve/transition (Windows/macOS only for now)
+- Added control transformation template facility (including some first templates, hard-coded, Windows/macOS only for now)
+- Improved usability by insisting on keyboard focus, even if 'Send all keyboard focus to plug-in' is disabled
+- Improved target info logging by including invocation count and target number
+- Fixed target "Project: Invoke REAPER action" invocation mode "Trigger" (could potentially suffer from not being retriggered in some situations)
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.6/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.6/realearn-windows-i686.dll</source>
+
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.6/realearn-user-guide.pdf</source>
+                <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.6/realearn-linux-armv7.so</source>
+
+
+                <source platform="win32" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
+            </version>
 
             <version name="2.14.0-pre.5" author="helgoboss" time="2022-09-30T12:00:00Z">
                 <changelog><![CDATA[- Added option to respect/ignore track grouping to supported track targets
