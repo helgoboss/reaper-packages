@@ -168,6 +168,41 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.14.0-pre.9" author="helgoboss" time="2022-11-02T12:00:00Z">
+                <changelog><![CDATA[- Added new experimental "Pot" targets for preset browsing in a large pot of presets (first supported preset database: Komplete NKS, see dedicated REAPER forum thread for details)
+- Added new feedback-only source "Speech" for speaking out numeric or text feedback via Windows/macOS built-in text-to-speech engine (no Linux yet, sorry)
+- Added new control transformation templates "Global sinus LFO" and "ReaComp Threshold linearization"
+- Improved wording by consistently using "Browse ..." instead of "Navigate within ..." or "Cycle through ..."
+- Improved wording by using less technical object selector names (e.g. "Particular" instead of "By ID")
+- Fixed missing feedback of "FX: Enable/disable" target when Bypass parameter is automated
+- Fixed saving of "By TCP position" and "By MCP position" selectors
+- Fixed unreliable track visibility change detection
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.9/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.9/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.9/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.9/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.9/realearn-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.9/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.9/realearn-linux-aarch64.so</source>
+
+
+                <source platform="win64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.9/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.9/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.9/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.14.0-pre.7" author="helgoboss" time="2022-10-14T12:00:00Z">
                 <changelog><![CDATA[- Added new track selectors that respect track visibility in TCP or MCP
 - Added new dynamic track variables "selected_track_tcp_index" and "selected_track_mcp_index"
@@ -3150,6 +3185,30 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.14.0-pre.9" author="helgoboss" time="2022-11-02T12:00:00Z">
+                <changelog><![CDATA[- Added new experimental "Pot" targets for preset browsing in a large pot of presets (first supported preset database: Komplete NKS, see dedicated REAPER forum thread for details)
+- Added new feedback-only source "Speech" for speaking out numeric or text feedback via Windows/macOS built-in text-to-speech engine (no Linux yet, sorry)
+- Added new control transformation templates "Global sinus LFO" and "ReaComp Threshold linearization"
+- Improved wording by consistently using "Browse ..." instead of "Navigate within ..." or "Cycle through ..."
+- Improved wording by using less technical object selector names (e.g. "Particular" instead of "By ID")
+- Fixed missing feedback of "FX: Enable/disable" target when Bypass parameter is automated
+- Fixed saving of "By TCP position" and "By MCP position" selectors
+- Fixed unreliable track visibility change detection
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.9/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.9/realearn-windows-i686.dll</source>
+
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.9/realearn-user-guide.pdf</source>
+                <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.9/realearn-linux-armv7.so</source>
+
+
+                <source platform="win32" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
+            </version>
 
             <version name="2.14.0-pre.7" author="helgoboss" time="2022-10-14T12:00:00Z">
                 <changelog><![CDATA[- Added new track selectors that respect track visibility in TCP or MCP
