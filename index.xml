@@ -168,6 +168,44 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.14.0-pre.11" author="helgoboss" time="2022-11-21T12:00:00Z">
+                <changelog><![CDATA[- Migrated to Rust 1.65.0
+- Added new MIDI source "Specific program change" (which makes it more straightforward to react to specific programs)
+- Added dynamic track expression variables "instance_track_tcp_index" and "instance_track_mcp_index"
+- Improved usability by allowing raw MIDI pattern (e.g. sysex) to be edited in separate editor window which also indicates whether the pattern is valid (both in source and target)
+- Fixed FX still being considered as focused when focus is changed from the FX window to the main area
+- Fixed track peak target not respecting solo state of other tracks
+- Fixed action target invocation mode 7-bit/14-bit confusion (existing presets will automatically be migrated, so existing behavior will not change)
+- Fixed failed scan on macOS El Capitan (ReaLearn stopped working on it since v2.13, fixed by removing Prometheus metrics support for macOS Intel builds)
+- Fixed crash when pressing a key on older macOS installations (a problem since 2.14.0-pre.6)
+- Fixed unreliable refresh of dynamic track result UI refresh in target section of mapping panel
+- Fixed failing NKS sub filter item gathering in pot target
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.11/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.11/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.11/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.11/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.11/realearn-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.11/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.11/realearn-linux-aarch64.so</source>
+
+
+                <source platform="win64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.11/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.11/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.11/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.14.0-pre.10" author="helgoboss" time="2022-11-11T12:00:00Z">
                 <changelog><![CDATA[- Added menu and help buttons to the header panel
 - Added previous/next buttons to the mapping panel (for navigating in the list of mappings that's currently visible in the main panel)
@@ -3227,6 +3265,33 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.14.0-pre.11" author="helgoboss" time="2022-11-21T12:00:00Z">
+                <changelog><![CDATA[- Migrated to Rust 1.65.0
+- Added new MIDI source "Specific program change" (which makes it more straightforward to react to specific programs)
+- Added dynamic track expression variables "instance_track_tcp_index" and "instance_track_mcp_index"
+- Improved usability by allowing raw MIDI pattern (e.g. sysex) to be edited in separate editor window which also indicates whether the pattern is valid (both in source and target)
+- Fixed FX still being considered as focused when focus is changed from the FX window to the main area
+- Fixed track peak target not respecting solo state of other tracks
+- Fixed action target invocation mode 7-bit/14-bit confusion (existing presets will automatically be migrated, so existing behavior will not change)
+- Fixed failed scan on macOS El Capitan (ReaLearn stopped working on it since v2.13, fixed by removing Prometheus metrics support for macOS Intel builds)
+- Fixed crash when pressing a key on older macOS installations (a problem since 2.14.0-pre.6)
+- Fixed unreliable refresh of dynamic track result UI refresh in target section of mapping panel
+- Fixed failing NKS sub filter item gathering in pot target
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.11/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.11/realearn-windows-i686.dll</source>
+
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.11/realearn-user-guide.pdf</source>
+                <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.14.0-pre.11/realearn-linux-armv7.so</source>
+
+
+                <source platform="win32" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
+            </version>
 
             <version name="2.14.0-pre.10" author="helgoboss" time="2022-11-11T12:00:00Z">
                 <changelog><![CDATA[- Added menu and help buttons to the header panel
