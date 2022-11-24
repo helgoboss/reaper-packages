@@ -168,6 +168,113 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.14.0" author="helgoboss" time="2022-11-24T12:00:00Z">
+                <changelog><![CDATA[- Added new MIDI source "Specific program change" (which makes it more straightforward to react to specific programs)
+- Added dynamic track expression variables "instance_track_tcp_index" and "instance_track_mcp_index"
+- Added menu and help buttons to the header panel
+- Added previous/next buttons to the mapping panel (for navigating in the list of mappings that's currently visible in the main panel)
+- Added more comfortable editing for OSC feedback arguments and help button
+- Added Lua snippet versioning (from now on, all Lua exports from ReaLearn will contain the ReaLearn version number; used for getting version conflict warnings on import and applying migration logic; in your own Lua code, you should make sure it's set from now on ... removing it will make ReaLearn think that it's an old preset and then it might apply some migration logic that you don't want)
+- Added new takeover mode "Pickup (tolerant)" (prevents jumps but also makes extra sure the target doesn't get stuck, in addition to below mdmayfield improvements)
+- Added new text feedback placeholder "target.width.mcu" to target "Track: Set stereo width" for pretty display of width value
+- Added new experimental "Pot" targets for preset browsing in a large pot of presets (first supported preset database: Komplete NKS, see dedicated REAPER forum thread for details)
+- Added new feedback-only source "Speech" for speaking out numeric or text feedback via Windows/macOS built-in text-to-speech engine (no Linux yet, sorry)
+- Added new track selectors that respect track visibility in TCP or MCP
+- Added new dynamic track variables "selected_track_tcp_index" and "selected_track_mcp_index"
+- Added new options to target "Project: Navigate within tracks" to respect visibility in TCP or MCP
+- Added fancy control transformation editor with visual preview of curve/transition (Windows/macOS only for now)
+- Added control transformation template facility (including some first templates, hard-coded, Windows/macOS only for now)
+- Added option to respect/ignore track grouping to supported track targets
+- Added option to enable/disable selection ganging to supported track targets
+- Added target control information to mapping panel (Very useful to understand what's going on! For real-time-MIDI-controlled mappings, this only works if target control logging is enabled.)
+- Added new target "Global: Mouse" to control the mouse (one use case is to control the FX parameter which is currently under the mouse cursor)
+- Added possibility to save compartment notes (they are also saved with compartment presets)
+- Added multi-line editing and error reporting for EEL transformation formulas
+- Added possibility to force or prevent smooth seek in seek and marker/region targets
+- Added display type "Studiologic SL Keyboard display" for showing arbitrary text on the keyboard (tested with SL88)
+- Added display types "X-Touch Mackie LCD" and "X-Touch Mackie LCD XT" for enabling LCD color support when certain X-Touch devices are in MCU mode
+- Added various options to decide whether to keep ReaLearn active if its project tab is in the background (accessible via right-click menu)
+- Added option to play sound when target has been invoked successfully ("Beep on success" checkbox at the bottom left of the mapping panel, great for trigger-like targets such as saving a snapshot)
+- Added target "Track: Enable/disable parent send" (great for MIDI routing in the context of song switching)
+- Added option to prevent resetting feedback when releasing sources (accessible via right-click menu, good for using REAPER/ReaLearn as a remote control for hardware devices)
+- Added stop function to be used in control transformation formulas to emit a target value and stop the currently running transition at once
+- Added context menu entry "Open preset folder"
+- Added "Retrigger" option to target "FX parameter: Set value" (sets parameter even if it already has desired value)
+- Improved usability by allowing raw MIDI pattern (e.g. sysex) to be edited in separate editor window which also indicates whether the pattern is valid (both in source and target)
+- Improved takeover modes substantially by applying the "mdmayfield improvements": No more backwards jumps! Much less getting-stuck situations! Ability to choose a fixed default for jump max! (Thanks a lot to mdmayfield who made the initial contribution!)
+- Improved usability by removing "Jump min/max" settings and introducing an "Off" mode instead (the value for jump max is now an implementation detail; custom min/max values are still supported but only for old presets to ensure backward compatibility; one can use a value sequence as alternative to jump min)
+- Improved auto-load mode by automagically falling back to memorized mappings when FX loses focus (users will love this because it's much more intuitive than "Make instance superior", which still has its uses though in more complex scenarios where you want multiple instances)
+- Improved wording by consistently using "Browse ..." instead of "Navigate within ..." or "Cycle through ..."
+- Improved wording by using less technical object selector names (e.g. "Particular" instead of "By ID")
+- Improved usability by displaying in status bar if control/feedback globally off (don't show by greying out mapping rows anymore)
+- Improved usability by insisting on keyboard focus, even if 'Send all keyboard focus to plug-in' is disabled
+- Improved target-based conditional activation by listening to target activation/deactivation as well
+- Improved usability by marking targets that support MIDI real-time control (because MIDI real-time control has a few restrictions)
+- Improved source "MIDI script" when used with Lua language by making color information available (allows users to provide support for arbitrary MIDI color LEDs/displays, in addition to the built-in ones)
+- Improved target logging by including target control errors and other information
+- Improved usability by making it possible to copy and paste the activation condition of a mapping
+- Improved preset loading by supporting placing preset files in sub directories (1 level, ATTENTION: The parent directory will become part of the preset ID, so don't move existing presets!)
+- Improved preset loading by supporting symlinked preset files
+- Improved target "ReaLearn: Load mapping snapshot" by respecting the "Reverse" checkbox when loading the default value (great for changing the perspective when it comes to on/off targets)
+- Improved usability of the snapshot targets by displaying the snapshot ID in the row label
+- Improved usability of source "ReaLearn parameter" by displaying the parameter index in the row label
+- Improved usability of source "ReaLearn parameter" by making the parameter learnable
+- Improved usability by making text feedback available with dummy target (great for sending just some constant text or using placeholders that don't need target context)
+- Improved usability by displaying session ID in the status bar (should help detecting duplicate IDs, which can be useful e.g. when using projection)
+- Improved target "ReaLearn: Load mapping snapshot" by enabling feedback (showing if the desired snapshot is currently loaded or not)
+- Improved versatility of target "Project: Invoke REAPER action" by making trigger-like actions controllable by relative endless encoders (via invocation mode "Trigger")
+- Improved target "ReaLearn: Take mapping snapshot" by adding the "Last loaded" selector (great for assigning a particular button to update the currently loaded snapshot)
+- Fixed missing feedback of "FX: Enable/disable" target when Bypass parameter is automated
+- Fixed FX still being considered as focused when focus is changed from the FX window to the main area
+- Fixed track peak target not respecting solo state of other tracks
+- Fixed action target invocation mode 7-bit/14-bit confusion (existing presets will automatically be migrated, so existing behavior will not change)
+- Fixed failed scan on macOS El Capitan (ReaLearn stopped working on it since v2.13, fixed by removing Prometheus metrics support for macOS Intel builds)
+- Fixed unreliable refresh of dynamic track result UI refresh in target section of mapping panel
+- Fixed various mapping panel GUI bugs
+- Fixed missing feedback refresh when dealing with multiple instances (e.g. via "Make instance superior")
+- Fixed missing automatic feedback for target "FX: Set online/offline"
+- Fixed unreliable track visibility change detection
+- Fixed rel_time transformations to respect reverse, target min/max/sequence and rounding (also hide some settings that don't make sense)
+- Fixed OSC compatibility with certain apps such as Syntien (control didn't work when both control and feedback were enabled for the device)
+- Fixed target "Project: Invoke REAPER action" invocation mode "Trigger" (could potentially suffer from not being retriggered in some situations)
+- Fixed bug that caused retriggerable targets to not be retriggered with relative control if they already had the desired value
+- Fixed error when learning/using special keys on macOS (keyboard source)
+- Fixed REAPER track color detection
+- Fixed bug that caused parameters and custom projection data to not be cleared when switching preset to None
+- Fixed fire modes when using rel_time transitions
+- Fixed saving of snapshot IDs in target "ReaLearn: Take mapping snapshot"
+- Fixed feedback of target "Marker/region: Go to" (it was changing even when playback was stopped)
+- Fixed ReaLearn still being active when disabling it via its automatable "Bypass" parameter (as opposed to disabling it via checkbox or ReaScript)
+- Fixed deletion of mapping snapshots when copying and pasting a compartment
+- Fixed "mapping not found" error when removing a mapping while still learning it
+- Fixed infinite error loop and certain "track is not available"-like errors
+- Fixed change detection for FX on the monitoring FX chain (most importantly enable/disable, in general ReaLearn should now work much better when targeting monitoring FX and also work better if it's placed on the monitoring FX chain itself)
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.14.0/realearn-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/realearn/releases/download/v2.14.0/realearn-linux-aarch64.so</source>
+
+
+                <source platform="win64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.14.0/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.14.0/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.14.0/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.14.0-pre.11" author="helgoboss" time="2022-11-21T12:00:00Z">
                 <changelog><![CDATA[- Migrated to Rust 1.65.0
 - Added new MIDI source "Specific program change" (which makes it more straightforward to react to specific programs)
@@ -3265,6 +3372,102 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.14.0" author="helgoboss" time="2022-11-24T12:00:00Z">
+                <changelog><![CDATA[- Added new MIDI source "Specific program change" (which makes it more straightforward to react to specific programs)
+- Added dynamic track expression variables "instance_track_tcp_index" and "instance_track_mcp_index"
+- Added menu and help buttons to the header panel
+- Added previous/next buttons to the mapping panel (for navigating in the list of mappings that's currently visible in the main panel)
+- Added more comfortable editing for OSC feedback arguments and help button
+- Added Lua snippet versioning (from now on, all Lua exports from ReaLearn will contain the ReaLearn version number; used for getting version conflict warnings on import and applying migration logic; in your own Lua code, you should make sure it's set from now on ... removing it will make ReaLearn think that it's an old preset and then it might apply some migration logic that you don't want)
+- Added new takeover mode "Pickup (tolerant)" (prevents jumps but also makes extra sure the target doesn't get stuck, in addition to below mdmayfield improvements)
+- Added new text feedback placeholder "target.width.mcu" to target "Track: Set stereo width" for pretty display of width value
+- Added new experimental "Pot" targets for preset browsing in a large pot of presets (first supported preset database: Komplete NKS, see dedicated REAPER forum thread for details)
+- Added new feedback-only source "Speech" for speaking out numeric or text feedback via Windows/macOS built-in text-to-speech engine (no Linux yet, sorry)
+- Added new track selectors that respect track visibility in TCP or MCP
+- Added new dynamic track variables "selected_track_tcp_index" and "selected_track_mcp_index"
+- Added new options to target "Project: Navigate within tracks" to respect visibility in TCP or MCP
+- Added fancy control transformation editor with visual preview of curve/transition (Windows/macOS only for now)
+- Added control transformation template facility (including some first templates, hard-coded, Windows/macOS only for now)
+- Added option to respect/ignore track grouping to supported track targets
+- Added option to enable/disable selection ganging to supported track targets
+- Added target control information to mapping panel (Very useful to understand what's going on! For real-time-MIDI-controlled mappings, this only works if target control logging is enabled.)
+- Added new target "Global: Mouse" to control the mouse (one use case is to control the FX parameter which is currently under the mouse cursor)
+- Added possibility to save compartment notes (they are also saved with compartment presets)
+- Added multi-line editing and error reporting for EEL transformation formulas
+- Added possibility to force or prevent smooth seek in seek and marker/region targets
+- Added display type "Studiologic SL Keyboard display" for showing arbitrary text on the keyboard (tested with SL88)
+- Added display types "X-Touch Mackie LCD" and "X-Touch Mackie LCD XT" for enabling LCD color support when certain X-Touch devices are in MCU mode
+- Added various options to decide whether to keep ReaLearn active if its project tab is in the background (accessible via right-click menu)
+- Added option to play sound when target has been invoked successfully ("Beep on success" checkbox at the bottom left of the mapping panel, great for trigger-like targets such as saving a snapshot)
+- Added target "Track: Enable/disable parent send" (great for MIDI routing in the context of song switching)
+- Added option to prevent resetting feedback when releasing sources (accessible via right-click menu, good for using REAPER/ReaLearn as a remote control for hardware devices)
+- Added stop function to be used in control transformation formulas to emit a target value and stop the currently running transition at once
+- Added context menu entry "Open preset folder"
+- Added "Retrigger" option to target "FX parameter: Set value" (sets parameter even if it already has desired value)
+- Improved usability by allowing raw MIDI pattern (e.g. sysex) to be edited in separate editor window which also indicates whether the pattern is valid (both in source and target)
+- Improved takeover modes substantially by applying the "mdmayfield improvements": No more backwards jumps! Much less getting-stuck situations! Ability to choose a fixed default for jump max! (Thanks a lot to mdmayfield who made the initial contribution!)
+- Improved usability by removing "Jump min/max" settings and introducing an "Off" mode instead (the value for jump max is now an implementation detail; custom min/max values are still supported but only for old presets to ensure backward compatibility; one can use a value sequence as alternative to jump min)
+- Improved auto-load mode by automagically falling back to memorized mappings when FX loses focus (users will love this because it's much more intuitive than "Make instance superior", which still has its uses though in more complex scenarios where you want multiple instances)
+- Improved wording by consistently using "Browse ..." instead of "Navigate within ..." or "Cycle through ..."
+- Improved wording by using less technical object selector names (e.g. "Particular" instead of "By ID")
+- Improved usability by displaying in status bar if control/feedback globally off (don't show by greying out mapping rows anymore)
+- Improved usability by insisting on keyboard focus, even if 'Send all keyboard focus to plug-in' is disabled
+- Improved target-based conditional activation by listening to target activation/deactivation as well
+- Improved usability by marking targets that support MIDI real-time control (because MIDI real-time control has a few restrictions)
+- Improved source "MIDI script" when used with Lua language by making color information available (allows users to provide support for arbitrary MIDI color LEDs/displays, in addition to the built-in ones)
+- Improved target logging by including target control errors and other information
+- Improved usability by making it possible to copy and paste the activation condition of a mapping
+- Improved preset loading by supporting placing preset files in sub directories (1 level, ATTENTION: The parent directory will become part of the preset ID, so don't move existing presets!)
+- Improved preset loading by supporting symlinked preset files
+- Improved target "ReaLearn: Load mapping snapshot" by respecting the "Reverse" checkbox when loading the default value (great for changing the perspective when it comes to on/off targets)
+- Improved usability of the snapshot targets by displaying the snapshot ID in the row label
+- Improved usability of source "ReaLearn parameter" by displaying the parameter index in the row label
+- Improved usability of source "ReaLearn parameter" by making the parameter learnable
+- Improved usability by making text feedback available with dummy target (great for sending just some constant text or using placeholders that don't need target context)
+- Improved usability by displaying session ID in the status bar (should help detecting duplicate IDs, which can be useful e.g. when using projection)
+- Improved target "ReaLearn: Load mapping snapshot" by enabling feedback (showing if the desired snapshot is currently loaded or not)
+- Improved versatility of target "Project: Invoke REAPER action" by making trigger-like actions controllable by relative endless encoders (via invocation mode "Trigger")
+- Improved target "ReaLearn: Take mapping snapshot" by adding the "Last loaded" selector (great for assigning a particular button to update the currently loaded snapshot)
+- Fixed missing feedback of "FX: Enable/disable" target when Bypass parameter is automated
+- Fixed FX still being considered as focused when focus is changed from the FX window to the main area
+- Fixed track peak target not respecting solo state of other tracks
+- Fixed action target invocation mode 7-bit/14-bit confusion (existing presets will automatically be migrated, so existing behavior will not change)
+- Fixed failed scan on macOS El Capitan (ReaLearn stopped working on it since v2.13, fixed by removing Prometheus metrics support for macOS Intel builds)
+- Fixed unreliable refresh of dynamic track result UI refresh in target section of mapping panel
+- Fixed various mapping panel GUI bugs
+- Fixed missing feedback refresh when dealing with multiple instances (e.g. via "Make instance superior")
+- Fixed missing automatic feedback for target "FX: Set online/offline"
+- Fixed unreliable track visibility change detection
+- Fixed rel_time transformations to respect reverse, target min/max/sequence and rounding (also hide some settings that don't make sense)
+- Fixed OSC compatibility with certain apps such as Syntien (control didn't work when both control and feedback were enabled for the device)
+- Fixed target "Project: Invoke REAPER action" invocation mode "Trigger" (could potentially suffer from not being retriggered in some situations)
+- Fixed bug that caused retriggerable targets to not be retriggered with relative control if they already had the desired value
+- Fixed error when learning/using special keys on macOS (keyboard source)
+- Fixed REAPER track color detection
+- Fixed bug that caused parameters and custom projection data to not be cleared when switching preset to None
+- Fixed fire modes when using rel_time transitions
+- Fixed saving of snapshot IDs in target "ReaLearn: Take mapping snapshot"
+- Fixed feedback of target "Marker/region: Go to" (it was changing even when playback was stopped)
+- Fixed ReaLearn still being active when disabling it via its automatable "Bypass" parameter (as opposed to disabling it via checkbox or ReaScript)
+- Fixed deletion of mapping snapshots when copying and pasting a compartment
+- Fixed "mapping not found" error when removing a mapping while still learning it
+- Fixed infinite error loop and certain "track is not available"-like errors
+- Fixed change detection for FX on the monitoring FX chain (most importantly enable/disable, in general ReaLearn should now work much better when targeting monitoring FX and also work better if it's placed on the monitoring FX chain itself)
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.14.0/realearn-windows-i686.dll</source>
+
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.14.0/realearn-user-guide.pdf</source>
+                <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/realearn/releases/download/v2.14.0/realearn-linux-armv7.so</source>
+
+
+                <source platform="win32" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+                <source platform="linux-armv7l" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/realearn/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
+            </version>
 
             <version name="2.14.0-pre.11" author="helgoboss" time="2022-11-21T12:00:00Z">
                 <changelog><![CDATA[- Migrated to Rust 1.65.0
