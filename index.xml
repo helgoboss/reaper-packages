@@ -169,6 +169,38 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.15.0-pre.4" author="helgoboss" time="2023-05-23T12:00:00Z">
+                <changelog><![CDATA[- Pot Browser: Added support for "Project databases" (add via '+' icon, gives you essentially a history of sounds/presets used in all of your projects)
+- Pot Browser: Added new text feedback placeholders "fx_parameter.macro.section.name" and "fx_parameter.macro.name"
+- Pot Browser: Added preset context menu action "Reveal preview in file manager"
+- Pot Browser: Added preset metadata section containing information about author, vendor, file size and modification date (if available)
+- Pot Browser: Added more options to configure when to display FX windows and when to hide them
+- Pot Browser: Added preset context menu action "Pre-play" (This is fun! It's like a preview on steroids. Pot Browser will load the preview into RS5k sampler, making it playable on your keyboard. So you can play the sound in a lower quality without actually loading the preset. Useful if loading a preset is slow and you want to get a first impression before loading it. Or use it in creative ways!)
+- Pot Browser: Improved UI a bit (show notifications a bit longer, better text formatting and error messages, better responsiveness, avoid empty "round dot" context menu)
+- Pot Browser: Fixed VST2 plug-ins with negative magic number not showing up (e.g. "Op-X Pro II")
+- Pot Browser: Fixed some Komplete banks and categories not showing up (e.g. "MiniMonsta 2"
+- Pot Browser: Fixed NKS macro parameters for all VST3 plug-ins not being found
+- Pot Browser: Fixed internal "FX presets" for all VST2 plug-ins not showing up
+- Pot Browser: Fixed JSFX effects failing to load if they have a file extension (e.g. Saike's JSFX)
+- Pot Browser: Fixed possible crash by preventing Pot Browser from replacing its associated ReaLearn instance
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.15.0-pre.4/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.15.0-pre.4/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.15.0-pre.4/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.15.0-pre.4/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.15.0-pre.4/realearn-macos-aarch64.vst.dylib</source>
+
+
+
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.15.0-pre.4/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.15.0-pre.4/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.15.0-pre.4/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.15.0-pre.3" author="helgoboss" time="2023-05-15T12:00:00Z">
                 <changelog><![CDATA[- Temporarily disabled Linux ARM builds
 - Added experimental Pot Browser (a modern preset browser with support for preset crawling and preview recording, Windows & macOS only for now)
@@ -3650,6 +3682,30 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.15.0-pre.4" author="helgoboss" time="2023-05-23T12:00:00Z">
+                <changelog><![CDATA[- Pot Browser: Added support for "Project databases" (add via '+' icon, gives you essentially a history of sounds/presets used in all of your projects)
+- Pot Browser: Added new text feedback placeholders "fx_parameter.macro.section.name" and "fx_parameter.macro.name"
+- Pot Browser: Added preset context menu action "Reveal preview in file manager"
+- Pot Browser: Added preset metadata section containing information about author, vendor, file size and modification date (if available)
+- Pot Browser: Added more options to configure when to display FX windows and when to hide them
+- Pot Browser: Added preset context menu action "Pre-play" (This is fun! It's like a preview on steroids. Pot Browser will load the preview into RS5k sampler, making it playable on your keyboard. So you can play the sound in a lower quality without actually loading the preset. Useful if loading a preset is slow and you want to get a first impression before loading it. Or use it in creative ways!)
+- Pot Browser: Improved UI a bit (show notifications a bit longer, better text formatting and error messages, better responsiveness, avoid empty "round dot" context menu)
+- Pot Browser: Fixed VST2 plug-ins with negative magic number not showing up (e.g. "Op-X Pro II")
+- Pot Browser: Fixed some Komplete banks and categories not showing up (e.g. "MiniMonsta 2"
+- Pot Browser: Fixed NKS macro parameters for all VST3 plug-ins not being found
+- Pot Browser: Fixed internal "FX presets" for all VST2 plug-ins not showing up
+- Pot Browser: Fixed JSFX effects failing to load if they have a file extension (e.g. Saike's JSFX)
+- Pot Browser: Fixed possible crash by preventing Pot Browser from replacing its associated ReaLearn instance
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.15.0-pre.4/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.15.0-pre.4/realearn-windows-i686.dll</source>
+
+
+
+            </version>
 
             <version name="2.15.0-pre.3" author="helgoboss" time="2023-05-15T12:00:00Z">
                 <changelog><![CDATA[- Temporarily disabled Linux ARM builds
