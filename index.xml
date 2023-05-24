@@ -166,8 +166,37 @@
         </reapack>
     </category>
 
+
+
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.15.0-pre.6" author="helgoboss" time="2023-05-24T12:00:00Z">
+                <changelog><![CDATA[- Pot Browser: Improved usability by adding hint to "FX presets" database that ".vstpreset"-style presets are not yet supported
+- Pot Browser: Improved usability by detecting VST3 plug-ins scanned by very old REAPER versions and giving corresponding instructions (sometimes still shown as false positive)
+- Pot Browser: Improved usability by adding context column, e.g. to display the containing project of project presets
+- Pot Browser: Improved preview recording quality by not normalizing (closer to the original, less surprises when doing pre-play)
+- Pot Browser: Fixed loading of presets in "FX presets" for sub-directory JS effects on Windows and particular VST plug-ins
+- Pot Browser: Fixed slightly unresponsive GUI when opening Pot Browser for the first time
+- Pot Browser: Fixed error on Windows when trying to add project database (by not displaying file dialog)
+- Pot Browser: Fixed possible temporary UI inconsistency by preventing rebuilds during refresh
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.15.0-pre.6/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.15.0-pre.6/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.15.0-pre.6/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.15.0-pre.6/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.15.0-pre.6/realearn-macos-aarch64.vst.dylib</source>
+
+
+
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.15.0-pre.6/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.15.0-pre.6/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.15.0-pre.6/realearn-linux-x86_64.so</source>
+            </version>
 
             <version name="2.15.0-pre.4" author="helgoboss" time="2023-05-23T12:00:00Z">
                 <changelog><![CDATA[- Pot Browser: Added support for "Project databases" (add via '+' icon, gives you essentially a history of sounds/presets used in all of your projects)
@@ -3682,6 +3711,25 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.15.0-pre.6" author="helgoboss" time="2023-05-24T12:00:00Z">
+                <changelog><![CDATA[- Pot Browser: Improved usability by adding hint to "FX presets" database that ".vstpreset"-style presets are not yet supported
+- Pot Browser: Improved usability by detecting VST3 plug-ins scanned by very old REAPER versions and giving corresponding instructions (sometimes still shown as false positive)
+- Pot Browser: Improved usability by adding context column, e.g. to display the containing project of project presets
+- Pot Browser: Improved preview recording quality by not normalizing (closer to the original, less surprises when doing pre-play)
+- Pot Browser: Fixed loading of presets in "FX presets" for sub-directory JS effects on Windows and particular VST plug-ins
+- Pot Browser: Fixed slightly unresponsive GUI when opening Pot Browser for the first time
+- Pot Browser: Fixed error on Windows when trying to add project database (by not displaying file dialog)
+- Pot Browser: Fixed possible temporary UI inconsistency by preventing rebuilds during refresh
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.15.0-pre.6/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.15.0-pre.6/realearn-windows-i686.dll</source>
+
+
+
+            </version>
 
             <version name="2.15.0-pre.4" author="helgoboss" time="2023-05-23T12:00:00Z">
                 <changelog><![CDATA[- Pot Browser: Added support for "Project databases" (add via '+' icon, gives you essentially a history of sounds/presets used in all of your projects)
