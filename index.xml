@@ -168,8 +168,53 @@
 
 
 
+
+
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.15.0" author="helgoboss" time="2023-06-01T12:00:00Z">
+                <changelog><![CDATA[- Temporarily disabled Linux ARM builds
+- Added Pot Browser (a modern preset browser with support for preset crawling and preview recording, Windows & macOS only for now)
+- Added many new features and improvements to ReaLearn's experimental Pot targets (e.g. support for CLAP/VST3/JS, filter exclusion, skipping of empty filters, factory/user preset filter, product kind filter, favorite filter, support for REAPER's own preset formats ... and much more)
+- Added new option "Consider target invocations" to targets "ReaLearn: Modify mapping" and "Global: Last touched", e.g. in order to make it possible to ignore target invocations that were caused by ReaLearn itself
+- Added possibility to restrict the list of included target types when using target "Global: Last touched"
+- Added new target "ReaLearn: Modify mapping", currently supporting the following modifications: "Learn target", "Set target to last touched", supports picking included target types and modifying mapping of other ReaLearn instance
+- Added possibility to pick target from last-touched ones (one last-touched per type)
+- Added group interaction kind "Inverse target value (off only)"
+- Added basic Behringer x32 instructions to the list of tested controllers
+- Lua MIDI script: Improved error reporting
+- Improved compatibility with older Linux libc/libxdo versions by building release in Ubuntu 20.04 instead of 22.04
+- Improved global target capturing (via ReaLearn REAPER actions) by also adding support for learning transport controls and REAPER action invocations
+- Improved UI-triggered target learning (doesn't pick up target touches anymore that are caused by another ReaLearn instance)
+- Improved transformation editor to apply changes immediately when typing (no need to close window)
+- Improved performance of target "Global: Last touched"
+- Improved target "Global: Last touched" to pick up transport actions and some other actions as well (if included in the list of target types)
+- Fixed disappearing target value sequence values when the target is "FX parameter: Set value" and the FX is a JS FX
+- Lua MIDI script: Fixed "context.feedback_value.color" not containing nil if no color set
+- Fixed usability issue with "FX parameter: Set value" and instance FX "Focused" by making it possible to choose FX parameter although instance FX not focused anymore
+- Fixed full channel and subsequent PoisonError when ReaLearn needs to process many parameter changes at once (e.g. by parameter modulation)
+- Fixed issues with new REAPER v6.78+ dev builds (was totally broken)
+- Fixed glue section user interface inconsistency
+- Fixed possible errors with send targets when removing a hardware output send from a track
+- Removed Pot target's capability to save last selected preset and filters (temporary removal)
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.15.0/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.15.0/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.15.0/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.15.0/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.15.0/realearn-macos-aarch64.vst.dylib</source>
+
+
+
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.15.0/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.15.0/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.15.0/realearn-linux-x86_64.so</source>
+            </version>
 
             <version name="2.15.0-pre.7" author="helgoboss" time="2023-05-28T12:00:00Z">
                 <changelog><![CDATA[- Pot Browser: Added possibility to search not just in preset name column but also plug-in/product and file extension columns (all 3 enabled by default)
@@ -3735,6 +3780,41 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.15.0" author="helgoboss" time="2023-06-01T12:00:00Z">
+                <changelog><![CDATA[- Temporarily disabled Linux ARM builds
+- Added Pot Browser (a modern preset browser with support for preset crawling and preview recording, Windows & macOS only for now)
+- Added many new features and improvements to ReaLearn's experimental Pot targets (e.g. support for CLAP/VST3/JS, filter exclusion, skipping of empty filters, factory/user preset filter, product kind filter, favorite filter, support for REAPER's own preset formats ... and much more)
+- Added new option "Consider target invocations" to targets "ReaLearn: Modify mapping" and "Global: Last touched", e.g. in order to make it possible to ignore target invocations that were caused by ReaLearn itself
+- Added possibility to restrict the list of included target types when using target "Global: Last touched"
+- Added new target "ReaLearn: Modify mapping", currently supporting the following modifications: "Learn target", "Set target to last touched", supports picking included target types and modifying mapping of other ReaLearn instance
+- Added possibility to pick target from last-touched ones (one last-touched per type)
+- Added group interaction kind "Inverse target value (off only)"
+- Added basic Behringer x32 instructions to the list of tested controllers
+- Lua MIDI script: Improved error reporting
+- Improved compatibility with older Linux libc/libxdo versions by building release in Ubuntu 20.04 instead of 22.04
+- Improved global target capturing (via ReaLearn REAPER actions) by also adding support for learning transport controls and REAPER action invocations
+- Improved UI-triggered target learning (doesn't pick up target touches anymore that are caused by another ReaLearn instance)
+- Improved transformation editor to apply changes immediately when typing (no need to close window)
+- Improved performance of target "Global: Last touched"
+- Improved target "Global: Last touched" to pick up transport actions and some other actions as well (if included in the list of target types)
+- Fixed disappearing target value sequence values when the target is "FX parameter: Set value" and the FX is a JS FX
+- Lua MIDI script: Fixed "context.feedback_value.color" not containing nil if no color set
+- Fixed usability issue with "FX parameter: Set value" and instance FX "Focused" by making it possible to choose FX parameter although instance FX not focused anymore
+- Fixed full channel and subsequent PoisonError when ReaLearn needs to process many parameter changes at once (e.g. by parameter modulation)
+- Fixed issues with new REAPER v6.78+ dev builds (was totally broken)
+- Fixed glue section user interface inconsistency
+- Fixed possible errors with send targets when removing a hardware output send from a track
+- Removed Pot target's capability to save last selected preset and filters (temporary removal)
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.15.0/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.15.0/realearn-windows-i686.dll</source>
+
+
+
+            </version>
 
             <version name="2.15.0-pre.7" author="helgoboss" time="2023-05-28T12:00:00Z">
                 <changelog><![CDATA[- Pot Browser: Added possibility to search not just in preset name column but also plug-in/product and file extension columns (all 3 enabled by default)
