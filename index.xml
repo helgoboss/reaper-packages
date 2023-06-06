@@ -173,6 +173,40 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.16.0-pre.1" author="helgoboss" time="2023-06-05T12:00:00Z">
+                <changelog><![CDATA[- Added possibility to write feedback scripts in the glue section: Now you can build arbitrary feedback messages using Lua code (custom text formatting is just one of the many possibilities).
+- Added Novation SL MkIII Pot Browser Control preset (available here)
+- Added text placeholders "target.available", "global.realearn_time", "target.discrete_value" and "target.discrete_value_count"
+- Added text placeholders "target.fx_parameter.macro.new_section.name" and "target.fx_parameter.macro.section.index" to target "FX parameter: Set value"
+- Added many text placeholders to targets "Pot: Browse presets" and "Pot: Load preset" for obtaining preset metadata such as author and comment
+- Pot Browser: Improved usability by stopping preview as soon as loading the preset
+- Improved target "Pot: Preview preset" by using the same sound player as the Pot Browser (inherits its functionality such as customizable volume and stopping playback when preset loaded)
+- Improved feedback due to conditional activation/deactivation by emitting it in deterministic order (in mapping order)
+- Improved feedback possibilities by processing text feedback expressions and scripts even if target doesn't support normal (numerical) feedback
+- Improved availability check for almost all Pot targets (good for advanced visual feedback of what Pot features are available in a certain situation, see new text placeholder "target.available")
+- Fixed source "MIDI script" feedback address not being respected (important e.g. for switching feedback off correctly)
+- Fixed ambiguous "kind" properties in ReaLearn Script (Lua import/export)
+- Fixed "context.feedback_value.color" not containing nil when no color set in source "MIDI script"
+- Fixed possible freeze when using "Open in text editor on macOS" by completely disabling this function on macOS
+- Fixed possible error when using "Selected" track selector and removing that selected track
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.1/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.1/realearn-macos-aarch64.vst.dylib</source>
+
+
+
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.1/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.1/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.1/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.15.0" author="helgoboss" time="2023-06-01T12:00:00Z">
                 <changelog><![CDATA[- Temporarily disabled Linux ARM builds
 - Added Pot Browser (a modern preset browser with support for preset crawling and preview recording, Windows & macOS only for now)
@@ -3780,6 +3814,32 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.16.0-pre.1" author="helgoboss" time="2023-06-05T12:00:00Z">
+                <changelog><![CDATA[- Added possibility to write feedback scripts in the glue section: Now you can build arbitrary feedback messages using Lua code (custom text formatting is just one of the many possibilities).
+- Added Novation SL MkIII Pot Browser Control preset (available here)
+- Added text placeholders "target.available", "global.realearn_time", "target.discrete_value" and "target.discrete_value_count"
+- Added text placeholders "target.fx_parameter.macro.new_section.name" and "target.fx_parameter.macro.section.index" to target "FX parameter: Set value"
+- Added many text placeholders to targets "Pot: Browse presets" and "Pot: Load preset" for obtaining preset metadata such as author and comment
+- Pot Browser: Improved usability by stopping preview as soon as loading the preset
+- Improved target "Pot: Preview preset" by using the same sound player as the Pot Browser (inherits its functionality such as customizable volume and stopping playback when preset loaded)
+- Improved feedback due to conditional activation/deactivation by emitting it in deterministic order (in mapping order)
+- Improved feedback possibilities by processing text feedback expressions and scripts even if target doesn't support normal (numerical) feedback
+- Improved availability check for almost all Pot targets (good for advanced visual feedback of what Pot features are available in a certain situation, see new text placeholder "target.available")
+- Fixed source "MIDI script" feedback address not being respected (important e.g. for switching feedback off correctly)
+- Fixed ambiguous "kind" properties in ReaLearn Script (Lua import/export)
+- Fixed "context.feedback_value.color" not containing nil when no color set in source "MIDI script"
+- Fixed possible freeze when using "Open in text editor on macOS" by completely disabling this function on macOS
+- Fixed possible error when using "Selected" track selector and removing that selected track
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.1/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.1/realearn-windows-i686.dll</source>
+
+
+
+            </version>
 
             <version name="2.15.0" author="helgoboss" time="2023-06-01T12:00:00Z">
                 <changelog><![CDATA[- Temporarily disabled Linux ARM builds
