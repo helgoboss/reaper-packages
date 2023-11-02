@@ -169,9 +169,34 @@
 
 
 
-
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.16.0-pre.2" author="helgoboss" time="2023-11-01T12:00:00Z">
+                <changelog><![CDATA[- Internal change: Playtime-related changes that shouldn't affect normal ReaLearn operation
+- Fixed deadlock when using 500+ ReaLearn instances
+- Fixed possible 'REAPER string should be UTF-8 encoded' error (when using long compartment parameter names in ReaLearn and referring to them elsewhere, e.g. as TCP param)
+- Fixed Lua import of XTouchMackieLCD display source settings
+- Fixed linking from FX to preset when ReaLearn is on monitoring FX chain
+- Fixed 'BorrowMut' error when copy/pasting mapping with target-based activation condition
+- Fixed potential hard crash in process_f64 call
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.2/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.2/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.2/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.2/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.2/realearn-macos-aarch64.vst.dylib</source>
+
+
+
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.2/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.2/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.2/realearn-linux-x86_64.so</source>
+            </version>
 
             <version name="2.16.0-pre.1" author="helgoboss" time="2023-06-05T12:00:00Z">
                 <changelog><![CDATA[- Added possibility to write feedback scripts in the glue section: Now you can build arbitrary feedback messages using Lua code (custom text formatting is just one of the many possibilities).
@@ -3814,6 +3839,24 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.16.0-pre.2" author="helgoboss" time="2023-11-01T12:00:00Z">
+                <changelog><![CDATA[- Internal change: Playtime-related changes that shouldn't affect normal ReaLearn operation
+- Fixed deadlock when using 500+ ReaLearn instances
+- Fixed possible 'REAPER string should be UTF-8 encoded' error (when using long compartment parameter names in ReaLearn and referring to them elsewhere, e.g. as TCP param)
+- Fixed Lua import of XTouchMackieLCD display source settings
+- Fixed linking from FX to preset when ReaLearn is on monitoring FX chain
+- Fixed 'BorrowMut' error when copy/pasting mapping with target-based activation condition
+- Fixed potential hard crash in process_f64 call
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.2/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.2/realearn-windows-i686.dll</source>
+
+
+
+            </version>
 
             <version name="2.16.0-pre.1" author="helgoboss" time="2023-06-05T12:00:00Z">
                 <changelog><![CDATA[- Added possibility to write feedback scripts in the glue section: Now you can build arbitrary feedback messages using Lua code (custom text formatting is just one of the many possibilities).
