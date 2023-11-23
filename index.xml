@@ -165,12 +165,36 @@
             </version>
         </reapack>
     </category>
-
-
-
-
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.16.0-pre.4" author="helgoboss" time="2023-11-23T12:00:00Z">
+                <changelog><![CDATA[- Improved resource usage (by firing up threads for async logging and metrics only if enabled, by letting ReaLearn and Clip Engine metrics share the same thread, by  making app and server share the same one-threaded async runtime and by stopping async deallocation thread and async runtime when last ReaLearn instance gone)
+- Improved plug-in scanning speed (ReaLearn won't initialize a few things if it knows it's just being scanned anyway)
+- Improved resource clean-up on Windows when REAPER preference "Allow complete unload of VST plug-ins" enabled
+- Fixed hard crash when duplicating mappings containing Lua scripts (2.16.0-pre.2 regression caused by changes related to async deallocation)
+- Fixed possible audio dropouts due to deallocation in real-time threads when using EEL (2.16.0-pre.2 regression)
+- Fixed possible panic when closing REAPER
+- Internal change: Use Rust 1.73.0
+- Internal change: Added counter of undesired real-time allocations to UI (debug builds only)
+- Internal change: Added necessary changes to allow for Playtime early-access program
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-macos-aarch64.vst.dylib</source>
+
+
+
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-linux-x86_64.so</source>
+            </version>
 
             <version name="2.16.0-pre.2" author="helgoboss" time="2023-11-01T12:00:00Z">
                 <changelog><![CDATA[- Internal change: Playtime-related changes that shouldn't affect normal ReaLearn operation
@@ -3838,7 +3862,70 @@
             </metadata>
 
         </reapack>
+        <reapack name="Helgobox-x64" type="extension" desc="Helgobox: Early access. Don't use!">
+
+            <version name="2.16.0-pre.4" author="helgoboss" time="2023-11-23T12:00:00Z">
+                <changelog><![CDATA[- Improved resource usage (by firing up threads for async logging and metrics only if enabled, by letting ReaLearn and Clip Engine metrics share the same thread, by  making app and server share the same one-threaded async runtime and by stopping async deallocation thread and async runtime when last ReaLearn instance gone)
+- Improved plug-in scanning speed (ReaLearn won't initialize a few things if it knows it's just being scanned anyway)
+- Improved resource clean-up on Windows when REAPER preference "Allow complete unload of VST plug-ins" enabled
+- Fixed hard crash when duplicating mappings containing Lua scripts (2.16.0-pre.2 regression caused by changes related to async deallocation)
+- Fixed possible audio dropouts due to deallocation in real-time threads when using EEL (2.16.0-pre.2 regression)
+- Fixed possible panic when closing REAPER
+- Internal change: Use Rust 1.73.0
+- Internal change: Added counter of undesired real-time allocations to UI (debug builds only)
+- Internal change: Added necessary changes to allow for Playtime early-access program
+]]></changelog>
+                <!-- User guide -->
+                <source platform="all" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-user-guide.pdf</source>
+                <!-- Plug-in -->
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-macos-aarch64.vst.dylib</source>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-linux-x86_64.so</source>
+                <!-- App -->
+                <source platform="win64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.1.0/helgobox-app-windows.tar.zst</source>
+                <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.1.0/helgobox-app-macos.tar.zst</source>
+                <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.1.0/helgobox-app-macos.tar.zst</source>
+            </version>
+
+
+            <metadata>
+                <link rel="website">https://www.helgoboss.org/projects/realearn/</link>
+                <link rel="donation">https://www.paypal.me/helgoboss</link>
+                <link rel="donation">https://liberapay.com/helgoboss/donate</link>
+                <link rel="screenshot" href="https://ibb.co/fGsnDnr">Mapping list</link>
+                <link rel="screenshot" href="https://ibb.co/qD8PwCV">Mapping detail</link>
+                <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is a VST instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 REAPER itself has this capability but some useful MIDI control scenarios are quite difficult and time-consuming to achieve with REAPER alone, for example if you want to restrict the controlled target value range. You would need to tinker with things like MIDIToReaControlPath and general purpose MIDI plug-ins. ReaLearn tries to make that much easier by giving you instant and easy access to lots of advanced features out-of-the-box.\par}
+}]]></description>
+            </metadata>
+
+        </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.16.0-pre.4" author="helgoboss" time="2023-11-23T12:00:00Z">
+                <changelog><![CDATA[- Improved resource usage (by firing up threads for async logging and metrics only if enabled, by letting ReaLearn and Clip Engine metrics share the same thread, by  making app and server share the same one-threaded async runtime and by stopping async deallocation thread and async runtime when last ReaLearn instance gone)
+- Improved plug-in scanning speed (ReaLearn won't initialize a few things if it knows it's just being scanned anyway)
+- Improved resource clean-up on Windows when REAPER preference "Allow complete unload of VST plug-ins" enabled
+- Fixed hard crash when duplicating mappings containing Lua scripts (2.16.0-pre.2 regression caused by changes related to async deallocation)
+- Fixed possible audio dropouts due to deallocation in real-time threads when using EEL (2.16.0-pre.2 regression)
+- Fixed possible panic when closing REAPER
+- Internal change: Use Rust 1.73.0
+- Internal change: Added counter of undesired real-time allocations to UI (debug builds only)
+- Internal change: Added necessary changes to allow for Playtime early-access program
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-windows-i686.dll</source>
+
+
+
+            </version>
 
             <version name="2.16.0-pre.2" author="helgoboss" time="2023-11-01T12:00:00Z">
                 <changelog><![CDATA[- Internal change: Playtime-related changes that shouldn't affect normal ReaLearn operation
