@@ -3906,9 +3906,9 @@
                 <!-- User guide -->
                 <source platform="all" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.7/realearn-user-guide.pdf</source>
                 <!-- Toolbar icons -->
-                <source file="toolbar_icons/playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/03a73351f3bc4814a5004ccb04c7855dd731d953/resources/artwork/toolbar_icons/playtime.png</source>
-                <source file="toolbar_icons/150/playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/03a73351f3bc4814a5004ccb04c7855dd731d953/resources/artwork/toolbar_icons/150/playtime.png</source>
-                <source file="toolbar_icons/200/playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/03a73351f3bc4814a5004ccb04c7855dd731d953/resources/artwork/toolbar_icons/200/playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/03a73351f3bc4814a5004ccb04c7855dd731d953/resources/artwork/toolbar_icons/playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/03a73351f3bc4814a5004ccb04c7855dd731d953/resources/artwork/toolbar_icons/150/playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/03a73351f3bc4814a5004ccb04c7855dd731d953/resources/artwork/toolbar_icons/200/playtime.png</source>
             </version>
 
             <version name="2.16.0-pre.4" author="helgoboss" time="2023-11-23T12:00:00Z">
@@ -3935,9 +3935,9 @@
                 <!-- User guide -->
                 <source platform="all" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-user-guide.pdf</source>
                 <!-- Toolbar icons -->
-                <source file="toolbar_icons/playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/03a73351f3bc4814a5004ccb04c7855dd731d953/resources/artwork/toolbar_icons/playtime.png</source>
-                <source file="toolbar_icons/150/playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/03a73351f3bc4814a5004ccb04c7855dd731d953/resources/artwork/toolbar_icons/150/playtime.png</source>
-                <source file="toolbar_icons/200/playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/03a73351f3bc4814a5004ccb04c7855dd731d953/resources/artwork/toolbar_icons/200/playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/03a73351f3bc4814a5004ccb04c7855dd731d953/resources/artwork/toolbar_icons/playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/03a73351f3bc4814a5004ccb04c7855dd731d953/resources/artwork/toolbar_icons/150/playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/03a73351f3bc4814a5004ccb04c7855dd731d953/resources/artwork/toolbar_icons/200/playtime.png</source>
             </version>
 
 
