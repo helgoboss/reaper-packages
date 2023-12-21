@@ -168,6 +168,27 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.16.0-pre.7" author="helgoboss" time="2023-12-21T12:00:00Z">
+                <changelog><![CDATA[- Requires REAPER >= 6.11 (I simplified some code by using REAPER 6.11 features)
+- Improvements related to Playtime
+]]></changelog>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.7/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.7/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.7/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.7/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.7/realearn-macos-aarch64.vst.dylib</source>
+
+
+
+
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.7/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.7/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.7/realearn-linux-x86_64.so</source>
+            </version>
+
             <version name="2.16.0-pre.4" author="helgoboss" time="2023-11-23T12:00:00Z">
                 <changelog><![CDATA[- Improved resource usage (by firing up threads for async logging and metrics only if enabled, by letting ReaLearn and Clip Engine metrics share the same thread, by  making app and server share the same one-threaded async runtime and by stopping async deallocation thread and async runtime when last ReaLearn instance gone)
 - Improved plug-in scanning speed (ReaLearn won't initialize a few things if it knows it's just being scanned anyway)
@@ -3864,6 +3885,32 @@
         </reapack>
         <reapack name="Helgobox-x64" type="extension" desc="Helgobox: Early access. Don't use!">
 
+            <version name="2.16.0-pre.7" author="helgoboss" time="2023-12-21T12:00:00Z">
+                <changelog><![CDATA[- Requires REAPER >= 6.11 (I simplified some code by using REAPER 6.11 features)
+- Improvements related to Playtime
+]]></changelog>
+                <!-- Plug-in -->
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.7/realearn-macos-aarch64.vst.dylib</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.7/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.7/realearn-windows-x86_64.dll</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.7/realearn-linux-x86_64.so</source>
+
+                <!-- Extension -->
+                <source platform="darwin-arm64" file="reaper_helgobox-arm64.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.7/reaper_helgobox-macos-aarch64.dylib</source>
+                <source platform="darwin64" file="reaper_helgobox-x64.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.7/reaper_helgobox-macos-x86_64.dylib</source>
+
+                <!-- App -->
+                <source platform="win64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.2.0/helgobox-app-windows.tar.zst</source>
+                <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.2.0/helgobox-app-macos.tar.zst</source>
+                <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.2.0/helgobox-app-macos.tar.zst</source>
+                <!-- User guide -->
+                <source platform="all" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.7/realearn-user-guide.pdf</source>
+                <!-- Toolbar icons -->
+                <source file="toolbar_icons/playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/03a73351f3bc4814a5004ccb04c7855dd731d953/resources/artwork/toolbar_icons/playtime.png</source>
+                <source file="toolbar_icons/150/playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/03a73351f3bc4814a5004ccb04c7855dd731d953/resources/artwork/toolbar_icons/150/playtime.png</source>
+                <source file="toolbar_icons/200/playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/03a73351f3bc4814a5004ccb04c7855dd731d953/resources/artwork/toolbar_icons/200/playtime.png</source>
+            </version>
+
             <version name="2.16.0-pre.4" author="helgoboss" time="2023-11-23T12:00:00Z">
                 <changelog><![CDATA[- Improved resource usage (by firing up threads for async logging and metrics only if enabled, by letting ReaLearn and Clip Engine metrics share the same thread, by  making app and server share the same one-threaded async runtime and by stopping async deallocation thread and async runtime when last ReaLearn instance gone)
 - Improved plug-in scanning speed (ReaLearn won't initialize a few things if it knows it's just being scanned anyway)
@@ -3875,17 +3922,22 @@
 - Internal change: Added counter of undesired real-time allocations to UI (debug builds only)
 - Internal change: Added necessary changes to allow for Playtime early-access program
 ]]></changelog>
-                <!-- User guide -->
-                <source platform="all" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-user-guide.pdf</source>
                 <!-- Plug-in -->
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-macos-aarch64.vst.dylib</source>
-                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-windows-x86_64.dll</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-linux-x86_64.so</source>
+
                 <!-- App -->
                 <source platform="win64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.1.0/helgobox-app-windows.tar.zst</source>
                 <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.1.0/helgobox-app-macos.tar.zst</source>
                 <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.1.0/helgobox-app-macos.tar.zst</source>
+                <!-- User guide -->
+                <source platform="all" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.4/realearn-user-guide.pdf</source>
+                <!-- Toolbar icons -->
+                <source file="toolbar_icons/playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/03a73351f3bc4814a5004ccb04c7855dd731d953/resources/artwork/toolbar_icons/playtime.png</source>
+                <source file="toolbar_icons/150/playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/03a73351f3bc4814a5004ccb04c7855dd731d953/resources/artwork/toolbar_icons/150/playtime.png</source>
+                <source file="toolbar_icons/200/playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/03a73351f3bc4814a5004ccb04c7855dd731d953/resources/artwork/toolbar_icons/200/playtime.png</source>
             </version>
 
 
@@ -3906,6 +3958,19 @@
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.16.0-pre.7" author="helgoboss" time="2023-12-21T12:00:00Z">
+                <changelog><![CDATA[- Requires REAPER >= 6.11 (I simplified some code by using REAPER 6.11 features)
+- Improvements related to Playtime
+]]></changelog>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.7/realearn-user-guide.pdf</source>
+
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.7/realearn-windows-i686.dll</source>
+
+
+
+            </version>
 
             <version name="2.16.0-pre.4" author="helgoboss" time="2023-11-23T12:00:00Z">
                 <changelog><![CDATA[- Improved resource usage (by firing up threads for async logging and metrics only if enabled, by letting ReaLearn and Clip Engine metrics share the same thread, by  making app and server share the same one-threaded async runtime and by stopping async deallocation thread and async runtime when last ReaLearn instance gone)
