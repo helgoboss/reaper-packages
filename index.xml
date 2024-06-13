@@ -168,6 +168,53 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
 
+            <version name="2.16.0-pre.15" author="helgoboss" time="2024-06-13T12:00:00Z">
+                <changelog><![CDATA[- Playtime-related changes (details available for early-access testers only)
+- Improved virtual control by considering two same-named virtual control elements with different character the same (this change has only been made to named control elements, not to numbered ones!)
+- Improved auto-load by falling back to initially active preset when no FX focused
+- Improved both "After timeout" fire modes by respecting button filter setting (this makes long-press-on-release-off scenarios achievable with just one mapping)
+- Improved "suitable main preset selection" algorithm when connecting known controllers
+- Improved import by warning when invalid top-level properties were detected (which could indicate wrong usage of the import API)
+- Improved error reporting when importing invalid Luau code by making the error cause more visible
+- Improved reliability of preset loading/import in high-CPU usage situations by increasing the maximum execution time of Luau scripts
+- Improved reporting of general errors by not just logging repeated error messages as vertical dashes (this was confusing)
+- Fixed memorization of last color in color picker
+- Fixed broken connection from ReaLearn Companion running on Android
+- Fixed possible errors when connecting MIDI devices (related to the new controller auto detection)
+- Fixed some incorrect detection of recursive tables in Luau code on import
+- Removed CSI MST import
+- Internal change: Removed undocumented ReaLearn script utility functions
+- Internal change: Removed old logging framework
+- Internal change: Renamed lots of Prometheus metrics
+- Internal change: Enforced UTF-8-encoded paths very early in the processing when interfacing with the REAPER API (REAPER by contract should provide UTF-8 encoded paths, if not it's a bug in REAPER)
+]]></changelog>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/realearn-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/realearn-linux-x86_64.so</source>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/realearn-macos-aarch64.vst.dylib</source>
+
+
+
+
+
+                <!-- Extension -->
+                <source platform="darwin-arm64" file="reaper_helgobox-arm64.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/reaper_helgobox-macos-aarch64.dylib</source>
+                <source platform="darwin64" file="reaper_helgobox-x64.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/reaper_helgobox-macos-x86_64.dylib</source>
+                <source platform="win64" file="reaper_helgobox-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/reaper_helgobox-windows-x86_64.dll</source>
+                <!-- Toolbar icons -->
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+            </version>
+
             <version name="2.16.0-pre.14" author="helgoboss" time="2024-04-24T12:00:00Z">
                 <changelog><![CDATA[- Playtime-related changes (details available for early-access testers only)
 ]]></changelog>
@@ -4131,13 +4178,60 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is a VST instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is an instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 REAPER itself has this capability but some useful MIDI control scenarios are quite difficult and time-consuming to achieve with REAPER alone, for example if you want to restrict the controlled target value range. You would need to tinker with things like MIDIToReaControlPath and general purpose MIDI plug-ins. ReaLearn tries to make that much easier by giving you instant and easy access to lots of advanced features out-of-the-box.\par}
 }]]></description>
             </metadata>
 
         </reapack>
         <reapack name="Helgobox-x64" type="extension" desc="Helgobox: Early access. Don't use!">
+
+            <version name="2.16.0-pre.15" author="helgoboss" time="2024-06-13T12:00:00Z">
+                <changelog><![CDATA[- Playtime-related changes (details available for early-access testers only)
+- Improved virtual control by considering two same-named virtual control elements with different character the same (this change has only been made to named control elements, not to numbered ones!)
+- Improved auto-load by falling back to initially active preset when no FX focused
+- Improved both "After timeout" fire modes by respecting button filter setting (this makes long-press-on-release-off scenarios achievable with just one mapping)
+- Improved "suitable main preset selection" algorithm when connecting known controllers
+- Improved import by warning when invalid top-level properties were detected (which could indicate wrong usage of the import API)
+- Improved error reporting when importing invalid Luau code by making the error cause more visible
+- Improved reliability of preset loading/import in high-CPU usage situations by increasing the maximum execution time of Luau scripts
+- Improved reporting of general errors by not just logging repeated error messages as vertical dashes (this was confusing)
+- Fixed memorization of last color in color picker
+- Fixed broken connection from ReaLearn Companion running on Android
+- Fixed possible errors when connecting MIDI devices (related to the new controller auto detection)
+- Fixed some incorrect detection of recursive tables in Luau code on import
+- Removed CSI MST import
+- Internal change: Removed undocumented ReaLearn script utility functions
+- Internal change: Removed old logging framework
+- Internal change: Renamed lots of Prometheus metrics
+- Internal change: Enforced UTF-8-encoded paths very early in the processing when interfacing with the REAPER API (REAPER by contract should provide UTF-8 encoded paths, if not it's a bug in REAPER)
+]]></changelog>
+                <!-- Plug-in -->
+                <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/realearn-macos-aarch64.vst.dylib</source>
+                <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/realearn-macos-x86_64.vst.dylib</source>
+                <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/realearn-windows-x86_64.dll</source>
+                <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/realearn-linux-x86_64.so</source>
+
+                <!-- Extension -->
+                <source platform="darwin-arm64" file="reaper_helgobox-arm64.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/reaper_helgobox-macos-aarch64.dylib</source>
+                <source platform="darwin64" file="reaper_helgobox-x64.dylib">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/reaper_helgobox-macos-x86_64.dylib</source>
+
+                <!-- App -->
+                <source platform="win64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.6.0/helgobox-app-windows.tar.zst</source>
+                <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.6.0/helgobox-app-macos.tar.zst</source>
+                <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.6.0/helgobox-app-macos.tar.zst</source>
+                <!-- User guide -->
+                <source platform="all" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/realearn-user-guide.pdf</source>
+                <!-- Toolbar icons -->
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+                <!-- Extension -->
+                <source platform="win64" file="reaper_helgobox-x64.dll">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/reaper_helgobox-windows-x86_64.dll</source>
+                <!-- Toolbar icons -->
+
+            </version>
 
             <version name="2.16.0-pre.14" author="helgoboss" time="2024-04-24T12:00:00Z">
                 <changelog><![CDATA[- Playtime-related changes (details available for early-access testers only)
@@ -4335,13 +4429,50 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is a VST instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is an instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 REAPER itself has this capability but some useful MIDI control scenarios are quite difficult and time-consuming to achieve with REAPER alone, for example if you want to restrict the controlled target value range. You would need to tinker with things like MIDIToReaControlPath and general purpose MIDI plug-ins. ReaLearn tries to make that much easier by giving you instant and easy access to lots of advanced features out-of-the-box.\par}
 }]]></description>
             </metadata>
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="ReaLearn: Sophisticated MIDI/OSC-learn tool for controlling REAPER with feedback">
+
+            <version name="2.16.0-pre.15" author="helgoboss" time="2024-06-13T12:00:00Z">
+                <changelog><![CDATA[- Playtime-related changes (details available for early-access testers only)
+- Improved virtual control by considering two same-named virtual control elements with different character the same (this change has only been made to named control elements, not to numbered ones!)
+- Improved auto-load by falling back to initially active preset when no FX focused
+- Improved both "After timeout" fire modes by respecting button filter setting (this makes long-press-on-release-off scenarios achievable with just one mapping)
+- Improved "suitable main preset selection" algorithm when connecting known controllers
+- Improved import by warning when invalid top-level properties were detected (which could indicate wrong usage of the import API)
+- Improved error reporting when importing invalid Luau code by making the error cause more visible
+- Improved reliability of preset loading/import in high-CPU usage situations by increasing the maximum execution time of Luau scripts
+- Improved reporting of general errors by not just logging repeated error messages as vertical dashes (this was confusing)
+- Fixed memorization of last color in color picker
+- Fixed broken connection from ReaLearn Companion running on Android
+- Fixed possible errors when connecting MIDI devices (related to the new controller auto detection)
+- Fixed some incorrect detection of recursive tables in Luau code on import
+- Removed CSI MST import
+- Internal change: Removed undocumented ReaLearn script utility functions
+- Internal change: Removed old logging framework
+- Internal change: Renamed lots of Prometheus metrics
+- Internal change: Enforced UTF-8-encoded paths very early in the processing when interfacing with the REAPER API (REAPER by contract should provide UTF-8 encoded paths, if not it's a bug in REAPER)
+]]></changelog>
+                <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/realearn-windows-i686.dll</source>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/realearn-user-guide.pdf</source>
+
+
+
+
+
+                <!-- Extension -->
+                <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/realearn/releases/download/v2.16.0-pre.15/reaper_helgobox-windows-i686.dll</source>
+                <!-- Toolbar icons -->
+                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/realearn/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+            </version>
 
             <version name="2.16.0-pre.14" author="helgoboss" time="2024-04-24T12:00:00Z">
                 <changelog><![CDATA[- Playtime-related changes (details available for early-access testers only)
@@ -7433,7 +7564,7 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is a VST instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaLearn is an instrument plug-in which works in REAPER only. Its purpose is to improve REAPER\u8217's MIDI learn capabilities and add MIDI feedback (e.g.\u160?via LEDs and motorized faders). If you frequently need to map MIDI controller elements like knobs or switches to REAPER functions such as FX parameters or actions, ReaLearn might be useful for you.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 REAPER itself has this capability but some useful MIDI control scenarios are quite difficult and time-consuming to achieve with REAPER alone, for example if you want to restrict the controlled target value range. You would need to tinker with things like MIDIToReaControlPath and general purpose MIDI plug-ins. ReaLearn tries to make that much easier by giving you instant and easy access to lots of advanced features out-of-the-box.\par}
 }]]></description>
             </metadata>
