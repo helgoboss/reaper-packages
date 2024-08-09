@@ -168,83 +168,147 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
 
+            <version name="2.16.1" author="helgoboss" time="2024-08-09T12:00:00Z">
+                <changelog><![CDATA[- General: #1058 Fixed possible error "REAPER string should be UTF-8 encoded" when using Helgobox App
+- Playtime: #1070 Added memorization of ignited slots when closing and reopening REAPER project (starting playback after reopening the project will play the ignited slots)
+- Playtime: #1063 Added possibility to append or merge matrix sequence to/into existing arrangement
+- Playtime: #1062 Added column context menu entry "Insert column for each selected track"
+- Playtime: #1069 Added MIDI panic button to window title bar
+- Playtime: #936 Added setting to hide license info from title bar
+- Playtime: #1077 Improved silence mode by starting playback immediately when playing a single clip
+- Playtime: #1076 Improved tempo detection recordings by displaying a warning in silence mode and by not playing ignited clips after recording
+- Playtime: #1082 Improved usability by selecting corresponding REAPER track when activating a column or slot
+- Playtime: #966 Improved arrangement export by not just using REAPER's time selection to determine the length of the export but also its starting position
+- Playtime: #1066 Improved latency compensation when recording clips and only compensate when not using input monitoring (only matters when using high buffer sizes)
+- Playtime: #1060 Improved MIDI overdubbing by showing overdubbed notes in the open MIDI editor in real-time
+- Playtime: #1059 Improved usability by starting off with 8 rows instead of no rows (makes initial addition of rows obsolete)
+- Playtime: #939 Improved auto-detection of Launchpad Pro by being more tolerant regarding its device family ID
+- Playtime: #1086 Fixed GUI bug that caused the import-file dialog not covering all audio file types (now it simply shows files of all types)
+- Playtime: #964 Fixed bug that caused immediate MIDI recordings to be played back with 120bpm instead of the original tempo
+- Playtime: #964 Fixed error when attempting to insert a column when the corresponding project tab is not active (needs REAPER 7.19+)
+- Playtime: #1072 Fixed metronome possibly being delayed if project resample mode is not the default resample mode (e.g. "r8brain free")
+- Playtime: #966 Fixed bug in arrangement export that caused non-looped clips being written to the arrangement as looped items
+- Playtime: #1071 Fixed bug that caused MIDI notes being played back even if they are muted
+- Playtime: #967 Fixed possibly overlapping clip playback in exclusive column mode when other clip is triggered shortly after start of the bar (even if clip stop timing is set correctly)
+- Playtime: #1000 Fixed PDC-related bug that caused initial material to be skipped when starting playback in REAPER or in Playtime
+- Playtime: #968 Fixed another PDC-related bug that caused initial material to be skipped when playing back a recorded loop for the first time
+- Playtime: #969 Fixed GUI bug in the waveform view that caused the waveform to be completely wrong in certain situations (e.g. when the audio file was not very short or if not much screen space was available)
+- Playtime: #1065 Fixed another GUI bug in the waveform view that caused the waveform to disappear when the effective clip section is longer than the length of the audio file
+- Playtime: #963 Fixed GUI bug that caused drag and drop between slots to not work in certain situations
+- Playtime: #963 Fixed a related GUI bug that caused scrolling to go get stuck in certain situations
+- Playtime: #970 Fixed bug that caused row copy to not copy the row name
+- Playtime: #973 Fixed notes being triggered twice during MIDI overdubbing when using input monitoring
+- Playtime: #940 Fixed GUI bug that caused settings panel "Controllers" being completely empty if no controllers are set up yet
+- Playtime: #935 Fixed Windows-only GUI bug that caused serious issues with the full-screen mode
+- ReaLearn: #1081 Fixed fire mode "Fire after timeout" firing even if button released before timeout
+]]></changelog>
+                <source platform="win64" file="FX/helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.1/helgobox-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/helgobox-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.1/helgobox-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/helgobox-x64.so">https://github.com/helgoboss/helgobox/releases/download/v2.16.1/helgobox-linux-x86_64.so</source>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.1/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.1/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.1/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.1/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/helgobox-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.1/helgobox-macos-aarch64.vst.dylib</source>
+
+
+
+
+
+                <!-- Extension -->
+                <source platform="darwin-arm64" file="reaper_helgobox-arm64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.1/reaper_helgobox-macos-aarch64.dylib</source>
+                <source platform="darwin64" file="reaper_helgobox-x64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.1/reaper_helgobox-macos-x86_64.dylib</source>
+                <source platform="win64" file="reaper_helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.1/reaper_helgobox-windows-x86_64.dll</source>
+                <!-- App -->
+                <source platform="win64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.9.0/helgobox-app-windows.tar.zst</source>
+                <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.9.0/helgobox-app-macos.tar.zst</source>
+                <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.9.0/helgobox-app-macos.tar.zst</source>
+                <!-- Toolbar icons -->
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+            </version>
+
             <version name="2.16.0" author="helgoboss" time="2024-07-07T12:00:00Z">
-                <changelog><![CDATA[- Important rebranding: The plug-in has been renamed from "ReaLearn" to "Helgobox - ReaLearn & Playtime". Helgobox unites 2 products: ReaLearn (free and open-source) and Playtime (paid and mostly closed-source).
-- ReaLearn now requires at least REAPER 6.11 (I simplified some code by using REAPER 6.11 features)
-- Changed scripting language from Lua 5.4 to Luau (existing scripts should run in the same way as before because all Lua 5.4 functions that I have previously unlocked for usage are also available in Luau)
-- Added welcome screen which allows one to add a Playtime toolbar button. That works best with current REAPER releases, older REAPER versions require a restart.
-- Added generic main preset for changing FX parameters
-- Added Helgobox App: An app that provides the user interface for Playtime and ReaLearn Projection. Right now, it is only available embedded into REAPER and only on macOS on Windows. In the future, it will be made available for Linux, Android and iOS, eventually replacing the ReaLearn Companion App.
-- Added a REAPER extension, which is automatically loaded at REAPER startup and acts as a supplement to the actual VST plug-in. Provides a convenient entry 'Helgobox' in the REAPER 'Extensions' menu and other features right after REAPER start, which would otherwise only be available if at least one ReaLearn VST plug-in instance is loaded. This extension is currently shipped on Windows and macOS. It's optional, ReaLearn will also work without it!
-- Pot Browser: Added recording of preset previews for exporting purposes
-- Added ability to add additional units to one ReaLearn instance (= one ReaLearn instance can now deal with multiple controllers)
-- Added support for compartment presets written in the Luau language (including the ability to require other Luau modules in the same namespace)
-- Added extensive auto-generated Luau type definitions for building ReaLearn presets, ReaLearn MIDI script sources and Playtime matrices with auto-completion and error reporting (for code editors with Luau support, e.g. Visual Studio Code)
-- Added menu option to create a ready-made preset development workspace that can be opened in Visual Studio Code (see workspace README for details)
-- Added possibility to reuse Luau code defined once within a compartment preset across all MIDI script sources used in that compartment (avoids having to duplicate device-specific code in hundreds of mapping, saving memory ... and it just makes sense)
-- Added support for factory presets (they are really built-in, not shipped separately ... presets currently distributed via ReaPack will disappear soon)
-- Added feedback logging to mapping panels (analogously to control logging)
-- Added "Auto units" feature (1. Globally define what controllers you have => 2. Choose which main preset you want to use for which controller => 3. Make one or several ReaLearn instances automatically load/unload those presets whenever the controllers are connected/disconnected ... controller manager is a part of the Helgobox App, which is currently only available to Playtime Early Access testers)
-- Added possibility to add metadata to Luau presets (displayed in the upcoming Helgobox App and used for the new "Auto units" feature as well as automatic creation of known controllers
-- Added auto-magical creation of known MIDI controllers (via MIDI device inquiry, used for the new "Auto units" features)
-- Added possibility to write feedback scripts in the glue section: Now you can build arbitrary feedback messages using Lua code (custom text formatting is just one of the many possibilities).
-- Added Novation SL MkIII Pot Browser Control preset (available here)
-- Added text placeholders "target.available", "global.realearn\_time", "target.discrete\_value" and "target.discrete\_value\_count"
-- Added text placeholders "target.fx\_parameter.macro.new\_section.name" and "target.fx\_parameter.macro.section.index" to target "FX parameter: Set value"
-- Added many text placeholders to targets "Pot: Browse presets" and "Pot: Load preset" for obtaining preset metadata such as author and comment
-- Pot Browser: Improved usability by stopping preview as soon as loading the preset
-- Improved virtual control by considering two same-named virtual control elements with different character the same (this change has only been made to named control elements, not to numbered ones!)
-- Improved auto-load by falling back to initially active preset when no FX focused
-- Improved both "After timeout" fire modes by respecting button filter setting (this makes long-press-on-release-off scenarios achievable with just one mapping)
-- Improved import by warning when invalid top-level properties were detected (which could indicate wrong usage of the import API)
-- Improved error reporting when importing invalid Luau code by making the error cause more visible
-- Improved reliability of preset loading/import in high-CPU usage situations by increasing the maximum execution time of Luau scripts
-- Improved reporting of general errors by not just logging repeated error messages as vertical dashes (this was confusing)
-- Improved Projection feature by building it into the Helgobox App (which is only accessible to early-access Playtime testers at the moment)
-- Improved ReaLearn unit management by allowing custom unit names and improving how units are displayed in the main panel
-- Improved Lua-based compartment presets: One can now add a preset description
-- Improved Midi Fighter Twister controller presets: Now Lua-based, with ReaLearn color support and available in 2 different virtual control schemes (grid and numbered)
-- Improved ReaLearn REAPER actions by showing an error if instance needed to execute the action and improving macOS message panel font size
-- Improved Lua MIDI scripts by allowing them to access the common compartment Lua module even when just calculating the feedback address
-- Improved Lua-based presets and imports by detecting cyclic module dependencies
-- Improved target menu by distinguishing between different target sections
-- Improved preset sharing by introducing the concept of preset namespaces (each sub folder of the main/controller preset folder is now a namespace, that means it's completely self-contained and can be easily shared, each namespace shows up in a different sub menu when browsing presets)
-- Improved shutdown behavior by switching all device LEDs/screens off and tearing all motor faders down when quitting REAPER
-- Improved input/output pickers by distinguishing between available and not available devices
-- Improved OSC performance by processing more OSC messages per cycle
-- Improved general performance by introducing lots of small-scale boosts after profiling hot code (non-crypto hash functions, unnecessary allocation and processing)
-- Improved robustness and usability by not participating in REAPER's undo anymore (this can prevent potentially fatal but in any case surprising scenarios in which doing an undo in REAPER sets back ReaLearn and Playtime to a very old state, requires REAPER >= v7.09+dev0202)
-- Improved dummy target by making it work just like most other targets (generating pseudo feedback, value changes observable in mapping panel etc.)
-- Improved user interface by adding colors
-- Improved target "Pot: Preview preset" by using the same sound player as the Pot Browser (inherits its functionality such as customizable volume and stopping playback when preset loaded)
-- Improved feedback due to conditional activation/deactivation by emitting it in deterministic order (in mapping order)
-- Improved feedback possibilities by processing text feedback expressions and scripts even if target doesn't support normal (numerical) feedback
-- Improved availability check for almost all Pot targets (good for advanced visual feedback of what Pot features are available in a certain situation, see new text placeholder "target.available")
-- Improved resource usage (by firing up threads for async logging and metrics only if enabled, by letting ReaLearn and Clip Engine metrics share the same thread, by  making app and server share the same one-threaded async runtime and by stopping async deallocation thread and async runtime when last ReaLearn instance gone)
-- Improved plug-in scanning speed (ReaLearn won't initialize a few things if it knows it's just being scanned anyway)
-- Improved resource clean-up on Windows when REAPER preference "Allow complete unload of VST plug-ins" enabled
-- Fixed memorization of last color in color picker
-- Fixed some incorrect detection of recursive tables in Luau code on import
-- Fixed source "MIDI script" feedback address not being respected (important e.g. for switching feedback off correctly)
-- Fixed ambiguous "kind" properties in ReaLearn Script (Lua import/export)
-- Fixed "context.feedback\_value.color" not containing nil when no color set in source "MIDI script"
-- Fixed possible freeze when using "Open in text editor on macOS" by completely disabling this function on macOS
-- Fixed possible error when using "Selected" track selector and removing that selected track
-- Fixed deadlock when using 500+ ReaLearn instances
-- Fixed possible 'REAPER string should be UTF-8 encoded' error (when using long compartment parameter names in ReaLearn and referring to them elsewhere, e.g. as TCP param)
-- Fixed Lua import of XTouchMackieLCD display source settings
-- Fixed linking from FX to preset when ReaLearn is on monitoring FX chain
-- Fixed 'BorrowMut' error when copy/pasting mapping with target-based activation condition
-- Fixed potential hard crash in process\_f64 call
-- Fixed possible panic when closing REAPER
-- Fixed scaling issue on Linux (colors are now also available on Linux but still looks a bit funny, hopefully the dark mode detection for SWELL customizations works now)
-- Internal change: Added counter of undesired real-time allocations to UI (debug builds only)
-- Internal change: Removed undocumented ReaLearn script utility functions
-- Internal change: Removed old logging framework
-- Internal change: Renamed lots of Prometheus metrics
-- Internal change: Enforced UTF-8-encoded paths very early in the processing when interfacing with the REAPER API (REAPER by contract should provide UTF-8 encoded paths, if not it's a bug in REAPER)
-- Removed CSI MST import
-- Internal change: Use Rust 1.79.0
+                <changelog><![CDATA[- General: Important rebranding: The plug-in has been renamed from "ReaLearn" to "Helgobox - ReaLearn & Playtime". Helgobox unites 2 products: ReaLearn (free and open-source) and Playtime (paid and mostly closed-source).
+- General: The plug-in now requires at least REAPER 6.11 (I simplified some code by using REAPER 6.11 features)
+- General: Changed scripting language from Lua 5.4 to Luau (existing scripts should run in the same way as before because all Lua 5.4 functions that I have previously unlocked for usage are also available in Luau)
+- General: Internal change: Renamed lots of Prometheus metrics
+- General: Internal change: Enforced UTF-8-encoded paths very early in the processing when interfacing with the REAPER API (REAPER by contract should provide UTF-8 encoded paths, if not it's a bug in REAPER)
+- General: Internal change: Use Rust 1.79.0
+- General: Added welcome screen which allows one to add a Playtime toolbar button. That works best with current REAPER releases, older REAPER versions require a restart.
+- General: Added Helgobox App: An app that provides the user interface for Playtime and ReaLearn Projection. Right now, it is only available embedded into REAPER and only on macOS on Windows. In the future, it will be made available for Linux, Android and iOS, eventually replacing the ReaLearn Companion App.
+- General: #906 Added a REAPER extension, which is automatically loaded at REAPER startup and acts as a supplement to the actual VST plug-in. Provides a convenient entry 'Helgobox' in the REAPER 'Extensions' menu and other features right after REAPER start, which would otherwise only be available if at least one ReaLearn VST plug-in instance is loaded. This extension is currently shipped on Windows and macOS. It's optional, ReaLearn will also work without it!
+- General: #908 Added extensive auto-generated Luau type definitions for building ReaLearn presets, ReaLearn MIDI script sources and Playtime matrices with auto-completion and error reporting (for code editors with Luau support, e.g. Visual Studio Code)
+- General: Internal change: Added counter of undesired real-time allocations to UI (debug builds only)
+- General: Improved import by warning when invalid top-level properties were detected (which could indicate wrong usage of the import API)
+- General: Improved error reporting when importing invalid Luau code by making the error cause more visible
+- General: Improved reliability of preset loading/import in high-CPU usage situations by increasing the maximum execution time of Luau scripts
+- General: Improved reporting of general errors by not just logging repeated error messages as vertical dashes (this was confusing)
+- General: Improved Lua-based presets and imports by detecting cyclic module dependencies
+- General: #913 Improved general performance by introducing lots of small-scale boosts after profiling hot code (non-crypto hash functions, unnecessary allocation and processing)
+- General: #915 Improved robustness and usability by not participating in REAPER's undo anymore (this can prevent potentially fatal but in any case surprising scenarios in which doing an undo in REAPER sets back ReaLearn and Playtime to a very old state, requires REAPER >= v7.09+dev0202)
+- General: Improved resource usage (by firing up threads for async logging and metrics only if enabled, by letting ReaLearn and Clip Engine metrics share the same thread, by  making app and server share the same one-threaded async runtime and by stopping async deallocation thread and async runtime when last ReaLearn instance gone)
+- General: Improved plug-in scanning speed (Helgobox won't initialize a few things if it knows it's just being scanned anyway)
+- General: Improved resource clean-up on Windows when REAPER preference "Allow complete unload of VST plug-ins" enabled
+- General: Fixed some incorrect detection of recursive tables in Luau code on import
+- General: #875 Fixed deadlock when using 500+ Helgobox instances
+- General: Fixed potential hard crash in process\_f64 call
+- General: Fixed possible panic when closing REAPER
+- General: #916 Fixed scaling issue on Linux (colors are now also available on Linux but still looks a bit funny, hopefully the dark mode detection for SWELL customizations works now)
+- General: Internal change: Removed old logging framework
+- ReaLearn: Added generic main preset for changing FX parameters
+- ReaLearn: #870 Added ability to add additional units to one ReaLearn instance (= one ReaLearn instance can now deal with multiple controllers)
+- ReaLearn: #901 Added support for compartment presets written in the Luau language (including the ability to require other Luau modules in the same namespace)
+- ReaLearn: #908 Added menu option to create a ready-made preset development workspace that can be opened in Visual Studio Code (see workspace README for details)
+- ReaLearn: Added possibility to reuse Luau code defined once within a compartment preset across all MIDI script sources used in that compartment (avoids having to duplicate device-specific code in hundreds of mapping, saving memory ... and it just makes sense)
+- ReaLearn: #902 Added support for factory presets (they are really built-in, not shipped separately ... presets currently distributed via ReaPack will disappear soon)
+- ReaLearn: #903 Added feedback logging to mapping panels (analogously to control logging)
+- ReaLearn: #900 Added "Auto units" feature (1. Globally define what controllers you have => 2. Choose which main preset you want to use for which controller => 3. Make one or several ReaLearn instances automatically load/unload those presets whenever the controllers are connected/disconnected ... controller manager is a part of the Helgobox App, which is currently only available to Playtime Early Access testers)
+- ReaLearn: #905 Added possibility to add metadata to Luau presets (displayed in the upcoming Helgobox App and used for the new "Auto units" feature as well as automatic creation of known controllers
+- ReaLearn: #905 Added auto-magical creation of known MIDI controllers (via MIDI device inquiry, used for the new "Auto units" features)
+- ReaLearn: #757 Added possibility to write feedback scripts in the glue section: Now you can build arbitrary feedback messages using Lua code (custom text formatting is just one of the many possibilities).
+- ReaLearn: #716 Added experimental Novation SL MkIII Pot Browser Control preset (available here)
+- ReaLearn: #716 Added text placeholders "target.available", "global.realearn\_time", "target.discrete\_value" and "target.discrete\_value\_count"
+- ReaLearn: #743 Added text placeholders "target.fx\_parameter.macro.new\_section.name" and "target.fx\_parameter.macro.section.index" to target "FX parameter: Set value"
+- ReaLearn: #743 Added many text placeholders to targets "Pot: Browse presets" and "Pot: Load preset" for obtaining preset metadata such as author and comment
+- ReaLearn: Improved virtual control by considering two same-named virtual control elements with different character the same (this change has only been made to named control elements, not to numbered ones!)
+- ReaLearn: #923 Improved auto-load by falling back to initially active preset when no FX focused
+- ReaLearn: #928 Improved both "After timeout" fire modes by respecting button filter setting (this makes long-press-on-release-off scenarios achievable with just one mapping)
+- ReaLearn: Improved Projection feature by building it into the Helgobox App (which is only accessible to early-access Playtime testers at the moment)
+- ReaLearn: Improved Midi Fighter Twister controller presets: Now Lua-based, with ReaLearn color support and available in 2 different virtual control schemes (grid and numbered)
+- ReaLearn: Improved ReaLearn REAPER actions by showing an error if instance needed to execute the action and improving macOS message panel font size
+- ReaLearn: Improved Lua MIDI scripts by allowing them to access the common compartment Lua module even when just calculating the feedback address
+- ReaLearn: #904 Improved target menu by distinguishing between different target sections
+- ReaLearn: #902 Improved preset sharing by introducing the concept of preset namespaces (each sub folder of the main/controller preset folder is now a namespace, that means it's completely self-contained and can be easily shared, each namespace shows up in a different sub menu when browsing presets)
+- ReaLearn: #788 Improved shutdown behavior by switching all device LEDs/screens off and tearing all motor faders down when quitting REAPER
+- ReaLearn: #914 Improved input/output pickers by distinguishing between available and not available devices
+- ReaLearn: #913 Improved OSC performance by processing more OSC messages per cycle
+- ReaLearn: Improved dummy target by making it work just like most other targets (generating pseudo feedback, value changes observable in mapping panel etc.)
+- ReaLearn: #916 Improved user interface by adding colors
+- ReaLearn: #864 Improved feedback due to conditional activation/deactivation by emitting it in deterministic order (in mapping order)
+- ReaLearn: #716 Improved feedback possibilities by processing text feedback expressions and scripts even if target doesn't support normal (numerical) feedback
+- ReaLearn: Fixed memorization of last color in color picker
+- ReaLearn: #862 Fixed source "MIDI script" feedback address not being respected (important e.g. for switching feedback off correctly)
+- ReaLearn: #863 Fixed ambiguous "kind" properties in ReaLearn Script (Lua import/export)
+- ReaLearn: #716 Fixed "context.feedback\_value.color" not containing nil when no color set in source "MIDI script"
+- ReaLearn: #860 Fixed possible freeze when using "Open in text editor on macOS" by completely disabling this function on macOS
+- ReaLearn: #857 Fixed possible error when using "Selected" track selector and removing that selected track
+- ReaLearn: #867 Fixed possible 'REAPER string should be UTF-8 encoded' error (when using long compartment parameter names in ReaLearn and referring to them elsewhere, e.g. as TCP param)
+- ReaLearn: #865 Fixed Lua import of XTouchMackieLCD display source settings
+- ReaLearn: #866 Fixed linking from FX to preset when ReaLearn is on monitoring FX chain
+- ReaLearn: Fixed 'BorrowMut' error when copy/pasting mapping with target-based activation condition
+- ReaLearn: Internal change: Removed undocumented ReaLearn script utility functions
+- ReaLearn: Removed CSI MST import
+- Playtime: Added Playtime as beta
+- SoundPot: #931 Added recording of preset previews for exporting purposes
+- SoundPot: #861 Improved usability by stopping preview as soon as loading the preset
+- SoundPot: #743 Improved target "Pot: Preview preset" by using the same sound player as the Pot Browser (inherits its functionality such as customizable volume and stopping playback when preset loaded)
+- SoundPot: #716 Improved availability check for almost all Pot targets (good for advanced visual feedback of what Pot features are available in a certain situation, see new text placeholder "target.available")
 ]]></changelog>
                 <source platform="win64" file="FX/helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.0/helgobox-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/helgobox-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.0/helgobox-macos-x86_64.vst.dylib</source>
@@ -4387,83 +4451,133 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
 
+            <version name="2.16.1" author="helgoboss" time="2024-08-09T12:00:00Z">
+                <changelog><![CDATA[- General: #1058 Fixed possible error "REAPER string should be UTF-8 encoded" when using Helgobox App
+- Playtime: #1070 Added memorization of ignited slots when closing and reopening REAPER project (starting playback after reopening the project will play the ignited slots)
+- Playtime: #1063 Added possibility to append or merge matrix sequence to/into existing arrangement
+- Playtime: #1062 Added column context menu entry "Insert column for each selected track"
+- Playtime: #1069 Added MIDI panic button to window title bar
+- Playtime: #936 Added setting to hide license info from title bar
+- Playtime: #1077 Improved silence mode by starting playback immediately when playing a single clip
+- Playtime: #1076 Improved tempo detection recordings by displaying a warning in silence mode and by not playing ignited clips after recording
+- Playtime: #1082 Improved usability by selecting corresponding REAPER track when activating a column or slot
+- Playtime: #966 Improved arrangement export by not just using REAPER's time selection to determine the length of the export but also its starting position
+- Playtime: #1066 Improved latency compensation when recording clips and only compensate when not using input monitoring (only matters when using high buffer sizes)
+- Playtime: #1060 Improved MIDI overdubbing by showing overdubbed notes in the open MIDI editor in real-time
+- Playtime: #1059 Improved usability by starting off with 8 rows instead of no rows (makes initial addition of rows obsolete)
+- Playtime: #939 Improved auto-detection of Launchpad Pro by being more tolerant regarding its device family ID
+- Playtime: #1086 Fixed GUI bug that caused the import-file dialog not covering all audio file types (now it simply shows files of all types)
+- Playtime: #964 Fixed bug that caused immediate MIDI recordings to be played back with 120bpm instead of the original tempo
+- Playtime: #964 Fixed error when attempting to insert a column when the corresponding project tab is not active (needs REAPER 7.19+)
+- Playtime: #1072 Fixed metronome possibly being delayed if project resample mode is not the default resample mode (e.g. "r8brain free")
+- Playtime: #966 Fixed bug in arrangement export that caused non-looped clips being written to the arrangement as looped items
+- Playtime: #1071 Fixed bug that caused MIDI notes being played back even if they are muted
+- Playtime: #967 Fixed possibly overlapping clip playback in exclusive column mode when other clip is triggered shortly after start of the bar (even if clip stop timing is set correctly)
+- Playtime: #1000 Fixed PDC-related bug that caused initial material to be skipped when starting playback in REAPER or in Playtime
+- Playtime: #968 Fixed another PDC-related bug that caused initial material to be skipped when playing back a recorded loop for the first time
+- Playtime: #969 Fixed GUI bug in the waveform view that caused the waveform to be completely wrong in certain situations (e.g. when the audio file was not very short or if not much screen space was available)
+- Playtime: #1065 Fixed another GUI bug in the waveform view that caused the waveform to disappear when the effective clip section is longer than the length of the audio file
+- Playtime: #963 Fixed GUI bug that caused drag and drop between slots to not work in certain situations
+- Playtime: #963 Fixed a related GUI bug that caused scrolling to go get stuck in certain situations
+- Playtime: #970 Fixed bug that caused row copy to not copy the row name
+- Playtime: #973 Fixed notes being triggered twice during MIDI overdubbing when using input monitoring
+- Playtime: #940 Fixed GUI bug that caused settings panel "Controllers" being completely empty if no controllers are set up yet
+- Playtime: #935 Fixed Windows-only GUI bug that caused serious issues with the full-screen mode
+- ReaLearn: #1081 Fixed fire mode "Fire after timeout" firing even if button released before timeout
+]]></changelog>
+                <source platform="win32" file="FX/helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.1/helgobox-windows-i686.dll</source>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.1/realearn-user-guide.pdf</source>
+
+
+
+
+
+                <!-- Extension -->
+                <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.1/reaper_helgobox-windows-i686.dll</source>
+                <!-- Toolbar icons -->
+                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+            </version>
+
             <version name="2.16.0" author="helgoboss" time="2024-07-07T12:00:00Z">
-                <changelog><![CDATA[- Important rebranding: The plug-in has been renamed from "ReaLearn" to "Helgobox - ReaLearn & Playtime". Helgobox unites 2 products: ReaLearn (free and open-source) and Playtime (paid and mostly closed-source).
-- ReaLearn now requires at least REAPER 6.11 (I simplified some code by using REAPER 6.11 features)
-- Changed scripting language from Lua 5.4 to Luau (existing scripts should run in the same way as before because all Lua 5.4 functions that I have previously unlocked for usage are also available in Luau)
-- Added welcome screen which allows one to add a Playtime toolbar button. That works best with current REAPER releases, older REAPER versions require a restart.
-- Added generic main preset for changing FX parameters
-- Added Helgobox App: An app that provides the user interface for Playtime and ReaLearn Projection. Right now, it is only available embedded into REAPER and only on macOS on Windows. In the future, it will be made available for Linux, Android and iOS, eventually replacing the ReaLearn Companion App.
-- Added a REAPER extension, which is automatically loaded at REAPER startup and acts as a supplement to the actual VST plug-in. Provides a convenient entry 'Helgobox' in the REAPER 'Extensions' menu and other features right after REAPER start, which would otherwise only be available if at least one ReaLearn VST plug-in instance is loaded. This extension is currently shipped on Windows and macOS. It's optional, ReaLearn will also work without it!
-- Pot Browser: Added recording of preset previews for exporting purposes
-- Added ability to add additional units to one ReaLearn instance (= one ReaLearn instance can now deal with multiple controllers)
-- Added support for compartment presets written in the Luau language (including the ability to require other Luau modules in the same namespace)
-- Added extensive auto-generated Luau type definitions for building ReaLearn presets, ReaLearn MIDI script sources and Playtime matrices with auto-completion and error reporting (for code editors with Luau support, e.g. Visual Studio Code)
-- Added menu option to create a ready-made preset development workspace that can be opened in Visual Studio Code (see workspace README for details)
-- Added possibility to reuse Luau code defined once within a compartment preset across all MIDI script sources used in that compartment (avoids having to duplicate device-specific code in hundreds of mapping, saving memory ... and it just makes sense)
-- Added support for factory presets (they are really built-in, not shipped separately ... presets currently distributed via ReaPack will disappear soon)
-- Added feedback logging to mapping panels (analogously to control logging)
-- Added "Auto units" feature (1. Globally define what controllers you have => 2. Choose which main preset you want to use for which controller => 3. Make one or several ReaLearn instances automatically load/unload those presets whenever the controllers are connected/disconnected ... controller manager is a part of the Helgobox App, which is currently only available to Playtime Early Access testers)
-- Added possibility to add metadata to Luau presets (displayed in the upcoming Helgobox App and used for the new "Auto units" feature as well as automatic creation of known controllers
-- Added auto-magical creation of known MIDI controllers (via MIDI device inquiry, used for the new "Auto units" features)
-- Added possibility to write feedback scripts in the glue section: Now you can build arbitrary feedback messages using Lua code (custom text formatting is just one of the many possibilities).
-- Added Novation SL MkIII Pot Browser Control preset (available here)
-- Added text placeholders "target.available", "global.realearn\_time", "target.discrete\_value" and "target.discrete\_value\_count"
-- Added text placeholders "target.fx\_parameter.macro.new\_section.name" and "target.fx\_parameter.macro.section.index" to target "FX parameter: Set value"
-- Added many text placeholders to targets "Pot: Browse presets" and "Pot: Load preset" for obtaining preset metadata such as author and comment
-- Pot Browser: Improved usability by stopping preview as soon as loading the preset
-- Improved virtual control by considering two same-named virtual control elements with different character the same (this change has only been made to named control elements, not to numbered ones!)
-- Improved auto-load by falling back to initially active preset when no FX focused
-- Improved both "After timeout" fire modes by respecting button filter setting (this makes long-press-on-release-off scenarios achievable with just one mapping)
-- Improved import by warning when invalid top-level properties were detected (which could indicate wrong usage of the import API)
-- Improved error reporting when importing invalid Luau code by making the error cause more visible
-- Improved reliability of preset loading/import in high-CPU usage situations by increasing the maximum execution time of Luau scripts
-- Improved reporting of general errors by not just logging repeated error messages as vertical dashes (this was confusing)
-- Improved Projection feature by building it into the Helgobox App (which is only accessible to early-access Playtime testers at the moment)
-- Improved ReaLearn unit management by allowing custom unit names and improving how units are displayed in the main panel
-- Improved Lua-based compartment presets: One can now add a preset description
-- Improved Midi Fighter Twister controller presets: Now Lua-based, with ReaLearn color support and available in 2 different virtual control schemes (grid and numbered)
-- Improved ReaLearn REAPER actions by showing an error if instance needed to execute the action and improving macOS message panel font size
-- Improved Lua MIDI scripts by allowing them to access the common compartment Lua module even when just calculating the feedback address
-- Improved Lua-based presets and imports by detecting cyclic module dependencies
-- Improved target menu by distinguishing between different target sections
-- Improved preset sharing by introducing the concept of preset namespaces (each sub folder of the main/controller preset folder is now a namespace, that means it's completely self-contained and can be easily shared, each namespace shows up in a different sub menu when browsing presets)
-- Improved shutdown behavior by switching all device LEDs/screens off and tearing all motor faders down when quitting REAPER
-- Improved input/output pickers by distinguishing between available and not available devices
-- Improved OSC performance by processing more OSC messages per cycle
-- Improved general performance by introducing lots of small-scale boosts after profiling hot code (non-crypto hash functions, unnecessary allocation and processing)
-- Improved robustness and usability by not participating in REAPER's undo anymore (this can prevent potentially fatal but in any case surprising scenarios in which doing an undo in REAPER sets back ReaLearn and Playtime to a very old state, requires REAPER >= v7.09+dev0202)
-- Improved dummy target by making it work just like most other targets (generating pseudo feedback, value changes observable in mapping panel etc.)
-- Improved user interface by adding colors
-- Improved target "Pot: Preview preset" by using the same sound player as the Pot Browser (inherits its functionality such as customizable volume and stopping playback when preset loaded)
-- Improved feedback due to conditional activation/deactivation by emitting it in deterministic order (in mapping order)
-- Improved feedback possibilities by processing text feedback expressions and scripts even if target doesn't support normal (numerical) feedback
-- Improved availability check for almost all Pot targets (good for advanced visual feedback of what Pot features are available in a certain situation, see new text placeholder "target.available")
-- Improved resource usage (by firing up threads for async logging and metrics only if enabled, by letting ReaLearn and Clip Engine metrics share the same thread, by  making app and server share the same one-threaded async runtime and by stopping async deallocation thread and async runtime when last ReaLearn instance gone)
-- Improved plug-in scanning speed (ReaLearn won't initialize a few things if it knows it's just being scanned anyway)
-- Improved resource clean-up on Windows when REAPER preference "Allow complete unload of VST plug-ins" enabled
-- Fixed memorization of last color in color picker
-- Fixed some incorrect detection of recursive tables in Luau code on import
-- Fixed source "MIDI script" feedback address not being respected (important e.g. for switching feedback off correctly)
-- Fixed ambiguous "kind" properties in ReaLearn Script (Lua import/export)
-- Fixed "context.feedback\_value.color" not containing nil when no color set in source "MIDI script"
-- Fixed possible freeze when using "Open in text editor on macOS" by completely disabling this function on macOS
-- Fixed possible error when using "Selected" track selector and removing that selected track
-- Fixed deadlock when using 500+ ReaLearn instances
-- Fixed possible 'REAPER string should be UTF-8 encoded' error (when using long compartment parameter names in ReaLearn and referring to them elsewhere, e.g. as TCP param)
-- Fixed Lua import of XTouchMackieLCD display source settings
-- Fixed linking from FX to preset when ReaLearn is on monitoring FX chain
-- Fixed 'BorrowMut' error when copy/pasting mapping with target-based activation condition
-- Fixed potential hard crash in process\_f64 call
-- Fixed possible panic when closing REAPER
-- Fixed scaling issue on Linux (colors are now also available on Linux but still looks a bit funny, hopefully the dark mode detection for SWELL customizations works now)
-- Internal change: Added counter of undesired real-time allocations to UI (debug builds only)
-- Internal change: Removed undocumented ReaLearn script utility functions
-- Internal change: Removed old logging framework
-- Internal change: Renamed lots of Prometheus metrics
-- Internal change: Enforced UTF-8-encoded paths very early in the processing when interfacing with the REAPER API (REAPER by contract should provide UTF-8 encoded paths, if not it's a bug in REAPER)
-- Removed CSI MST import
-- Internal change: Use Rust 1.79.0
+                <changelog><![CDATA[- General: Important rebranding: The plug-in has been renamed from "ReaLearn" to "Helgobox - ReaLearn & Playtime". Helgobox unites 2 products: ReaLearn (free and open-source) and Playtime (paid and mostly closed-source).
+- General: The plug-in now requires at least REAPER 6.11 (I simplified some code by using REAPER 6.11 features)
+- General: Changed scripting language from Lua 5.4 to Luau (existing scripts should run in the same way as before because all Lua 5.4 functions that I have previously unlocked for usage are also available in Luau)
+- General: Internal change: Renamed lots of Prometheus metrics
+- General: Internal change: Enforced UTF-8-encoded paths very early in the processing when interfacing with the REAPER API (REAPER by contract should provide UTF-8 encoded paths, if not it's a bug in REAPER)
+- General: Internal change: Use Rust 1.79.0
+- General: Added welcome screen which allows one to add a Playtime toolbar button. That works best with current REAPER releases, older REAPER versions require a restart.
+- General: Added Helgobox App: An app that provides the user interface for Playtime and ReaLearn Projection. Right now, it is only available embedded into REAPER and only on macOS on Windows. In the future, it will be made available for Linux, Android and iOS, eventually replacing the ReaLearn Companion App.
+- General: #906 Added a REAPER extension, which is automatically loaded at REAPER startup and acts as a supplement to the actual VST plug-in. Provides a convenient entry 'Helgobox' in the REAPER 'Extensions' menu and other features right after REAPER start, which would otherwise only be available if at least one ReaLearn VST plug-in instance is loaded. This extension is currently shipped on Windows and macOS. It's optional, ReaLearn will also work without it!
+- General: #908 Added extensive auto-generated Luau type definitions for building ReaLearn presets, ReaLearn MIDI script sources and Playtime matrices with auto-completion and error reporting (for code editors with Luau support, e.g. Visual Studio Code)
+- General: Internal change: Added counter of undesired real-time allocations to UI (debug builds only)
+- General: Improved import by warning when invalid top-level properties were detected (which could indicate wrong usage of the import API)
+- General: Improved error reporting when importing invalid Luau code by making the error cause more visible
+- General: Improved reliability of preset loading/import in high-CPU usage situations by increasing the maximum execution time of Luau scripts
+- General: Improved reporting of general errors by not just logging repeated error messages as vertical dashes (this was confusing)
+- General: Improved Lua-based presets and imports by detecting cyclic module dependencies
+- General: #913 Improved general performance by introducing lots of small-scale boosts after profiling hot code (non-crypto hash functions, unnecessary allocation and processing)
+- General: #915 Improved robustness and usability by not participating in REAPER's undo anymore (this can prevent potentially fatal but in any case surprising scenarios in which doing an undo in REAPER sets back ReaLearn and Playtime to a very old state, requires REAPER >= v7.09+dev0202)
+- General: Improved resource usage (by firing up threads for async logging and metrics only if enabled, by letting ReaLearn and Clip Engine metrics share the same thread, by  making app and server share the same one-threaded async runtime and by stopping async deallocation thread and async runtime when last ReaLearn instance gone)
+- General: Improved plug-in scanning speed (Helgobox won't initialize a few things if it knows it's just being scanned anyway)
+- General: Improved resource clean-up on Windows when REAPER preference "Allow complete unload of VST plug-ins" enabled
+- General: Fixed some incorrect detection of recursive tables in Luau code on import
+- General: #875 Fixed deadlock when using 500+ Helgobox instances
+- General: Fixed potential hard crash in process\_f64 call
+- General: Fixed possible panic when closing REAPER
+- General: #916 Fixed scaling issue on Linux (colors are now also available on Linux but still looks a bit funny, hopefully the dark mode detection for SWELL customizations works now)
+- General: Internal change: Removed old logging framework
+- ReaLearn: Added generic main preset for changing FX parameters
+- ReaLearn: #870 Added ability to add additional units to one ReaLearn instance (= one ReaLearn instance can now deal with multiple controllers)
+- ReaLearn: #901 Added support for compartment presets written in the Luau language (including the ability to require other Luau modules in the same namespace)
+- ReaLearn: #908 Added menu option to create a ready-made preset development workspace that can be opened in Visual Studio Code (see workspace README for details)
+- ReaLearn: Added possibility to reuse Luau code defined once within a compartment preset across all MIDI script sources used in that compartment (avoids having to duplicate device-specific code in hundreds of mapping, saving memory ... and it just makes sense)
+- ReaLearn: #902 Added support for factory presets (they are really built-in, not shipped separately ... presets currently distributed via ReaPack will disappear soon)
+- ReaLearn: #903 Added feedback logging to mapping panels (analogously to control logging)
+- ReaLearn: #900 Added "Auto units" feature (1. Globally define what controllers you have => 2. Choose which main preset you want to use for which controller => 3. Make one or several ReaLearn instances automatically load/unload those presets whenever the controllers are connected/disconnected ... controller manager is a part of the Helgobox App, which is currently only available to Playtime Early Access testers)
+- ReaLearn: #905 Added possibility to add metadata to Luau presets (displayed in the upcoming Helgobox App and used for the new "Auto units" feature as well as automatic creation of known controllers
+- ReaLearn: #905 Added auto-magical creation of known MIDI controllers (via MIDI device inquiry, used for the new "Auto units" features)
+- ReaLearn: #757 Added possibility to write feedback scripts in the glue section: Now you can build arbitrary feedback messages using Lua code (custom text formatting is just one of the many possibilities).
+- ReaLearn: #716 Added experimental Novation SL MkIII Pot Browser Control preset (available here)
+- ReaLearn: #716 Added text placeholders "target.available", "global.realearn\_time", "target.discrete\_value" and "target.discrete\_value\_count"
+- ReaLearn: #743 Added text placeholders "target.fx\_parameter.macro.new\_section.name" and "target.fx\_parameter.macro.section.index" to target "FX parameter: Set value"
+- ReaLearn: #743 Added many text placeholders to targets "Pot: Browse presets" and "Pot: Load preset" for obtaining preset metadata such as author and comment
+- ReaLearn: Improved virtual control by considering two same-named virtual control elements with different character the same (this change has only been made to named control elements, not to numbered ones!)
+- ReaLearn: #923 Improved auto-load by falling back to initially active preset when no FX focused
+- ReaLearn: #928 Improved both "After timeout" fire modes by respecting button filter setting (this makes long-press-on-release-off scenarios achievable with just one mapping)
+- ReaLearn: Improved Projection feature by building it into the Helgobox App (which is only accessible to early-access Playtime testers at the moment)
+- ReaLearn: Improved Midi Fighter Twister controller presets: Now Lua-based, with ReaLearn color support and available in 2 different virtual control schemes (grid and numbered)
+- ReaLearn: Improved ReaLearn REAPER actions by showing an error if instance needed to execute the action and improving macOS message panel font size
+- ReaLearn: Improved Lua MIDI scripts by allowing them to access the common compartment Lua module even when just calculating the feedback address
+- ReaLearn: #904 Improved target menu by distinguishing between different target sections
+- ReaLearn: #902 Improved preset sharing by introducing the concept of preset namespaces (each sub folder of the main/controller preset folder is now a namespace, that means it's completely self-contained and can be easily shared, each namespace shows up in a different sub menu when browsing presets)
+- ReaLearn: #788 Improved shutdown behavior by switching all device LEDs/screens off and tearing all motor faders down when quitting REAPER
+- ReaLearn: #914 Improved input/output pickers by distinguishing between available and not available devices
+- ReaLearn: #913 Improved OSC performance by processing more OSC messages per cycle
+- ReaLearn: Improved dummy target by making it work just like most other targets (generating pseudo feedback, value changes observable in mapping panel etc.)
+- ReaLearn: #916 Improved user interface by adding colors
+- ReaLearn: #864 Improved feedback due to conditional activation/deactivation by emitting it in deterministic order (in mapping order)
+- ReaLearn: #716 Improved feedback possibilities by processing text feedback expressions and scripts even if target doesn't support normal (numerical) feedback
+- ReaLearn: Fixed memorization of last color in color picker
+- ReaLearn: #862 Fixed source "MIDI script" feedback address not being respected (important e.g. for switching feedback off correctly)
+- ReaLearn: #863 Fixed ambiguous "kind" properties in ReaLearn Script (Lua import/export)
+- ReaLearn: #716 Fixed "context.feedback\_value.color" not containing nil when no color set in source "MIDI script"
+- ReaLearn: #860 Fixed possible freeze when using "Open in text editor on macOS" by completely disabling this function on macOS
+- ReaLearn: #857 Fixed possible error when using "Selected" track selector and removing that selected track
+- ReaLearn: #867 Fixed possible 'REAPER string should be UTF-8 encoded' error (when using long compartment parameter names in ReaLearn and referring to them elsewhere, e.g. as TCP param)
+- ReaLearn: #865 Fixed Lua import of XTouchMackieLCD display source settings
+- ReaLearn: #866 Fixed linking from FX to preset when ReaLearn is on monitoring FX chain
+- ReaLearn: Fixed 'BorrowMut' error when copy/pasting mapping with target-based activation condition
+- ReaLearn: Internal change: Removed undocumented ReaLearn script utility functions
+- ReaLearn: Removed CSI MST import
+- Playtime: Added Playtime as beta
+- SoundPot: #931 Added recording of preset previews for exporting purposes
+- SoundPot: #861 Improved usability by stopping preview as soon as loading the preset
+- SoundPot: #743 Improved target "Pot: Preview preset" by using the same sound player as the Pot Browser (inherits its functionality such as customizable volume and stopping playback when preset loaded)
+- SoundPot: #716 Improved availability check for almost all Pot targets (good for advanced visual feedback of what Pot features are available in a certain situation, see new text placeholder "target.available")
 ]]></changelog>
                 <source platform="win32" file="FX/helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.0/helgobox-windows-i686.dll</source>
 
