@@ -168,6 +168,65 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
 
+            <version name="2.16.2" author="helgoboss" time="2024-08-21T12:00:00Z">
+                <changelog><![CDATA[- General: Improved documentation by moving large parts of the user guide into the Wiki and renaming what's left to "Technical Reference"
+- General: #1100 Improved error messages by including the module path in the error description (= path to DLL, SO or DYLIB)
+- ReaLearn: #252 Added menu action to make targets non-sticky in many different ways
+- ReaLearn: #1093 Added X-Touch One preset
+- ReaLearn: #1097 Added possibility to disable learning for particular virtual sources (useful e.g. in order to enforce learning of fader movements instead of fader touch events)
+- ReaLearn: #1097 Improved usability by ignoring fader touch events of all presets based on Mackie Control Universal when learning sources in the main compartment (you can finally learn fader movements without having to press the fader before pressing the "Learn source" button)
+- ReaLearn: #1093 Improved usability by turning various presets into built-in factory presets (e.g. Mackie Control Universal and DAW control)
+- ReaLearn: #1095 Improved projection edit mode by showing virtual control element names if mapping names are empty
+- ReaLearn: #1095 Improved projection edit mode by not showing disabled or projection-disabled mappings in control palette
+- ReaLearn: #1095 Improved Midi Fighter Twister preset by hiding feedback-only mappings in Projection
+- ReaLearn: #252 Improved preset saving by not automatically making targets non-sticky in particular ways (and instead by referring to the new menu action)
+- ReaLearn: #1101 Improved editing of mappings with targets that refer to the currently focused FX: Focusing ReaLearn itself will not mess everything up anymore
+- ReaLearn: #1102 Improved the addition of new FX-to-preset linking by using the new categorized preset menu
+- ReaLearn: #1103 Improved usability by writing preset metadata into the compartment notes on load (only if notes not already set in preset content)
+- ReaLearn: #1112 Fixed possible error message "is not a valid ReaperPanValue"
+- ReaLearn: #1118 Fixed target "FX: Open/close" by focusing FX window if it's already open (was not the case before on Windows)
+- Playtime: #1108 Added clip pitch adjustment in semitones
+- Playtime: #1104 Improved usability by adding an icon to the track panel which shows the track input type
+- Playtime: #1083 Fixed global keyboard shortcuts on Windows preventing text entry, e.g. renaming clips
+- Playtime: #1083 Fixed unprocessed keyboard shortcuts on macOS being passed through to REAPER (not desired anymore)
+- Playtime: #1105 Fixed possible error message "ring buffer too small for writing block" when recording clips with high sample rates
+- Playtime: #1105 Fixed possibly incomplete recordings, especially when using high sample rates
+- Playtime: #1118 Fixed already open FX not being focused on Windows when pressing the "Instrument" button
+- Playtime: #1091 Fixed displayed MIDI trigger note octave (was 1 octave too high)
+- Playtime: #1115 Fixed dialogs with text fields not closing on Windows when pressing Escape
+- Playtime: #1098 Fixed error "not implemented" when exporting MIDI clips to the arrangement
+]]></changelog>
+                <source platform="win64" file="FX/helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.2/helgobox-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/helgobox-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.2/helgobox-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/helgobox-x64.so">https://github.com/helgoboss/helgobox/releases/download/v2.16.2/helgobox-linux-x86_64.so</source>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.2/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.2/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.2/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.2/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/helgobox-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.2/helgobox-macos-aarch64.vst.dylib</source>
+
+
+
+
+
+                <!-- Extension -->
+                <source platform="darwin-arm64" file="reaper_helgobox-arm64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.2/reaper_helgobox-macos-aarch64.dylib</source>
+                <source platform="darwin64" file="reaper_helgobox-x64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.2/reaper_helgobox-macos-x86_64.dylib</source>
+                <source platform="win64" file="reaper_helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.2/reaper_helgobox-windows-x86_64.dll</source>
+                <!-- App -->
+                <source platform="win64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.10.0/helgobox-app-windows.tar.zst</source>
+                <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.10.0/helgobox-app-macos.tar.zst</source>
+                <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.10.0/helgobox-app-macos.tar.zst</source>
+                <!-- Toolbar icons -->
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+            </version>
+
             <version name="2.16.1" author="helgoboss" time="2024-08-09T12:00:00Z">
                 <changelog><![CDATA[- General: #1058 Fixed possible error "REAPER string should be UTF-8 encoded" when using Helgobox App
 - Playtime: #1070 Added memorization of ignited slots when closing and reopening REAPER project (starting playback after reopening the project will play the ignited slots)
@@ -4450,6 +4509,51 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
+
+            <version name="2.16.2" author="helgoboss" time="2024-08-21T12:00:00Z">
+                <changelog><![CDATA[- General: Improved documentation by moving large parts of the user guide into the Wiki and renaming what's left to "Technical Reference"
+- General: #1100 Improved error messages by including the module path in the error description (= path to DLL, SO or DYLIB)
+- ReaLearn: #252 Added menu action to make targets non-sticky in many different ways
+- ReaLearn: #1093 Added X-Touch One preset
+- ReaLearn: #1097 Added possibility to disable learning for particular virtual sources (useful e.g. in order to enforce learning of fader movements instead of fader touch events)
+- ReaLearn: #1097 Improved usability by ignoring fader touch events of all presets based on Mackie Control Universal when learning sources in the main compartment (you can finally learn fader movements without having to press the fader before pressing the "Learn source" button)
+- ReaLearn: #1093 Improved usability by turning various presets into built-in factory presets (e.g. Mackie Control Universal and DAW control)
+- ReaLearn: #1095 Improved projection edit mode by showing virtual control element names if mapping names are empty
+- ReaLearn: #1095 Improved projection edit mode by not showing disabled or projection-disabled mappings in control palette
+- ReaLearn: #1095 Improved Midi Fighter Twister preset by hiding feedback-only mappings in Projection
+- ReaLearn: #252 Improved preset saving by not automatically making targets non-sticky in particular ways (and instead by referring to the new menu action)
+- ReaLearn: #1101 Improved editing of mappings with targets that refer to the currently focused FX: Focusing ReaLearn itself will not mess everything up anymore
+- ReaLearn: #1102 Improved the addition of new FX-to-preset linking by using the new categorized preset menu
+- ReaLearn: #1103 Improved usability by writing preset metadata into the compartment notes on load (only if notes not already set in preset content)
+- ReaLearn: #1112 Fixed possible error message "is not a valid ReaperPanValue"
+- ReaLearn: #1118 Fixed target "FX: Open/close" by focusing FX window if it's already open (was not the case before on Windows)
+- Playtime: #1108 Added clip pitch adjustment in semitones
+- Playtime: #1104 Improved usability by adding an icon to the track panel which shows the track input type
+- Playtime: #1083 Fixed global keyboard shortcuts on Windows preventing text entry, e.g. renaming clips
+- Playtime: #1083 Fixed unprocessed keyboard shortcuts on macOS being passed through to REAPER (not desired anymore)
+- Playtime: #1105 Fixed possible error message "ring buffer too small for writing block" when recording clips with high sample rates
+- Playtime: #1105 Fixed possibly incomplete recordings, especially when using high sample rates
+- Playtime: #1118 Fixed already open FX not being focused on Windows when pressing the "Instrument" button
+- Playtime: #1091 Fixed displayed MIDI trigger note octave (was 1 octave too high)
+- Playtime: #1115 Fixed dialogs with text fields not closing on Windows when pressing Escape
+- Playtime: #1098 Fixed error "not implemented" when exporting MIDI clips to the arrangement
+]]></changelog>
+                <source platform="win32" file="FX/helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.2/helgobox-windows-i686.dll</source>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.2/realearn-user-guide.pdf</source>
+
+
+
+
+
+                <!-- Extension -->
+                <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.2/reaper_helgobox-windows-i686.dll</source>
+                <!-- Toolbar icons -->
+                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+            </version>
 
             <version name="2.16.1" author="helgoboss" time="2024-08-09T12:00:00Z">
                 <changelog><![CDATA[- General: #1058 Fixed possible error "REAPER string should be UTF-8 encoded" when using Helgobox App
