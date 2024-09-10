@@ -168,6 +168,65 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
 
+            <version name="2.16.4" author="helgoboss" time="2024-09-10T12:00:00Z">
+                <changelog><![CDATA[- ReaLearn: #1124 Added possibility to do global MIDI transformation: See new options in target "MIDI: Send message" (yes!)
+- ReaLearn: #1158 Added possibility to use keyboard input in addition to MIDI/OSC input (yes!)
+- ReaLearn: #1155 Added menu entry "User interface => Background colors" to globally disable the use of background colors (useful when using custom Windows themes)
+- ReaLearn: #1157 Improved control via keyboard by not processing keyboard input when user is entering text (needs REAPER 7.23+)
+- ReaLearn: #1170 Fixed REAPER actions "ReaLearn: Find first mapping by source" (wouldn't find certain mappings) and "ReaLearn: Learn single mapping (reassigning source)" (always created new mappings)
+- ReaLearn: #1152 Fixed occasional "FX not loadable" error (e.g. when removing FX)
+- ReaLearn: #1162 Fixed timing information not being passed on when translating device MIDI to device MIDI via target "MIDI: Send message"
+- ReaLearn: #1126 Fixed error "impossible" when on monitoring FX and pressing target menu button
+- Playtime: #1131 Added the possibility to record clips from stopped state with a count-in/pre-roll (simply turn metronome on and record, right-click metronome to set length of pre-roll ... makes users who come from other session views feel more at home)
+- Playtime: #1163 Added track PDC information, including help texts (as a warning not to expect miracles when using high-latency FX)
+- Playtime: #1168 Added support for REAPER's "Smooth seek": Clips will keep playing as if nothing happened. Current limitation: Smooth-seek to the left still leads to retriggering when using PDC.
+- Playtime: #1119 Improved usability by always playing ignited clips when starting one specific clip when playback is stopped (makes users who come from other session views feel more at home)
+- Playtime: #1146 Improved section and fade behavior and defaults in order to prevent unwanted auto-fades
+- Playtime: #1132 Improved usability by making the static section an expert option and renaming it to "Source cut"
+- Playtime: #1166 Improved usability by replacing the "Silence mode" design with a more traditional "Stopped" design (also, Playtime now starts by default in stopped state)
+- Playtime: #1136 Improved keyboard control by handling SPACE even if set as a global shortcut in REAPER (needs REAPER 7.23+)
+- Playtime: #1137 Improved usability by letting SPACE keep ongoing recordings instead of discarding them
+- Playtime: #1164 Fixed clips completely losing sync when enabling or disabling high-latency FX due to PDC (for now only fixed when REAPER transport is stopped)
+- Playtime: #1179 Fixed audio clips playing back slightly delayed right after recording (bug was introduced in 2.16.2)
+- Playtime: #1143 Fixed Launchpad Pro detection on Windows if device name has a prefix (e.g. '2- ')
+- Playtime: #1165 Fixed inability to use MIDI input devices with IDs > 63
+- Playtime: #1149 Fixed App not getting keyboard focus unless clicking on specific areas such as the matrix view (keyboard shortcuts now work immediately after opening the app)
+- Playtime: #1160 Fixed play cursors in MIDI editor and waveform view noticeably off when using high-latency FX (due to PDC)
+- Playtime: #1156 Fixed audio clips turning silent when starting REAPER playback and having high-latency FX in the signal flow (due to PDC)
+- Playtime: #1135 Fixed tempo detection recordings not working via controller
+- Playtime: #1134 Fixed immediate playback of clip in stopped state not working via controller
+]]></changelog>
+                <source platform="win64" file="FX/helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.4/helgobox-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/helgobox-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.4/helgobox-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/helgobox-x64.so">https://github.com/helgoboss/helgobox/releases/download/v2.16.4/helgobox-linux-x86_64.so</source>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.4/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.4/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.4/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.4/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/helgobox-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.4/helgobox-macos-aarch64.vst.dylib</source>
+
+
+
+
+
+                <!-- Extension -->
+                <source platform="darwin-arm64" file="reaper_helgobox-arm64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.4/reaper_helgobox-macos-aarch64.dylib</source>
+                <source platform="darwin64" file="reaper_helgobox-x64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.4/reaper_helgobox-macos-x86_64.dylib</source>
+                <source platform="win64" file="reaper_helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.4/reaper_helgobox-windows-x86_64.dll</source>
+                <!-- App -->
+                <source platform="win64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.11.0/helgobox-app-windows.tar.zst</source>
+                <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.11.0/helgobox-app-macos.tar.zst</source>
+                <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.11.0/helgobox-app-macos.tar.zst</source>
+                <!-- Toolbar icons -->
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+            </version>
+
             <version name="2.16.3" author="helgoboss" time="2024-08-24T12:00:00Z">
                 <changelog><![CDATA[- ReaLearn: #422 Added support for MIDI editor and Media Explorer actions
 - ReaLearn: #1122 Fixed broken "Learn many" in controller compartment
@@ -4544,6 +4603,51 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
+
+            <version name="2.16.4" author="helgoboss" time="2024-09-10T12:00:00Z">
+                <changelog><![CDATA[- ReaLearn: #1124 Added possibility to do global MIDI transformation: See new options in target "MIDI: Send message" (yes!)
+- ReaLearn: #1158 Added possibility to use keyboard input in addition to MIDI/OSC input (yes!)
+- ReaLearn: #1155 Added menu entry "User interface => Background colors" to globally disable the use of background colors (useful when using custom Windows themes)
+- ReaLearn: #1157 Improved control via keyboard by not processing keyboard input when user is entering text (needs REAPER 7.23+)
+- ReaLearn: #1170 Fixed REAPER actions "ReaLearn: Find first mapping by source" (wouldn't find certain mappings) and "ReaLearn: Learn single mapping (reassigning source)" (always created new mappings)
+- ReaLearn: #1152 Fixed occasional "FX not loadable" error (e.g. when removing FX)
+- ReaLearn: #1162 Fixed timing information not being passed on when translating device MIDI to device MIDI via target "MIDI: Send message"
+- ReaLearn: #1126 Fixed error "impossible" when on monitoring FX and pressing target menu button
+- Playtime: #1131 Added the possibility to record clips from stopped state with a count-in/pre-roll (simply turn metronome on and record, right-click metronome to set length of pre-roll ... makes users who come from other session views feel more at home)
+- Playtime: #1163 Added track PDC information, including help texts (as a warning not to expect miracles when using high-latency FX)
+- Playtime: #1168 Added support for REAPER's "Smooth seek": Clips will keep playing as if nothing happened. Current limitation: Smooth-seek to the left still leads to retriggering when using PDC.
+- Playtime: #1119 Improved usability by always playing ignited clips when starting one specific clip when playback is stopped (makes users who come from other session views feel more at home)
+- Playtime: #1146 Improved section and fade behavior and defaults in order to prevent unwanted auto-fades
+- Playtime: #1132 Improved usability by making the static section an expert option and renaming it to "Source cut"
+- Playtime: #1166 Improved usability by replacing the "Silence mode" design with a more traditional "Stopped" design (also, Playtime now starts by default in stopped state)
+- Playtime: #1136 Improved keyboard control by handling SPACE even if set as a global shortcut in REAPER (needs REAPER 7.23+)
+- Playtime: #1137 Improved usability by letting SPACE keep ongoing recordings instead of discarding them
+- Playtime: #1164 Fixed clips completely losing sync when enabling or disabling high-latency FX due to PDC (for now only fixed when REAPER transport is stopped)
+- Playtime: #1179 Fixed audio clips playing back slightly delayed right after recording (bug was introduced in 2.16.2)
+- Playtime: #1143 Fixed Launchpad Pro detection on Windows if device name has a prefix (e.g. '2- ')
+- Playtime: #1165 Fixed inability to use MIDI input devices with IDs > 63
+- Playtime: #1149 Fixed App not getting keyboard focus unless clicking on specific areas such as the matrix view (keyboard shortcuts now work immediately after opening the app)
+- Playtime: #1160 Fixed play cursors in MIDI editor and waveform view noticeably off when using high-latency FX (due to PDC)
+- Playtime: #1156 Fixed audio clips turning silent when starting REAPER playback and having high-latency FX in the signal flow (due to PDC)
+- Playtime: #1135 Fixed tempo detection recordings not working via controller
+- Playtime: #1134 Fixed immediate playback of clip in stopped state not working via controller
+]]></changelog>
+                <source platform="win32" file="FX/helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.4/helgobox-windows-i686.dll</source>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.4/realearn-user-guide.pdf</source>
+
+
+
+
+
+                <!-- Extension -->
+                <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.4/reaper_helgobox-windows-i686.dll</source>
+                <!-- Toolbar icons -->
+                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+            </version>
 
             <version name="2.16.3" author="helgoboss" time="2024-08-24T12:00:00Z">
                 <changelog><![CDATA[- ReaLearn: #422 Added support for MIDI editor and Media Explorer actions
