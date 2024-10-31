@@ -168,6 +168,51 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
 
+            <version name="2.16.12" author="helgoboss" time="2024-10-31T12:00:00Z">
+                <changelog><![CDATA[- ReaLearn: #1287 Added 3 factory controller presets for Softube Console 1 mk2
+- ReaLearn: #800 Added possibility to produce relative values in EEL control transformations
+- ReaLearn: #1294 Added control transformation variable 'realearn\_last\_feedback\_value' (might be useful in mappings with virtual target, rarely needed, considered experimental, used in the new Console 1 MIDI relative preset)
+- ReaLearn: #1290 Added possibility to pick among the actually available virtual control elements in the main mapping source section
+- ReaLearn: #715 Added control transformation variable 'realearn\_timestamp', which is based on audio blocks and for MIDI even takes intra-block offset into account (it can't get more precise)
+- ReaLearn: #1295 Added function 'realearn\_dbg' to EEL transformation (a debugging tool that prints floating-point values to stdout)
+- ReaLearn: #1293 Improved preset picker by categorizing by device manufacturer
+- ReaLearn: #1289 Improve feedback send behavior "Prevent echo feedback" by also making it work when used in a controller mapping (actually the most important place for using this option ... previously, it only worked when used in a main mapping)
+- ReaLearn: Improve glue documentation by adding signal flow diagrams
+- ReaLearn: Improved usability by clearing search field and filters when switching between compartments (this was confusing)
+- ReaLearn: #1288 Fixed text entry in control transformation editor if a key is defined as global REAPER hotkey (most importantly, the SPACE key)
+- ReaLearn: Fixed error when removing mapping while some mapping panel's edit control had focus
+]]></changelog>
+                <source platform="win64" file="FX/helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.12/helgobox-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/helgobox-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.12/helgobox-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/helgobox-x64.so">https://github.com/helgoboss/helgobox/releases/download/v2.16.12/helgobox-linux-x86_64.so</source>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.12/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.12/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.12/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.12/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/helgobox-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.12/helgobox-macos-aarch64.vst.dylib</source>
+
+
+
+
+
+                <!-- Extension -->
+                <source platform="darwin-arm64" file="reaper_helgobox-arm64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.12/reaper_helgobox-macos-aarch64.dylib</source>
+                <source platform="darwin64" file="reaper_helgobox-x64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.12/reaper_helgobox-macos-x86_64.dylib</source>
+                <source platform="win64" file="reaper_helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.12/reaper_helgobox-windows-x86_64.dll</source>
+                <!-- App -->
+                <source platform="win64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.16.0/helgobox-app-windows.tar.zst</source>
+                <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.16.0/helgobox-app-macos.tar.zst</source>
+                <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.16.0/helgobox-app-macos.tar.zst</source>
+                <!-- Toolbar icons -->
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+            </version>
+
             <version name="2.16.11" author="helgoboss" time="2024-10-23T12:00:00Z">
                 <changelog><![CDATA[- ReaLearn: #1256 Added new documentation website https://docs.helgoboss.org
 - ReaLearn: #1256 Added automatic screenshot generation during integration tests (activated on macOS only)
@@ -4776,6 +4821,37 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
+
+            <version name="2.16.12" author="helgoboss" time="2024-10-31T12:00:00Z">
+                <changelog><![CDATA[- ReaLearn: #1287 Added 3 factory controller presets for Softube Console 1 mk2
+- ReaLearn: #800 Added possibility to produce relative values in EEL control transformations
+- ReaLearn: #1294 Added control transformation variable 'realearn\_last\_feedback\_value' (might be useful in mappings with virtual target, rarely needed, considered experimental, used in the new Console 1 MIDI relative preset)
+- ReaLearn: #1290 Added possibility to pick among the actually available virtual control elements in the main mapping source section
+- ReaLearn: #715 Added control transformation variable 'realearn\_timestamp', which is based on audio blocks and for MIDI even takes intra-block offset into account (it can't get more precise)
+- ReaLearn: #1295 Added function 'realearn\_dbg' to EEL transformation (a debugging tool that prints floating-point values to stdout)
+- ReaLearn: #1293 Improved preset picker by categorizing by device manufacturer
+- ReaLearn: #1289 Improve feedback send behavior "Prevent echo feedback" by also making it work when used in a controller mapping (actually the most important place for using this option ... previously, it only worked when used in a main mapping)
+- ReaLearn: Improve glue documentation by adding signal flow diagrams
+- ReaLearn: Improved usability by clearing search field and filters when switching between compartments (this was confusing)
+- ReaLearn: #1288 Fixed text entry in control transformation editor if a key is defined as global REAPER hotkey (most importantly, the SPACE key)
+- ReaLearn: Fixed error when removing mapping while some mapping panel's edit control had focus
+]]></changelog>
+                <source platform="win32" file="FX/helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.12/helgobox-windows-i686.dll</source>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.12/realearn-user-guide.pdf</source>
+
+
+
+
+
+                <!-- Extension -->
+                <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.12/reaper_helgobox-windows-i686.dll</source>
+                <!-- Toolbar icons -->
+                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+            </version>
 
             <version name="2.16.11" author="helgoboss" time="2024-10-23T12:00:00Z">
                 <changelog><![CDATA[- ReaLearn: #1256 Added new documentation website https://docs.helgoboss.org
