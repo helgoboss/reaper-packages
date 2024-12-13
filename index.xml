@@ -168,6 +168,61 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
 
+            <version name="2.16.15" author="helgoboss" time="2024-12-13T12:00:00Z">
+                <changelog><![CDATA[- ReaLearn: #1261 Added basic support for Windows 7 and 8 (exceptions: Helgobox App and a few special GUI components)
+- ReaLearn: #1317 Fixed help links to refer to new documentation website
+- ReaLearn: #1343 Fixed bug that caused letter 'P' to be unusable in ReaLearn text fields
+- Playtime: #1348 Added new action and toolbar button Show/hide custom Playtime to use customized Playtime instance from track template (see tutorial)
+- Playtime: #1339 Added matrix recording option Allow tempo detection recording which lets you opt out from automatic tempo detection recording in stopped state when the metronome is disabled, instead always doing a count-in recording (with an audible click, no matter what)
+- Playtime: #1331 Added possibility to remove Playtime toolbar button manually (before that, it was only possible by using the welcome screen)
+- Playtime: #1328 Added tip if mouse events not throttled in REAPER for macOS
+- Playtime: #1328 Added warning if "Stop/repeat playback at end of project" enabled in REAPER
+- Playtime: #1352 Improved MIDI editing by supporting custom note names
+- Playtime: #1313 Improved MIDI editing by making edited items visible on column track and allowing free editing and playback outside of Playtime (for this, simply start or stop playback in REAPER's MIDI editor or arrange view - Playtime will automatically stop its own playback)
+- Playtime: #1351 Improved visibility of playing clips on Launchpads
+- Playtime: #1322 Improved Luau matrix building by allowing any field of the top-level table to be empty (using defaults)
+- Playtime: #1300 Fixed undo closing MIDI editor and sometimes even track after inserting first note
+- Playtime: #1354 Fixed grid controller scrolling possibly getting stuck after changing matrix size
+- Playtime: #1090 Fixed grid controller right and down scrolling LEDs lighting up although not scrollable
+- Playtime: #1313 Fixed play cursor getting stuck in MIDI editor
+- Playtime: #1344 Fixed GUI bug when overriding clip resample mode with "Project default"
+]]></changelog>
+                <source platform="win64" file="FX/helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.15/helgobox-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/helgobox-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.15/helgobox-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/helgobox-x64.so">https://github.com/helgoboss/helgobox/releases/download/v2.16.15/helgobox-linux-x86_64.so</source>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.15/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.15/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.15/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.15/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/helgobox-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.15/helgobox-macos-aarch64.vst.dylib</source>
+
+
+
+
+
+                <!-- Extension -->
+                <source platform="darwin-arm64" file="reaper_helgobox-arm64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.15/reaper_helgobox-macos-aarch64.dylib</source>
+                <source platform="darwin64" file="reaper_helgobox-x64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.15/reaper_helgobox-macos-x86_64.dylib</source>
+                <source platform="win64" file="reaper_helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.15/reaper_helgobox-windows-x86_64.dll</source>
+                <!-- App -->
+                <source platform="win64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.17.0/helgobox-app-windows.tar.zst</source>
+                <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.17.0/helgobox-app-macos.tar.zst</source>
+                <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.17.0/helgobox-app-macos.tar.zst</source>
+                <!-- Toolbar icons -->
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime_custom.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime_custom.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime_custom.png</source>
+
+            </version>
+
             <version name="2.16.14" author="helgoboss" time="2024-11-06T12:00:00Z">
                 <changelog><![CDATA[- ReaLearn: #1301 Added new 'Stream Deck' source (supporting both control and quite extensive feedback)
 - ReaLearn: #1308 Added new source 'ReaLearn compartment loaded'
@@ -202,9 +257,10 @@
                 <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.16.0/helgobox-app-macos.tar.zst</source>
                 <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.16.0/helgobox-app-macos.tar.zst</source>
                 <!-- Toolbar icons -->
-                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -236,9 +292,10 @@
                 <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.16.0/helgobox-app-macos.tar.zst</source>
                 <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.16.0/helgobox-app-macos.tar.zst</source>
                 <!-- Toolbar icons -->
-                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -281,9 +338,10 @@
                 <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.16.0/helgobox-app-macos.tar.zst</source>
                 <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.16.0/helgobox-app-macos.tar.zst</source>
                 <!-- Toolbar icons -->
-                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -322,9 +380,10 @@
                 <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.15.0/helgobox-app-macos.tar.zst</source>
                 <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.15.0/helgobox-app-macos.tar.zst</source>
                 <!-- Toolbar icons -->
-                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -358,9 +417,10 @@
                 <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.15.0/helgobox-app-macos.tar.zst</source>
                 <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.15.0/helgobox-app-macos.tar.zst</source>
                 <!-- Toolbar icons -->
-                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -414,9 +474,10 @@
                 <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.14.0/helgobox-app-macos.tar.zst</source>
                 <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.14.0/helgobox-app-macos.tar.zst</source>
                 <!-- Toolbar icons -->
-                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -454,9 +515,10 @@
                 <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.13.0/helgobox-app-macos.tar.zst</source>
                 <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.13.0/helgobox-app-macos.tar.zst</source>
                 <!-- Toolbar icons -->
-                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -513,9 +575,10 @@
                 <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.11.0/helgobox-app-macos.tar.zst</source>
                 <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.11.0/helgobox-app-macos.tar.zst</source>
                 <!-- Toolbar icons -->
-                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -548,9 +611,10 @@
                 <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.10.0/helgobox-app-macos.tar.zst</source>
                 <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.10.0/helgobox-app-macos.tar.zst</source>
                 <!-- Toolbar icons -->
-                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -607,9 +671,10 @@
                 <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.10.0/helgobox-app-macos.tar.zst</source>
                 <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.10.0/helgobox-app-macos.tar.zst</source>
                 <!-- Toolbar icons -->
-                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -672,9 +737,10 @@
                 <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.9.0/helgobox-app-macos.tar.zst</source>
                 <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.9.0/helgobox-app-macos.tar.zst</source>
                 <!-- Toolbar icons -->
-                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -780,9 +846,10 @@
                 <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.8.0/helgobox-app-macos.tar.zst</source>
                 <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.8.0/helgobox-app-macos.tar.zst</source>
                 <!-- Toolbar icons -->
-                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -819,9 +886,10 @@
                 <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.8.0/helgobox-app-macos.tar.zst</source>
                 <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.8.0/helgobox-app-macos.tar.zst</source>
                 <!-- Toolbar icons -->
-                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -853,9 +921,10 @@
                 <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.7.0/helgobox-app-macos.tar.zst</source>
                 <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.7.0/helgobox-app-macos.tar.zst</source>
                 <!-- Toolbar icons -->
-                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -904,9 +973,10 @@
                 <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.6.0/helgobox-app-macos.tar.zst</source>
                 <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.6.0/helgobox-app-macos.tar.zst</source>
                 <!-- Toolbar icons -->
-                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -938,9 +1008,10 @@
                 <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.5.0/helgobox-app-macos.tar.zst</source>
                 <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.5.0/helgobox-app-macos.tar.zst</source>
                 <!-- Toolbar icons -->
-                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -986,9 +1057,10 @@
                 <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.4.0/helgobox-app-macos.tar.zst</source>
                 <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.4.0/helgobox-app-macos.tar.zst</source>
                 <!-- Toolbar icons -->
-                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -1044,9 +1116,10 @@
                 <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.3.0/helgobox-app-macos.tar.zst</source>
                 <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.3.0/helgobox-app-macos.tar.zst</source>
                 <!-- Toolbar icons -->
-                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -1065,6 +1138,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.7/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.7/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -1099,6 +1173,7 @@
 
 
 
+
             </version>
 
             <version name="2.16.0-pre.2" author="helgoboss" time="2023-11-01T12:00:00Z">
@@ -1121,6 +1196,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.2/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.2/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -1156,6 +1232,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.1/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.1/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -1205,6 +1282,7 @@
 
 
 
+
             </version>
 
             <version name="2.15.0-pre.7" author="helgoboss" time="2023-05-28T12:00:00Z">
@@ -1225,6 +1303,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.15.0-pre.7/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.15.0-pre.7/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -1253,6 +1332,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.15.0-pre.6/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.15.0-pre.6/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -1291,6 +1371,7 @@
 
 
 
+
             </version>
 
             <version name="2.15.0-pre.3" author="helgoboss" time="2023-05-15T12:00:00Z">
@@ -1313,6 +1394,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.15.0-pre.3/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.15.0-pre.3/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -1354,6 +1436,7 @@
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/click-high.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/e4e7a734524330ab434ee46305fa08b334c7428f/resources/sounds/click-high.mp3</source>
 
 
+
             </version>
 
             <version name="2.15.0-pre.1" author="helgoboss" time="2023-02-28T12:00:00Z">
@@ -1392,6 +1475,7 @@
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/click-high.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/e4e7a734524330ab434ee46305fa08b334c7428f/resources/sounds/click-high.mp3</source>
 
 
+
             </version>
 
             <version name="2.14.3" author="helgoboss" time="2023-01-13T12:00:00Z">
@@ -1420,6 +1504,7 @@
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/sounds/click-high.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/e4e7a734524330ab434ee46305fa08b334c7428f/resources/sounds/click-high.mp3</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/sounds/click-high.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/e4e7a734524330ab434ee46305fa08b334c7428f/resources/sounds/click-high.mp3</source>
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/click-high.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/e4e7a734524330ab434ee46305fa08b334c7428f/resources/sounds/click-high.mp3</source>
+
 
 
             </version>
@@ -1458,6 +1543,7 @@
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/sounds/click-high.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/e4e7a734524330ab434ee46305fa08b334c7428f/resources/sounds/click-high.mp3</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/sounds/click-high.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/e4e7a734524330ab434ee46305fa08b334c7428f/resources/sounds/click-high.mp3</source>
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/click-high.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/e4e7a734524330ab434ee46305fa08b334c7428f/resources/sounds/click-high.mp3</source>
+
 
 
             </version>
@@ -1569,6 +1655,7 @@
 
 
 
+
             </version>
 
             <version name="2.14.0-pre.11" author="helgoboss" time="2022-11-21T12:00:00Z">
@@ -1606,6 +1693,7 @@
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
 
 
 
@@ -1653,6 +1741,7 @@
 
 
 
+
             </version>
 
             <version name="2.14.0-pre.9" author="helgoboss" time="2022-11-02T12:00:00Z">
@@ -1687,6 +1776,7 @@
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
 
 
 
@@ -1725,6 +1815,7 @@
 
 
 
+
             </version>
 
             <version name="2.14.0-pre.6" author="helgoboss" time="2022-10-09T12:00:00Z">
@@ -1756,6 +1847,7 @@
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
 
 
 
@@ -1794,6 +1886,7 @@
 
 
 
+
             </version>
 
             <version name="2.14.0-pre.4" author="helgoboss" time="2022-09-24T12:00:00Z">
@@ -1825,6 +1918,7 @@
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
 
 
 
@@ -1861,6 +1955,7 @@
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
 
 
 
@@ -1921,6 +2016,7 @@
 
 
 
+
             </version>
 
             <version name="2.13.1" author="helgoboss" time="2022-07-10T12:00:00Z">
@@ -1941,6 +2037,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.1/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.1/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -2058,6 +2155,7 @@
 
 
 
+
             </version>
 
             <version name="2.13.0-pre-13" author="helgoboss" time="2022-07-06T12:00:00Z">
@@ -2080,6 +2178,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre-13/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre-13/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -2113,6 +2212,7 @@
 
 
 
+
             </version>
 
             <version name="2.13.0-pre.11" author="helgoboss" time="2022-06-24T12:00:00Z">
@@ -2135,6 +2235,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.11/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.11/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -2163,6 +2264,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.10/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.10/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -2196,6 +2298,7 @@
 
 
 
+
             </version>
 
             <version name="2.13.0-pre.8" author="helgoboss" time="2022-06-18T12:00:00Z">
@@ -2218,6 +2321,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.8/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.8/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -2248,6 +2352,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.7/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.7/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -2293,6 +2398,7 @@
 
 
 
+
             </version>
 
             <version name="2.13.0-pre.4" author="helgoboss" time="2022-05-13T12:00:00Z">
@@ -2331,6 +2437,7 @@
 
 
 
+
             </version>
 
             <version name="2.13.0-pre.3" author="helgoboss" time="2022-04-08T12:00:00Z">
@@ -2354,6 +2461,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.3/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.3/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -2397,6 +2505,7 @@
 
 
 
+
             </version>
 
             <version name="2.13.0-pre.1" author="helgoboss" time="2022-03-25T12:00:00Z">
@@ -2435,6 +2544,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.1/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.1/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -2486,6 +2596,7 @@
 
 
 
+
             </version>
 
             <version name="2.12.0-pre.4" author="helgoboss" time="2021-12-30T12:00:00Z">
@@ -2518,6 +2629,7 @@
 
 
 
+
             </version>
 
             <version name="2.12.0-pre.3" author="helgoboss" time="2021-12-24T12:00:00Z">
@@ -2538,6 +2650,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.12.0-pre.3/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.12.0-pre.3/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -2565,6 +2678,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.12.0-pre.1/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.12.0-pre.1/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -2644,6 +2758,7 @@
 
 
 
+
             </version>
 
             <version name="2.11.0-pre.15" author="helgoboss" time="2021-11-22T12:00:00Z">
@@ -2679,6 +2794,7 @@
 
 
 
+
             </version>
 
             <version name="2.11.0-pre.14" author="helgoboss" time="2021-11-18T12:00:00Z">
@@ -2702,6 +2818,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.14/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.14/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -2744,6 +2861,7 @@
 
 
 
+
             </version>
 
             <version name="2.11.0-pre.12" author="helgoboss" time="2021-11-01T12:00:00Z">
@@ -2770,6 +2888,7 @@
 
 
 
+
             </version>
 
             <version name="2.11.0-pre.11" author="helgoboss" time="2021-10-30T12:00:00Z">
@@ -2791,6 +2910,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.11/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.11/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -2822,6 +2942,7 @@
 
 
 
+
             </version>
 
             <version name="2.11.0-pre.8" author="helgoboss" time="2021-10-14T12:00:00Z">
@@ -2842,6 +2963,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.8/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.8/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -2872,6 +2994,7 @@
 
 
 
+
             </version>
 
             <version name="2.11.0-pre.3" author="helgoboss" time="2021-10-09T12:00:00Z">
@@ -2888,6 +3011,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.3/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.3/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -2917,6 +3041,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.2/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.2/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -2953,6 +3078,7 @@
 
 
 
+
             </version>
 
             <version name="2.10.4" author="helgoboss" time="2021-11-01T12:00:00Z">
@@ -2970,6 +3096,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.10.4/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.10.4/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -2996,6 +3123,7 @@
 
 
 
+
             </version>
 
             <version name="2.10.2" author="helgoboss" time="2021-09-16T12:00:00Z">
@@ -3017,6 +3145,7 @@
 
 
 
+
             </version>
 
             <version name="2.10.1" author="helgoboss" time="2021-09-14T12:00:00Z">
@@ -3033,6 +3162,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.10.1/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.10.1/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -3105,6 +3235,7 @@
 
 
 
+
             </version>
 
             <version name="2.10.0-pre.10" author="helgoboss" time="2021-09-02T12:00:00Z">
@@ -3123,6 +3254,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.10.0-pre.10/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.10.0-pre.10/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -3159,6 +3291,7 @@
 
 
 
+
             </version>
 
             <version name="2.10.0-pre.6" author="helgoboss" time="2021-08-01T12:00:00Z">
@@ -3183,6 +3316,7 @@
 
 
 
+
             </version>
 
             <version name="2.10.0-pre.5" author="helgoboss" time="2021-07-24T12:00:00Z">
@@ -3202,6 +3336,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.10.0-pre.5/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.10.0-pre.5/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -3235,6 +3370,7 @@
 
 
 
+
             </version>
 
             <version name="2.10.0-pre.3" author="helgoboss" time="2021-07-17T12:00:00Z">
@@ -3262,6 +3398,7 @@
 
 
 
+
             </version>
 
             <version name="2.10.0-pre.2" author="helgoboss" time="2021-05-18T12:00:00Z">
@@ -3279,6 +3416,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.10.0-pre.2/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.10.0-pre.2/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -3312,6 +3450,7 @@
 
 
 
+
             </version>
 
             <version name="2.9.1" author="helgoboss" time="2021-05-16T12:00:00Z">
@@ -3328,6 +3467,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.9.1/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.9.1/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -3363,6 +3503,7 @@
 
 
 
+
             </version>
 
             <version name="2.9.0-pre.9" author="helgoboss" time="2021-05-11T12:00:00Z">
@@ -3380,6 +3521,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.9.0-pre.9/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.9.0-pre.9/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -3408,6 +3550,7 @@
 
 
 
+
             </version>
 
             <version name="2.9.0-pre.7" author="helgoboss" time="2021-05-03T12:00:00Z">
@@ -3426,6 +3569,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.9.0-pre.7/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.9.0-pre.7/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -3453,6 +3597,7 @@
 
 
 
+
             </version>
 
             <version name="2.9.0-pre.5" author="helgoboss" time="2021-04-30T12:00:00Z">
@@ -3469,6 +3614,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.9.0-pre.5/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.9.0-pre.5/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -3492,6 +3638,7 @@
 
 
 
+
             </version>
 
             <version name="2.8.2" author="helgoboss" time="2021-04-29T12:00:00Z">
@@ -3506,6 +3653,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.2/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.2/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.2/realearn-user-guide.pdf</source>
+
 
 
 
@@ -3621,6 +3769,7 @@
 
 
 
+
             </version>
 
             <version name="2.8.0-rc.6" author="helgoboss" time="2021-04-23T12:00:00Z">
@@ -3640,6 +3789,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.6/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.6/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.6/realearn-user-guide.pdf</source>
+
 
 
 
@@ -3670,6 +3820,7 @@
 
 
 
+
             </version>
 
             <version name="2.8.0-rc.4" author="helgoboss" time="2021-04-14T12:00:00Z">
@@ -3691,6 +3842,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.4/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.4/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.4/realearn-user-guide.pdf</source>
+
 
 
 
@@ -3727,6 +3879,7 @@
 
 
 
+
             </version>
 
             <version name="2.8.0-rc.1" author="helgoboss" time="2021-04-06T12:00:00Z">
@@ -3746,6 +3899,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.1/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.1/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.1/realearn-user-guide.pdf</source>
+
 
 
 
@@ -3775,6 +3929,7 @@
 
 
 
+
             </version>
 
             <version name="2.8.0-pre8" author="helgoboss" time="2021-03-31T12:00:00Z">
@@ -3791,6 +3946,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre8/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre8/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre8/realearn-user-guide.pdf</source>
+
 
 
 
@@ -3828,6 +3984,7 @@
 
 
 
+
             </version>
 
             <version name="2.8.0-pre6" author="helgoboss" time="2021-03-25T12:00:00Z">
@@ -3845,6 +4002,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre6/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre6/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre6/realearn-user-guide.pdf</source>
+
 
 
 
@@ -3876,6 +4034,7 @@
 
 
 
+
             </version>
 
             <version name="2.8.0-pre4" author="helgoboss" time="2021-03-22T12:00:00Z">
@@ -3895,6 +4054,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre4/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre4/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre4/realearn-user-guide.pdf</source>
+
 
 
 
@@ -3923,6 +4083,7 @@
 
 
 
+
             </version>
 
             <version name="2.8.0-pre2" author="helgoboss" time="2021-03-13T12:00:00Z">
@@ -3938,6 +4099,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre2/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre2/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre2/realearn-user-guide.pdf</source>
+
 
 
 
@@ -3962,6 +4124,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre1/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre1/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre1/realearn-user-guide.pdf</source>
+
 
 
 
@@ -3993,6 +4156,7 @@
 
 
 
+
             </version>
 
             <version name="2.6.0" author="helgoboss" time="2021-03-07T12:00:00Z">
@@ -4012,6 +4176,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.6.0/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.6.0/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.6.0/realearn-user-guide.pdf</source>
+
 
 
 
@@ -4038,6 +4203,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.5.0/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.5.0/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.5.0/realearn-user-guide.pdf</source>
+
 
 
 
@@ -4079,6 +4245,7 @@
 
 
 
+
             </version>
 
             <version name="2.3.2" author="helgoboss" time="2021-02-23T12:00:00Z">
@@ -4091,6 +4258,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.3.2/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.3.2/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.3.2/realearn-user-guide.pdf</source>
+
 
 
 
@@ -4115,6 +4283,7 @@
 
 
 
+
             </version>
 
             <version name="2.3.0" author="helgoboss" time="2021-02-21T12:00:00Z">
@@ -4127,6 +4296,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.3.0/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.3.0/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.3.0/realearn-user-guide.pdf</source>
+
 
 
 
@@ -4155,6 +4325,7 @@
 
 
 
+
             </version>
 
             <version name="2.1.0" author="helgoboss" time="2021-02-13T12:00:00Z">
@@ -4175,6 +4346,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.1.0/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.1.0/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.1.0/realearn-user-guide.pdf</source>
+
 
 
 
@@ -4289,6 +4461,7 @@
 
 
 
+
             </version>
 
             <version name="1.12.0-pre21" author="helgoboss" time="2021-02-08T12:00:00Z">
@@ -4308,6 +4481,7 @@
 
 
 
+
             </version>
 
             <version name="1.12.0-pre20" author="helgoboss" time="2021-01-30T12:00:00Z">
@@ -4319,6 +4493,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre20/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre20/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre20/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -4344,6 +4519,7 @@
 
 
 
+
             </version>
 
             <version name="1.12.0-pre18" author="helgoboss" time="2021-01-26T12:00:00Z">
@@ -4358,6 +4534,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre18/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre18/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre18/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -4388,6 +4565,7 @@
 
 
 
+
             </version>
 
             <version name="1.12.0-pre15" author="helgoboss" time="2021-01-20T12:00:00Z">
@@ -4398,6 +4576,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre15/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre15/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre15/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -4417,6 +4596,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre14/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre14/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre14/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -4443,6 +4623,7 @@
 
 
 
+
             </version>
 
             <version name="1.12.0-pre10" author="helgoboss" time="2021-01-13T12:00:00Z">
@@ -4456,6 +4637,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre10/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre10/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre10/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -4493,6 +4675,7 @@
 
 
 
+
             </version>
 
             <version name="1.12.0-pre8" author="helgoboss" time="2020-12-25T12:00:00Z">
@@ -4515,6 +4698,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre8/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre8/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre8/realearn-user-guide.pdf</source>
+
 
 
 
@@ -4545,6 +4729,7 @@
 
 
 
+
             </version>
 
             <version name="1.12.0-pre6" author="helgoboss" time="2020-12-08T12:00:00Z">
@@ -4558,6 +4743,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre6/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre6/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre6/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -4590,6 +4776,7 @@
 
 
 
+
             </version>
 
             <version name="1.12.0-pre4" author="helgoboss" time="2020-12-03T12:00:00Z">
@@ -4607,6 +4794,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre4/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre4/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre4/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -4637,6 +4825,7 @@
 
 
 
+
             </version>
 
             <version name="1.11.0-pre2" author="helgoboss" time="2020-09-01T12:00:00Z">
@@ -4656,6 +4845,7 @@
 
 
 
+
             </version>
 
             <version name="1.11.0-pre1" author="helgoboss" time="2020-08-28T12:00:00Z">
@@ -4664,6 +4854,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.11.0-pre1/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.11.0-pre1/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.11.0-pre1/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -4732,6 +4923,7 @@
 
 
 
+
             </version>
 
             <version name="1.10.0-pre8" author="helgoboss" time="2020-08-19T12:00:00Z">
@@ -4741,6 +4933,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre8/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre8/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre8/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -4767,6 +4960,7 @@
 
 
 
+
             </version>
 
             <version name="1.10.0-pre6" author="helgoboss" time="2020-07-13T12:00:00Z">
@@ -4778,6 +4972,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre6/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre6/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre6/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -4796,6 +4991,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre5/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre5/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre5/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -4821,6 +5017,7 @@
 
 
 
+
             </version>
 
             <version name="1.10.0-pre3" author="helgoboss" time="2020-06-25T12:00:00Z">
@@ -4830,6 +5027,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre3/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre3/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre3/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -4872,6 +5070,7 @@
 
 
 
+
             </version>
 
 
@@ -4896,6 +5095,47 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
 
+            <version name="2.16.15" author="helgoboss" time="2024-12-13T12:00:00Z">
+                <changelog><![CDATA[- ReaLearn: #1261 Added basic support for Windows 7 and 8 (exceptions: Helgobox App and a few special GUI components)
+- ReaLearn: #1317 Fixed help links to refer to new documentation website
+- ReaLearn: #1343 Fixed bug that caused letter 'P' to be unusable in ReaLearn text fields
+- Playtime: #1348 Added new action and toolbar button Show/hide custom Playtime to use customized Playtime instance from track template (see tutorial)
+- Playtime: #1339 Added matrix recording option Allow tempo detection recording which lets you opt out from automatic tempo detection recording in stopped state when the metronome is disabled, instead always doing a count-in recording (with an audible click, no matter what)
+- Playtime: #1331 Added possibility to remove Playtime toolbar button manually (before that, it was only possible by using the welcome screen)
+- Playtime: #1328 Added tip if mouse events not throttled in REAPER for macOS
+- Playtime: #1328 Added warning if "Stop/repeat playback at end of project" enabled in REAPER
+- Playtime: #1352 Improved MIDI editing by supporting custom note names
+- Playtime: #1313 Improved MIDI editing by making edited items visible on column track and allowing free editing and playback outside of Playtime (for this, simply start or stop playback in REAPER's MIDI editor or arrange view - Playtime will automatically stop its own playback)
+- Playtime: #1351 Improved visibility of playing clips on Launchpads
+- Playtime: #1322 Improved Luau matrix building by allowing any field of the top-level table to be empty (using defaults)
+- Playtime: #1300 Fixed undo closing MIDI editor and sometimes even track after inserting first note
+- Playtime: #1354 Fixed grid controller scrolling possibly getting stuck after changing matrix size
+- Playtime: #1090 Fixed grid controller right and down scrolling LEDs lighting up although not scrollable
+- Playtime: #1313 Fixed play cursor getting stuck in MIDI editor
+- Playtime: #1344 Fixed GUI bug when overriding clip resample mode with "Project default"
+]]></changelog>
+                <source platform="win32" file="FX/helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.15/helgobox-windows-i686.dll</source>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.15/realearn-user-guide.pdf</source>
+
+
+
+
+
+                <!-- Extension -->
+                <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.15/reaper_helgobox-windows-i686.dll</source>
+                <!-- Toolbar icons -->
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime_custom.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime_custom.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime_custom.png</source>
+
+            </version>
+
             <version name="2.16.14" author="helgoboss" time="2024-11-06T12:00:00Z">
                 <changelog><![CDATA[- ReaLearn: #1301 Added new 'Stream Deck' source (supporting both control and quite extensive feedback)
 - ReaLearn: #1308 Added new source 'ReaLearn compartment loaded'
@@ -4916,9 +5156,10 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <!-- Extension -->
                 <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.14/reaper_helgobox-windows-i686.dll</source>
                 <!-- Toolbar icons -->
-                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -4936,9 +5177,10 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <!-- Extension -->
                 <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.13/reaper_helgobox-windows-i686.dll</source>
                 <!-- Toolbar icons -->
-                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -4967,9 +5209,10 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <!-- Extension -->
                 <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.12/reaper_helgobox-windows-i686.dll</source>
                 <!-- Toolbar icons -->
-                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -4994,9 +5237,10 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <!-- Extension -->
                 <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.11/reaper_helgobox-windows-i686.dll</source>
                 <!-- Toolbar icons -->
-                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -5016,9 +5260,10 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <!-- Extension -->
                 <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.10/reaper_helgobox-windows-i686.dll</source>
                 <!-- Toolbar icons -->
-                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -5058,9 +5303,10 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <!-- Extension -->
                 <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.9/reaper_helgobox-windows-i686.dll</source>
                 <!-- Toolbar icons -->
-                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -5084,9 +5330,10 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <!-- Extension -->
                 <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.8/reaper_helgobox-windows-i686.dll</source>
                 <!-- Toolbar icons -->
-                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -5129,9 +5376,10 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <!-- Extension -->
                 <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.4/reaper_helgobox-windows-i686.dll</source>
                 <!-- Toolbar icons -->
-                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -5150,9 +5398,10 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <!-- Extension -->
                 <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.3/reaper_helgobox-windows-i686.dll</source>
                 <!-- Toolbar icons -->
-                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -5195,9 +5444,10 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <!-- Extension -->
                 <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.2/reaper_helgobox-windows-i686.dll</source>
                 <!-- Toolbar icons -->
-                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -5246,9 +5496,10 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <!-- Extension -->
                 <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.1/reaper_helgobox-windows-i686.dll</source>
                 <!-- Toolbar icons -->
-                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -5340,9 +5591,10 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <!-- Extension -->
                 <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.0/reaper_helgobox-windows-i686.dll</source>
                 <!-- Toolbar icons -->
-                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -5365,9 +5617,10 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <!-- Extension -->
                 <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.18/reaper_helgobox-windows-i686.dll</source>
                 <!-- Toolbar icons -->
-                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -5385,9 +5638,10 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <!-- Extension -->
                 <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.17/reaper_helgobox-windows-i686.dll</source>
                 <!-- Toolbar icons -->
-                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -5422,9 +5676,10 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <!-- Extension -->
                 <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.15/reaper_helgobox-windows-i686.dll</source>
                 <!-- Toolbar icons -->
-                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -5442,9 +5697,10 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <!-- Extension -->
                 <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.14/reaper_helgobox-windows-i686.dll</source>
                 <!-- Toolbar icons -->
-                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -5476,9 +5732,10 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <!-- Extension -->
                 <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.13/reaper_helgobox-windows-i686.dll</source>
                 <!-- Toolbar icons -->
-                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -5520,9 +5777,10 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <!-- Extension -->
                 <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.9/reaper_helgobox-windows-i686.dll</source>
                 <!-- Toolbar icons -->
-                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
-                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/e2927854c987a2c3688219a1911f146d88c0d1a1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/master/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
             </version>
 
@@ -5533,6 +5791,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.7/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.7/realearn-user-guide.pdf</source>
+
 
 
 
@@ -5559,6 +5818,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.16.0-pre.2" author="helgoboss" time="2023-11-01T12:00:00Z">
@@ -5573,6 +5833,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.2/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.2/realearn-user-guide.pdf</source>
+
 
 
 
@@ -5600,6 +5861,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.1/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.1/realearn-user-guide.pdf</source>
+
 
 
 
@@ -5641,6 +5903,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.15.0-pre.7" author="helgoboss" time="2023-05-28T12:00:00Z">
@@ -5653,6 +5916,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.15.0-pre.7/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.15.0-pre.7/realearn-user-guide.pdf</source>
+
 
 
 
@@ -5673,6 +5937,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.15.0-pre.6/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.15.0-pre.6/realearn-user-guide.pdf</source>
+
 
 
 
@@ -5703,6 +5968,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.15.0-pre.3" author="helgoboss" time="2023-05-15T12:00:00Z">
@@ -5717,6 +5983,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.15.0-pre.3/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.15.0-pre.3/realearn-user-guide.pdf</source>
+
 
 
 
@@ -5747,6 +6014,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/sounds/click-high.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/e4e7a734524330ab434ee46305fa08b334c7428f/resources/sounds/click-high.mp3</source>
 
 
+
             </version>
 
             <version name="2.15.0-pre.1" author="helgoboss" time="2023-02-28T12:00:00Z">
@@ -5774,6 +6042,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/sounds/click-high.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/e4e7a734524330ab434ee46305fa08b334c7428f/resources/sounds/click-high.mp3</source>
 
 
+
             </version>
 
             <version name="2.14.3" author="helgoboss" time="2023-01-13T12:00:00Z">
@@ -5791,6 +6060,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
                 <source platform="win32" type="data" file="helgoboss/realearn/sounds/click-high.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/e4e7a734524330ab434ee46305fa08b334c7428f/resources/sounds/click-high.mp3</source>
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/sounds/click-high.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/e4e7a734524330ab434ee46305fa08b334c7428f/resources/sounds/click-high.mp3</source>
+
 
 
             </version>
@@ -5818,6 +6088,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
                 <source platform="win32" type="data" file="helgoboss/realearn/sounds/click-high.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/e4e7a734524330ab434ee46305fa08b334c7428f/resources/sounds/click-high.mp3</source>
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/sounds/click-high.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/e4e7a734524330ab434ee46305fa08b334c7428f/resources/sounds/click-high.mp3</source>
+
 
 
             </version>
@@ -5918,6 +6189,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.14.0-pre.11" author="helgoboss" time="2022-11-21T12:00:00Z">
@@ -5944,6 +6216,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
                 <source platform="win32" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
 
 
 
@@ -5980,6 +6253,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.14.0-pre.9" author="helgoboss" time="2022-11-02T12:00:00Z">
@@ -6003,6 +6277,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
                 <source platform="win32" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
 
 
 
@@ -6030,6 +6305,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.14.0-pre.6" author="helgoboss" time="2022-10-09T12:00:00Z">
@@ -6050,6 +6326,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
                 <source platform="win32" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
 
 
 
@@ -6077,6 +6354,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.14.0-pre.4" author="helgoboss" time="2022-09-24T12:00:00Z">
@@ -6097,6 +6375,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
                 <source platform="win32" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
 
 
 
@@ -6122,6 +6401,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
                 <source platform="win32" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/18884996521e66dad0e8d972e186d55ac34cbe14/resources/sounds/high-click.mp3</source>
+
 
 
 
@@ -6171,6 +6451,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.13.1" author="helgoboss" time="2022-07-10T12:00:00Z">
@@ -6183,6 +6464,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.1/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.1/realearn-linux-armv7.so</source>
+
 
 
 
@@ -6292,6 +6574,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.13.0-pre-13" author="helgoboss" time="2022-07-06T12:00:00Z">
@@ -6306,6 +6589,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre-13/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre-13/realearn-linux-armv7.so</source>
+
 
 
 
@@ -6331,6 +6615,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.13.0-pre.11" author="helgoboss" time="2022-06-24T12:00:00Z">
@@ -6345,6 +6630,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.11/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.11/realearn-linux-armv7.so</source>
+
 
 
 
@@ -6365,6 +6651,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.10/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.10/realearn-linux-armv7.so</source>
+
 
 
 
@@ -6390,6 +6677,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.13.0-pre.8" author="helgoboss" time="2022-06-18T12:00:00Z">
@@ -6404,6 +6692,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.8/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.8/realearn-linux-armv7.so</source>
+
 
 
 
@@ -6426,6 +6715,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.7/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.7/realearn-linux-armv7.so</source>
+
 
 
 
@@ -6463,6 +6753,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.13.0-pre.4" author="helgoboss" time="2022-05-13T12:00:00Z">
@@ -6493,6 +6784,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.13.0-pre.3" author="helgoboss" time="2022-04-08T12:00:00Z">
@@ -6508,6 +6800,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.3/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.3/realearn-linux-armv7.so</source>
+
 
 
 
@@ -6543,6 +6836,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.13.0-pre.1" author="helgoboss" time="2022-03-25T12:00:00Z">
@@ -6573,6 +6867,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.1/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.1/realearn-linux-armv7.so</source>
+
 
 
 
@@ -6616,6 +6911,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.12.0-pre.4" author="helgoboss" time="2021-12-30T12:00:00Z">
@@ -6640,6 +6936,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.12.0-pre.3" author="helgoboss" time="2021-12-24T12:00:00Z">
@@ -6652,6 +6949,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.12.0-pre.3/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/helgobox/releases/download/v2.12.0-pre.3/realearn-linux-armv7.so</source>
+
 
 
 
@@ -6671,6 +6969,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.12.0-pre.1/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/helgobox/releases/download/v2.12.0-pre.1/realearn-linux-armv7.so</source>
+
 
 
 
@@ -6742,6 +7041,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.11.0-pre.15" author="helgoboss" time="2021-11-22T12:00:00Z">
@@ -6769,6 +7069,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.11.0-pre.14" author="helgoboss" time="2021-11-18T12:00:00Z">
@@ -6784,6 +7085,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.14/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.14/realearn-linux-armv7.so</source>
+
 
 
 
@@ -6818,6 +7120,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.11.0-pre.12" author="helgoboss" time="2021-11-01T12:00:00Z">
@@ -6836,6 +7139,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.11.0-pre.11" author="helgoboss" time="2021-10-30T12:00:00Z">
@@ -6849,6 +7153,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.11/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.11/realearn-linux-armv7.so</source>
+
 
 
 
@@ -6872,6 +7177,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.11.0-pre.8" author="helgoboss" time="2021-10-14T12:00:00Z">
@@ -6884,6 +7190,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
                 <source platform="linux-armv7l" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.8/realearn-user-guide.pdf</source>
                 <source platform="linux-armv7l" file="FX/ReaLearn-armv7.so">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.8/realearn-linux-armv7.so</source>
+
 
 
 
@@ -6906,6 +7213,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.11.0-pre.3" author="helgoboss" time="2021-10-09T12:00:00Z">
@@ -6914,6 +7222,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.3/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.3/realearn-user-guide.pdf</source>
+
 
 
 
@@ -6935,6 +7244,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.2/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.2/realearn-user-guide.pdf</source>
+
 
 
 
@@ -6963,6 +7273,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.10.4" author="helgoboss" time="2021-11-01T12:00:00Z">
@@ -6972,6 +7283,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.10.4/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.10.4/realearn-user-guide.pdf</source>
+
 
 
 
@@ -6990,6 +7302,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.10.2" author="helgoboss" time="2021-09-16T12:00:00Z">
@@ -7003,6 +7316,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.10.1" author="helgoboss" time="2021-09-14T12:00:00Z">
@@ -7011,6 +7325,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.10.1/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.10.1/realearn-user-guide.pdf</source>
+
 
 
 
@@ -7075,6 +7390,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.10.0-pre.10" author="helgoboss" time="2021-09-02T12:00:00Z">
@@ -7085,6 +7401,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.10.0-pre.10/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.10.0-pre.10/realearn-user-guide.pdf</source>
+
 
 
 
@@ -7113,6 +7430,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.10.0-pre.6" author="helgoboss" time="2021-08-01T12:00:00Z">
@@ -7129,6 +7447,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.10.0-pre.5" author="helgoboss" time="2021-07-24T12:00:00Z">
@@ -7140,6 +7459,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.10.0-pre.5/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.10.0-pre.5/realearn-user-guide.pdf</source>
+
 
 
 
@@ -7165,6 +7485,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.10.0-pre.3" author="helgoboss" time="2021-07-17T12:00:00Z">
@@ -7184,6 +7505,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.10.0-pre.2" author="helgoboss" time="2021-05-18T12:00:00Z">
@@ -7193,6 +7515,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.10.0-pre.2/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.10.0-pre.2/realearn-user-guide.pdf</source>
+
 
 
 
@@ -7218,6 +7541,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.9.1" author="helgoboss" time="2021-05-16T12:00:00Z">
@@ -7226,6 +7550,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.9.1/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.9.1/realearn-user-guide.pdf</source>
+
 
 
 
@@ -7253,6 +7578,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.9.0-pre.9" author="helgoboss" time="2021-05-11T12:00:00Z">
@@ -7262,6 +7588,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.9.0-pre.9/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.9.0-pre.9/realearn-user-guide.pdf</source>
+
 
 
 
@@ -7282,6 +7609,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.9.0-pre.7" author="helgoboss" time="2021-05-03T12:00:00Z">
@@ -7292,6 +7620,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.9.0-pre.7/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.9.0-pre.7/realearn-user-guide.pdf</source>
+
 
 
 
@@ -7311,6 +7640,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.9.0-pre.5" author="helgoboss" time="2021-04-30T12:00:00Z">
@@ -7319,6 +7649,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.9.0-pre.5/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.9.0-pre.5/realearn-user-guide.pdf</source>
+
 
 
 
@@ -7337,6 +7668,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.8.2" author="helgoboss" time="2021-04-29T12:00:00Z">
@@ -7347,6 +7679,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.8.2/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.2/realearn-user-guide.pdf</source>
+
 
 
 
@@ -7456,6 +7789,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.8.0-rc.6" author="helgoboss" time="2021-04-23T12:00:00Z">
@@ -7471,6 +7805,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.6/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.6/realearn-user-guide.pdf</source>
+
 
 
 
@@ -7495,6 +7830,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.8.0-rc.4" author="helgoboss" time="2021-04-14T12:00:00Z">
@@ -7512,6 +7848,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.4/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.4/realearn-user-guide.pdf</source>
+
 
 
 
@@ -7542,6 +7879,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.8.0-rc.1" author="helgoboss" time="2021-04-06T12:00:00Z">
@@ -7557,6 +7895,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.1/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.1/realearn-user-guide.pdf</source>
+
 
 
 
@@ -7580,6 +7919,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.8.0-pre8" author="helgoboss" time="2021-03-31T12:00:00Z">
@@ -7592,6 +7932,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre8/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre8/realearn-user-guide.pdf</source>
+
 
 
 
@@ -7623,6 +7964,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.8.0-pre6" author="helgoboss" time="2021-03-25T12:00:00Z">
@@ -7636,6 +7978,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre6/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre6/realearn-user-guide.pdf</source>
+
 
 
 
@@ -7661,6 +8004,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.8.0-pre4" author="helgoboss" time="2021-03-22T12:00:00Z">
@@ -7676,6 +8020,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre4/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre4/realearn-user-guide.pdf</source>
+
 
 
 
@@ -7698,6 +8043,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.8.0-pre2" author="helgoboss" time="2021-03-13T12:00:00Z">
@@ -7709,6 +8055,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre2/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre2/realearn-user-guide.pdf</source>
+
 
 
 
@@ -7728,6 +8075,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre1/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre1/realearn-user-guide.pdf</source>
+
 
 
 
@@ -7753,6 +8101,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.6.0" author="helgoboss" time="2021-03-07T12:00:00Z">
@@ -7768,6 +8117,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.6.0/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.6.0/realearn-user-guide.pdf</source>
+
 
 
 
@@ -7789,6 +8139,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.5.0/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.5.0/realearn-user-guide.pdf</source>
+
 
 
 
@@ -7824,6 +8175,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.3.2" author="helgoboss" time="2021-02-23T12:00:00Z">
@@ -7832,6 +8184,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.3.2/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.3.2/realearn-user-guide.pdf</source>
+
 
 
 
@@ -7850,6 +8203,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.3.0" author="helgoboss" time="2021-02-21T12:00:00Z">
@@ -7858,6 +8212,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.3.0/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.3.0/realearn-user-guide.pdf</source>
+
 
 
 
@@ -7880,6 +8235,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="2.1.0" author="helgoboss" time="2021-02-13T12:00:00Z">
@@ -7896,6 +8252,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.1.0/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.1.0/realearn-user-guide.pdf</source>
+
 
 
 
@@ -8004,6 +8361,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="1.12.0-pre21" author="helgoboss" time="2021-02-08T12:00:00Z">
@@ -8020,6 +8378,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="1.12.0-pre20" author="helgoboss" time="2021-01-30T12:00:00Z">
@@ -8029,6 +8388,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Fixed bug that caused ReaLearn-monitoring-FX controlled targets to become sticky when switching between project tabs (not updating correctly)
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre20/realearn-windows-i686.dll</source>
+
 
 
 
@@ -8050,6 +8410,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="1.12.0-pre18" author="helgoboss" time="2021-01-26T12:00:00Z">
@@ -8062,6 +8423,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Fixed bug when moving mapping to another group that caused the activation conditions to not immediately be reflected
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre18/realearn-windows-i686.dll</source>
+
 
 
 
@@ -8088,6 +8450,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="1.12.0-pre15" author="helgoboss" time="2021-01-20T12:00:00Z">
@@ -8096,6 +8459,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Fixed segmentation fault on Linux when loading ReaLearn after plug-in scan
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre15/realearn-windows-i686.dll</source>
+
 
 
 
@@ -8112,6 +8476,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Fixed double-processing of MIDI messages when "MIDI control input" set to MIDI device
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre14/realearn-windows-i686.dll</source>
+
 
 
 
@@ -8134,6 +8499,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="1.12.0-pre10" author="helgoboss" time="2021-01-13T12:00:00Z">
@@ -8145,6 +8511,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Fixed wording in mapping row panel context menu
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre10/realearn-windows-i686.dll</source>
+
 
 
 
@@ -8176,6 +8543,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="1.12.0-pre8" author="helgoboss" time="2020-12-25T12:00:00Z">
@@ -8194,6 +8562,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre8/realearn-windows-i686.dll</source>
 
                 <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre8/realearn-user-guide.pdf</source>
+
 
 
 
@@ -8220,6 +8589,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="1.12.0-pre6" author="helgoboss" time="2020-12-08T12:00:00Z">
@@ -8231,6 +8601,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Fixed error message if track could not be found
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre6/realearn-windows-i686.dll</source>
+
 
 
 
@@ -8259,6 +8630,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="1.12.0-pre4" author="helgoboss" time="2020-12-03T12:00:00Z">
@@ -8274,6 +8646,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Fixed error message when trying to pick action
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre4/realearn-windows-i686.dll</source>
+
 
 
 
@@ -8300,6 +8673,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="1.11.0-pre2" author="helgoboss" time="2020-09-01T12:00:00Z">
@@ -8316,12 +8690,14 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="1.11.0-pre1" author="helgoboss" time="2020-08-28T12:00:00Z">
                 <changelog><![CDATA[- Added feature 'conditional activation' for (de)activating mappings based on parameter values
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v1.11.0-pre1/realearn-windows-i686.dll</source>
+
 
 
 
@@ -8386,6 +8762,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="1.10.0-pre8" author="helgoboss" time="2020-08-19T12:00:00Z">
@@ -8393,6 +8770,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Improved error handling: Some possible smaller errors/misbehaviors where totally ignored in previous versions and therefore might have gone unnoticed. In this version, ReaLearn will print a bug report if it detects such a smaller error, exactly like it already did before with more serious errors. (ReaLearn follows a fail-fast approach in order to detect errors early instead of letting them introduce subtle and hard-to-analyze bugs.)
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre8/realearn-windows-i686.dll</source>
+
 
 
 
@@ -8415,6 +8793,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="1.10.0-pre6" author="helgoboss" time="2020-07-13T12:00:00Z">
@@ -8424,6 +8803,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Fixed non-moving slider when slider currently focused
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre6/realearn-windows-i686.dll</source>
+
 
 
 
@@ -8439,6 +8819,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Fixed sometimes not working FX parameter learn
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre5/realearn-windows-i686.dll</source>
+
 
 
 
@@ -8460,6 +8841,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
 
 
+
             </version>
 
             <version name="1.10.0-pre3" author="helgoboss" time="2020-06-25T12:00:00Z">
@@ -8467,6 +8849,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Include more diagnostic information in error log messages (debug info such as line numbers)
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre3/realearn-windows-i686.dll</source>
+
 
 
 
@@ -8500,6 +8883,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Fixed bug that caused feedback and learn not working with master track
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre2/realearn-windows-i686.dll</source>
+
 
 
 
