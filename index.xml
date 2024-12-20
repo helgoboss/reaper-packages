@@ -3,6 +3,48 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
 
+            <version name="2.16.17" author="helgoboss" time="2024-12-20T12:00:00Z">
+                <changelog><![CDATA[- General: #1304 Fixed Linux version possibly not loading (2.16.16 depended on libssl, this one doesn't)
+]]></changelog>
+                <source platform="win64" file="FX/helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.17/helgobox-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/helgobox-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.17/helgobox-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/helgobox-x64.so">https://github.com/helgoboss/helgobox/releases/download/v2.16.17/helgobox-linux-x86_64.so</source>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.17/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.17/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.17/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.17/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/helgobox-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.17/helgobox-macos-aarch64.vst.dylib</source>
+
+
+
+
+
+                <!-- Extension -->
+                <source platform="darwin-arm64" file="reaper_helgobox-arm64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.17/reaper_helgobox-macos-aarch64.dylib</source>
+                <source platform="darwin64" file="reaper_helgobox-x64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.17/reaper_helgobox-macos-x86_64.dylib</source>
+                <source platform="win64" file="reaper_helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.17/reaper_helgobox-windows-x86_64.dll</source>
+                <!-- App -->
+                <source platform="win64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.18.0/helgobox-app-windows.tar.zst</source>
+                <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.18.0/helgobox-app-macos.tar.zst</source>
+                <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.18.0/helgobox-app-macos.tar.zst</source>
+                <!-- Toolbar icons -->
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.17/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.17/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.17/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.17/resources/artwork/toolbar_icons/toolbar_playtime_custom.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.17/resources/artwork/toolbar_icons/150/toolbar_playtime_custom.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.17/resources/artwork/toolbar_icons/200/toolbar_playtime_custom.png</source>
+
+
+                <source platform="all" type="data" file="helgoboss/helgobox/doc/about.html">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.17/about.html</source>
+
+            </version>
+
             <version name="2.16.16" author="helgoboss" time="2024-12-20T12:00:00Z">
                 <changelog><![CDATA[- General: #1304 Added support for automatically sending errors to developer
 - General: #1304 Added possibility to flexibly configure error reporting (automatic sending and console logging)
@@ -5125,6 +5167,34 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
+
+            <version name="2.16.17" author="helgoboss" time="2024-12-20T12:00:00Z">
+                <changelog><![CDATA[- General: #1304 Fixed Linux version possibly not loading (2.16.16 depended on libssl, this one doesn't)
+]]></changelog>
+                <source platform="win32" file="FX/helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.17/helgobox-windows-i686.dll</source>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.17/realearn-user-guide.pdf</source>
+
+
+
+
+
+                <!-- Extension -->
+                <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.16.17/reaper_helgobox-windows-i686.dll</source>
+                <!-- Toolbar icons -->
+                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.17/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.17/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.17/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+
+                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.17/resources/artwork/toolbar_icons/toolbar_playtime_custom.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.17/resources/artwork/toolbar_icons/150/toolbar_playtime_custom.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.17/resources/artwork/toolbar_icons/200/toolbar_playtime_custom.png</source>
+
+
+                <source platform="win32" type="data" file="helgoboss/helgobox/doc/about.html">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.17/about.html</source>
+
+            </version>
 
             <version name="2.16.16" author="helgoboss" time="2024-12-20T12:00:00Z">
                 <changelog><![CDATA[- General: #1304 Added support for automatically sending errors to developer
