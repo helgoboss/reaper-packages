@@ -168,6 +168,54 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
 
+            <version name="2.17.1" author="helgoboss" time="2024-12-28T12:00:00Z">
+                <changelog><![CDATA[- General: #1381 Fixed possible "This app does not have Accessibility Permissions enabled and will not work" error when using Pot Browser ot ReaLearn mouse target on macOS (is now handled a bit more gracefully)
+- General: #1376 Fixed possible hard crash when closing REAPER while Helgobox loaded
+- ReaLearn: #1366 Improved target "Track: Set automation touch state" by adding "Respect grouping" and "Selection ganging" checkboxes
+- ReaLearn: #1382 Fixed possible "entered unreachable code" error when interacting with ReaLearn windows
+- ReaLearn: #1384 Fixed compatibility with older macOS versions (2.16.16 broke compatibility with macOS 10.13 and 10.14)
+- ReaLearn: #1366 Fixed laggy target "Track: Set automation touch state", this time for good
+- Playtime: #1380 Fixed possible "Track not available" error when using Playtime
+]]></changelog>
+                <source platform="win64" file="FX/helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.17.1/helgobox-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/helgobox-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.17.1/helgobox-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/helgobox-x64.so">https://github.com/helgoboss/helgobox/releases/download/v2.17.1/helgobox-linux-x86_64.so</source>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.17.1/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.17.1/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.17.1/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.17.1/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/helgobox-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.17.1/helgobox-macos-aarch64.vst.dylib</source>
+
+
+
+
+
+                <!-- Extension -->
+                <source platform="darwin-arm64" file="reaper_helgobox-arm64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.17.1/reaper_helgobox-macos-aarch64.dylib</source>
+                <source platform="darwin64" file="reaper_helgobox-x64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.17.1/reaper_helgobox-macos-x86_64.dylib</source>
+                <source platform="win64" file="reaper_helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.17.1/reaper_helgobox-windows-x86_64.dll</source>
+                <!-- App -->
+                <source platform="win64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.18.0/helgobox-app-windows.tar.zst</source>
+                <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.18.0/helgobox-app-macos.tar.zst</source>
+                <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.18.0/helgobox-app-macos.tar.zst</source>
+                <!-- Toolbar icons -->
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.1/resources/artwork/toolbar_icons/toolbar_playtime_custom.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.1/resources/artwork/toolbar_icons/150/toolbar_playtime_custom.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.1/resources/artwork/toolbar_icons/200/toolbar_playtime_custom.png</source>
+
+
+                <source platform="all" type="data" file="helgoboss/helgobox/doc/about.html">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.1/about.html</source>
+
+            </version>
+
             <version name="2.17.0" author="helgoboss" time="2024-12-21T12:00:00Z">
                 <changelog><![CDATA[- General: Fixed long error message when attempting to enable Playtime toolbar button in older REAPER version
 - ReaLearn: Fixed auto detection of Akai grid controllers (now accepts a broader range of firmware versions)
@@ -5418,6 +5466,40 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
+
+            <version name="2.17.1" author="helgoboss" time="2024-12-28T12:00:00Z">
+                <changelog><![CDATA[- General: #1381 Fixed possible "This app does not have Accessibility Permissions enabled and will not work" error when using Pot Browser ot ReaLearn mouse target on macOS (is now handled a bit more gracefully)
+- General: #1376 Fixed possible hard crash when closing REAPER while Helgobox loaded
+- ReaLearn: #1366 Improved target "Track: Set automation touch state" by adding "Respect grouping" and "Selection ganging" checkboxes
+- ReaLearn: #1382 Fixed possible "entered unreachable code" error when interacting with ReaLearn windows
+- ReaLearn: #1384 Fixed compatibility with older macOS versions (2.16.16 broke compatibility with macOS 10.13 and 10.14)
+- ReaLearn: #1366 Fixed laggy target "Track: Set automation touch state", this time for good
+- Playtime: #1380 Fixed possible "Track not available" error when using Playtime
+]]></changelog>
+                <source platform="win32" file="FX/helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.17.1/helgobox-windows-i686.dll</source>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.17.1/realearn-user-guide.pdf</source>
+
+
+
+
+
+                <!-- Extension -->
+                <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.17.1/reaper_helgobox-windows-i686.dll</source>
+                <!-- Toolbar icons -->
+                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+
+                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.1/resources/artwork/toolbar_icons/toolbar_playtime_custom.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.1/resources/artwork/toolbar_icons/150/toolbar_playtime_custom.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.1/resources/artwork/toolbar_icons/200/toolbar_playtime_custom.png</source>
+
+
+                <source platform="win32" type="data" file="helgoboss/helgobox/doc/about.html">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.1/about.html</source>
+
+            </version>
 
             <version name="2.17.0" author="helgoboss" time="2024-12-21T12:00:00Z">
                 <changelog><![CDATA[- General: Fixed long error message when attempting to enable Playtime toolbar button in older REAPER version
