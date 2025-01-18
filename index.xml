@@ -168,6 +168,63 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
 
+            <version name="2.18.0-pre.1" author="helgoboss" time="2024-01-18T12:00:00Z">
+                <changelog><![CDATA[- General: #1413 Helgobox App: Added possibility to run the app in remote mode (connecting to Helgobox Plug-In via network connection)
+- General: #1411 Improved window title bar layout (theme switcher was clipped before, even with a small but normal window width)
+- Playtime: #1391 Added experimental Linux support as stage 1 (engine and app now run on Linux, the app only runs in remote mode so far, x64 and arm64 are supported)
+- Playtime: #1399 Added proper support for importing multiple items at once
+- ReaLearn: #1391 Added Linux arm64 support again (it was paused for some releases)
+]]></changelog>
+                <source platform="win64" file="FX/helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.1/helgobox-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/helgobox-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.1/helgobox-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/helgobox-x64.so">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.1/helgobox-linux-x86_64.so</source>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.1/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/helgobox-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.1/helgobox-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.1/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/helgobox-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.1/helgobox-linux-aarch64.so</source>
+
+
+
+
+                <!-- Extension -->
+                <source platform="darwin-arm64" file="reaper_helgobox-arm64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.1/reaper_helgobox-macos-aarch64.dylib</source>
+                <source platform="darwin64" file="reaper_helgobox-x64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.1/reaper_helgobox-macos-x86_64.dylib</source>
+                <source platform="win64" file="reaper_helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.1/reaper_helgobox-windows-x86_64.dll</source>
+                <!-- App -->
+                <source platform="win64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.19.0/helgobox-app-windows.tar.zst</source>
+                <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.19.0/helgobox-app-macos.tar.zst</source>
+                <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.19.0/helgobox-app-macos.tar.zst</source>
+                <!-- Toolbar icons -->
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+
+                <!-- Extension (Linux) -->
+                <source platform="linux64" file="reaper_helgobox-x64.so">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.1/reaper_helgobox-linux-x86_64.so</source>
+                <source platform="linux-aarch64" file="reaper_helgobox-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.1/reaper_helgobox-linux-aarch64.so</source>
+                <!-- App (Linux) -->
+                <source platform="linux64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.19.0/helgobox-app-linux-x64.tar.zst</source>
+                <source platform="linux-aarch64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.19.0/helgobox-app-linux-arm64.tar.zst</source>
+
+
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.1/resources/artwork/toolbar_icons/toolbar_playtime_custom.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.1/resources/artwork/toolbar_icons/150/toolbar_playtime_custom.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.1/resources/artwork/toolbar_icons/200/toolbar_playtime_custom.png</source>
+
+
+                <source platform="all" type="data" file="helgoboss/helgobox/doc/about.html">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.1/about.html</source>
+
+            </version>
+
             <version name="2.17.2" author="helgoboss" time="2024-12-31T12:00:00Z">
                 <changelog><![CDATA[- General: Improved error reporting when error doesn't happen in main thread (now opens console, if configured, as it was in the past)
 - General: #1392 Improved error notification when attempting to add Helgobox to an FX container or item/take FX
@@ -202,6 +259,7 @@
                 <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.2/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.2/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.2/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
 
                 <source platform="all" type="data" file="toolbar_icons/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.2/resources/artwork/toolbar_icons/toolbar_playtime_custom.png</source>
@@ -252,6 +310,7 @@
                 <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
 
 
+
                 <source platform="all" type="data" file="toolbar_icons/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.1/resources/artwork/toolbar_icons/toolbar_playtime_custom.png</source>
                 <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.1/resources/artwork/toolbar_icons/150/toolbar_playtime_custom.png</source>
                 <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.1/resources/artwork/toolbar_icons/200/toolbar_playtime_custom.png</source>
@@ -296,6 +355,7 @@
                 <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.0/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
 
 
+
                 <source platform="all" type="data" file="toolbar_icons/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.0/resources/artwork/toolbar_icons/toolbar_playtime_custom.png</source>
                 <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.0/resources/artwork/toolbar_icons/150/toolbar_playtime_custom.png</source>
                 <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.17.0/resources/artwork/toolbar_icons/200/toolbar_playtime_custom.png</source>
@@ -338,6 +398,7 @@
                 <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.18/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
 
 
+
                 <source platform="all" type="data" file="toolbar_icons/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.18/resources/artwork/toolbar_icons/toolbar_playtime_custom.png</source>
                 <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.18/resources/artwork/toolbar_icons/150/toolbar_playtime_custom.png</source>
                 <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.18/resources/artwork/toolbar_icons/200/toolbar_playtime_custom.png</source>
@@ -378,6 +439,7 @@
                 <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.17/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.17/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.17/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
 
                 <source platform="all" type="data" file="toolbar_icons/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.17/resources/artwork/toolbar_icons/toolbar_playtime_custom.png</source>
@@ -429,6 +491,7 @@
                 <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.16/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.16/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.16/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
 
                 <source platform="all" type="data" file="toolbar_icons/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.16/resources/artwork/toolbar_icons/toolbar_playtime_custom.png</source>
@@ -489,6 +552,7 @@
                 <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.15/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
 
 
+
                 <source platform="all" type="data" file="toolbar_icons/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.15/resources/artwork/toolbar_icons/toolbar_playtime_custom.png</source>
                 <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.15/resources/artwork/toolbar_icons/150/toolbar_playtime_custom.png</source>
                 <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.15/resources/artwork/toolbar_icons/200/toolbar_playtime_custom.png</source>
@@ -536,6 +600,7 @@
 
 
 
+
             </version>
 
             <version name="2.16.13" author="helgoboss" time="2024-11-02T12:00:00Z">
@@ -569,6 +634,7 @@
                 <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.13/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.13/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.13/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
 
 
@@ -619,6 +685,7 @@
 
 
 
+
             </version>
 
             <version name="2.16.11" author="helgoboss" time="2024-10-23T12:00:00Z">
@@ -662,6 +729,7 @@
 
 
 
+
             </version>
 
             <version name="2.16.10" author="helgoboss" time="2024-09-28T12:00:00Z">
@@ -697,6 +765,7 @@
                 <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.10/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.10/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.10/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
 
 
@@ -758,6 +827,7 @@
 
 
 
+
             </version>
 
             <version name="2.16.8" author="helgoboss" time="2024-09-14T12:00:00Z">
@@ -797,6 +867,7 @@
                 <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.8/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.8/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.8/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
 
 
@@ -861,6 +932,7 @@
 
 
 
+
             </version>
 
             <version name="2.16.3" author="helgoboss" time="2024-08-24T12:00:00Z">
@@ -895,6 +967,7 @@
                 <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.3/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.3/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.3/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
 
 
@@ -956,6 +1029,7 @@
                 <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.2/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.2/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.2/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
 
 
@@ -1023,6 +1097,7 @@
                 <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
 
 
@@ -1136,6 +1211,7 @@
 
 
 
+
             </version>
 
             <version name="2.16.0-pre.18" author="helgoboss" time="2024-07-04T12:00:00Z">
@@ -1177,6 +1253,7 @@
 
 
 
+
             </version>
 
             <version name="2.16.0-pre.17" author="helgoboss" time="2024-06-19T12:00:00Z">
@@ -1210,6 +1287,7 @@
                 <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.0-pre.17/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.0-pre.17/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.0-pre.17/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
 
 
@@ -1266,6 +1344,7 @@
 
 
 
+
             </version>
 
             <version name="2.16.0-pre.14" author="helgoboss" time="2024-04-24T12:00:00Z">
@@ -1299,6 +1378,7 @@
                 <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.0-pre.14/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.0-pre.14/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.0-pre.14/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
 
 
@@ -1349,6 +1429,7 @@
                 <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.0-pre.13/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.0-pre.13/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
                 <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.16.0-pre.13/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
 
 
 
@@ -1412,6 +1493,7 @@
 
 
 
+
             </version>
 
             <version name="2.16.0-pre.7" author="helgoboss" time="2023-12-21T12:00:00Z">
@@ -1429,6 +1511,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.7/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.7/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -1467,6 +1550,7 @@
 
 
 
+
             </version>
 
             <version name="2.16.0-pre.2" author="helgoboss" time="2023-11-01T12:00:00Z">
@@ -1489,6 +1573,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.2/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.2/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -1526,6 +1611,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.1/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.16.0-pre.1/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -1579,6 +1665,7 @@
 
 
 
+
             </version>
 
             <version name="2.15.0-pre.7" author="helgoboss" time="2023-05-28T12:00:00Z">
@@ -1599,6 +1686,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.15.0-pre.7/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.15.0-pre.7/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -1629,6 +1717,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.15.0-pre.6/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.15.0-pre.6/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -1671,6 +1760,7 @@
 
 
 
+
             </version>
 
             <version name="2.15.0-pre.3" author="helgoboss" time="2023-05-15T12:00:00Z">
@@ -1693,6 +1783,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.15.0-pre.3/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.15.0-pre.3/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -1738,6 +1829,7 @@
 
 
 
+
             </version>
 
             <version name="2.15.0-pre.1" author="helgoboss" time="2023-02-28T12:00:00Z">
@@ -1778,6 +1870,7 @@
 
 
 
+
             </version>
 
             <version name="2.14.3" author="helgoboss" time="2023-01-13T12:00:00Z">
@@ -1806,6 +1899,7 @@
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/sounds/click-high.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/v2.14.3/resources/sounds/click-high.mp3</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/sounds/click-high.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/v2.14.3/resources/sounds/click-high.mp3</source>
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/click-high.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/v2.14.3/resources/sounds/click-high.mp3</source>
+
 
 
 
@@ -1846,6 +1940,7 @@
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/sounds/click-high.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/v2.14.2/resources/sounds/click-high.mp3</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/sounds/click-high.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/v2.14.2/resources/sounds/click-high.mp3</source>
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/click-high.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/v2.14.2/resources/sounds/click-high.mp3</source>
+
 
 
 
@@ -1961,6 +2056,7 @@
 
 
 
+
             </version>
 
             <version name="2.14.0-pre.11" author="helgoboss" time="2022-11-21T12:00:00Z">
@@ -1998,6 +2094,7 @@
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/v2.14.0-pre.11/resources/sounds/high-click.mp3</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/v2.14.0-pre.11/resources/sounds/high-click.mp3</source>
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/v2.14.0-pre.11/resources/sounds/high-click.mp3</source>
+
 
 
 
@@ -2049,6 +2146,7 @@
 
 
 
+
             </version>
 
             <version name="2.14.0-pre.9" author="helgoboss" time="2022-11-02T12:00:00Z">
@@ -2083,6 +2181,7 @@
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/v2.14.0-pre.9/resources/sounds/high-click.mp3</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/v2.14.0-pre.9/resources/sounds/high-click.mp3</source>
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/v2.14.0-pre.9/resources/sounds/high-click.mp3</source>
+
 
 
 
@@ -2125,6 +2224,7 @@
 
 
 
+
             </version>
 
             <version name="2.14.0-pre.6" author="helgoboss" time="2022-10-09T12:00:00Z">
@@ -2156,6 +2256,7 @@
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/v2.14.0-pre.6/resources/sounds/high-click.mp3</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/v2.14.0-pre.6/resources/sounds/high-click.mp3</source>
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/v2.14.0-pre.6/resources/sounds/high-click.mp3</source>
+
 
 
 
@@ -2198,6 +2299,7 @@
 
 
 
+
             </version>
 
             <version name="2.14.0-pre.4" author="helgoboss" time="2022-09-24T12:00:00Z">
@@ -2229,6 +2331,7 @@
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/v2.14.0-pre.4/resources/sounds/high-click.mp3</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/v2.14.0-pre.4/resources/sounds/high-click.mp3</source>
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/v2.14.0-pre.4/resources/sounds/high-click.mp3</source>
+
 
 
 
@@ -2267,6 +2370,7 @@
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/v2.14.0-pre.3/resources/sounds/high-click.mp3</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/v2.14.0-pre.3/resources/sounds/high-click.mp3</source>
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/sounds/high-click.mp3">https://raw.githubusercontent.com/helgoboss/helgobox/v2.14.0-pre.3/resources/sounds/high-click.mp3</source>
+
 
 
 
@@ -2331,6 +2435,7 @@
 
 
 
+
             </version>
 
             <version name="2.13.1" author="helgoboss" time="2022-07-10T12:00:00Z">
@@ -2351,6 +2456,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.1/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.1/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -2472,6 +2578,7 @@
 
 
 
+
             </version>
 
             <version name="2.13.0-pre-13" author="helgoboss" time="2022-07-06T12:00:00Z">
@@ -2494,6 +2601,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre-13/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre-13/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -2531,6 +2639,7 @@
 
 
 
+
             </version>
 
             <version name="2.13.0-pre.11" author="helgoboss" time="2022-06-24T12:00:00Z">
@@ -2553,6 +2662,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.11/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.11/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -2583,6 +2693,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.10/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.10/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -2620,6 +2731,7 @@
 
 
 
+
             </version>
 
             <version name="2.13.0-pre.8" author="helgoboss" time="2022-06-18T12:00:00Z">
@@ -2642,6 +2754,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.8/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.8/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -2674,6 +2787,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.7/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.7/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -2723,6 +2837,7 @@
 
 
 
+
             </version>
 
             <version name="2.13.0-pre.4" author="helgoboss" time="2022-05-13T12:00:00Z">
@@ -2763,6 +2878,7 @@
 
 
 
+
             </version>
 
             <version name="2.13.0-pre.3" author="helgoboss" time="2022-04-08T12:00:00Z">
@@ -2786,6 +2902,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.3/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.3/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -2833,6 +2950,7 @@
 
 
 
+
             </version>
 
             <version name="2.13.0-pre.1" author="helgoboss" time="2022-03-25T12:00:00Z">
@@ -2871,6 +2989,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.1/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.1/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -2926,6 +3045,7 @@
 
 
 
+
             </version>
 
             <version name="2.12.0-pre.4" author="helgoboss" time="2021-12-30T12:00:00Z">
@@ -2960,6 +3080,7 @@
 
 
 
+
             </version>
 
             <version name="2.12.0-pre.3" author="helgoboss" time="2021-12-24T12:00:00Z">
@@ -2980,6 +3101,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.12.0-pre.3/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.12.0-pre.3/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -3009,6 +3131,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.12.0-pre.1/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.12.0-pre.1/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -3092,6 +3215,7 @@
 
 
 
+
             </version>
 
             <version name="2.11.0-pre.15" author="helgoboss" time="2021-11-22T12:00:00Z">
@@ -3129,6 +3253,7 @@
 
 
 
+
             </version>
 
             <version name="2.11.0-pre.14" author="helgoboss" time="2021-11-18T12:00:00Z">
@@ -3152,6 +3277,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.14/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.14/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -3198,6 +3324,7 @@
 
 
 
+
             </version>
 
             <version name="2.11.0-pre.12" author="helgoboss" time="2021-11-01T12:00:00Z">
@@ -3226,6 +3353,7 @@
 
 
 
+
             </version>
 
             <version name="2.11.0-pre.11" author="helgoboss" time="2021-10-30T12:00:00Z">
@@ -3247,6 +3375,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.11/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.11/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -3282,6 +3411,7 @@
 
 
 
+
             </version>
 
             <version name="2.11.0-pre.8" author="helgoboss" time="2021-10-14T12:00:00Z">
@@ -3302,6 +3432,7 @@
 
                 <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.8/realearn-user-guide.pdf</source>
                 <source platform="linux-aarch64" file="FX/ReaLearn-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.8/realearn-linux-aarch64.so</source>
+
 
 
 
@@ -3336,6 +3467,7 @@
 
 
 
+
             </version>
 
             <version name="2.11.0-pre.3" author="helgoboss" time="2021-10-09T12:00:00Z">
@@ -3352,6 +3484,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.3/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.3/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -3383,6 +3516,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.2/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.2/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -3423,6 +3557,7 @@
 
 
 
+
             </version>
 
             <version name="2.10.4" author="helgoboss" time="2021-11-01T12:00:00Z">
@@ -3440,6 +3575,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.10.4/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.10.4/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -3470,6 +3606,7 @@
 
 
 
+
             </version>
 
             <version name="2.10.2" author="helgoboss" time="2021-09-16T12:00:00Z">
@@ -3493,6 +3630,7 @@
 
 
 
+
             </version>
 
             <version name="2.10.1" author="helgoboss" time="2021-09-14T12:00:00Z">
@@ -3509,6 +3647,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.10.1/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.10.1/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -3585,6 +3724,7 @@
 
 
 
+
             </version>
 
             <version name="2.10.0-pre.10" author="helgoboss" time="2021-09-02T12:00:00Z">
@@ -3603,6 +3743,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.10.0-pre.10/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.10.0-pre.10/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -3643,6 +3784,7 @@
 
 
 
+
             </version>
 
             <version name="2.10.0-pre.6" author="helgoboss" time="2021-08-01T12:00:00Z">
@@ -3669,6 +3811,7 @@
 
 
 
+
             </version>
 
             <version name="2.10.0-pre.5" author="helgoboss" time="2021-07-24T12:00:00Z">
@@ -3688,6 +3831,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.10.0-pre.5/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.10.0-pre.5/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -3725,6 +3869,7 @@
 
 
 
+
             </version>
 
             <version name="2.10.0-pre.3" author="helgoboss" time="2021-07-17T12:00:00Z">
@@ -3754,6 +3899,7 @@
 
 
 
+
             </version>
 
             <version name="2.10.0-pre.2" author="helgoboss" time="2021-05-18T12:00:00Z">
@@ -3771,6 +3917,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.10.0-pre.2/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.10.0-pre.2/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -3808,6 +3955,7 @@
 
 
 
+
             </version>
 
             <version name="2.9.1" author="helgoboss" time="2021-05-16T12:00:00Z">
@@ -3824,6 +3972,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.9.1/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.9.1/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -3863,6 +4012,7 @@
 
 
 
+
             </version>
 
             <version name="2.9.0-pre.9" author="helgoboss" time="2021-05-11T12:00:00Z">
@@ -3880,6 +4030,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.9.0-pre.9/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.9.0-pre.9/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -3912,6 +4063,7 @@
 
 
 
+
             </version>
 
             <version name="2.9.0-pre.7" author="helgoboss" time="2021-05-03T12:00:00Z">
@@ -3930,6 +4082,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.9.0-pre.7/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.9.0-pre.7/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -3961,6 +4114,7 @@
 
 
 
+
             </version>
 
             <version name="2.9.0-pre.5" author="helgoboss" time="2021-04-30T12:00:00Z">
@@ -3977,6 +4131,7 @@
 
                 <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.9.0-pre.5/realearn-user-guide.pdf</source>
                 <source platform="darwin-arm64" file="FX/ReaLearn-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.9.0-pre.5/realearn-macos-aarch64.vst.dylib</source>
+
 
 
 
@@ -4004,6 +4159,7 @@
 
 
 
+
             </version>
 
             <version name="2.8.2" author="helgoboss" time="2021-04-29T12:00:00Z">
@@ -4018,6 +4174,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.2/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.2/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.2/realearn-user-guide.pdf</source>
+
 
 
 
@@ -4137,6 +4294,7 @@
 
 
 
+
             </version>
 
             <version name="2.8.0-rc.6" author="helgoboss" time="2021-04-23T12:00:00Z">
@@ -4156,6 +4314,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.6/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.6/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.6/realearn-user-guide.pdf</source>
+
 
 
 
@@ -4190,6 +4349,7 @@
 
 
 
+
             </version>
 
             <version name="2.8.0-rc.4" author="helgoboss" time="2021-04-14T12:00:00Z">
@@ -4211,6 +4371,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.4/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.4/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.4/realearn-user-guide.pdf</source>
+
 
 
 
@@ -4251,6 +4412,7 @@
 
 
 
+
             </version>
 
             <version name="2.8.0-rc.1" author="helgoboss" time="2021-04-06T12:00:00Z">
@@ -4270,6 +4432,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.1/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.1/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-rc.1/realearn-user-guide.pdf</source>
+
 
 
 
@@ -4303,6 +4466,7 @@
 
 
 
+
             </version>
 
             <version name="2.8.0-pre8" author="helgoboss" time="2021-03-31T12:00:00Z">
@@ -4319,6 +4483,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre8/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre8/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre8/realearn-user-guide.pdf</source>
+
 
 
 
@@ -4360,6 +4525,7 @@
 
 
 
+
             </version>
 
             <version name="2.8.0-pre6" author="helgoboss" time="2021-03-25T12:00:00Z">
@@ -4377,6 +4543,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre6/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre6/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre6/realearn-user-guide.pdf</source>
+
 
 
 
@@ -4412,6 +4579,7 @@
 
 
 
+
             </version>
 
             <version name="2.8.0-pre4" author="helgoboss" time="2021-03-22T12:00:00Z">
@@ -4431,6 +4599,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre4/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre4/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre4/realearn-user-guide.pdf</source>
+
 
 
 
@@ -4463,6 +4632,7 @@
 
 
 
+
             </version>
 
             <version name="2.8.0-pre2" author="helgoboss" time="2021-03-13T12:00:00Z">
@@ -4478,6 +4648,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre2/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre2/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre2/realearn-user-guide.pdf</source>
+
 
 
 
@@ -4504,6 +4675,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre1/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre1/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.8.0-pre1/realearn-user-guide.pdf</source>
+
 
 
 
@@ -4539,6 +4711,7 @@
 
 
 
+
             </version>
 
             <version name="2.6.0" author="helgoboss" time="2021-03-07T12:00:00Z">
@@ -4558,6 +4731,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.6.0/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.6.0/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.6.0/realearn-user-guide.pdf</source>
+
 
 
 
@@ -4586,6 +4760,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.5.0/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.5.0/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.5.0/realearn-user-guide.pdf</source>
+
 
 
 
@@ -4631,6 +4806,7 @@
 
 
 
+
             </version>
 
             <version name="2.3.2" author="helgoboss" time="2021-02-23T12:00:00Z">
@@ -4643,6 +4819,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.3.2/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.3.2/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.3.2/realearn-user-guide.pdf</source>
+
 
 
 
@@ -4671,6 +4848,7 @@
 
 
 
+
             </version>
 
             <version name="2.3.0" author="helgoboss" time="2021-02-21T12:00:00Z">
@@ -4683,6 +4861,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.3.0/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.3.0/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.3.0/realearn-user-guide.pdf</source>
+
 
 
 
@@ -4715,6 +4894,7 @@
 
 
 
+
             </version>
 
             <version name="2.1.0" author="helgoboss" time="2021-02-13T12:00:00Z">
@@ -4735,6 +4915,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.1.0/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.1.0/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.1.0/realearn-user-guide.pdf</source>
+
 
 
 
@@ -4853,6 +5034,7 @@
 
 
 
+
             </version>
 
             <version name="1.12.0-pre21" author="helgoboss" time="2021-02-08T12:00:00Z">
@@ -4874,6 +5056,7 @@
 
 
 
+
             </version>
 
             <version name="1.12.0-pre20" author="helgoboss" time="2021-01-30T12:00:00Z">
@@ -4885,6 +5068,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre20/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre20/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre20/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -4914,6 +5098,7 @@
 
 
 
+
             </version>
 
             <version name="1.12.0-pre18" author="helgoboss" time="2021-01-26T12:00:00Z">
@@ -4928,6 +5113,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre18/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre18/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre18/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -4962,6 +5148,7 @@
 
 
 
+
             </version>
 
             <version name="1.12.0-pre15" author="helgoboss" time="2021-01-20T12:00:00Z">
@@ -4972,6 +5159,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre15/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre15/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre15/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -4993,6 +5181,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre14/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre14/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre14/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -5023,6 +5212,7 @@
 
 
 
+
             </version>
 
             <version name="1.12.0-pre10" author="helgoboss" time="2021-01-13T12:00:00Z">
@@ -5036,6 +5226,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre10/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre10/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre10/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -5077,6 +5268,7 @@
 
 
 
+
             </version>
 
             <version name="1.12.0-pre8" author="helgoboss" time="2020-12-25T12:00:00Z">
@@ -5099,6 +5291,7 @@
                 <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre8/realearn-user-guide.pdf</source>
                 <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre8/realearn-user-guide.pdf</source>
                 <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre8/realearn-user-guide.pdf</source>
+
 
 
 
@@ -5133,6 +5326,7 @@
 
 
 
+
             </version>
 
             <version name="1.12.0-pre6" author="helgoboss" time="2020-12-08T12:00:00Z">
@@ -5146,6 +5340,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre6/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre6/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre6/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -5182,6 +5377,7 @@
 
 
 
+
             </version>
 
             <version name="1.12.0-pre4" author="helgoboss" time="2020-12-03T12:00:00Z">
@@ -5199,6 +5395,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre4/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre4/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre4/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -5233,6 +5430,7 @@
 
 
 
+
             </version>
 
             <version name="1.11.0-pre2" author="helgoboss" time="2020-09-01T12:00:00Z">
@@ -5254,6 +5452,7 @@
 
 
 
+
             </version>
 
             <version name="1.11.0-pre1" author="helgoboss" time="2020-08-28T12:00:00Z">
@@ -5262,6 +5461,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.11.0-pre1/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.11.0-pre1/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.11.0-pre1/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -5334,6 +5534,7 @@
 
 
 
+
             </version>
 
             <version name="1.10.0-pre8" author="helgoboss" time="2020-08-19T12:00:00Z">
@@ -5343,6 +5544,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre8/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre8/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre8/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -5373,6 +5575,7 @@
 
 
 
+
             </version>
 
             <version name="1.10.0-pre6" author="helgoboss" time="2020-07-13T12:00:00Z">
@@ -5384,6 +5587,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre6/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre6/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre6/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -5404,6 +5608,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre5/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre5/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre5/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -5433,6 +5638,7 @@
 
 
 
+
             </version>
 
             <version name="1.10.0-pre3" author="helgoboss" time="2020-06-25T12:00:00Z">
@@ -5442,6 +5648,7 @@
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre3/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre3/realearn-macos-x86_64.vst.dylib</source>
                 <source platform="linux64" file="FX/ReaLearn-x64.so">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre3/realearn-linux-x86_64.so</source>
+
 
 
 
@@ -5488,6 +5695,7 @@
 
 
 
+
             </version>
 
 
@@ -5511,6 +5719,38 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
+
+            <version name="2.18.0-pre.1" author="helgoboss" time="2024-01-18T12:00:00Z">
+                <changelog><![CDATA[- General: #1413 Helgobox App: Added possibility to run the app in remote mode (connecting to Helgobox Plug-In via network connection)
+- General: #1411 Improved window title bar layout (theme switcher was clipped before, even with a small but normal window width)
+- Playtime: #1391 Added experimental Linux support as stage 1 (engine and app now run on Linux, the app only runs in remote mode so far, x64 and arm64 are supported)
+- Playtime: #1399 Added proper support for importing multiple items at once
+- ReaLearn: #1391 Added Linux arm64 support again (it was paused for some releases)
+]]></changelog>
+                <source platform="win32" file="FX/helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.1/helgobox-windows-i686.dll</source>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.1/realearn-user-guide.pdf</source>
+
+
+
+
+
+                <!-- Extension -->
+                <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.1/reaper_helgobox-windows-i686.dll</source>
+                <!-- Toolbar icons -->
+                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+
+                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.1/resources/artwork/toolbar_icons/toolbar_playtime_custom.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.1/resources/artwork/toolbar_icons/150/toolbar_playtime_custom.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.1/resources/artwork/toolbar_icons/200/toolbar_playtime_custom.png</source>
+
+
+                <source platform="win32" type="data" file="helgoboss/helgobox/doc/about.html">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.1/about.html</source>
+
+            </version>
 
             <version name="2.17.2" author="helgoboss" time="2024-12-31T12:00:00Z">
                 <changelog><![CDATA[- General: Improved error reporting when error doesn't happen in main thread (now opens console, if configured, as it was in the past)
