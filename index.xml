@@ -168,8 +168,75 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
 
+            <version name="2.18.0-pre.2" author="helgoboss" time="2024-01-25T12:00:00Z">
+                <changelog><![CDATA[- General: #1420 Fixed lots of hard corner-case errors by handling them more gracefully
+- General: #1421 Fixed possible silent crash or even freeze when exiting REAPER on Windows
+- General: Plug-in: Updated Rust from 1.77.2 on Windows / 1.81.0 on macOS and Linux to 1.84.0 on all OS (this removes Windows 7 compatibility once again, sorry!)
+- Playtime: #1397 Linux: Added real-time thread optimization (needs at least REAPER v7.30+dev0116)
+- Playtime: #1397 Linux: Added possibility to run Helgobox App on older Linux systems (with glibc 2.31, such as Ubuntu 20.04 or Debian Bullseye)
+- Playtime: #1419 Improved wording by renaming matrix target action "Play ignited or enter silence mode" to "Start or stop playback"
+- Playtime: #1422 Improved usability by always showing complete MIDI source data in MIDI editor regardless the "Source cut" settings
+- Playtime: #1422 Improved usability of "Import selected item into slot" by adjusting "Section" setting instead of "Source cut" setting (this is more in line with the general recommendation to avoid "Source cut" for MIDI clips)
+- Playtime: #1417 Fixed crash on macOS when closing app window after using knobs or drag fields (this was a new pre.1 bug)
+- Playtime: #1422 Fixed incorrect behavior of "Import selected item into slot" and subsequent error "Couldn't set item length" when opening clip editor
+- Playtime: Fixed bug that could cause the time signature to be obtained from the wrong project in a multi-project setup
+- ReaLearn: #1415 Fixed broken conditional activation for auto-load-fallback preset
+- ReaLearn: #1419 Fixed broken MIDI clock tempo source (now best used in combination with control transformation in order to get less tempo fluctuation)
+- ReaLearn: #1421 Fixed error "already mutably borrowed" when using auto-load in REAPER < 6.37
+]]></changelog>
+                <source platform="win64" file="FX/helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.2/helgobox-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/helgobox-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.2/helgobox-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/helgobox-x64.so">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.2/helgobox-linux-x86_64.so</source>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.2/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.2/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.2/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.2/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/helgobox-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.2/helgobox-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.2/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/helgobox-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.2/helgobox-linux-aarch64.so</source>
+
+
+
+
+                <!-- Extension -->
+                <source platform="darwin-arm64" file="reaper_helgobox-arm64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.2/reaper_helgobox-macos-aarch64.dylib</source>
+                <source platform="darwin64" file="reaper_helgobox-x64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.2/reaper_helgobox-macos-x86_64.dylib</source>
+                <source platform="win64" file="reaper_helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.2/reaper_helgobox-windows-x86_64.dll</source>
+                <!-- App -->
+                <source platform="win64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.20.0/helgobox-app-windows.tar.zst</source>
+                <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.20.0/helgobox-app-macos.tar.zst</source>
+                <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.20.0/helgobox-app-macos.tar.zst</source>
+                <!-- Toolbar icons -->
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.2/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.2/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.2/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+
+                <!-- Extension (Linux) -->
+                <source platform="linux64" file="reaper_helgobox-x64.so">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.2/reaper_helgobox-linux-x86_64.so</source>
+                <source platform="linux-aarch64" file="reaper_helgobox-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.2/reaper_helgobox-linux-aarch64.so</source>
+                <!-- App (Linux) -->
+                <source platform="linux64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.20.0/helgobox-app-linux-x64.tar.zst</source>
+                <source platform="linux-aarch64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.20.0/helgobox-app-linux-arm64.tar.zst</source>
+
+
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.2/resources/artwork/toolbar_icons/toolbar_playtime_custom.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.2/resources/artwork/toolbar_icons/150/toolbar_playtime_custom.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.2/resources/artwork/toolbar_icons/200/toolbar_playtime_custom.png</source>
+
+
+                <source platform="all" type="data" file="helgoboss/helgobox/doc/about.html">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.2/about.html</source>
+
+            </version>
+
             <version name="2.18.0-pre.1" author="helgoboss" time="2024-01-18T12:00:00Z">
-                <changelog><![CDATA[- General: #1413 Helgobox App: Added possibility to run the app in remote mode (connecting to Helgobox Plug-In via network connection)
+                <changelog><![CDATA[- General: #1413 Added possibility to run the Helgobox App in remote mode (connecting to Helgobox Plug-In via network connection)
+- General: #1391 Added Linux support for the Helgobox Utility Extension (which provides menu entries and welcome screen before instrument plug-in loaded)
 - General: #1411 Improved window title bar layout (theme switcher was clipped before, even with a small but normal window width)
 - Playtime: #1391 Added experimental Linux support as stage 1 (engine and app now run on Linux, the app only runs in remote mode so far, x64 and arm64 are supported)
 - Playtime: #1399 Added proper support for importing multiple items at once
@@ -5720,8 +5787,50 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
 
+            <version name="2.18.0-pre.2" author="helgoboss" time="2024-01-25T12:00:00Z">
+                <changelog><![CDATA[- General: #1420 Fixed lots of hard corner-case errors by handling them more gracefully
+- General: #1421 Fixed possible silent crash or even freeze when exiting REAPER on Windows
+- General: Plug-in: Updated Rust from 1.77.2 on Windows / 1.81.0 on macOS and Linux to 1.84.0 on all OS (this removes Windows 7 compatibility once again, sorry!)
+- Playtime: #1397 Linux: Added real-time thread optimization (needs at least REAPER v7.30+dev0116)
+- Playtime: #1397 Linux: Added possibility to run Helgobox App on older Linux systems (with glibc 2.31, such as Ubuntu 20.04 or Debian Bullseye)
+- Playtime: #1419 Improved wording by renaming matrix target action "Play ignited or enter silence mode" to "Start or stop playback"
+- Playtime: #1422 Improved usability by always showing complete MIDI source data in MIDI editor regardless the "Source cut" settings
+- Playtime: #1422 Improved usability of "Import selected item into slot" by adjusting "Section" setting instead of "Source cut" setting (this is more in line with the general recommendation to avoid "Source cut" for MIDI clips)
+- Playtime: #1417 Fixed crash on macOS when closing app window after using knobs or drag fields (this was a new pre.1 bug)
+- Playtime: #1422 Fixed incorrect behavior of "Import selected item into slot" and subsequent error "Couldn't set item length" when opening clip editor
+- Playtime: Fixed bug that could cause the time signature to be obtained from the wrong project in a multi-project setup
+- ReaLearn: #1415 Fixed broken conditional activation for auto-load-fallback preset
+- ReaLearn: #1419 Fixed broken MIDI clock tempo source (now best used in combination with control transformation in order to get less tempo fluctuation)
+- ReaLearn: #1421 Fixed error "already mutably borrowed" when using auto-load in REAPER < 6.37
+]]></changelog>
+                <source platform="win32" file="FX/helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.2/helgobox-windows-i686.dll</source>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.2/realearn-user-guide.pdf</source>
+
+
+
+
+
+                <!-- Extension -->
+                <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.18.0-pre.2/reaper_helgobox-windows-i686.dll</source>
+                <!-- Toolbar icons -->
+                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.2/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.2/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.2/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+
+                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.2/resources/artwork/toolbar_icons/toolbar_playtime_custom.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.2/resources/artwork/toolbar_icons/150/toolbar_playtime_custom.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.2/resources/artwork/toolbar_icons/200/toolbar_playtime_custom.png</source>
+
+
+                <source platform="win32" type="data" file="helgoboss/helgobox/doc/about.html">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.0-pre.2/about.html</source>
+
+            </version>
+
             <version name="2.18.0-pre.1" author="helgoboss" time="2024-01-18T12:00:00Z">
-                <changelog><![CDATA[- General: #1413 Helgobox App: Added possibility to run the app in remote mode (connecting to Helgobox Plug-In via network connection)
+                <changelog><![CDATA[- General: #1413 Added possibility to run the Helgobox App in remote mode (connecting to Helgobox Plug-In via network connection)
+- General: #1391 Added Linux support for the Helgobox Utility Extension (which provides menu entries and welcome screen before instrument plug-in loaded)
 - General: #1411 Improved window title bar layout (theme switcher was clipped before, even with a small but normal window width)
 - Playtime: #1391 Added experimental Linux support as stage 1 (engine and app now run on Linux, the app only runs in remote mode so far, x64 and arm64 are supported)
 - Playtime: #1399 Added proper support for importing multiple items at once
