@@ -168,9 +168,68 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
 
+            <version name="2.18.1" author="helgoboss" time="2025-07-09T12:00:00Z">
+                <changelog><![CDATA[- ReaLearn: #1545 Fixed broken takeover modes (2.18.0 regression)
+- ReaLearn: #1478 Fixed text areas not saving pasted text (not detecting it as change)
+- ReaLearn: #1480 Fixed possible error "OS error 232" when closing ReaLearn
+- ReaLearn: #1480 Fixed error "Attempt to use a function that has not been loaded: SWELL\_osx\_is\_dark\_mode" on older REAPER versions
+- ReaLearn: #1480 Fixed error "index out of bounds: the len is 129 but the index is 129" when using MIDI input device with ID 129
+- Playtime: #1517 Fixed Launchpad X auto-detection
+- Playtime: #1478 Fixed misleading error "Clip seems to be empty" when exporting with zero-length time selection
+]]></changelog>
+                <source platform="win64" file="FX/helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.18.1/helgobox-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/helgobox-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.18.1/helgobox-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/helgobox-x64.so">https://github.com/helgoboss/helgobox/releases/download/v2.18.1/helgobox-linux-x86_64.so</source>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.18.1/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.18.1/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.18.1/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.18.1/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/helgobox-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.18.1/helgobox-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.18.1/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/helgobox-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.18.1/helgobox-linux-aarch64.so</source>
+
+
+
+
+                <!-- Extension -->
+                <source platform="darwin-arm64" file="reaper_helgobox-arm64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.18.1/reaper_helgobox-macos-aarch64.dylib</source>
+                <source platform="darwin64" file="reaper_helgobox-x64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.18.1/reaper_helgobox-macos-x86_64.dylib</source>
+                <source platform="win64" file="reaper_helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.18.1/reaper_helgobox-windows-x86_64.dll</source>
+                <!-- App -->
+                <source platform="win64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.22.0/helgobox-app-windows.tar.zst</source>
+                <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.22.0/helgobox-app-macos.tar.zst</source>
+                <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.22.0/helgobox-app-macos.tar.zst</source>
+                <!-- Toolbar icons -->
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+
+                <!-- Extension (Linux) -->
+                <source platform="linux64" file="reaper_helgobox-x64.so">https://github.com/helgoboss/helgobox/releases/download/v2.18.1/reaper_helgobox-linux-x86_64.so</source>
+                <source platform="linux-aarch64" file="reaper_helgobox-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.18.1/reaper_helgobox-linux-aarch64.so</source>
+                <!-- App (Linux) -->
+                <source platform="linux64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.22.0/helgobox-app-linux-x64.tar.zst</source>
+                <source platform="linux-aarch64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.22.0/helgobox-app-linux-arm64.tar.zst</source>
+
+
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.1/resources/artwork/toolbar_icons/toolbar_playtime_custom.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.1/resources/artwork/toolbar_icons/150/toolbar_playtime_custom.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.1/resources/artwork/toolbar_icons/200/toolbar_playtime_custom.png</source>
+
+
+                <source platform="all" type="data" file="helgoboss/helgobox/doc/about.html">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.1/about.html</source>
+
+            </version>
+
             <version name="2.18.0" author="helgoboss" time="2025-03-15T12:00:00Z">
-                <changelog><![CDATA[- General: #1413 Added possibility to run the Helgobox App in remote mode (connecting to Helgobox Plug-In via network connection)
-- General: #1391 Added Linux support for the Helgobox Utility Extension (which provides menu entries and welcome screen before instrument plug-in loaded)
+                <changelog><![CDATA[- General: #1413 Added possibility to run the Helgobox App in remote mode (connecting to Helgobox Plugin via network connection)
+- General: #1391 Added Linux support for the Helgobox Utility Extension (which provides menu entries and welcome screen before instrument plugin loaded)
 - General: #1466 Added update notification (configurable via welcome screen)
 - General: #1411 App: Improved window title bar layout (theme switcher was clipped before, even with a small but normal window width)
 - General: #1420 Fixed lots of unhandled errors by dealing with them more gracefully
@@ -182,7 +241,7 @@
 - ReaLearn: #1415 Fixed broken conditional activation for auto-load-fallback preset
 - ReaLearn: #1419 Fixed broken MIDI clock tempo source (now best used in combination with control transformation in order to get less tempo fluctuation)
 - ReaLearn: #1421 Fixed error "already mutably borrowed" when using auto-load in REAPER < 6.37
-- ReaLearn: Plug-in: Updated Rust from 1.77.2 on Windows / 1.81.0 on macOS and Linux to 1.84.0 on all OS (this removes Windows 7 compatibility of ReaLearn again, so Windows 7 users should not do the update)
+- ReaLearn: Plugin: Updated Rust from 1.77.2 on Windows / 1.81.0 on macOS and Linux to 1.84.0 on all OS (this removes Windows 7 compatibility of ReaLearn again, so Windows 7 users should not do the update)
 - Playtime: #1391 Added experimental Linux support as stage 1 (engine and app now run on Linux, the app only runs in remote mode so far, x64 and arm64 are supported)
 - Playtime: #1399 Added proper support for importing multiple items at once
 - Playtime: #1467 Added possibility to change tempo when triggering scene (experimental, known issues when REAPER arrangement is playing as well)
@@ -307,7 +366,7 @@
             <version name="2.18.0-pre.2" author="helgoboss" time="2025-01-25T12:00:00Z">
                 <changelog><![CDATA[- General: #1420 Fixed lots of hard corner-case errors by handling them more gracefully
 - General: #1421 Fixed possible silent crash or even freeze when exiting REAPER on Windows
-- General: Plug-in: Updated Rust from 1.77.2 on Windows / 1.81.0 on macOS and Linux to 1.84.0 on all OS (this removes Windows 7 compatibility once again, sorry!)
+- General: Plugin: Updated Rust from 1.77.2 on Windows / 1.81.0 on macOS and Linux to 1.84.0 on all OS (this removes Windows 7 compatibility once again, sorry!)
 - Playtime: #1397 Linux: Added real-time thread optimization (needs at least REAPER v7.30+dev0116)
 - Playtime: #1397 Linux: Added possibility to run Helgobox App on older Linux systems (with glibc 2.31, such as Ubuntu 20.04 or Debian Bullseye)
 - Playtime: #1419 Improved wording by renaming matrix target action "Play ignited or enter silence mode" to "Start or stop playback"
@@ -371,8 +430,8 @@
             </version>
 
             <version name="2.18.0-pre.1" author="helgoboss" time="2025-01-18T12:00:00Z">
-                <changelog><![CDATA[- General: #1413 Added possibility to run the Helgobox App in remote mode (connecting to Helgobox Plug-In via network connection)
-- General: #1391 Added Linux support for the Helgobox Utility Extension (which provides menu entries and welcome screen before instrument plug-in loaded)
+                <changelog><![CDATA[- General: #1413 Added possibility to run the Helgobox App in remote mode (connecting to Helgobox Plugin via network connection)
+- General: #1391 Added Linux support for the Helgobox Utility Extension (which provides menu entries and welcome screen before instrument plugin loaded)
 - General: #1411 Improved window title bar layout (theme switcher was clipped before, even with a small but normal window width)
 - Playtime: #1391 Added experimental Linux support as stage 1 (engine and app now run on Linux, the app only runs in remote mode so far, x64 and arm64 are supported)
 - Playtime: #1399 Added proper support for importing multiple items at once
@@ -657,7 +716,7 @@
             <version name="2.16.16" author="helgoboss" time="2024-12-20T12:00:00Z">
                 <changelog><![CDATA[- General: #1304 Added support for automatically sending errors to developer
 - General: #1304 Added possibility to flexibly configure error reporting (automatic sending and console logging)
-- General: #1362 Added about screens to plug-in and app
+- General: #1362 Added about screens to plugin and app
 - ReaLearn: #1365 Added possibility to control FX parameters in real-time under certain conditions (see docs)
 - ReaLearn: #1363 Improved controller list in Wiki (it should be much easier now to contribute and use unofficial presets)
 - ReaLearn: #1366 Fixed laggy target "Track: Set automation touch state"
@@ -897,7 +956,7 @@
 - ReaLearn: #1256 Improved ReaLearn Reference by finally documenting all additions since 2.15.0 (except the new Playtime targets, which will be documented together with Playtime)
 - ReaLearn: #1256 Improved ReaLearn Reference by adding basic explanations, restructuring it, changing wording, unifying cross-references, improving markup, updating screenshots and removing unnecessary stuff
 - ReaLearn: #1256 Improved mapping panel help system by displaying help on mouse-over and supporting F1 to jump to corresponding section in ReaLearn Reference
-- ReaLearn: #1274 Fixed possible error "is not a valid UnitValue" when using Altiverb and possibly other plug-ins that report invalid parameter step sizes
+- ReaLearn: #1274 Fixed possible error "is not a valid UnitValue" when using Altiverb and possibly other plugins that report invalid parameter step sizes
 - ReaLearn: #1273 Fixed potential hard crash when obtaining number of FX in track
 - ReaLearn: #1272 Fixed target "Project: Invoke REAPER action" action picker incorrectly saving custom actions or scripts actions (ACTION REQUIRED if you picked such an action between 2.16.3 and 2.16.10)
 ]]></changelog>
@@ -936,7 +995,7 @@
             </version>
 
             <version name="2.16.10" author="helgoboss" time="2024-09-28T12:00:00Z">
-                <changelog><![CDATA[- General: Plug-in: Updated Rust (from 1.79.0 to 1.81.0)
+                <changelog><![CDATA[- General: Plugin: Updated Rust (from 1.79.0 to 1.81.0)
 - General: App: Updated Flutter (from 3.22 to 3.24) and various packages
 - General: It's intential that this release contains nothing else than compiler and framework updates (makes it easier to isolate possible regressions)
 ]]></changelog>
@@ -1307,15 +1366,15 @@
             </version>
 
             <version name="2.16.0" author="helgoboss" time="2024-07-07T12:00:00Z">
-                <changelog><![CDATA[- General: Important rebranding: The plug-in has been renamed from "ReaLearn" to "Helgobox - ReaLearn & Playtime". Helgobox unites 2 products: ReaLearn (free and open-source) and Playtime (paid and mostly closed-source).
-- General: The plug-in now requires at least REAPER 6.11 (I simplified some code by using REAPER 6.11 features)
+                <changelog><![CDATA[- General: Important rebranding: The plugin has been renamed from "ReaLearn" to "Helgobox - ReaLearn & Playtime". Helgobox unites 2 products: ReaLearn (free and open-source) and Playtime (paid and mostly closed-source).
+- General: The plugin now requires at least REAPER 6.11 (I simplified some code by using REAPER 6.11 features)
 - General: Changed scripting language from Lua 5.4 to Luau (existing scripts should run in the same way as before because all Lua 5.4 functions that I have previously unlocked for usage are also available in Luau)
 - General: Internal change: Renamed lots of Prometheus metrics
 - General: Internal change: Enforced UTF-8-encoded paths very early in the processing when interfacing with the REAPER API (REAPER by contract should provide UTF-8 encoded paths, if not it's a bug in REAPER)
 - General: Internal change: Use Rust 1.79.0
 - General: Added welcome screen which allows one to add a Playtime toolbar button. That works best with current REAPER releases, older REAPER versions require a restart.
 - General: Added Helgobox App: An app that provides the user interface for Playtime and ReaLearn Projection. Right now, it is only available embedded into REAPER and only on macOS on Windows. In the future, it will be made available for Linux, Android and iOS, eventually replacing the ReaLearn Companion App.
-- General: #906 Added a REAPER extension, which is automatically loaded at REAPER startup and acts as a supplement to the actual VST plug-in. Provides a convenient entry 'Helgobox' in the REAPER 'Extensions' menu and other features right after REAPER start, which would otherwise only be available if at least one ReaLearn VST plug-in instance is loaded. This extension is currently shipped on Windows and macOS. It's optional, ReaLearn will also work without it!
+- General: #906 Added a REAPER extension, which is automatically loaded at REAPER startup and acts as a supplement to the actual VST plugin. Provides a convenient entry 'Helgobox' in the REAPER 'Extensions' menu and other features right after REAPER start, which would otherwise only be available if at least one ReaLearn VST plugin instance is loaded. This extension is currently shipped on Windows and macOS. It's optional, ReaLearn will also work without it!
 - General: #908 Added extensive auto-generated Luau type definitions for building ReaLearn presets, ReaLearn MIDI script sources and Playtime matrices with auto-completion and error reporting (for code editors with Luau support, e.g. Visual Studio Code)
 - General: Internal change: Added counter of undesired real-time allocations to UI (debug builds only)
 - General: Improved import by warning when invalid top-level properties were detected (which could indicate wrong usage of the import API)
@@ -1326,8 +1385,8 @@
 - General: #913 Improved general performance by introducing lots of small-scale boosts after profiling hot code (non-crypto hash functions, unnecessary allocation and processing)
 - General: #915 Improved robustness and usability by not participating in REAPER's undo anymore (this can prevent potentially fatal but in any case surprising scenarios in which doing an undo in REAPER sets back ReaLearn and Playtime to a very old state, requires REAPER >= v7.09+dev0202)
 - General: Improved resource usage (by firing up threads for async logging and metrics only if enabled, by letting ReaLearn and Clip Engine metrics share the same thread, by  making app and server share the same one-threaded async runtime and by stopping async deallocation thread and async runtime when last ReaLearn instance gone)
-- General: Improved plug-in scanning speed (Helgobox won't initialize a few things if it knows it's just being scanned anyway)
-- General: Improved resource clean-up on Windows when REAPER preference "Allow complete unload of VST plug-ins" enabled
+- General: Improved plugin scanning speed (Helgobox won't initialize a few things if it knows it's just being scanned anyway)
+- General: Improved resource clean-up on Windows when REAPER preference "Allow complete unload of VST plugins" enabled
 - General: Fixed some incorrect detection of recursive tables in Luau code on import
 - General: #875 Fixed deadlock when using 500+ Helgobox instances
 - General: Fixed potential hard crash in process\_f64 call
@@ -1419,7 +1478,7 @@
 
             <version name="2.16.0-pre.18" author="helgoboss" time="2024-07-04T12:00:00Z">
                 <changelog><![CDATA[- Playtime-related changes (details available for early-access testers only)
-- Renamed plug-in library file and repository from 'realearn' to 'helgobox', also renamed many other occurrences of ReaLearn to Helgobox
+- Renamed plugin library file and repository from 'realearn' to 'helgobox', also renamed many other occurrences of ReaLearn to Helgobox
 - Added Helgobox App to the main ReaPack package (it was previously only available for Playtime early-access testers)
 - Pot Browser - Preview Recorder: Added recording of preset previews for exporting purposes
 - Fixed fire mode "After timeout" firing like crazy
@@ -1589,7 +1648,7 @@
 
             <version name="2.16.0-pre.13" author="helgoboss" time="2024-03-15T12:00:00Z">
                 <changelog><![CDATA[- Playtime-related changes (details available for early-access testers only)
-- Renamed plug-in name to "Helgobox - ReaLearn & Playtime"
+- Renamed plugin name to "Helgobox - ReaLearn & Playtime"
 - Added welcome screen (adding a Playtime toolbar button works best with current REAPER pre-releases, older REAPER versions require a restart)
 - Added generic main preset for changing FX parameters
 - Added possibility to edit Playtime targets directly within ReaLearn (no Lua required anymore)
@@ -1641,8 +1700,8 @@
             <version name="2.16.0-pre.9" author="helgoboss" time="2024-02-08T12:00:00Z">
                 <changelog><![CDATA[- Playtime-related changes (details available for early-access testers only)
 - Changed scripting language from Lua 5.4 to Luau (existing scripts should run in the same way as before because all Lua 5.4 functions that I have previously unlocked for usage are also available in Luau)
-- First mention of the upcoming product name "Helgobox": The VST plug-in that we know as ReaLearn will soon be renamed to "Helgobox". ReaLearn will stay as the central part of Helgobox. The other parts will be "Playtime" and (in long-term future) "Sound Pot". In a nutshell: Helgobox = ReaLearn + Playtime + SoundPot = A collection of creative tools that turns REAPER into a powerful musical instrument ... you will see the big picture as soon as Playtime 2 is revealed.
-- Added new REAPER extension called "Helgobox", which is automatically loaded at REAPER startup and acts as a supplement to the actual VST plug-in. Provides a convenient top-level menu and other features right after start, which would otherwise only be available if at least one ReaLearn VST plug-in instance is loaded. This extension is currently shipped on Windows and macOS but in general it's optional, ReaLearn will also work without it!
+- First mention of the upcoming product name "Helgobox": The VST plugin that we know as ReaLearn will soon be renamed to "Helgobox". ReaLearn will stay as the central part of Helgobox. The other parts will be "Playtime" and (in long-term future) "Sound Pot". In a nutshell: Helgobox = ReaLearn + Playtime + SoundPot = A collection of creative tools that turns REAPER into a powerful musical instrument ... you will see the big picture as soon as Playtime 2 is revealed.
+- Added new REAPER extension called "Helgobox", which is automatically loaded at REAPER startup and acts as a supplement to the actual VST plugin. Provides a convenient top-level menu and other features right after start, which would otherwise only be available if at least one ReaLearn VST plugin instance is loaded. This extension is currently shipped on Windows and macOS but in general it's optional, ReaLearn will also work without it!
 - Added ability to add additional units to one ReaLearn instance (= one ReaLearn instance can now deal with multiple controllers)
 - Added support for compartment presets written in the Luau language (including the ability to require other Luau modules in the same namespace)
 - Added extensive auto-generated Luau type definitions for building ReaLearn presets, ReaLearn MIDI script sources and Playtime matrices with auto-completion and error reporting (for code editors with Luau support, e.g. Visual Studio Code)
@@ -1726,8 +1785,8 @@
 
             <version name="2.16.0-pre.4" author="helgoboss" time="2023-11-23T12:00:00Z">
                 <changelog><![CDATA[- Improved resource usage (by firing up threads for async logging and metrics only if enabled, by letting ReaLearn and Clip Engine metrics share the same thread, by  making app and server share the same one-threaded async runtime and by stopping async deallocation thread and async runtime when last ReaLearn instance gone)
-- Improved plug-in scanning speed (ReaLearn won't initialize a few things if it knows it's just being scanned anyway)
-- Improved resource clean-up on Windows when REAPER preference "Allow complete unload of VST plug-ins" enabled
+- Improved plugin scanning speed (ReaLearn won't initialize a few things if it knows it's just being scanned anyway)
+- Improved resource clean-up on Windows when REAPER preference "Allow complete unload of VST plugins" enabled
 - Fixed hard crash when duplicating mappings containing Lua scripts (2.16.0-pre.2 regression caused by changes related to async deallocation)
 - Fixed possible audio dropouts due to deallocation in real-time threads when using EEL (2.16.0-pre.2 regression)
 - Fixed possible panic when closing REAPER
@@ -1872,7 +1931,7 @@
             </version>
 
             <version name="2.15.0-pre.7" author="helgoboss" time="2023-05-28T12:00:00Z">
-                <changelog><![CDATA[- Pot Browser: Added possibility to search not just in preset name column but also plug-in/product and file extension columns (all 3 enabled by default)
+                <changelog><![CDATA[- Pot Browser: Added possibility to search not just in preset name column but also plugin/product and file extension columns (all 3 enabled by default)
 - Pot Browser: Added new text feedback placeholder "fx\_parameter.macro.bank.name"
 - Pot Browser: Fixed broken detection of some JS effects (and related "FX preset" loading)
 - Pot Browser: Fixed UI issue that dialogs could get too large vertically
@@ -1901,10 +1960,10 @@
 
             <version name="2.15.0-pre.6" author="helgoboss" time="2023-05-24T12:00:00Z">
                 <changelog><![CDATA[- Pot Browser: Improved usability by adding hint to "FX presets" database that ".vstpreset"-style presets are not yet supported
-- Pot Browser: Improved usability by detecting VST3 plug-ins scanned by very old REAPER versions and giving corresponding instructions (sometimes still shown as false positive)
+- Pot Browser: Improved usability by detecting VST3 plugins scanned by very old REAPER versions and giving corresponding instructions (sometimes still shown as false positive)
 - Pot Browser: Improved usability by adding context column, e.g. to display the containing project of project presets
 - Pot Browser: Improved preview recording quality by not normalizing (closer to the original, less surprises when doing pre-play)
-- Pot Browser: Fixed loading of presets in "FX presets" for sub-directory JS effects on Windows and particular VST plug-ins
+- Pot Browser: Fixed loading of presets in "FX presets" for sub-directory JS effects on Windows and particular VST plugins
 - Pot Browser: Fixed slightly unresponsive GUI when opening Pot Browser for the first time
 - Pot Browser: Fixed error on Windows when trying to add project database (by not displaying file dialog)
 - Pot Browser: Fixed possible temporary UI inconsistency by preventing rebuilds during refresh
@@ -1938,10 +1997,10 @@
 - Pot Browser: Added more options to configure when to display FX windows and when to hide them
 - Pot Browser: Added preset context menu action "Pre-play" (This is fun! It's like a preview on steroids. Pot Browser will load the preview into RS5k sampler, making it playable on your keyboard. So you can play the sound in a lower quality without actually loading the preset. Useful if loading a preset is slow and you want to get a first impression before loading it. Or use it in creative ways!)
 - Pot Browser: Improved UI a bit (show notifications a bit longer, better text formatting and error messages, better responsiveness, avoid empty "round dot" context menu)
-- Pot Browser: Fixed VST2 plug-ins with negative magic number not showing up (e.g. "Op-X Pro II")
+- Pot Browser: Fixed VST2 plugins with negative magic number not showing up (e.g. "Op-X Pro II")
 - Pot Browser: Fixed some Komplete banks and categories not showing up (e.g. "MiniMonsta 2"
-- Pot Browser: Fixed NKS macro parameters for all VST3 plug-ins not being found
-- Pot Browser: Fixed internal "FX presets" for all VST2 plug-ins not showing up
+- Pot Browser: Fixed NKS macro parameters for all VST3 plugins not being found
+- Pot Browser: Fixed internal "FX presets" for all VST2 plugins not showing up
 - Pot Browser: Fixed JSFX effects failing to load if they have a file extension (e.g. Saike's JSFX)
 - Pot Browser: Fixed possible crash by preventing Pot Browser from replacing its associated ReaLearn instance
 ]]></changelog>
@@ -2189,7 +2248,7 @@
 - Improved wording by consistently using "Browse ..." instead of "Navigate within ..." or "Cycle through ..."
 - Improved wording by using less technical object selector names (e.g. "Particular" instead of "By ID")
 - Improved usability by displaying in status bar if control/feedback globally off (don't show by greying out mapping rows anymore)
-- Improved usability by insisting on keyboard focus, even if 'Send all keyboard focus to plug-in' is disabled
+- Improved usability by insisting on keyboard focus, even if 'Send all keyboard focus to plugin' is disabled
 - Improved target-based conditional activation by listening to target activation/deactivation as well
 - Improved usability by marking targets that support MIDI real-time control (because MIDI real-time control has a few restrictions)
 - Improved source "MIDI script" when used with Lua language by making color information available (allows users to provide support for arbitrary MIDI color LEDs/displays, in addition to the built-in ones)
@@ -2433,7 +2492,7 @@
             <version name="2.14.0-pre.6" author="helgoboss" time="2022-10-09T12:00:00Z">
                 <changelog><![CDATA[- Added fancy control transformation editor with visual preview of curve/transition (Windows/macOS only for now)
 - Added control transformation template facility (including some first templates, hard-coded, Windows/macOS only for now)
-- Improved usability by insisting on keyboard focus, even if 'Send all keyboard focus to plug-in' is disabled
+- Improved usability by insisting on keyboard focus, even if 'Send all keyboard focus to plugin' is disabled
 - Improved target info logging by including invocation count and target number
 - Fixed target "Project: Invoke REAPER action" invocation mode "Trigger" (could potentially suffer from not being retriggered in some situations)
 ]]></changelog>
@@ -2710,7 +2769,7 @@
 - Improved target "MIDI: Send message" by lifting all previous restrictions when using destination "FX output" (Yes, you can now play your VSTs via OSC!)
 - Improved precision for entering and displaying percentages and dB to 4 fractional digits (e.g. useful for values in value sequences)
 - Improved error reporting by including the name of the channel in case a channel ran full
-- Improved ReaLearn plug-in topology by removing output pins (since ReaLearn doesn't output any audio streams)
+- Improved ReaLearn plugin topology by removing output pins (since ReaLearn doesn't output any audio streams)
 - Improved keyboard source significantly (save/load, more reliable key catching, catching of modifier-only key presses, keystroke normalization for better cross-platform experience, portability warnings)
 - Improved selectors "All by name" and "All selected" by allowing combinatorial explosion (you can now easily target many FX, FX parameters and sends on many tracks with just one target ... powerful, use with caution!)
 - Improved OSC by using one socket for sending and receiving OSC messages (makes "respond to sender" possible, used for example by Behringer XR mixers)
@@ -2748,7 +2807,7 @@
 - Fixed missing update when changing FX in FX-related targets
 - Fixed missing text feedback updates when using placeholder target.fx.name and target.fx.index
 - Fixed "channel full" messages on high load (e.g. selecting many tracks at once) and improved initial memory consumption
-- Fixed error when using plug-ins with non-UTF8 names
+- Fixed error when using plugins with non-UTF8 names
 - Fixed feedback for virtual controller mappings by sending "Off" when not in use
 - Fixed feedback for virtual controller mappings if they are inactive
 - Fixed missing feedback on activation changes when replacing all parameters
@@ -3017,7 +3076,7 @@
 - Fixed missing text feedback updates when using placeholder target.fx.name and target.fx.index
 - Fixed "channel full" messages on high load (e.g. selecting many tracks at once) and improved initial memory consumption
 - Fixed broken controller layout saving (was affecting Companion App)
-- Fixed error when using plug-ins with non-UTF8 names
+- Fixed error when using plugins with non-UTF8 names
 ]]></changelog>
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.6/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.6/realearn-macos-x86_64.vst.dylib</source>
@@ -3168,7 +3227,7 @@
 - Improved target "MIDI: Send message" by lifting all previous restrictions when using destination "FX output" (Yes, you can now play your VSTs via OSC!)
 - Improved precision for entering and displaying percentages and dB to 4 fractional digits (e.g. useful for values in value sequences)
 - Improved error reporting by including the name of the channel in case a channel ran full
-- Improved ReaLearn plug-in topology by removing output pins (since ReaLearn doesn't output any audio streams)
+- Improved ReaLearn plugin topology by removing output pins (since ReaLearn doesn't output any audio streams)
 - Fixed bug that caused enabling/disabling ReaLearn to have no effect when on monitoring FX chain
 - Fixed white background color when using dark SWELL settings on Linux (by not enforcing any background color at all)
 - Fixed bug in target "MIDI: Send message" that made repeated sending of the same value have no effect with some configurations
@@ -3211,7 +3270,7 @@
 - Improved ReaLearn development by adding a fancy architecture documentation
 - Improved ReaLearn Script by making more Lua built-in variables/functions available (only safe ones to prevent execution of malicious code)
 - Improved usability by automatically resending all feedback when MIDI device plugged in (probably works on macOS only at the moment)
-- Improved feedback latency of "FX: Navigate within presets" for plug-ins that report parameter changes when changing presets
+- Improved feedback latency of "FX: Navigate within presets" for plugins that report parameter changes when changing presets
 - Improved memory footprint a lot (nobody seems to have noticed it but ReaLearn used enormous amounts of memory per mapping before)
 - Fixed borrow error when virtualizing mappings if that fails for some mappings
 - Fixed Lua import of Lua export of mapping with negative step factor
@@ -3221,11 +3280,11 @@
 - Fixed feedback when writing send volume automation
 - Fixed "Invalid command ID" error if JSON contains invalid command ID but target type is not "Project: Invoke REAPER action"
 - Fixed blacked out GUI on macOS since in REAPER 6.48 - 6.51
-- Fixed rare PoisonError when loading plug-in
+- Fixed rare PoisonError when loading plugin
 - Fixed text feedback error when trying to format paramter of FX that's offline
 - Fixed missing Lua import of poll\_for\_feedback property in target FxParameterValue target
 - Fixed error when pressing save button on non-existing preset (grey out button instead)
-- Fixed "FX: Navigate within presets" target getting stuck at "No preset" for VST 3 plug-ins
+- Fixed "FX: Navigate within presets" target getting stuck at "No preset" for VST 3 plugins
 ]]></changelog>
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.12.0/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.12.0/realearn-macos-x86_64.vst.dylib</source>
@@ -3255,7 +3314,7 @@
                 <changelog><![CDATA[- Added fine-grained OSC feedback argument mapping
 - Added support for sending colors to TouchOSC (in RRGGBB string format)
 - Improved usability by automatically resending all feedback when MIDI device plugged in (probably works on macOS only at the moment)
-- Improved feedback latency of "FX: Navigate within presets" for plug-ins that report parameter changes when changing presets
+- Improved feedback latency of "FX: Navigate within presets" for plugins that report parameter changes when changing presets
 - Fixed unnecessary user prompt when changing preset if no mappings and groups present
 - Fixed display issue when using Mackie LCD source in combination with Mountain Utilities BCManager
 - Fixed feedback when writing send volume automation
@@ -3377,7 +3436,7 @@
 - Improved virtual control element naming by increasing maximum length from 16 to 32
 - Improved wording by renaming "Tuning" to "Glue"
 - Improved target "ReaLearn: Load mapping snapshot" by allowing to restrict snapshot loading to mappings with certain tags and activity state
-- Improved auto-load preset functionality to work better with shell plug-ins, e.g. Waves (now by default uses plug-in name instead of file name to distinguish between the single plug-in types; in order for this to take effect, you need to remove each problematic link and reestablish it or edit the link and fill out the FX ID name yourself)
+- Improved auto-load preset functionality to work better with shell plugins, e.g. Waves (now by default uses plugin name instead of file name to distinguish between the single plugin types; in order for this to take effect, you need to remove each problematic link and reestablish it or edit the link and fill out the FX ID name yourself)
 - Improved projection feedback by sending feedback initially, not just on value changes or on manual request via REAPER action
 - Improved target value entry by providing buttons for trigger- or switch-like targets
 - Improved "Toggle buttons" mode to support exclusive toggle button use cases (if target min is equal to target max, it now toggles between that specific value and zero)
@@ -3646,7 +3705,7 @@
 
             <version name="2.11.0-pre.6" author="helgoboss" time="2021-10-12T12:00:00Z">
                 <changelog><![CDATA[- Added support for Raspberry Pi (Linux armv7 and Linux aarch64)
-- Improved auto-load preset functionality to work better with shell plug-ins, e.g. Waves (now by default uses plug-in name instead of file name to distinguish between the single plug-in types; in order for this to take effect, you need to remove each problematic link and reestablish it or edit the link and fill out the FX ID name yourself)
+- Improved auto-load preset functionality to work better with shell plugins, e.g. Waves (now by default uses plugin name instead of file name to distinguish between the single plugin types; in order for this to take effect, you need to remove each problematic link and reestablish it or edit the link and fill out the FX ID name yourself)
 - Improved usability by disabling certain UI elements depending on the selected OSC argument type
 ]]></changelog>
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.6/realearn-windows-x86_64.dll</source>
@@ -4419,11 +4478,11 @@
 - Added checkboxes "Scroll TCP" and "Scroll mixer" to targets "Selected track" and "Track selection"
 - Added checkboxes "Set loop points" and "Set time selection" to target "Go to region"
 - Added "Paste mappings (replace all in group)" to header context menu
-- Added "FX-to-preset links" to header context menu for better management and for making it possible to map multiple plug-ins to the same preset
-- Added possibility to use plug-in file name wildcards (\* and ?) when linking an FX to a preset (another way to map multiple plug-ins to the same preset)
+- Added "FX-to-preset links" to header context menu for better management and for making it possible to map multiple plugins to the same preset
+- Added possibility to use plugin file name wildcards (\* and ?) when linking an FX to a preset (another way to map multiple plugins to the same preset)
 - Added new source character "Toggle button" as a workaround for hardware buttons that can't be configured to act as momentary buttons (should usually be avoided; behavior is that it always sends 1 even when 0 is received)
 - Added new fire modes "Single press" and "Double press" (can now distinguish between single press, double press and long press)
-- Added possibility to use preset name in addition to plug-in name when creating preset links for the "Auto-load preset" feature (allows you to load a different ReaLearn main preset when the preset of the focused FX changes)
+- Added possibility to use preset name in addition to plugin name when creating preset links for the "Auto-load preset" feature (allows you to load a different ReaLearn main preset when the preset of the focused FX changes)
 - Added ability to correctly switch feedback when enabling/disabling ReaLearn instances that talk to the same control elements (uses source-takeover mechanism)
 - Added possibility to easily react to button press-down only and ignore button release (without affecting feedback)
 - Added possibility to easily react to encoder increments or decrements only
@@ -4674,7 +4733,7 @@
 
             <version name="2.8.0-pre8" author="helgoboss" time="2021-03-31T12:00:00Z">
                 <changelog><![CDATA[- Added new fire modes "Single press" and "Double press" (can now distinguish between single press, double press and long press)
-- Added possibility to use preset name in addition to plug-in name when creating preset links for the "Auto-load preset" feature (allows you to load a different ReaLearn main preset when the preset of the focused FX changes)
+- Added possibility to use preset name in addition to plugin name when creating preset links for the "Auto-load preset" feature (allows you to load a different ReaLearn main preset when the preset of the focused FX changes)
 - Added ability to correctly switch feedback when enabling/disabling ReaLearn instances that talk to the same control elements (uses source-takeover mechanism)
 - Improved usability by renaming and reordering targets, also introduced additional target hint label
 - Improved "Move to upper floor" feature by detecting more reliably when instance not active anymore and unloading presets more reliably when FX window closed
@@ -4705,8 +4764,8 @@
 - Added checkboxes "Scroll TCP" and "Scroll mixer" to targets "Selected track" and "Track selection"
 - Added checkboxes "Set loop points" and "Set time selection" to target "Go to region"
 - Added "Paste mappings (replace all in group)" to header context menu
-- Added "FX-to-preset links" to header context menu for better management and for making it possible to map multiple plug-ins to the same preset
-- Added possibility to use plug-in file name wildcards (\* and ?) when linking an FX to a preset (another way to map multiple plug-ins to the same preset)
+- Added "FX-to-preset links" to header context menu for better management and for making it possible to map multiple plugins to the same preset
+- Added possibility to use plugin file name wildcards (\* and ?) when linking an FX to a preset (another way to map multiple plugins to the same preset)
 - Added new source character "Toggle button" as a workaround for hardware buttons that can't be configured to act as momentary buttons (should usually be avoided; behavior is that it always sends 1 even when 0 is received)
 - Improved understandability by renaming "Program" to "Bank" in conditional activation
 - Fixed feedback issues due to numerical inaccuracies (especially useful for radio-button-like feedback from discrete target values)
@@ -5143,7 +5202,7 @@
 - Added preset auto-loading depending on focused FX (!)
 - Added possibility to assign mappings to different groups and set activation condition and control/feedback enable state for each group
 - Added limited MIDI feedback support for MIDI CC actions (requires REAPER >= 6.20)
-- Added possibility again to enter values > 100x in Speed text field (useful e.g. when using relative encoders with some NI plug-ins that report continuous parameters with step sizes that are very low)
+- Added possibility again to enter values > 100x in Speed text field (useful e.g. when using relative encoders with some NI plugins that report continuous parameters with step sizes that are very low)
 - Added performance measuring of ReaLearn control surface methods (including exposing metrics in Prometheus format)
 - Added possibility to use preset "Reset to factory default" to clear all settings, groups and mappings (without changing the session ID)
 - Added user guide sections "Tested controllers" and "Tutorials"
@@ -5193,7 +5252,7 @@
 - Fixed action invocation mode "trigger", which sometimes wouldn't fire
 - Fixed misleading labels in mapping panel
 - Fixed feedback when reverse enabled and target range non-symmetric
-- Fixed bug with broken plug-ins that report parameter as discrete but with a nonsensical step size of zero
+- Fixed bug with broken plugins that report parameter as discrete but with a nonsensical step size of zero
 - Fixed broken arrow symbols on Windows 7 (display rectangles instead of arrows)
 - Fixed "Couldn't get preset count" error
 - Fixed (N)RPN learning and consumption check
@@ -5219,7 +5278,7 @@
 - Fixed auto correction for "Send feedback only if track armed"
 - Fixed bug that could cause target value to get stuck if step size too small when it could be avoided
 - Fixed "BorrowMut" error and potential race conditions when "Allow live FX multiprocessing" enabled
-- Fixed segmentation fault on Linux when loading ReaLearn after plug-in scan
+- Fixed segmentation fault on Linux when loading ReaLearn after plugin scan
 - Fixed wrong reverse behavior in 'Normal' mode when target value range is non-symmetric (old presets will keep their wrong behavior in order to not break existing projects)
 ]]></changelog>
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.0.1/realearn-windows-x86_64.dll</source>
@@ -5338,7 +5397,7 @@
 - Fixed action invocation mode "trigger", which sometimes wouldn't fire
 - Fixed misleading labels in mapping panel
 - Fixed feedback when reverse enabled and target range non-symmetric
-- Fixed bug with broken plug-ins that report parameter as discrete but with a nonsensical step size of zero
+- Fixed bug with broken plugins that report parameter as discrete but with a nonsensical step size of zero
 ]]></changelog>
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre16/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre16/realearn-macos-x86_64.vst.dylib</source>
@@ -5357,7 +5416,7 @@
             <version name="1.12.0-pre15" author="helgoboss" time="2021-01-20T12:00:00Z">
                 <changelog><![CDATA[- Improved projection server so it can deal with spaces and special characters in preset file names and session IDs
 - Fixed mapping row painting on Linux
-- Fixed segmentation fault on Linux when loading ReaLearn after plug-in scan
+- Fixed segmentation fault on Linux when loading ReaLearn after plugin scan
 ]]></changelog>
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre15/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre15/realearn-macos-x86_64.vst.dylib</source>
@@ -5444,7 +5503,7 @@
                 <changelog><![CDATA[- Added preset auto-loading depending on focused FX (!)
 - Added possibility to assign mappings to different groups and set activation condition and control/feedback enable state for each group
 - Added limited MIDI feedback support for MIDI CC actions (requires REAPER >= 6.19+dev1226)
-- Added possibility again to enter values > 100x in Speed text field (useful e.g. when using relative encoders with some NI plug-ins that report continuous parameters with step sizes that are very low)
+- Added possibility again to enter values > 100x in Speed text field (useful e.g. when using relative encoders with some NI plugins that report continuous parameters with step sizes that are very low)
 - Added performance measuring of ReaLearn control surface methods (including exposing metrics in Prometheus format)
 - Improved source character guessing (yields best results when turning clockwise!)
 - Improved learning of transport buttons (now prefers ReaLearn's built-in transport target over the corresponding REAPER actions)
@@ -5452,7 +5511,7 @@
 - Improved preset usability by asking user whether to automatically convert project-anchored targets to project-independent ones
 - Fixed error when encountering MIDI device name with incorrectly encoded special characters
 - Fixed error when encountering invalid MIDI messages (they are now ignored)
-- Fixed possible crash when REAPER preference "Allow complete unload of VST plug-ins" is set (projection server now completely unloads and releases TCP ports when removing the last ReaLearn instance)
+- Fixed possible crash when REAPER preference "Allow complete unload of VST plugins" is set (projection server now completely unloads and releases TCP ports when removing the last ReaLearn instance)
 - Fixed serialization bug that caused source channel and number to be skipped from serialization and loaded as 0 instead of  (THIS MIGHT BREAK YOUR 1.12 PRERELEASE PRESETS/PROJECTS, SORRY! When loading with pre9, check if there are any sources that unwillingly contains \<Any> as channel or number, manually change it to 0 and save the project/preset!)
 - Fixed bug that caused ReaLearn to stop working when project paused and ReaLearn track not armed
 ]]></changelog>
@@ -5711,7 +5770,7 @@
 - Made a complete rewrite in Rust programming language
 - Published as open source (available on GitHub)
 - Fixed logic error after learning target on master track
-- Fixed crashes on logic errors while executing VST plug-in callbacks. Now it just reports an error message instead of aborting REAPER.
+- Fixed crashes on logic errors while executing VST plugin callbacks. Now it just reports an error message instead of aborting REAPER.
 - Fixed non-working 'Track must be selected' target condition
 - Fixed non-moving slider when slider currently focused
 - Fixed some FX parameter target bugs which caused ReaLearn to error on particular values
@@ -5723,7 +5782,7 @@
 - Fixed bug that caused ReaLearn instance to stay around as a ghost even if already removed. That caused surprising issues e.g. complaints about a target parameter not being found which was not used at all.
 - Fixed continuous MIDI feedback of automated FX parameter values, track send volume and track send pan. Now fires on real value changes only. It’s still possible that ReaLearn sends more feedback than necessary when having automation. This can happen if there are value changes but they are so small that they don’t have any effect on the feedback MIDI value (because MIDI feedback values have a very low resolution).)
 - Fixed some random error messages when using FX parameter target with parameters that report step sizes
-- Fixed crashes when removing plug-ins
+- Fixed crashes when removing plugins
 - Fixed bug that caused feedback and learn not working with master track
 ]]></changelog>
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.10.0/realearn-windows-x86_64.dll</source>
@@ -5765,7 +5824,7 @@
 - Improved toggle mode by letting Source Min/Max clamp feedback value just like in other modes
 - Improved 'Log debug info' by logging to REAPER console instead of terminal
 - Fixed logic error after learning target on master track
-- Fixed crashes on logic errors while executing VST plug-in callbacks. Now it just reports an error message instead of aborting REAPER.
+- Fixed crashes on logic errors while executing VST plugin callbacks. Now it just reports an error message instead of aborting REAPER.
 ]]></changelog>
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre7/realearn-windows-x86_64.dll</source>
                 <source platform="darwin64" file="FX/ReaLearn-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre7/realearn-macos-x86_64.vst.dylib</source>
@@ -5884,7 +5943,7 @@
 - Improved feedback by keeping it more in sync with the mapping settings (e.g. also updates while changing target range)
 - Improved relative mode by giving the 'step size' / 'step count' (now 'speed') controls an overhaul
 - Improved usability by not letting target fields forget their values when switching type
-- Fixed crashes when removing plug-ins
+- Fixed crashes when removing plugins
 - Fixed bug that caused feedback and learn not working with master track
 ]]></changelog>
                 <source platform="win64" file="FX/ReaLearn-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre2/realearn-windows-x86_64.dll</source>
@@ -5915,7 +5974,7 @@
 \deftab720
 \pard\pardeftab720\sa180\partightenfactor0
 
-\f0\fs24 \cf0 Helgobox is a plug-in that unites multiple creative tools under one roof. It currently contains the products ReaLearn and Playtime, which were previously separate plug-ins.\
+\f0\fs24 \cf0 Helgobox is a plugin that unites multiple creative tools under one roof. It currently contains the products ReaLearn and Playtime, which were previously separate plugins.\
 ReaLearn is a versatile controller integration tool. Playtime is a modern session view.\
 }]]></description>
             </metadata>
@@ -5923,9 +5982,43 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
 
+            <version name="2.18.1" author="helgoboss" time="2025-07-09T12:00:00Z">
+                <changelog><![CDATA[- ReaLearn: #1545 Fixed broken takeover modes (2.18.0 regression)
+- ReaLearn: #1478 Fixed text areas not saving pasted text (not detecting it as change)
+- ReaLearn: #1480 Fixed possible error "OS error 232" when closing ReaLearn
+- ReaLearn: #1480 Fixed error "Attempt to use a function that has not been loaded: SWELL\_osx\_is\_dark\_mode" on older REAPER versions
+- ReaLearn: #1480 Fixed error "index out of bounds: the len is 129 but the index is 129" when using MIDI input device with ID 129
+- Playtime: #1517 Fixed Launchpad X auto-detection
+- Playtime: #1478 Fixed misleading error "Clip seems to be empty" when exporting with zero-length time selection
+]]></changelog>
+                <source platform="win32" file="FX/helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.18.1/helgobox-windows-i686.dll</source>
+
+                <source platform="win32" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.18.1/realearn-user-guide.pdf</source>
+
+
+
+
+
+                <!-- Extension -->
+                <source platform="win32" file="reaper_helgobox-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.18.1/reaper_helgobox-windows-i686.dll</source>
+                <!-- Toolbar icons -->
+                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.1/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.1/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.1/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+
+                <source platform="win32" type="data" file="toolbar_icons/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.1/resources/artwork/toolbar_icons/toolbar_playtime_custom.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/150/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.1/resources/artwork/toolbar_icons/150/toolbar_playtime_custom.png</source>
+                <source platform="win32" type="data" file="toolbar_icons/200/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.1/resources/artwork/toolbar_icons/200/toolbar_playtime_custom.png</source>
+
+
+                <source platform="win32" type="data" file="helgoboss/helgobox/doc/about.html">https://raw.githubusercontent.com/helgoboss/helgobox/v2.18.1/about.html</source>
+
+            </version>
+
             <version name="2.18.0" author="helgoboss" time="2025-03-15T12:00:00Z">
-                <changelog><![CDATA[- General: #1413 Added possibility to run the Helgobox App in remote mode (connecting to Helgobox Plug-In via network connection)
-- General: #1391 Added Linux support for the Helgobox Utility Extension (which provides menu entries and welcome screen before instrument plug-in loaded)
+                <changelog><![CDATA[- General: #1413 Added possibility to run the Helgobox App in remote mode (connecting to Helgobox Plugin via network connection)
+- General: #1391 Added Linux support for the Helgobox Utility Extension (which provides menu entries and welcome screen before instrument plugin loaded)
 - General: #1466 Added update notification (configurable via welcome screen)
 - General: #1411 App: Improved window title bar layout (theme switcher was clipped before, even with a small but normal window width)
 - General: #1420 Fixed lots of unhandled errors by dealing with them more gracefully
@@ -5937,7 +6030,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - ReaLearn: #1415 Fixed broken conditional activation for auto-load-fallback preset
 - ReaLearn: #1419 Fixed broken MIDI clock tempo source (now best used in combination with control transformation in order to get less tempo fluctuation)
 - ReaLearn: #1421 Fixed error "already mutably borrowed" when using auto-load in REAPER < 6.37
-- ReaLearn: Plug-in: Updated Rust from 1.77.2 on Windows / 1.81.0 on macOS and Linux to 1.84.0 on all OS (this removes Windows 7 compatibility of ReaLearn again, so Windows 7 users should not do the update)
+- ReaLearn: Plugin: Updated Rust from 1.77.2 on Windows / 1.81.0 on macOS and Linux to 1.84.0 on all OS (this removes Windows 7 compatibility of ReaLearn again, so Windows 7 users should not do the update)
 - Playtime: #1391 Added experimental Linux support as stage 1 (engine and app now run on Linux, the app only runs in remote mode so far, x64 and arm64 are supported)
 - Playtime: #1399 Added proper support for importing multiple items at once
 - Playtime: #1467 Added possibility to change tempo when triggering scene (experimental, known issues when REAPER arrangement is playing as well)
@@ -6012,7 +6105,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
             <version name="2.18.0-pre.2" author="helgoboss" time="2025-01-25T12:00:00Z">
                 <changelog><![CDATA[- General: #1420 Fixed lots of hard corner-case errors by handling them more gracefully
 - General: #1421 Fixed possible silent crash or even freeze when exiting REAPER on Windows
-- General: Plug-in: Updated Rust from 1.77.2 on Windows / 1.81.0 on macOS and Linux to 1.84.0 on all OS (this removes Windows 7 compatibility once again, sorry!)
+- General: Plugin: Updated Rust from 1.77.2 on Windows / 1.81.0 on macOS and Linux to 1.84.0 on all OS (this removes Windows 7 compatibility once again, sorry!)
 - Playtime: #1397 Linux: Added real-time thread optimization (needs at least REAPER v7.30+dev0116)
 - Playtime: #1397 Linux: Added possibility to run Helgobox App on older Linux systems (with glibc 2.31, such as Ubuntu 20.04 or Debian Bullseye)
 - Playtime: #1419 Improved wording by renaming matrix target action "Play ignited or enter silence mode" to "Start or stop playback"
@@ -6051,8 +6144,8 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
             </version>
 
             <version name="2.18.0-pre.1" author="helgoboss" time="2025-01-18T12:00:00Z">
-                <changelog><![CDATA[- General: #1413 Added possibility to run the Helgobox App in remote mode (connecting to Helgobox Plug-In via network connection)
-- General: #1391 Added Linux support for the Helgobox Utility Extension (which provides menu entries and welcome screen before instrument plug-in loaded)
+                <changelog><![CDATA[- General: #1413 Added possibility to run the Helgobox App in remote mode (connecting to Helgobox Plugin via network connection)
+- General: #1391 Added Linux support for the Helgobox Utility Extension (which provides menu entries and welcome screen before instrument plugin loaded)
 - General: #1411 Improved window title bar layout (theme switcher was clipped before, even with a small but normal window width)
 - Playtime: #1391 Added experimental Linux support as stage 1 (engine and app now run on Linux, the app only runs in remote mode so far, x64 and arm64 are supported)
 - Playtime: #1399 Added proper support for importing multiple items at once
@@ -6237,7 +6330,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
             <version name="2.16.16" author="helgoboss" time="2024-12-20T12:00:00Z">
                 <changelog><![CDATA[- General: #1304 Added support for automatically sending errors to developer
 - General: #1304 Added possibility to flexibly configure error reporting (automatic sending and console logging)
-- General: #1362 Added about screens to plug-in and app
+- General: #1362 Added about screens to plugin and app
 - ReaLearn: #1365 Added possibility to control FX parameters in real-time under certain conditions (see docs)
 - ReaLearn: #1363 Improved controller list in Wiki (it should be much easier now to contribute and use unofficial presets)
 - ReaLearn: #1366 Fixed laggy target "Track: Set automation touch state"
@@ -6402,7 +6495,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - ReaLearn: #1256 Improved ReaLearn Reference by finally documenting all additions since 2.15.0 (except the new Playtime targets, which will be documented together with Playtime)
 - ReaLearn: #1256 Improved ReaLearn Reference by adding basic explanations, restructuring it, changing wording, unifying cross-references, improving markup, updating screenshots and removing unnecessary stuff
 - ReaLearn: #1256 Improved mapping panel help system by displaying help on mouse-over and supporting F1 to jump to corresponding section in ReaLearn Reference
-- ReaLearn: #1274 Fixed possible error "is not a valid UnitValue" when using Altiverb and possibly other plug-ins that report invalid parameter step sizes
+- ReaLearn: #1274 Fixed possible error "is not a valid UnitValue" when using Altiverb and possibly other plugins that report invalid parameter step sizes
 - ReaLearn: #1273 Fixed potential hard crash when obtaining number of FX in track
 - ReaLearn: #1272 Fixed target "Project: Invoke REAPER action" action picker incorrectly saving custom actions or scripts actions (ACTION REQUIRED if you picked such an action between 2.16.3 and 2.16.10)
 ]]></changelog>
@@ -6426,7 +6519,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
             </version>
 
             <version name="2.16.10" author="helgoboss" time="2024-09-28T12:00:00Z">
-                <changelog><![CDATA[- General: Plug-in: Updated Rust (from 1.79.0 to 1.81.0)
+                <changelog><![CDATA[- General: Plugin: Updated Rust (from 1.79.0 to 1.81.0)
 - General: App: Updated Flutter (from 3.22 to 3.24) and various packages
 - General: It's intential that this release contains nothing else than compiler and framework updates (makes it easier to isolate possible regressions)
 ]]></changelog>
@@ -6692,15 +6785,15 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
             </version>
 
             <version name="2.16.0" author="helgoboss" time="2024-07-07T12:00:00Z">
-                <changelog><![CDATA[- General: Important rebranding: The plug-in has been renamed from "ReaLearn" to "Helgobox - ReaLearn & Playtime". Helgobox unites 2 products: ReaLearn (free and open-source) and Playtime (paid and mostly closed-source).
-- General: The plug-in now requires at least REAPER 6.11 (I simplified some code by using REAPER 6.11 features)
+                <changelog><![CDATA[- General: Important rebranding: The plugin has been renamed from "ReaLearn" to "Helgobox - ReaLearn & Playtime". Helgobox unites 2 products: ReaLearn (free and open-source) and Playtime (paid and mostly closed-source).
+- General: The plugin now requires at least REAPER 6.11 (I simplified some code by using REAPER 6.11 features)
 - General: Changed scripting language from Lua 5.4 to Luau (existing scripts should run in the same way as before because all Lua 5.4 functions that I have previously unlocked for usage are also available in Luau)
 - General: Internal change: Renamed lots of Prometheus metrics
 - General: Internal change: Enforced UTF-8-encoded paths very early in the processing when interfacing with the REAPER API (REAPER by contract should provide UTF-8 encoded paths, if not it's a bug in REAPER)
 - General: Internal change: Use Rust 1.79.0
 - General: Added welcome screen which allows one to add a Playtime toolbar button. That works best with current REAPER releases, older REAPER versions require a restart.
 - General: Added Helgobox App: An app that provides the user interface for Playtime and ReaLearn Projection. Right now, it is only available embedded into REAPER and only on macOS on Windows. In the future, it will be made available for Linux, Android and iOS, eventually replacing the ReaLearn Companion App.
-- General: #906 Added a REAPER extension, which is automatically loaded at REAPER startup and acts as a supplement to the actual VST plug-in. Provides a convenient entry 'Helgobox' in the REAPER 'Extensions' menu and other features right after REAPER start, which would otherwise only be available if at least one ReaLearn VST plug-in instance is loaded. This extension is currently shipped on Windows and macOS. It's optional, ReaLearn will also work without it!
+- General: #906 Added a REAPER extension, which is automatically loaded at REAPER startup and acts as a supplement to the actual VST plugin. Provides a convenient entry 'Helgobox' in the REAPER 'Extensions' menu and other features right after REAPER start, which would otherwise only be available if at least one ReaLearn VST plugin instance is loaded. This extension is currently shipped on Windows and macOS. It's optional, ReaLearn will also work without it!
 - General: #908 Added extensive auto-generated Luau type definitions for building ReaLearn presets, ReaLearn MIDI script sources and Playtime matrices with auto-completion and error reporting (for code editors with Luau support, e.g. Visual Studio Code)
 - General: Internal change: Added counter of undesired real-time allocations to UI (debug builds only)
 - General: Improved import by warning when invalid top-level properties were detected (which could indicate wrong usage of the import API)
@@ -6711,8 +6804,8 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - General: #913 Improved general performance by introducing lots of small-scale boosts after profiling hot code (non-crypto hash functions, unnecessary allocation and processing)
 - General: #915 Improved robustness and usability by not participating in REAPER's undo anymore (this can prevent potentially fatal but in any case surprising scenarios in which doing an undo in REAPER sets back ReaLearn and Playtime to a very old state, requires REAPER >= v7.09+dev0202)
 - General: Improved resource usage (by firing up threads for async logging and metrics only if enabled, by letting ReaLearn and Clip Engine metrics share the same thread, by  making app and server share the same one-threaded async runtime and by stopping async deallocation thread and async runtime when last ReaLearn instance gone)
-- General: Improved plug-in scanning speed (Helgobox won't initialize a few things if it knows it's just being scanned anyway)
-- General: Improved resource clean-up on Windows when REAPER preference "Allow complete unload of VST plug-ins" enabled
+- General: Improved plugin scanning speed (Helgobox won't initialize a few things if it knows it's just being scanned anyway)
+- General: Improved resource clean-up on Windows when REAPER preference "Allow complete unload of VST plugins" enabled
 - General: Fixed some incorrect detection of recursive tables in Luau code on import
 - General: #875 Fixed deadlock when using 500+ Helgobox instances
 - General: Fixed potential hard crash in process\_f64 call
@@ -6789,7 +6882,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
             <version name="2.16.0-pre.18" author="helgoboss" time="2024-07-04T12:00:00Z">
                 <changelog><![CDATA[- Playtime-related changes (details available for early-access testers only)
-- Renamed plug-in library file and repository from 'realearn' to 'helgobox', also renamed many other occurrences of ReaLearn to Helgobox
+- Renamed plugin library file and repository from 'realearn' to 'helgobox', also renamed many other occurrences of ReaLearn to Helgobox
 - Added Helgobox App to the main ReaPack package (it was previously only available for Playtime early-access testers)
 - Pot Browser - Preview Recorder: Added recording of preset previews for exporting purposes
 - Fixed fire mode "After timeout" firing like crazy
@@ -6899,7 +6992,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
             <version name="2.16.0-pre.13" author="helgoboss" time="2024-03-15T12:00:00Z">
                 <changelog><![CDATA[- Playtime-related changes (details available for early-access testers only)
-- Renamed plug-in name to "Helgobox - ReaLearn & Playtime"
+- Renamed plugin name to "Helgobox - ReaLearn & Playtime"
 - Added welcome screen (adding a Playtime toolbar button works best with current REAPER pre-releases, older REAPER versions require a restart)
 - Added generic main preset for changing FX parameters
 - Added possibility to edit Playtime targets directly within ReaLearn (no Lua required anymore)
@@ -6936,8 +7029,8 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
             <version name="2.16.0-pre.9" author="helgoboss" time="2024-02-08T12:00:00Z">
                 <changelog><![CDATA[- Playtime-related changes (details available for early-access testers only)
 - Changed scripting language from Lua 5.4 to Luau (existing scripts should run in the same way as before because all Lua 5.4 functions that I have previously unlocked for usage are also available in Luau)
-- First mention of the upcoming product name "Helgobox": The VST plug-in that we know as ReaLearn will soon be renamed to "Helgobox". ReaLearn will stay as the central part of Helgobox. The other parts will be "Playtime" and (in long-term future) "Sound Pot". In a nutshell: Helgobox = ReaLearn + Playtime + SoundPot = A collection of creative tools that turns REAPER into a powerful musical instrument ... you will see the big picture as soon as Playtime 2 is revealed.
-- Added new REAPER extension called "Helgobox", which is automatically loaded at REAPER startup and acts as a supplement to the actual VST plug-in. Provides a convenient top-level menu and other features right after start, which would otherwise only be available if at least one ReaLearn VST plug-in instance is loaded. This extension is currently shipped on Windows and macOS but in general it's optional, ReaLearn will also work without it!
+- First mention of the upcoming product name "Helgobox": The VST plugin that we know as ReaLearn will soon be renamed to "Helgobox". ReaLearn will stay as the central part of Helgobox. The other parts will be "Playtime" and (in long-term future) "Sound Pot". In a nutshell: Helgobox = ReaLearn + Playtime + SoundPot = A collection of creative tools that turns REAPER into a powerful musical instrument ... you will see the big picture as soon as Playtime 2 is revealed.
+- Added new REAPER extension called "Helgobox", which is automatically loaded at REAPER startup and acts as a supplement to the actual VST plugin. Provides a convenient top-level menu and other features right after start, which would otherwise only be available if at least one ReaLearn VST plugin instance is loaded. This extension is currently shipped on Windows and macOS but in general it's optional, ReaLearn will also work without it!
 - Added ability to add additional units to one ReaLearn instance (= one ReaLearn instance can now deal with multiple controllers)
 - Added support for compartment presets written in the Luau language (including the ability to require other Luau modules in the same namespace)
 - Added extensive auto-generated Luau type definitions for building ReaLearn presets, ReaLearn MIDI script sources and Playtime matrices with auto-completion and error reporting (for code editors with Luau support, e.g. Visual Studio Code)
@@ -6997,8 +7090,8 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
             <version name="2.16.0-pre.4" author="helgoboss" time="2023-11-23T12:00:00Z">
                 <changelog><![CDATA[- Improved resource usage (by firing up threads for async logging and metrics only if enabled, by letting ReaLearn and Clip Engine metrics share the same thread, by  making app and server share the same one-threaded async runtime and by stopping async deallocation thread and async runtime when last ReaLearn instance gone)
-- Improved plug-in scanning speed (ReaLearn won't initialize a few things if it knows it's just being scanned anyway)
-- Improved resource clean-up on Windows when REAPER preference "Allow complete unload of VST plug-ins" enabled
+- Improved plugin scanning speed (ReaLearn won't initialize a few things if it knows it's just being scanned anyway)
+- Improved resource clean-up on Windows when REAPER preference "Allow complete unload of VST plugins" enabled
 - Fixed hard crash when duplicating mappings containing Lua scripts (2.16.0-pre.2 regression caused by changes related to async deallocation)
 - Fixed possible audio dropouts due to deallocation in real-time threads when using EEL (2.16.0-pre.2 regression)
 - Fixed possible panic when closing REAPER
@@ -7107,7 +7200,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
             </version>
 
             <version name="2.15.0-pre.7" author="helgoboss" time="2023-05-28T12:00:00Z">
-                <changelog><![CDATA[- Pot Browser: Added possibility to search not just in preset name column but also plug-in/product and file extension columns (all 3 enabled by default)
+                <changelog><![CDATA[- Pot Browser: Added possibility to search not just in preset name column but also plugin/product and file extension columns (all 3 enabled by default)
 - Pot Browser: Added new text feedback placeholder "fx\_parameter.macro.bank.name"
 - Pot Browser: Fixed broken detection of some JS effects (and related "FX preset" loading)
 - Pot Browser: Fixed UI issue that dialogs could get too large vertically
@@ -7127,10 +7220,10 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
             <version name="2.15.0-pre.6" author="helgoboss" time="2023-05-24T12:00:00Z">
                 <changelog><![CDATA[- Pot Browser: Improved usability by adding hint to "FX presets" database that ".vstpreset"-style presets are not yet supported
-- Pot Browser: Improved usability by detecting VST3 plug-ins scanned by very old REAPER versions and giving corresponding instructions (sometimes still shown as false positive)
+- Pot Browser: Improved usability by detecting VST3 plugins scanned by very old REAPER versions and giving corresponding instructions (sometimes still shown as false positive)
 - Pot Browser: Improved usability by adding context column, e.g. to display the containing project of project presets
 - Pot Browser: Improved preview recording quality by not normalizing (closer to the original, less surprises when doing pre-play)
-- Pot Browser: Fixed loading of presets in "FX presets" for sub-directory JS effects on Windows and particular VST plug-ins
+- Pot Browser: Fixed loading of presets in "FX presets" for sub-directory JS effects on Windows and particular VST plugins
 - Pot Browser: Fixed slightly unresponsive GUI when opening Pot Browser for the first time
 - Pot Browser: Fixed error on Windows when trying to add project database (by not displaying file dialog)
 - Pot Browser: Fixed possible temporary UI inconsistency by preventing rebuilds during refresh
@@ -7155,10 +7248,10 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Pot Browser: Added more options to configure when to display FX windows and when to hide them
 - Pot Browser: Added preset context menu action "Pre-play" (This is fun! It's like a preview on steroids. Pot Browser will load the preview into RS5k sampler, making it playable on your keyboard. So you can play the sound in a lower quality without actually loading the preset. Useful if loading a preset is slow and you want to get a first impression before loading it. Or use it in creative ways!)
 - Pot Browser: Improved UI a bit (show notifications a bit longer, better text formatting and error messages, better responsiveness, avoid empty "round dot" context menu)
-- Pot Browser: Fixed VST2 plug-ins with negative magic number not showing up (e.g. "Op-X Pro II")
+- Pot Browser: Fixed VST2 plugins with negative magic number not showing up (e.g. "Op-X Pro II")
 - Pot Browser: Fixed some Komplete banks and categories not showing up (e.g. "MiniMonsta 2"
-- Pot Browser: Fixed NKS macro parameters for all VST3 plug-ins not being found
-- Pot Browser: Fixed internal "FX presets" for all VST2 plug-ins not showing up
+- Pot Browser: Fixed NKS macro parameters for all VST3 plugins not being found
+- Pot Browser: Fixed internal "FX presets" for all VST2 plugins not showing up
 - Pot Browser: Fixed JSFX effects failing to load if they have a file extension (e.g. Saike's JSFX)
 - Pot Browser: Fixed possible crash by preventing Pot Browser from replacing its associated ReaLearn instance
 ]]></changelog>
@@ -7340,7 +7433,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Improved wording by consistently using "Browse ..." instead of "Navigate within ..." or "Cycle through ..."
 - Improved wording by using less technical object selector names (e.g. "Particular" instead of "By ID")
 - Improved usability by displaying in status bar if control/feedback globally off (don't show by greying out mapping rows anymore)
-- Improved usability by insisting on keyboard focus, even if 'Send all keyboard focus to plug-in' is disabled
+- Improved usability by insisting on keyboard focus, even if 'Send all keyboard focus to plugin' is disabled
 - Improved target-based conditional activation by listening to target activation/deactivation as well
 - Improved usability by marking targets that support MIDI real-time control (because MIDI real-time control has a few restrictions)
 - Improved source "MIDI script" when used with Lua language by making color information available (allows users to provide support for arbitrary MIDI color LEDs/displays, in addition to the built-in ones)
@@ -7524,7 +7617,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
             <version name="2.14.0-pre.6" author="helgoboss" time="2022-10-09T12:00:00Z">
                 <changelog><![CDATA[- Added fancy control transformation editor with visual preview of curve/transition (Windows/macOS only for now)
 - Added control transformation template facility (including some first templates, hard-coded, Windows/macOS only for now)
-- Improved usability by insisting on keyboard focus, even if 'Send all keyboard focus to plug-in' is disabled
+- Improved usability by insisting on keyboard focus, even if 'Send all keyboard focus to plugin' is disabled
 - Improved target info logging by including invocation count and target number
 - Fixed target "Project: Invoke REAPER action" invocation mode "Trigger" (could potentially suffer from not being retriggered in some situations)
 ]]></changelog>
@@ -7732,7 +7825,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Improved target "MIDI: Send message" by lifting all previous restrictions when using destination "FX output" (Yes, you can now play your VSTs via OSC!)
 - Improved precision for entering and displaying percentages and dB to 4 fractional digits (e.g. useful for values in value sequences)
 - Improved error reporting by including the name of the channel in case a channel ran full
-- Improved ReaLearn plug-in topology by removing output pins (since ReaLearn doesn't output any audio streams)
+- Improved ReaLearn plugin topology by removing output pins (since ReaLearn doesn't output any audio streams)
 - Improved keyboard source significantly (save/load, more reliable key catching, catching of modifier-only key presses, keystroke normalization for better cross-platform experience, portability warnings)
 - Improved selectors "All by name" and "All selected" by allowing combinatorial explosion (you can now easily target many FX, FX parameters and sends on many tracks with just one target ... powerful, use with caution!)
 - Improved OSC by using one socket for sending and receiving OSC messages (makes "respond to sender" possible, used for example by Behringer XR mixers)
@@ -7770,7 +7863,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Fixed missing update when changing FX in FX-related targets
 - Fixed missing text feedback updates when using placeholder target.fx.name and target.fx.index
 - Fixed "channel full" messages on high load (e.g. selecting many tracks at once) and improved initial memory consumption
-- Fixed error when using plug-ins with non-UTF8 names
+- Fixed error when using plugins with non-UTF8 names
 - Fixed feedback for virtual controller mappings by sending "Off" when not in use
 - Fixed feedback for virtual controller mappings if they are inactive
 - Fixed missing feedback on activation changes when replacing all parameters
@@ -7967,7 +8060,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Fixed missing text feedback updates when using placeholder target.fx.name and target.fx.index
 - Fixed "channel full" messages on high load (e.g. selecting many tracks at once) and improved initial memory consumption
 - Fixed broken controller layout saving (was affecting Companion App)
-- Fixed error when using plug-ins with non-UTF8 names
+- Fixed error when using plugins with non-UTF8 names
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.13.0-pre.6/realearn-windows-i686.dll</source>
 
@@ -8082,7 +8175,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Improved target "MIDI: Send message" by lifting all previous restrictions when using destination "FX output" (Yes, you can now play your VSTs via OSC!)
 - Improved precision for entering and displaying percentages and dB to 4 fractional digits (e.g. useful for values in value sequences)
 - Improved error reporting by including the name of the channel in case a channel ran full
-- Improved ReaLearn plug-in topology by removing output pins (since ReaLearn doesn't output any audio streams)
+- Improved ReaLearn plugin topology by removing output pins (since ReaLearn doesn't output any audio streams)
 - Fixed bug that caused enabling/disabling ReaLearn to have no effect when on monitoring FX chain
 - Fixed white background color when using dark SWELL settings on Linux (by not enforcing any background color at all)
 - Fixed bug in target "MIDI: Send message" that made repeated sending of the same value have no effect with some configurations
@@ -8116,7 +8209,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Improved ReaLearn development by adding a fancy architecture documentation
 - Improved ReaLearn Script by making more Lua built-in variables/functions available (only safe ones to prevent execution of malicious code)
 - Improved usability by automatically resending all feedback when MIDI device plugged in (probably works on macOS only at the moment)
-- Improved feedback latency of "FX: Navigate within presets" for plug-ins that report parameter changes when changing presets
+- Improved feedback latency of "FX: Navigate within presets" for plugins that report parameter changes when changing presets
 - Improved memory footprint a lot (nobody seems to have noticed it but ReaLearn used enormous amounts of memory per mapping before)
 - Fixed borrow error when virtualizing mappings if that fails for some mappings
 - Fixed Lua import of Lua export of mapping with negative step factor
@@ -8126,11 +8219,11 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Fixed feedback when writing send volume automation
 - Fixed "Invalid command ID" error if JSON contains invalid command ID but target type is not "Project: Invoke REAPER action"
 - Fixed blacked out GUI on macOS since in REAPER 6.48 - 6.51
-- Fixed rare PoisonError when loading plug-in
+- Fixed rare PoisonError when loading plugin
 - Fixed text feedback error when trying to format paramter of FX that's offline
 - Fixed missing Lua import of poll\_for\_feedback property in target FxParameterValue target
 - Fixed error when pressing save button on non-existing preset (grey out button instead)
-- Fixed "FX: Navigate within presets" target getting stuck at "No preset" for VST 3 plug-ins
+- Fixed "FX: Navigate within presets" target getting stuck at "No preset" for VST 3 plugins
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.12.0/realearn-windows-i686.dll</source>
 
@@ -8151,7 +8244,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <changelog><![CDATA[- Added fine-grained OSC feedback argument mapping
 - Added support for sending colors to TouchOSC (in RRGGBB string format)
 - Improved usability by automatically resending all feedback when MIDI device plugged in (probably works on macOS only at the moment)
-- Improved feedback latency of "FX: Navigate within presets" for plug-ins that report parameter changes when changing presets
+- Improved feedback latency of "FX: Navigate within presets" for plugins that report parameter changes when changing presets
 - Fixed unnecessary user prompt when changing preset if no mappings and groups present
 - Fixed display issue when using Mackie LCD source in combination with Mountain Utilities BCManager
 - Fixed feedback when writing send volume automation
@@ -8246,7 +8339,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Improved virtual control element naming by increasing maximum length from 16 to 32
 - Improved wording by renaming "Tuning" to "Glue"
 - Improved target "ReaLearn: Load mapping snapshot" by allowing to restrict snapshot loading to mappings with certain tags and activity state
-- Improved auto-load preset functionality to work better with shell plug-ins, e.g. Waves (now by default uses plug-in name instead of file name to distinguish between the single plug-in types; in order for this to take effect, you need to remove each problematic link and reestablish it or edit the link and fill out the FX ID name yourself)
+- Improved auto-load preset functionality to work better with shell plugins, e.g. Waves (now by default uses plugin name instead of file name to distinguish between the single plugin types; in order for this to take effect, you need to remove each problematic link and reestablish it or edit the link and fill out the FX ID name yourself)
 - Improved projection feedback by sending feedback initially, not just on value changes or on manual request via REAPER action
 - Improved target value entry by providing buttons for trigger- or switch-like targets
 - Improved "Toggle buttons" mode to support exclusive toggle button use cases (if target min is equal to target max, it now toggles between that specific value and zero)
@@ -8443,7 +8536,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
             <version name="2.11.0-pre.6" author="helgoboss" time="2021-10-12T12:00:00Z">
                 <changelog><![CDATA[- Added support for Raspberry Pi (Linux armv7 and Linux aarch64)
-- Improved auto-load preset functionality to work better with shell plug-ins, e.g. Waves (now by default uses plug-in name instead of file name to distinguish between the single plug-in types; in order for this to take effect, you need to remove each problematic link and reestablish it or edit the link and fill out the FX ID name yourself)
+- Improved auto-load preset functionality to work better with shell plugins, e.g. Waves (now by default uses plugin name instead of file name to distinguish between the single plugin types; in order for this to take effect, you need to remove each problematic link and reestablish it or edit the link and fill out the FX ID name yourself)
 - Improved usability by disabling certain UI elements depending on the selected OSC argument type
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.11.0-pre.6/realearn-windows-i686.dll</source>
@@ -8988,11 +9081,11 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Added checkboxes "Scroll TCP" and "Scroll mixer" to targets "Selected track" and "Track selection"
 - Added checkboxes "Set loop points" and "Set time selection" to target "Go to region"
 - Added "Paste mappings (replace all in group)" to header context menu
-- Added "FX-to-preset links" to header context menu for better management and for making it possible to map multiple plug-ins to the same preset
-- Added possibility to use plug-in file name wildcards (\* and ?) when linking an FX to a preset (another way to map multiple plug-ins to the same preset)
+- Added "FX-to-preset links" to header context menu for better management and for making it possible to map multiple plugins to the same preset
+- Added possibility to use plugin file name wildcards (\* and ?) when linking an FX to a preset (another way to map multiple plugins to the same preset)
 - Added new source character "Toggle button" as a workaround for hardware buttons that can't be configured to act as momentary buttons (should usually be avoided; behavior is that it always sends 1 even when 0 is received)
 - Added new fire modes "Single press" and "Double press" (can now distinguish between single press, double press and long press)
-- Added possibility to use preset name in addition to plug-in name when creating preset links for the "Auto-load preset" feature (allows you to load a different ReaLearn main preset when the preset of the focused FX changes)
+- Added possibility to use preset name in addition to plugin name when creating preset links for the "Auto-load preset" feature (allows you to load a different ReaLearn main preset when the preset of the focused FX changes)
 - Added ability to correctly switch feedback when enabling/disabling ReaLearn instances that talk to the same control elements (uses source-takeover mechanism)
 - Added possibility to easily react to button press-down only and ignore button release (without affecting feedback)
 - Added possibility to easily react to encoder increments or decrements only
@@ -9201,7 +9294,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
             <version name="2.8.0-pre8" author="helgoboss" time="2021-03-31T12:00:00Z">
                 <changelog><![CDATA[- Added new fire modes "Single press" and "Double press" (can now distinguish between single press, double press and long press)
-- Added possibility to use preset name in addition to plug-in name when creating preset links for the "Auto-load preset" feature (allows you to load a different ReaLearn main preset when the preset of the focused FX changes)
+- Added possibility to use preset name in addition to plugin name when creating preset links for the "Auto-load preset" feature (allows you to load a different ReaLearn main preset when the preset of the focused FX changes)
 - Added ability to correctly switch feedback when enabling/disabling ReaLearn instances that talk to the same control elements (uses source-takeover mechanism)
 - Improved usability by renaming and reordering targets, also introduced additional target hint label
 - Improved "Move to upper floor" feature by detecting more reliably when instance not active anymore and unloading presets more reliably when FX window closed
@@ -9226,8 +9319,8 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Added checkboxes "Scroll TCP" and "Scroll mixer" to targets "Selected track" and "Track selection"
 - Added checkboxes "Set loop points" and "Set time selection" to target "Go to region"
 - Added "Paste mappings (replace all in group)" to header context menu
-- Added "FX-to-preset links" to header context menu for better management and for making it possible to map multiple plug-ins to the same preset
-- Added possibility to use plug-in file name wildcards (\* and ?) when linking an FX to a preset (another way to map multiple plug-ins to the same preset)
+- Added "FX-to-preset links" to header context menu for better management and for making it possible to map multiple plugins to the same preset
+- Added possibility to use plugin file name wildcards (\* and ?) when linking an FX to a preset (another way to map multiple plugins to the same preset)
 - Added new source character "Toggle button" as a workaround for hardware buttons that can't be configured to act as momentary buttons (should usually be avoided; behavior is that it always sends 1 even when 0 is received)
 - Improved understandability by renaming "Program" to "Bank" in conditional activation
 - Fixed feedback issues due to numerical inaccuracies (especially useful for radio-button-like feedback from discrete target values)
@@ -9568,7 +9661,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Added preset auto-loading depending on focused FX (!)
 - Added possibility to assign mappings to different groups and set activation condition and control/feedback enable state for each group
 - Added limited MIDI feedback support for MIDI CC actions (requires REAPER >= 6.20)
-- Added possibility again to enter values > 100x in Speed text field (useful e.g. when using relative encoders with some NI plug-ins that report continuous parameters with step sizes that are very low)
+- Added possibility again to enter values > 100x in Speed text field (useful e.g. when using relative encoders with some NI plugins that report continuous parameters with step sizes that are very low)
 - Added performance measuring of ReaLearn control surface methods (including exposing metrics in Prometheus format)
 - Added possibility to use preset "Reset to factory default" to clear all settings, groups and mappings (without changing the session ID)
 - Added user guide sections "Tested controllers" and "Tutorials"
@@ -9618,7 +9711,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Fixed action invocation mode "trigger", which sometimes wouldn't fire
 - Fixed misleading labels in mapping panel
 - Fixed feedback when reverse enabled and target range non-symmetric
-- Fixed bug with broken plug-ins that report parameter as discrete but with a nonsensical step size of zero
+- Fixed bug with broken plugins that report parameter as discrete but with a nonsensical step size of zero
 - Fixed broken arrow symbols on Windows 7 (display rectangles instead of arrows)
 - Fixed "Couldn't get preset count" error
 - Fixed (N)RPN learning and consumption check
@@ -9644,7 +9737,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Fixed auto correction for "Send feedback only if track armed"
 - Fixed bug that could cause target value to get stuck if step size too small when it could be avoided
 - Fixed "BorrowMut" error and potential race conditions when "Allow live FX multiprocessing" enabled
-- Fixed segmentation fault on Linux when loading ReaLearn after plug-in scan
+- Fixed segmentation fault on Linux when loading ReaLearn after plugin scan
 - Fixed wrong reverse behavior in 'Normal' mode when target value range is non-symmetric (old presets will keep their wrong behavior in order to not break existing projects)
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v2.0.1/realearn-windows-i686.dll</source>
@@ -9741,7 +9834,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Fixed action invocation mode "trigger", which sometimes wouldn't fire
 - Fixed misleading labels in mapping panel
 - Fixed feedback when reverse enabled and target range non-symmetric
-- Fixed bug with broken plug-ins that report parameter as discrete but with a nonsensical step size of zero
+- Fixed bug with broken plugins that report parameter as discrete but with a nonsensical step size of zero
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre16/realearn-windows-i686.dll</source>
 
@@ -9756,7 +9849,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
             <version name="1.12.0-pre15" author="helgoboss" time="2021-01-20T12:00:00Z">
                 <changelog><![CDATA[- Improved projection server so it can deal with spaces and special characters in preset file names and session IDs
 - Fixed mapping row painting on Linux
-- Fixed segmentation fault on Linux when loading ReaLearn after plug-in scan
+- Fixed segmentation fault on Linux when loading ReaLearn after plugin scan
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v1.12.0-pre15/realearn-windows-i686.dll</source>
 
@@ -9827,7 +9920,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
                 <changelog><![CDATA[- Added preset auto-loading depending on focused FX (!)
 - Added possibility to assign mappings to different groups and set activation condition and control/feedback enable state for each group
 - Added limited MIDI feedback support for MIDI CC actions (requires REAPER >= 6.19+dev1226)
-- Added possibility again to enter values > 100x in Speed text field (useful e.g. when using relative encoders with some NI plug-ins that report continuous parameters with step sizes that are very low)
+- Added possibility again to enter values > 100x in Speed text field (useful e.g. when using relative encoders with some NI plugins that report continuous parameters with step sizes that are very low)
 - Added performance measuring of ReaLearn control surface methods (including exposing metrics in Prometheus format)
 - Improved source character guessing (yields best results when turning clockwise!)
 - Improved learning of transport buttons (now prefers ReaLearn's built-in transport target over the corresponding REAPER actions)
@@ -9835,7 +9928,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Improved preset usability by asking user whether to automatically convert project-anchored targets to project-independent ones
 - Fixed error when encountering MIDI device name with incorrectly encoded special characters
 - Fixed error when encountering invalid MIDI messages (they are now ignored)
-- Fixed possible crash when REAPER preference "Allow complete unload of VST plug-ins" is set (projection server now completely unloads and releases TCP ports when removing the last ReaLearn instance)
+- Fixed possible crash when REAPER preference "Allow complete unload of VST plugins" is set (projection server now completely unloads and releases TCP ports when removing the last ReaLearn instance)
 - Fixed serialization bug that caused source channel and number to be skipped from serialization and loaded as 0 instead of  (THIS MIGHT BREAK YOUR 1.12 PRERELEASE PRESETS/PROJECTS, SORRY! When loading with pre9, check if there are any sources that unwillingly contains \<Any> as channel or number, manually change it to 0 and save the project/preset!)
 - Fixed bug that caused ReaLearn to stop working when project paused and ReaLearn track not armed
 ]]></changelog>
@@ -10054,7 +10147,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Made a complete rewrite in Rust programming language
 - Published as open source (available on GitHub)
 - Fixed logic error after learning target on master track
-- Fixed crashes on logic errors while executing VST plug-in callbacks. Now it just reports an error message instead of aborting REAPER.
+- Fixed crashes on logic errors while executing VST plugin callbacks. Now it just reports an error message instead of aborting REAPER.
 - Fixed non-working 'Track must be selected' target condition
 - Fixed non-moving slider when slider currently focused
 - Fixed some FX parameter target bugs which caused ReaLearn to error on particular values
@@ -10066,7 +10159,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Fixed bug that caused ReaLearn instance to stay around as a ghost even if already removed. That caused surprising issues e.g. complaints about a target parameter not being found which was not used at all.
 - Fixed continuous MIDI feedback of automated FX parameter values, track send volume and track send pan. Now fires on real value changes only. It’s still possible that ReaLearn sends more feedback than necessary when having automation. This can happen if there are value changes but they are so small that they don’t have any effect on the feedback MIDI value (because MIDI feedback values have a very low resolution).)
 - Fixed some random error messages when using FX parameter target with parameters that report step sizes
-- Fixed crashes when removing plug-ins
+- Fixed crashes when removing plugins
 - Fixed bug that caused feedback and learn not working with master track
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v1.10.0/realearn-windows-i686.dll</source>
@@ -10100,7 +10193,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Improved toggle mode by letting Source Min/Max clamp feedback value just like in other modes
 - Improved 'Log debug info' by logging to REAPER console instead of terminal
 - Fixed logic error after learning target on master track
-- Fixed crashes on logic errors while executing VST plug-in callbacks. Now it just reports an error message instead of aborting REAPER.
+- Fixed crashes on logic errors while executing VST plugin callbacks. Now it just reports an error message instead of aborting REAPER.
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre7/realearn-windows-i686.dll</source>
 
@@ -10199,7 +10292,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 - Improved feedback by keeping it more in sync with the mapping settings (e.g. also updates while changing target range)
 - Improved relative mode by giving the 'step size' / 'step count' (now 'speed') controls an overhaul
 - Improved usability by not letting target fields forget their values when switching type
-- Fixed crashes when removing plug-ins
+- Fixed crashes when removing plugins
 - Fixed bug that caused feedback and learn not working with master track
 ]]></changelog>
                 <source platform="win32" file="FX/ReaLearn-x86.dll">https://github.com/helgoboss/helgobox/releases/download/v1.10.0-pre2/realearn-windows-i686.dll</source>
@@ -10226,7 +10319,7 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 \deftab720
 \pard\pardeftab720\sa180\partightenfactor0
 
-\f0\fs24 \cf0 Helgobox is a plug-in that unites multiple creative tools under one roof. It currently contains the products ReaLearn and Playtime, which were previously separate plug-ins.\
+\f0\fs24 \cf0 Helgobox is a plugin that unites multiple creative tools under one roof. It currently contains the products ReaLearn and Playtime, which were previously separate plugins.\
 ReaLearn is a versatile controller integration tool. Playtime is a modern session view.\
 }]]></description>
             </metadata>
