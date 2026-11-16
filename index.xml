@@ -3,6 +3,113 @@
     <category name="Extensions">
         <reapack name="ReaLearn-x64" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
 
+            <version name="2.20.0" author="helgoboss" time="2026-11-16T12:00:00Z">
+                <changelog><![CDATA[- General: #1397 Added Linux support for running the Helgobox App (including the Playtime GUI) integrated into REAPER (only x64 for now, but arm64 already tested)
+- General: #1694 Added experimental mobile Android/iOS versions of the app (acting as a remote for Helgobox running on the computer)
+- General: #1694 Added mDNS advertising of Helgobox Server to enable discovery through mobile app versions
+- General: #1707 Added lots of more themes and a right-click theme picker
+- General: #1630 Improved Linux compatibility by removing libxdo dependency (this was the main reason for REAPER not being able to scan Helgobox on Linux)
+- General: #1706 Improved app REAPER theme (now not experimental anymore)
+- General: #1695 Improved stability of experimental native context menus, removed Windows support, only supports right-click context menus (Settings button → General → Prefer native popup menus)
+- General: #1699 Improved macOS app download size from 66 MB to just 23 MB
+- General: #1397 Improved Linux compatibility by saving app settings in the REAPER resource folder instead of globally (when app opened from REAPER)
+- General: #1708 Improved app CPU usage a bit when not playing
+- General: #1397 Fixed issue with certain unit keys when opening the app (Linux)
+- General: #1697 Fixed app server sometimes wrongly reporting that it hasn't started successfully
+- General: #1698 Fixed app sometimes getting stuck at "Checking host version" (Linux)
+- General: Fixed possible "Input/output error" when logging enabled
+- General: App: Updated Flutter from 3.38.8 to 3.47.7 on all OS
+- ReaLearn: #1690 Added support for more StreamDeck models
+- ReaLearn: #1690 Added support for connecting multiple StreamDeck devices of one kind
+- ReaLearn: #1537 Added copy and paste buttons to mapping panel
+- ReaLearn: #1685 Added ReaLearn target "Project: Any on" parameter "MIDI editor focused" (which allows lighting an LED or enabling mappings when a MIDI editor is focused)
+- ReaLearn: #1694 Added experimental possibility to use the modern Projection feature from mobile devices (using the new Android/iOS app which acts as remote)
+- ReaLearn: #1701 Fixed "Open compartment preset folder" not working if the folder does not exist yet
+- ReaLearn: #1715 Fixed checkbox "Round" when used with discrete sources (for example, MIDI sources)
+- ReaLearn: #1713 Fixed unnecessary invocation of discrete targets (change is most detectable by less beeps when "Beep on success" is enabled)
+- Playtime: #1726 Added experimental preset browser
+- Playtime: #1723 Added "Learn track input" button to track panels
+- Playtime: #1720 Added experimental retrospective record mode (for less stressful clip recording)
+- Playtime: #1721 Added adjustable recording stop tolerance (for less stressful clip recording)
+- Playtime: #1621 Added ability to change metronome output channel
+- Playtime: #1710 Added track template support: Adding a column will now offer a track template list
+- Playtime: #1687 Added possibility to drag and drop clips into the REAPER arrangement
+- Playtime: #1369 Added support for MIDI envelopes (pitch/CC curves are now preserved and played back)
+- Playtime: #1719 Added possibility to record audio output from tracks (also added a column action "Set up instrument output recording" to serve the most popular use case)
+- Playtime: #1718 Added extensive editing and zooming capabilities to the waveform viewer
+- Playtime: #1691 Added new clip properties "Tempo" and "Speed" for tempo and vari-speed performance control
+- Playtime: #1717 Added ReaLearn targets "Playtime: Slot tempo factor" and "Playtime: Slot speed factor"
+- Playtime: #1692 Added ReaLearn targets "Playtime: Slot start position" and "Playtime: Slot length"
+- Playtime: #1716 Added ReaLearn target "Playtime: Slot pitch shift"
+- Playtime: #1712 Added possibility to choose a negative section start position, inserting silence at the front
+- Playtime: #1683 Added ReaLearn target "Playtime: Browse cells" option "Scroll" which allows placing the active cell into the top-left matrix corner (thanks to Peter for sponsoring this feature!)
+- Playtime: #1683 Added variables "active\_cell\_column\_index" and "active\_cell\_row\_index" for usage in dynamic expression of corresponding Playtime targets (thanks to Peter for sponsoring this feature!)
+- Playtime: #1694 Added experimental possibility to use Playtime from mobile devices (using the new Android/iOS app which acts as remote)
+- Playtime: #1695 Added built-in MIDI editor (only note editing so far, activated by default on Android/iOS apps, can be enabled on computers via Settings button → Playtime → Behavior → Primary MIDI editor "Helgobox")
+- Playtime: #1689 Improved usability by applying MIDI editor and MIDI quantization changes more smoothly (it now retains already playing notes)
+- Playtime: #1486 Improved usability by showing a warning if "Close audio device when stopped and application is inactive" enabled
+- Playtime: #1523 Improved usability by always showing the "Loading & saving disabled" warning when Playtime is not yet activated
+- Playtime: #1523 Improved usability by disabling "Allow tempo detection" by default (for new projects)
+- Playtime: #1725 Improved usability by opening FX chain directly in app
+- Playtime: #1714 Improved ReaLearn target "Playtime: Control unit scroll" by making it possible to use from the main unit as well
+- Playtime: #1473 Fixed temporary inability to scroll after overscrolling the clip matrix
+- Playtime: #1681 Fixed missing column selection GUI for ReaLearn track targets with track selector "From Playtime column"
+- Playtime: #1700 Fixed occasional "Column index too large" when using "Mixed" template (Linux)
+- Playtime: #1556 Fixed first click of metronome not being audible when starting playback in Playtime alone (without REAPER arrangement)
+- Playtime: #1703 Fixed possible initial value jump when doing mouse dragging on drag fields and knobs (macOS)
+- Playtime: #1704 Fixed right cursor key causing error message when no column exists
+- Playtime: #1734 Fixed possible error when using ReaRoute inputs (Windows)
+]]></changelog>
+                <source platform="win64" file="FX/helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.20.0/helgobox-windows-x86_64.dll</source>
+                <source platform="darwin64" file="FX/helgobox-x64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.20.0/helgobox-macos-x86_64.vst.dylib</source>
+                <source platform="linux64" file="FX/helgobox-x64.so">https://github.com/helgoboss/helgobox/releases/download/v2.20.0/helgobox-linux-x86_64.so</source>
+
+                <source platform="win64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.20.0/realearn-user-guide.pdf</source>
+                <source platform="darwin64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.20.0/realearn-user-guide.pdf</source>
+                <source platform="linux64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.20.0/realearn-user-guide.pdf</source>
+
+
+                <source platform="darwin-arm64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.20.0/realearn-user-guide.pdf</source>
+                <source platform="darwin-arm64" file="FX/helgobox-arm64.vst.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.20.0/helgobox-macos-aarch64.vst.dylib</source>
+
+
+                <source platform="linux-aarch64" type="data" file="helgoboss/realearn/doc/realearn-user-guide.pdf">https://github.com/helgoboss/helgobox/releases/download/v2.20.0/realearn-user-guide.pdf</source>
+                <source platform="linux-aarch64" file="FX/helgobox-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.20.0/helgobox-linux-aarch64.so</source>
+
+
+
+
+                <!-- Extension -->
+                <source platform="darwin-arm64" file="reaper_helgobox-arm64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.20.0/reaper_helgobox-macos-aarch64.dylib</source>
+                <source platform="darwin64" file="reaper_helgobox-x64.dylib">https://github.com/helgoboss/helgobox/releases/download/v2.20.0/reaper_helgobox-macos-x86_64.dylib</source>
+                <source platform="win64" file="reaper_helgobox-x64.dll">https://github.com/helgoboss/helgobox/releases/download/v2.20.0/reaper_helgobox-windows-x86_64.dll</source>
+                <!-- App -->
+                <source platform="win64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.28.0/helgobox-app-windows.tar.zst</source>
+                <source platform="darwin64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.28.0/helgobox-app-macos.tar.zst</source>
+                <source platform="darwin-arm64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.28.0/helgobox-app-macos.tar.zst</source>
+                <!-- Toolbar icons -->
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.20.0/resources/artwork/toolbar_icons/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.20.0/resources/artwork/toolbar_icons/150/toolbar_playtime.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.20.0/resources/artwork/toolbar_icons/200/toolbar_playtime.png</source>
+
+
+                <!-- Extension (Linux) -->
+                <source platform="linux64" file="reaper_helgobox-x64.so">https://github.com/helgoboss/helgobox/releases/download/v2.20.0/reaper_helgobox-linux-x86_64.so</source>
+                <source platform="linux-aarch64" file="reaper_helgobox-aarch64.so">https://github.com/helgoboss/helgobox/releases/download/v2.20.0/reaper_helgobox-linux-aarch64.so</source>
+                <!-- App (Linux) -->
+                <source platform="linux64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.28.0/helgobox-app-linux-x64.tar.zst</source>
+                <source platform="linux-aarch64" type="data" file="helgoboss/archives/helgobox-app.tar.zst">https://github.com/helgoboss/helgobox-app-dist/releases/download/v0.28.0/helgobox-app-linux-arm64.tar.zst</source>
+
+
+                <source platform="all" type="data" file="toolbar_icons/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.20.0/resources/artwork/toolbar_icons/toolbar_playtime_custom.png</source>
+                <source platform="all" type="data" file="toolbar_icons/150/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.20.0/resources/artwork/toolbar_icons/150/toolbar_playtime_custom.png</source>
+                <source platform="all" type="data" file="toolbar_icons/200/toolbar_playtime_custom.png">https://raw.githubusercontent.com/helgoboss/helgobox/v2.20.0/resources/artwork/toolbar_icons/200/toolbar_playtime_custom.png</source>
+
+
+                <source platform="all" type="data" file="helgoboss/helgobox/doc/about.html">https://raw.githubusercontent.com/helgoboss/helgobox/v2.20.0/about.html</source>
+
+            </version>
+
             <version name="2.19.0-pre.6" author="helgoboss" time="2026-10-31T12:00:00Z">
                 <changelog><![CDATA[- ReaLearn: #1715 Fixed checkbox "Round" when used with discrete sources (for example, MIDI sources)
 - ReaLearn: #1713 Fixed unnecessary invocation of discrete targets (change is most detectable by less beeps when "Beep on success" is enabled)
@@ -77,7 +184,7 @@
 - General: #1397 Improved Linux compatibility by saving app settings in the REAPER resource folder instead of globally (when app opened from REAPER)
 - General: #1708 Improved app CPU usage a bit when not playing
 - General: #1397 Fixed issue with certain unit keys when opening the app (Linux)
-- General: #1697 Fixed app server sometimes wrongly reporting that server it hasn't started successfully
+- General: #1697 Fixed app server sometimes wrongly reporting that it hasn't started successfully
 - General: #1698 Fixed app sometimes getting stuck at "Checking host version" (Linux)
 - General: Fixed possible "Input/output error" when logging enabled
 - ReaLearn: #1690 Added support for more StreamDeck models
@@ -91,7 +198,6 @@
 - Playtime: #1700 Fixed occasional "Column index too large" when using "Mixed" template (Linux)
 - Playtime: #1556 Fixed first click of metronome not being audible when starting playback in Playtime alone (without REAPER arrangement)
 - Playtime: #1696 Fixed one more potential macOS crash when closing app (issue introduced in 2.19.0-pre.1)
-- Playtime: #1700 Fixed occasional error "Column index too large" when creating "Mixed" template
 - Playtime: #1703 Fixed possible initial value jump when doing mouse dragging on drag fields and knobs (macOS)
 - Playtime: #1704 Fixed right cursor key causing error message when no column exists
 - Playtime: #1705 Fixed edge scrolling (issue introduced in 2.19.0-pre.3)
@@ -6299,6 +6405,8 @@ ReaLearn is a versatile controller integration tool. Playtime is a modern sessio
 
         </reapack>
         <reapack name="ReaLearn-x86" type="extension" desc="Helgobox: ReaLearn &amp; Playtime">
+
+
 
 
 
